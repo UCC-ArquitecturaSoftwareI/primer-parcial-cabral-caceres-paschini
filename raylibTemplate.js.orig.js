@@ -194,7 +194,7 @@ Module['FS_createPath']('/', 'resources', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 205546, "filename": "/resources/map.png"}, {"start": 205546, "audio": 0, "end": 216239, "filename": "/resources/shell.html"}, {"start": 216239, "audio": 0, "end": 218196, "filename": "/resources/ship.png"}, {"start": 218196, "audio": 1, "end": 2557116, "filename": "/resources/Cyberpunk Moonlight Sonata.mp3"}], "remote_package_size": 2557116, "package_uuid": "cb6fa83b-550e-429f-9cbe-d9503984046a"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 205546, "filename": "/resources/map.png"}, {"start": 205546, "audio": 0, "end": 216239, "filename": "/resources/shell.html"}, {"start": 216239, "audio": 0, "end": 218196, "filename": "/resources/ship.png"}, {"start": 218196, "audio": 1, "end": 2557116, "filename": "/resources/Cyberpunk Moonlight Sonata.mp3"}], "remote_package_size": 2557116, "package_uuid": "31c1ed67-1ab1-4f60-b8eb-e644ff9c081a"});
 
 })();
 
@@ -10921,7 +10921,7 @@ function _stbv_start_decoder($f) {
         if ((HEAP32[$imdct_mem >> 2] | 0) >>> 0 > (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 12 >> 2] | 0) >>> 0) HEAP32[(HEAP32[$f$addr >> 2] | 0) + 12 >> 2] = HEAP32[$imdct_mem >> 2];
         HEAP8[(HEAP32[$f$addr >> 2] | 0) + 1377 >> 0] = 1;
         do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) {
-         if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0) != (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0)) ___assert_fail(36138, 35641, 4123, 36194);
+         if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0) != (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0)) ___assert_fail(36156, 35659, 4123, 36212);
          if (((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 88 >> 2] | 0) + 1512 + (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 12 >> 2] | 0) | 0) >>> 0 <= (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0) >>> 0) break;
          HEAP32[$retval >> 2] = _stbv_error(HEAP32[$f$addr >> 2] | 0, 3) | 0;
          $1012 = HEAP32[$retval >> 2] | 0;
@@ -10958,17 +10958,17 @@ function _malloc($bytes) {
  do if ($bytes >>> 0 < 245) {
   $cond = $bytes >>> 0 < 11 ? 16 : $bytes + 11 & -8;
   $shr = $cond >>> 3;
-  $0 = HEAP32[38867] | 0;
+  $0 = HEAP32[38868] | 0;
   $shr3 = $0 >>> $shr;
   if ($shr3 & 3 | 0) {
    $add8 = ($shr3 & 1 ^ 1) + $shr | 0;
-   $arrayidx = 155508 + ($add8 << 1 << 2) | 0;
+   $arrayidx = 155512 + ($add8 << 1 << 2) | 0;
    $1 = $arrayidx + 8 | 0;
    $2 = HEAP32[$1 >> 2] | 0;
    $fd9 = $2 + 8 | 0;
    $3 = HEAP32[$fd9 >> 2] | 0;
-   do if (($3 | 0) == ($arrayidx | 0)) HEAP32[38867] = $0 & ~(1 << $add8); else {
-    if ((HEAP32[38871] | 0) >>> 0 > $3 >>> 0) _abort();
+   do if (($3 | 0) == ($arrayidx | 0)) HEAP32[38868] = $0 & ~(1 << $add8); else {
+    if ((HEAP32[38872] | 0) >>> 0 > $3 >>> 0) _abort();
     $bk = $3 + 12 | 0;
     if ((HEAP32[$bk >> 2] | 0) == ($2 | 0)) {
      HEAP32[$bk >> 2] = $arrayidx;
@@ -10984,7 +10984,7 @@ function _malloc($bytes) {
    STACKTOP = sp;
    return $retval$0 | 0;
   }
-  $7 = HEAP32[38869] | 0;
+  $7 = HEAP32[38870] | 0;
   if ($cond >>> 0 > $7 >>> 0) {
    if ($shr3 | 0) {
     $shl37 = 2 << $shr;
@@ -11000,17 +11000,17 @@ function _malloc($bytes) {
     $shr59 = $shr55 >>> $and57;
     $and61 = $shr59 >>> 1 & 1;
     $add64 = ($and49 | $and46 | $and53 | $and57 | $and61) + ($shr59 >>> $and61) | 0;
-    $arrayidx66 = 155508 + ($add64 << 1 << 2) | 0;
+    $arrayidx66 = 155512 + ($add64 << 1 << 2) | 0;
     $8 = $arrayidx66 + 8 | 0;
     $9 = HEAP32[$8 >> 2] | 0;
     $fd69 = $9 + 8 | 0;
     $10 = HEAP32[$fd69 >> 2] | 0;
     do if (($10 | 0) == ($arrayidx66 | 0)) {
      $and74 = $0 & ~(1 << $add64);
-     HEAP32[38867] = $and74;
+     HEAP32[38868] = $and74;
      $14 = $and74;
     } else {
-     if ((HEAP32[38871] | 0) >>> 0 > $10 >>> 0) _abort();
+     if ((HEAP32[38872] | 0) >>> 0 > $10 >>> 0) _abort();
      $bk78 = $10 + 12 | 0;
      if ((HEAP32[$bk78 >> 2] | 0) == ($9 | 0)) {
       HEAP32[$bk78 >> 2] = $arrayidx66;
@@ -11026,18 +11026,18 @@ function _malloc($bytes) {
     HEAP32[$add$ptr95 + 4 >> 2] = $sub91 | 1;
     HEAP32[$9 + $shl90 >> 2] = $sub91;
     if ($7 | 0) {
-     $13 = HEAP32[38872] | 0;
+     $13 = HEAP32[38873] | 0;
      $shr101 = $7 >>> 3;
-     $arrayidx103 = 155508 + ($shr101 << 1 << 2) | 0;
+     $arrayidx103 = 155512 + ($shr101 << 1 << 2) | 0;
      $shl105 = 1 << $shr101;
      if (!($14 & $shl105)) {
-      HEAP32[38867] = $14 | $shl105;
+      HEAP32[38868] = $14 | $shl105;
       $$pre$phiZ2D = $arrayidx103 + 8 | 0;
       $F104$0 = $arrayidx103;
      } else {
       $15 = $arrayidx103 + 8 | 0;
       $16 = HEAP32[$15 >> 2] | 0;
-      if ((HEAP32[38871] | 0) >>> 0 > $16 >>> 0) _abort(); else {
+      if ((HEAP32[38872] | 0) >>> 0 > $16 >>> 0) _abort(); else {
        $$pre$phiZ2D = $15;
        $F104$0 = $16;
       }
@@ -11047,13 +11047,13 @@ function _malloc($bytes) {
      HEAP32[$13 + 8 >> 2] = $F104$0;
      HEAP32[$13 + 12 >> 2] = $arrayidx103;
     }
-    HEAP32[38869] = $sub91;
-    HEAP32[38872] = $add$ptr95;
+    HEAP32[38870] = $sub91;
+    HEAP32[38873] = $add$ptr95;
     $retval$0 = $fd69;
     STACKTOP = sp;
     return $retval$0 | 0;
    }
-   $18 = HEAP32[38868] | 0;
+   $18 = HEAP32[38869] | 0;
    if (!$18) $nb$0 = $cond; else {
     $sub2$i = ($18 & 0 - $18) + -1 | 0;
     $and3$i = $sub2$i >>> 12 & 16;
@@ -11065,7 +11065,7 @@ function _malloc($bytes) {
     $and13$i = $shr11$i >>> 1 & 2;
     $shr15$i = $shr11$i >>> $and13$i;
     $and17$i = $shr15$i >>> 1 & 1;
-    $19 = HEAP32[155772 + (($and6$i | $and3$i | $and9$i | $and13$i | $and17$i) + ($shr15$i >>> $and17$i) << 2) >> 2] | 0;
+    $19 = HEAP32[155776 + (($and6$i | $and3$i | $and9$i | $and13$i | $and17$i) + ($shr15$i >>> $and17$i) << 2) >> 2] | 0;
     $rsize$0$i = (HEAP32[$19 + 4 >> 2] & -8) - $cond | 0;
     $t$0$i = $19;
     $v$0$i = $19;
@@ -11081,7 +11081,7 @@ function _malloc($bytes) {
      $t$0$i = $cond5$i;
      $v$0$i = $cmp32$i ? $cond5$i : $v$0$i;
     }
-    $24 = HEAP32[38871] | 0;
+    $24 = HEAP32[38872] | 0;
     if ($24 >>> 0 > $v$0$i >>> 0) _abort();
     $add$ptr$i = $v$0$i + $cond | 0;
     if ($add$ptr$i >>> 0 <= $v$0$i >>> 0) _abort();
@@ -11143,19 +11143,19 @@ function _malloc($bytes) {
     } while (0);
     L78 : do if ($25 | 0) {
      $34 = HEAP32[$v$0$i + 28 >> 2] | 0;
-     $arrayidx94$i = 155772 + ($34 << 2) | 0;
+     $arrayidx94$i = 155776 + ($34 << 2) | 0;
      do if (($v$0$i | 0) == (HEAP32[$arrayidx94$i >> 2] | 0)) {
       HEAP32[$arrayidx94$i >> 2] = $R$3$i;
       if (!$R$3$i) {
-       HEAP32[38868] = $18 & ~(1 << $34);
+       HEAP32[38869] = $18 & ~(1 << $34);
        break L78;
       }
-     } else if ((HEAP32[38871] | 0) >>> 0 > $25 >>> 0) _abort(); else {
+     } else if ((HEAP32[38872] | 0) >>> 0 > $25 >>> 0) _abort(); else {
       $arrayidx113$i = $25 + 16 | 0;
       HEAP32[((HEAP32[$arrayidx113$i >> 2] | 0) == ($v$0$i | 0) ? $arrayidx113$i : $25 + 20 | 0) >> 2] = $R$3$i;
       if (!$R$3$i) break L78; else break;
      } while (0);
-     $38 = HEAP32[38871] | 0;
+     $38 = HEAP32[38872] | 0;
      if ($38 >>> 0 > $R$3$i >>> 0) _abort();
      HEAP32[$R$3$i + 24 >> 2] = $25;
      $39 = HEAP32[$v$0$i + 16 >> 2] | 0;
@@ -11165,7 +11165,7 @@ function _malloc($bytes) {
       break;
      } while (0);
      $40 = HEAP32[$v$0$i + 20 >> 2] | 0;
-     if ($40 | 0) if ((HEAP32[38871] | 0) >>> 0 > $40 >>> 0) _abort(); else {
+     if ($40 | 0) if ((HEAP32[38872] | 0) >>> 0 > $40 >>> 0) _abort(); else {
       HEAP32[$R$3$i + 20 >> 2] = $40;
       HEAP32[$40 + 24 >> 2] = $R$3$i;
       break;
@@ -11181,18 +11181,18 @@ function _malloc($bytes) {
      HEAP32[$add$ptr$i + 4 >> 2] = $rsize$0$i | 1;
      HEAP32[$add$ptr$i + $rsize$0$i >> 2] = $rsize$0$i;
      if ($7 | 0) {
-      $43 = HEAP32[38872] | 0;
+      $43 = HEAP32[38873] | 0;
       $shr194$i = $7 >>> 3;
-      $arrayidx196$i = 155508 + ($shr194$i << 1 << 2) | 0;
+      $arrayidx196$i = 155512 + ($shr194$i << 1 << 2) | 0;
       $shl198$i = 1 << $shr194$i;
       if (!($shl198$i & $0)) {
-       HEAP32[38867] = $shl198$i | $0;
+       HEAP32[38868] = $shl198$i | $0;
        $$pre$phi$iZ2D = $arrayidx196$i + 8 | 0;
        $F197$0$i = $arrayidx196$i;
       } else {
        $44 = $arrayidx196$i + 8 | 0;
        $45 = HEAP32[$44 >> 2] | 0;
-       if ((HEAP32[38871] | 0) >>> 0 > $45 >>> 0) _abort(); else {
+       if ((HEAP32[38872] | 0) >>> 0 > $45 >>> 0) _abort(); else {
         $$pre$phi$iZ2D = $44;
         $F197$0$i = $45;
        }
@@ -11202,8 +11202,8 @@ function _malloc($bytes) {
       HEAP32[$43 + 8 >> 2] = $F197$0$i;
       HEAP32[$43 + 12 >> 2] = $arrayidx196$i;
      }
-     HEAP32[38869] = $rsize$0$i;
-     HEAP32[38872] = $add$ptr$i;
+     HEAP32[38870] = $rsize$0$i;
+     HEAP32[38873] = $add$ptr$i;
     }
     $retval$0 = $v$0$i + 8 | 0;
     STACKTOP = sp;
@@ -11213,7 +11213,7 @@ function _malloc($bytes) {
  } else if ($bytes >>> 0 > 4294967231) $nb$0 = -1; else {
   $add144 = $bytes + 11 | 0;
   $and145 = $add144 & -8;
-  $47 = HEAP32[38868] | 0;
+  $47 = HEAP32[38869] | 0;
   if (!$47) $nb$0 = $and145; else {
    $sub$i140 = 0 - $and145 | 0;
    $shr$i141 = $add144 >>> 8;
@@ -11226,7 +11226,7 @@ function _malloc($bytes) {
     $add17$i = 14 - ($and8$i | $and$i145 | $and12$i) + ($shl9$i << $and12$i >>> 15) | 0;
     $idx$0$i = $and145 >>> ($add17$i + 7 | 0) & 1 | $add17$i << 1;
    }
-   $48 = HEAP32[155772 + ($idx$0$i << 2) >> 2] | 0;
+   $48 = HEAP32[155776 + ($idx$0$i << 2) >> 2] | 0;
    L122 : do if (!$48) {
     $rsize$3$i = $sub$i140;
     $t$2$i = 0;
@@ -11288,7 +11288,7 @@ function _malloc($bytes) {
      $and85$i = $shr83$i >>> 1 & 2;
      $shr87$i = $shr83$i >>> $and85$i;
      $and89$i = $shr87$i >>> 1 & 1;
-     $t$4$i = HEAP32[155772 + (($and77$i | $and73$i | $and81$i | $and85$i | $and89$i) + ($shr87$i >>> $and89$i) << 2) >> 2] | 0;
+     $t$4$i = HEAP32[155776 + (($and77$i | $and73$i | $and81$i | $and85$i | $and89$i) + ($shr87$i >>> $and89$i) << 2) >> 2] | 0;
      $v$3$i222 = 0;
     } else {
      $t$4$i = $t$2$i;
@@ -11326,8 +11326,8 @@ function _malloc($bytes) {
      }
     }
    }
-   if (!$v$4$lcssa$i) $nb$0 = $and145; else if ($rsize$4$lcssa$i >>> 0 < ((HEAP32[38869] | 0) - $and145 | 0) >>> 0) {
-    $57 = HEAP32[38871] | 0;
+   if (!$v$4$lcssa$i) $nb$0 = $and145; else if ($rsize$4$lcssa$i >>> 0 < ((HEAP32[38870] | 0) - $and145 | 0) >>> 0) {
+    $57 = HEAP32[38872] | 0;
     if ($57 >>> 0 > $v$4$lcssa$i >>> 0) _abort();
     $add$ptr$i164 = $v$4$lcssa$i + $and145 | 0;
     if ($add$ptr$i164 >>> 0 <= $v$4$lcssa$i >>> 0) _abort();
@@ -11389,16 +11389,16 @@ function _malloc($bytes) {
     } while (0);
     L176 : do if (!$58) $80 = $47; else {
      $67 = HEAP32[$v$4$lcssa$i + 28 >> 2] | 0;
-     $arrayidx184$i = 155772 + ($67 << 2) | 0;
+     $arrayidx184$i = 155776 + ($67 << 2) | 0;
      do if (($v$4$lcssa$i | 0) == (HEAP32[$arrayidx184$i >> 2] | 0)) {
       HEAP32[$arrayidx184$i >> 2] = $R$3$i177;
       if (!$R$3$i177) {
        $and194$i = $47 & ~(1 << $67);
-       HEAP32[38868] = $and194$i;
+       HEAP32[38869] = $and194$i;
        $80 = $and194$i;
        break L176;
       }
-     } else if ((HEAP32[38871] | 0) >>> 0 > $58 >>> 0) _abort(); else {
+     } else if ((HEAP32[38872] | 0) >>> 0 > $58 >>> 0) _abort(); else {
       $arrayidx204$i = $58 + 16 | 0;
       HEAP32[((HEAP32[$arrayidx204$i >> 2] | 0) == ($v$4$lcssa$i | 0) ? $arrayidx204$i : $58 + 20 | 0) >> 2] = $R$3$i177;
       if (!$R$3$i177) {
@@ -11406,7 +11406,7 @@ function _malloc($bytes) {
        break L176;
       } else break;
      } while (0);
-     $71 = HEAP32[38871] | 0;
+     $71 = HEAP32[38872] | 0;
      if ($71 >>> 0 > $R$3$i177 >>> 0) _abort();
      HEAP32[$R$3$i177 + 24 >> 2] = $58;
      $72 = HEAP32[$v$4$lcssa$i + 16 >> 2] | 0;
@@ -11416,7 +11416,7 @@ function _malloc($bytes) {
       break;
      } while (0);
      $73 = HEAP32[$v$4$lcssa$i + 20 >> 2] | 0;
-     if (!$73) $80 = $47; else if ((HEAP32[38871] | 0) >>> 0 > $73 >>> 0) _abort(); else {
+     if (!$73) $80 = $47; else if ((HEAP32[38872] | 0) >>> 0 > $73 >>> 0) _abort(); else {
       HEAP32[$R$3$i177 + 20 >> 2] = $73;
       HEAP32[$73 + 24 >> 2] = $R$3$i177;
       $80 = $47;
@@ -11434,17 +11434,17 @@ function _malloc($bytes) {
      HEAP32[$add$ptr$i164 + $rsize$4$lcssa$i >> 2] = $rsize$4$lcssa$i;
      $shr283$i = $rsize$4$lcssa$i >>> 3;
      if ($rsize$4$lcssa$i >>> 0 < 256) {
-      $arrayidx289$i = 155508 + ($shr283$i << 1 << 2) | 0;
-      $76 = HEAP32[38867] | 0;
+      $arrayidx289$i = 155512 + ($shr283$i << 1 << 2) | 0;
+      $76 = HEAP32[38868] | 0;
       $shl291$i = 1 << $shr283$i;
       if (!($76 & $shl291$i)) {
-       HEAP32[38867] = $76 | $shl291$i;
+       HEAP32[38868] = $76 | $shl291$i;
        $$pre$phi$i185Z2D = $arrayidx289$i + 8 | 0;
        $F290$0$i = $arrayidx289$i;
       } else {
        $77 = $arrayidx289$i + 8 | 0;
        $78 = HEAP32[$77 >> 2] | 0;
-       if ((HEAP32[38871] | 0) >>> 0 > $78 >>> 0) _abort(); else {
+       if ((HEAP32[38872] | 0) >>> 0 > $78 >>> 0) _abort(); else {
         $$pre$phi$i185Z2D = $77;
         $F290$0$i = $78;
        }
@@ -11465,14 +11465,14 @@ function _malloc($bytes) {
       $add346$i = 14 - ($and336$i | $and331$i | $and341$i) + ($shl338$i << $and341$i >>> 15) | 0;
       $I316$0$i = $rsize$4$lcssa$i >>> ($add346$i + 7 | 0) & 1 | $add346$i << 1;
      }
-     $arrayidx355$i = 155772 + ($I316$0$i << 2) | 0;
+     $arrayidx355$i = 155776 + ($I316$0$i << 2) | 0;
      HEAP32[$add$ptr$i164 + 28 >> 2] = $I316$0$i;
      $child357$i = $add$ptr$i164 + 16 | 0;
      HEAP32[$child357$i + 4 >> 2] = 0;
      HEAP32[$child357$i >> 2] = 0;
      $shl362$i = 1 << $I316$0$i;
      if (!($80 & $shl362$i)) {
-      HEAP32[38868] = $80 | $shl362$i;
+      HEAP32[38869] = $80 | $shl362$i;
       HEAP32[$arrayidx355$i >> 2] = $add$ptr$i164;
       HEAP32[$add$ptr$i164 + 24 >> 2] = $arrayidx355$i;
       HEAP32[$add$ptr$i164 + 12 >> 2] = $add$ptr$i164;
@@ -11495,7 +11495,7 @@ function _malloc($bytes) {
         $T$016$i = $83;
        }
       }
-      if ((HEAP32[38871] | 0) >>> 0 > $arrayidx394$i >>> 0) _abort(); else {
+      if ((HEAP32[38872] | 0) >>> 0 > $arrayidx394$i >>> 0) _abort(); else {
        HEAP32[$arrayidx394$i >> 2] = $add$ptr$i164;
        HEAP32[$add$ptr$i164 + 24 >> 2] = $T$016$i;
        HEAP32[$add$ptr$i164 + 12 >> 2] = $add$ptr$i164;
@@ -11505,7 +11505,7 @@ function _malloc($bytes) {
      } while (0);
      $fd416$i = $T$0$lcssa$i + 8 | 0;
      $86 = HEAP32[$fd416$i >> 2] | 0;
-     $87 = HEAP32[38871] | 0;
+     $87 = HEAP32[38872] | 0;
      if ($87 >>> 0 <= $86 >>> 0 & $87 >>> 0 <= $T$0$lcssa$i >>> 0) {
       HEAP32[$86 + 12 >> 2] = $add$ptr$i164;
       HEAP32[$fd416$i >> 2] = $add$ptr$i164;
@@ -11521,20 +11521,20 @@ function _malloc($bytes) {
    } else $nb$0 = $and145;
   }
  } while (0);
- $89 = HEAP32[38869] | 0;
+ $89 = HEAP32[38870] | 0;
  if ($89 >>> 0 >= $nb$0 >>> 0) {
   $sub160 = $89 - $nb$0 | 0;
-  $90 = HEAP32[38872] | 0;
+  $90 = HEAP32[38873] | 0;
   if ($sub160 >>> 0 > 15) {
    $add$ptr166 = $90 + $nb$0 | 0;
-   HEAP32[38872] = $add$ptr166;
-   HEAP32[38869] = $sub160;
+   HEAP32[38873] = $add$ptr166;
+   HEAP32[38870] = $sub160;
    HEAP32[$add$ptr166 + 4 >> 2] = $sub160 | 1;
    HEAP32[$90 + $89 >> 2] = $sub160;
    HEAP32[$90 + 4 >> 2] = $nb$0 | 3;
   } else {
-   HEAP32[38869] = 0;
-   HEAP32[38872] = 0;
+   HEAP32[38870] = 0;
+   HEAP32[38873] = 0;
    HEAP32[$90 + 4 >> 2] = $89 | 3;
    $head179 = $90 + $89 + 4 | 0;
    HEAP32[$head179 >> 2] = HEAP32[$head179 >> 2] | 1;
@@ -11543,29 +11543,29 @@ function _malloc($bytes) {
   STACKTOP = sp;
   return $retval$0 | 0;
  }
- $92 = HEAP32[38870] | 0;
+ $92 = HEAP32[38871] | 0;
  if ($92 >>> 0 > $nb$0 >>> 0) {
   $sub190 = $92 - $nb$0 | 0;
-  HEAP32[38870] = $sub190;
-  $93 = HEAP32[38873] | 0;
+  HEAP32[38871] = $sub190;
+  $93 = HEAP32[38874] | 0;
   $add$ptr193 = $93 + $nb$0 | 0;
-  HEAP32[38873] = $add$ptr193;
+  HEAP32[38874] = $add$ptr193;
   HEAP32[$add$ptr193 + 4 >> 2] = $sub190 | 1;
   HEAP32[$93 + 4 >> 2] = $nb$0 | 3;
   $retval$0 = $93 + 8 | 0;
   STACKTOP = sp;
   return $retval$0 | 0;
  }
- if (!(HEAP32[38985] | 0)) {
+ if (!(HEAP32[38986] | 0)) {
+  HEAP32[38988] = 4096;
   HEAP32[38987] = 4096;
-  HEAP32[38986] = 4096;
-  HEAP32[38988] = -1;
   HEAP32[38989] = -1;
-  HEAP32[38990] = 0;
-  HEAP32[38978] = 0;
-  HEAP32[38985] = $magic$i$i & -16 ^ 1431655768;
+  HEAP32[38990] = -1;
+  HEAP32[38991] = 0;
+  HEAP32[38979] = 0;
+  HEAP32[38986] = $magic$i$i & -16 ^ 1431655768;
   $96 = 4096;
- } else $96 = HEAP32[38987] | 0;
+ } else $96 = HEAP32[38988] | 0;
  $add$i188 = $nb$0 + 48 | 0;
  $sub$i189 = $nb$0 + 47 | 0;
  $add9$i = $96 + $sub$i189 | 0;
@@ -11576,9 +11576,9 @@ function _malloc($bytes) {
   STACKTOP = sp;
   return $retval$0 | 0;
  }
- $97 = HEAP32[38977] | 0;
+ $97 = HEAP32[38978] | 0;
  if ($97 | 0) {
-  $98 = HEAP32[38975] | 0;
+  $98 = HEAP32[38976] | 0;
   $add17$i191 = $98 + $and11$i | 0;
   if ($add17$i191 >>> 0 <= $98 >>> 0 | $add17$i191 >>> 0 > $97 >>> 0) {
    $retval$0 = 0;
@@ -11586,10 +11586,10 @@ function _malloc($bytes) {
    return $retval$0 | 0;
   }
  }
- L257 : do if (!(HEAP32[38978] & 4)) {
-  $100 = HEAP32[38873] | 0;
+ L257 : do if (!(HEAP32[38979] & 4)) {
+  $100 = HEAP32[38874] | 0;
   L259 : do if (!$100) label = 173; else {
-   $sp$0$i$i = 155916;
+   $sp$0$i$i = 155920;
    while (1) {
     $101 = HEAP32[$sp$0$i$i >> 2] | 0;
     if ($101 >>> 0 <= $100 >>> 0) if (($101 + (HEAP32[$sp$0$i$i + 4 >> 2] | 0) | 0) >>> 0 > $100 >>> 0) break;
@@ -11618,13 +11618,13 @@ function _malloc($bytes) {
    $call37$i = _sbrk(0) | 0;
    if (($call37$i | 0) == (-1 | 0)) $tsize$2687886$i = 0; else {
     $104 = $call37$i;
-    $105 = HEAP32[38986] | 0;
+    $105 = HEAP32[38987] | 0;
     $sub41$i = $105 + -1 | 0;
     $spec$select100$i = (($sub41$i & $104 | 0) == 0 ? 0 : ($sub41$i + $104 & 0 - $105) - $104 | 0) + $and11$i | 0;
-    $106 = HEAP32[38975] | 0;
+    $106 = HEAP32[38976] | 0;
     $add54$i = $spec$select100$i + $106 | 0;
     if ($spec$select100$i >>> 0 > $nb$0 >>> 0 & $spec$select100$i >>> 0 < 2147483647) {
-     $107 = HEAP32[38977] | 0;
+     $107 = HEAP32[38978] | 0;
      if ($107 | 0) if ($add54$i >>> 0 <= $106 >>> 0 | $add54$i >>> 0 > $107 >>> 0) {
       $tsize$2687886$i = 0;
       break;
@@ -11654,7 +11654,7 @@ function _malloc($bytes) {
     label = 190;
     break L257;
    }
-   $110 = HEAP32[38987] | 0;
+   $110 = HEAP32[38988] | 0;
    $and104$i = $sub$i189 - $ssize$2$ph$i + $110 & 0 - $110;
    if ($and104$i >>> 0 >= 2147483647) {
     $tbase$799$i = $br$2$ph$i;
@@ -11673,7 +11673,7 @@ function _malloc($bytes) {
     break L257;
    }
   } while (0);
-  HEAP32[38978] = HEAP32[38978] | 4;
+  HEAP32[38979] = HEAP32[38979] | 4;
   $tsize$4$i = $tsize$2687886$i;
   label = 188;
  } else {
@@ -11692,94 +11692,94 @@ function _malloc($bytes) {
   }
  }
  if ((label | 0) == 190) {
-  $add150$i = (HEAP32[38975] | 0) + $tsize$798$i | 0;
-  HEAP32[38975] = $add150$i;
-  if ($add150$i >>> 0 > (HEAP32[38976] | 0) >>> 0) HEAP32[38976] = $add150$i;
-  $114 = HEAP32[38873] | 0;
+  $add150$i = (HEAP32[38976] | 0) + $tsize$798$i | 0;
+  HEAP32[38976] = $add150$i;
+  if ($add150$i >>> 0 > (HEAP32[38977] | 0) >>> 0) HEAP32[38977] = $add150$i;
+  $114 = HEAP32[38874] | 0;
   L294 : do if (!$114) {
-   $115 = HEAP32[38871] | 0;
-   if (($115 | 0) == 0 | $tbase$799$i >>> 0 < $115 >>> 0) HEAP32[38871] = $tbase$799$i;
-   HEAP32[38979] = $tbase$799$i;
-   HEAP32[38980] = $tsize$798$i;
-   HEAP32[38982] = 0;
-   HEAP32[38876] = HEAP32[38985];
-   HEAP32[38875] = -1;
-   HEAP32[38880] = 155508;
-   HEAP32[38879] = 155508;
-   HEAP32[38882] = 155516;
-   HEAP32[38881] = 155516;
-   HEAP32[38884] = 155524;
-   HEAP32[38883] = 155524;
-   HEAP32[38886] = 155532;
-   HEAP32[38885] = 155532;
-   HEAP32[38888] = 155540;
-   HEAP32[38887] = 155540;
-   HEAP32[38890] = 155548;
-   HEAP32[38889] = 155548;
-   HEAP32[38892] = 155556;
-   HEAP32[38891] = 155556;
-   HEAP32[38894] = 155564;
-   HEAP32[38893] = 155564;
-   HEAP32[38896] = 155572;
-   HEAP32[38895] = 155572;
-   HEAP32[38898] = 155580;
-   HEAP32[38897] = 155580;
-   HEAP32[38900] = 155588;
-   HEAP32[38899] = 155588;
-   HEAP32[38902] = 155596;
-   HEAP32[38901] = 155596;
-   HEAP32[38904] = 155604;
-   HEAP32[38903] = 155604;
-   HEAP32[38906] = 155612;
-   HEAP32[38905] = 155612;
-   HEAP32[38908] = 155620;
-   HEAP32[38907] = 155620;
-   HEAP32[38910] = 155628;
-   HEAP32[38909] = 155628;
-   HEAP32[38912] = 155636;
-   HEAP32[38911] = 155636;
-   HEAP32[38914] = 155644;
-   HEAP32[38913] = 155644;
-   HEAP32[38916] = 155652;
-   HEAP32[38915] = 155652;
-   HEAP32[38918] = 155660;
-   HEAP32[38917] = 155660;
-   HEAP32[38920] = 155668;
-   HEAP32[38919] = 155668;
-   HEAP32[38922] = 155676;
-   HEAP32[38921] = 155676;
-   HEAP32[38924] = 155684;
-   HEAP32[38923] = 155684;
-   HEAP32[38926] = 155692;
-   HEAP32[38925] = 155692;
-   HEAP32[38928] = 155700;
-   HEAP32[38927] = 155700;
-   HEAP32[38930] = 155708;
-   HEAP32[38929] = 155708;
-   HEAP32[38932] = 155716;
-   HEAP32[38931] = 155716;
-   HEAP32[38934] = 155724;
-   HEAP32[38933] = 155724;
-   HEAP32[38936] = 155732;
-   HEAP32[38935] = 155732;
-   HEAP32[38938] = 155740;
-   HEAP32[38937] = 155740;
-   HEAP32[38940] = 155748;
-   HEAP32[38939] = 155748;
-   HEAP32[38942] = 155756;
-   HEAP32[38941] = 155756;
+   $115 = HEAP32[38872] | 0;
+   if (($115 | 0) == 0 | $tbase$799$i >>> 0 < $115 >>> 0) HEAP32[38872] = $tbase$799$i;
+   HEAP32[38980] = $tbase$799$i;
+   HEAP32[38981] = $tsize$798$i;
+   HEAP32[38983] = 0;
+   HEAP32[38877] = HEAP32[38986];
+   HEAP32[38876] = -1;
+   HEAP32[38881] = 155512;
+   HEAP32[38880] = 155512;
+   HEAP32[38883] = 155520;
+   HEAP32[38882] = 155520;
+   HEAP32[38885] = 155528;
+   HEAP32[38884] = 155528;
+   HEAP32[38887] = 155536;
+   HEAP32[38886] = 155536;
+   HEAP32[38889] = 155544;
+   HEAP32[38888] = 155544;
+   HEAP32[38891] = 155552;
+   HEAP32[38890] = 155552;
+   HEAP32[38893] = 155560;
+   HEAP32[38892] = 155560;
+   HEAP32[38895] = 155568;
+   HEAP32[38894] = 155568;
+   HEAP32[38897] = 155576;
+   HEAP32[38896] = 155576;
+   HEAP32[38899] = 155584;
+   HEAP32[38898] = 155584;
+   HEAP32[38901] = 155592;
+   HEAP32[38900] = 155592;
+   HEAP32[38903] = 155600;
+   HEAP32[38902] = 155600;
+   HEAP32[38905] = 155608;
+   HEAP32[38904] = 155608;
+   HEAP32[38907] = 155616;
+   HEAP32[38906] = 155616;
+   HEAP32[38909] = 155624;
+   HEAP32[38908] = 155624;
+   HEAP32[38911] = 155632;
+   HEAP32[38910] = 155632;
+   HEAP32[38913] = 155640;
+   HEAP32[38912] = 155640;
+   HEAP32[38915] = 155648;
+   HEAP32[38914] = 155648;
+   HEAP32[38917] = 155656;
+   HEAP32[38916] = 155656;
+   HEAP32[38919] = 155664;
+   HEAP32[38918] = 155664;
+   HEAP32[38921] = 155672;
+   HEAP32[38920] = 155672;
+   HEAP32[38923] = 155680;
+   HEAP32[38922] = 155680;
+   HEAP32[38925] = 155688;
+   HEAP32[38924] = 155688;
+   HEAP32[38927] = 155696;
+   HEAP32[38926] = 155696;
+   HEAP32[38929] = 155704;
+   HEAP32[38928] = 155704;
+   HEAP32[38931] = 155712;
+   HEAP32[38930] = 155712;
+   HEAP32[38933] = 155720;
+   HEAP32[38932] = 155720;
+   HEAP32[38935] = 155728;
+   HEAP32[38934] = 155728;
+   HEAP32[38937] = 155736;
+   HEAP32[38936] = 155736;
+   HEAP32[38939] = 155744;
+   HEAP32[38938] = 155744;
+   HEAP32[38941] = 155752;
+   HEAP32[38940] = 155752;
+   HEAP32[38943] = 155760;
+   HEAP32[38942] = 155760;
    $sub172$i = $tsize$798$i + -40 | 0;
    $117 = $tbase$799$i + 8 | 0;
    $cond$i20$i = ($117 & 7 | 0) == 0 ? 0 : 0 - $117 & 7;
    $add$ptr4$i$i = $tbase$799$i + $cond$i20$i | 0;
    $sub5$i$i = $sub172$i - $cond$i20$i | 0;
-   HEAP32[38873] = $add$ptr4$i$i;
-   HEAP32[38870] = $sub5$i$i;
+   HEAP32[38874] = $add$ptr4$i$i;
+   HEAP32[38871] = $sub5$i$i;
    HEAP32[$add$ptr4$i$i + 4 >> 2] = $sub5$i$i | 1;
    HEAP32[$tbase$799$i + $sub172$i + 4 >> 2] = 40;
-   HEAP32[38874] = HEAP32[38989];
+   HEAP32[38875] = HEAP32[38990];
   } else {
-   $sp$0116$i = 155916;
+   $sp$0116$i = 155920;
    while (1) {
     $119 = HEAP32[$sp$0116$i >> 2] | 0;
     $120 = HEAP32[$sp$0116$i + 4 >> 2] | 0;
@@ -11794,26 +11794,26 @@ function _malloc($bytes) {
     $size188$i$le = $sp$0116$i + 4 | 0;
     if (!(HEAP32[$sp$0116$i + 12 >> 2] & 8)) if ($tbase$799$i >>> 0 > $114 >>> 0 & $119 >>> 0 <= $114 >>> 0) {
      HEAP32[$size188$i$le >> 2] = $120 + $tsize$798$i;
-     $add215$i = (HEAP32[38870] | 0) + $tsize$798$i | 0;
+     $add215$i = (HEAP32[38871] | 0) + $tsize$798$i | 0;
      $124 = $114 + 8 | 0;
      $cond$i56$i = ($124 & 7 | 0) == 0 ? 0 : 0 - $124 & 7;
      $add$ptr4$i57$i = $114 + $cond$i56$i | 0;
      $sub5$i58$i = $add215$i - $cond$i56$i | 0;
-     HEAP32[38873] = $add$ptr4$i57$i;
-     HEAP32[38870] = $sub5$i58$i;
+     HEAP32[38874] = $add$ptr4$i57$i;
+     HEAP32[38871] = $sub5$i58$i;
      HEAP32[$add$ptr4$i57$i + 4 >> 2] = $sub5$i58$i | 1;
      HEAP32[$114 + $add215$i + 4 >> 2] = 40;
-     HEAP32[38874] = HEAP32[38989];
+     HEAP32[38875] = HEAP32[38990];
      break;
     }
    }
-   $126 = HEAP32[38871] | 0;
+   $126 = HEAP32[38872] | 0;
    if ($tbase$799$i >>> 0 < $126 >>> 0) {
-    HEAP32[38871] = $tbase$799$i;
+    HEAP32[38872] = $tbase$799$i;
     $139 = $tbase$799$i;
    } else $139 = $126;
    $add$ptr227$i = $tbase$799$i + $tsize$798$i | 0;
-   $sp$1115$i = 155916;
+   $sp$1115$i = 155920;
    while (1) {
     if ((HEAP32[$sp$1115$i >> 2] | 0) == ($add$ptr227$i | 0)) {
      label = 207;
@@ -11834,15 +11834,15 @@ function _malloc($bytes) {
     $sub18$i$i = $add$ptr16$i$i - $add$ptr4$i28$i - $nb$0 | 0;
     HEAP32[$add$ptr4$i28$i + 4 >> 2] = $nb$0 | 3;
     L317 : do if (($114 | 0) == ($add$ptr16$i$i | 0)) {
-     $add$i$i = (HEAP32[38870] | 0) + $sub18$i$i | 0;
-     HEAP32[38870] = $add$i$i;
-     HEAP32[38873] = $add$ptr17$i$i;
+     $add$i$i = (HEAP32[38871] | 0) + $sub18$i$i | 0;
+     HEAP32[38871] = $add$i$i;
+     HEAP32[38874] = $add$ptr17$i$i;
      HEAP32[$add$ptr17$i$i + 4 >> 2] = $add$i$i | 1;
     } else {
-     if ((HEAP32[38872] | 0) == ($add$ptr16$i$i | 0)) {
-      $add26$i$i = (HEAP32[38869] | 0) + $sub18$i$i | 0;
-      HEAP32[38869] = $add26$i$i;
-      HEAP32[38872] = $add$ptr17$i$i;
+     if ((HEAP32[38873] | 0) == ($add$ptr16$i$i | 0)) {
+      $add26$i$i = (HEAP32[38870] | 0) + $sub18$i$i | 0;
+      HEAP32[38870] = $add26$i$i;
+      HEAP32[38873] = $add$ptr17$i$i;
       HEAP32[$add$ptr17$i$i + 4 >> 2] = $add26$i$i | 1;
       HEAP32[$add$ptr17$i$i + $add26$i$i >> 2] = $add26$i$i;
       break;
@@ -11854,14 +11854,14 @@ function _malloc($bytes) {
       L325 : do if ($136 >>> 0 < 256) {
        $137 = HEAP32[$add$ptr16$i$i + 8 >> 2] | 0;
        $138 = HEAP32[$add$ptr16$i$i + 12 >> 2] | 0;
-       $arrayidx$i39$i = 155508 + ($shr$i36$i << 1 << 2) | 0;
+       $arrayidx$i39$i = 155512 + ($shr$i36$i << 1 << 2) | 0;
        do if (($137 | 0) != ($arrayidx$i39$i | 0)) {
         if ($139 >>> 0 > $137 >>> 0) _abort();
         if ((HEAP32[$137 + 12 >> 2] | 0) == ($add$ptr16$i$i | 0)) break;
         _abort();
        } while (0);
        if (($138 | 0) == ($137 | 0)) {
-        HEAP32[38867] = HEAP32[38867] & ~(1 << $shr$i36$i);
+        HEAP32[38868] = HEAP32[38868] & ~(1 << $shr$i36$i);
         break;
        }
        do if (($138 | 0) == ($arrayidx$i39$i | 0)) $fd68$pre$phi$i$iZ2D = $138 + 8 | 0; else {
@@ -11934,18 +11934,18 @@ function _malloc($bytes) {
        } while (0);
        if (!$143) break;
        $152 = HEAP32[$add$ptr16$i$i + 28 >> 2] | 0;
-       $arrayidx123$i$i = 155772 + ($152 << 2) | 0;
+       $arrayidx123$i$i = 155776 + ($152 << 2) | 0;
        do if ((HEAP32[$arrayidx123$i$i >> 2] | 0) == ($add$ptr16$i$i | 0)) {
         HEAP32[$arrayidx123$i$i >> 2] = $R$3$i$i;
         if ($R$3$i$i | 0) break;
-        HEAP32[38868] = HEAP32[38868] & ~(1 << $152);
+        HEAP32[38869] = HEAP32[38869] & ~(1 << $152);
         break L325;
-       } else if ((HEAP32[38871] | 0) >>> 0 > $143 >>> 0) _abort(); else {
+       } else if ((HEAP32[38872] | 0) >>> 0 > $143 >>> 0) _abort(); else {
         $arrayidx143$i$i = $143 + 16 | 0;
         HEAP32[((HEAP32[$arrayidx143$i$i >> 2] | 0) == ($add$ptr16$i$i | 0) ? $arrayidx143$i$i : $143 + 20 | 0) >> 2] = $R$3$i$i;
         if (!$R$3$i$i) break L325; else break;
        } while (0);
-       $157 = HEAP32[38871] | 0;
+       $157 = HEAP32[38872] | 0;
        if ($157 >>> 0 > $R$3$i$i >>> 0) _abort();
        HEAP32[$R$3$i$i + 24 >> 2] = $143;
        $child166$i$i = $add$ptr16$i$i + 16 | 0;
@@ -11957,7 +11957,7 @@ function _malloc($bytes) {
        } while (0);
        $159 = HEAP32[$child166$i$i + 4 >> 2] | 0;
        if (!$159) break;
-       if ((HEAP32[38871] | 0) >>> 0 > $159 >>> 0) _abort(); else {
+       if ((HEAP32[38872] | 0) >>> 0 > $159 >>> 0) _abort(); else {
         HEAP32[$R$3$i$i + 20 >> 2] = $159;
         HEAP32[$159 + 24 >> 2] = $R$3$i$i;
         break;
@@ -11975,17 +11975,17 @@ function _malloc($bytes) {
      HEAP32[$add$ptr17$i$i + $qsize$0$i$i >> 2] = $qsize$0$i$i;
      $shr214$i$i = $qsize$0$i$i >>> 3;
      if ($qsize$0$i$i >>> 0 < 256) {
-      $arrayidx223$i$i = 155508 + ($shr214$i$i << 1 << 2) | 0;
-      $162 = HEAP32[38867] | 0;
+      $arrayidx223$i$i = 155512 + ($shr214$i$i << 1 << 2) | 0;
+      $162 = HEAP32[38868] | 0;
       $shl226$i$i = 1 << $shr214$i$i;
       do if (!($162 & $shl226$i$i)) {
-       HEAP32[38867] = $162 | $shl226$i$i;
+       HEAP32[38868] = $162 | $shl226$i$i;
        $$pre$phi$i48$iZ2D = $arrayidx223$i$i + 8 | 0;
        $F224$0$i$i = $arrayidx223$i$i;
       } else {
        $163 = $arrayidx223$i$i + 8 | 0;
        $164 = HEAP32[$163 >> 2] | 0;
-       if ((HEAP32[38871] | 0) >>> 0 <= $164 >>> 0) {
+       if ((HEAP32[38872] | 0) >>> 0 <= $164 >>> 0) {
         $$pre$phi$i48$iZ2D = $163;
         $F224$0$i$i = $164;
         break;
@@ -12012,15 +12012,15 @@ function _malloc($bytes) {
       $add278$i$i = 14 - ($and268$i$i | $and264$i$i | $and273$i$i) + ($shl270$i$i << $and273$i$i >>> 15) | 0;
       $I252$0$i$i = $qsize$0$i$i >>> ($add278$i$i + 7 | 0) & 1 | $add278$i$i << 1;
      } while (0);
-     $arrayidx287$i$i = 155772 + ($I252$0$i$i << 2) | 0;
+     $arrayidx287$i$i = 155776 + ($I252$0$i$i << 2) | 0;
      HEAP32[$add$ptr17$i$i + 28 >> 2] = $I252$0$i$i;
      $child289$i$i = $add$ptr17$i$i + 16 | 0;
      HEAP32[$child289$i$i + 4 >> 2] = 0;
      HEAP32[$child289$i$i >> 2] = 0;
-     $166 = HEAP32[38868] | 0;
+     $166 = HEAP32[38869] | 0;
      $shl294$i$i = 1 << $I252$0$i$i;
      if (!($166 & $shl294$i$i)) {
-      HEAP32[38868] = $166 | $shl294$i$i;
+      HEAP32[38869] = $166 | $shl294$i$i;
       HEAP32[$arrayidx287$i$i >> 2] = $add$ptr17$i$i;
       HEAP32[$add$ptr17$i$i + 24 >> 2] = $arrayidx287$i$i;
       HEAP32[$add$ptr17$i$i + 12 >> 2] = $add$ptr17$i$i;
@@ -12043,7 +12043,7 @@ function _malloc($bytes) {
         $T$09$i$i = $169;
        }
       }
-      if ((HEAP32[38871] | 0) >>> 0 > $arrayidx325$i$i >>> 0) _abort(); else {
+      if ((HEAP32[38872] | 0) >>> 0 > $arrayidx325$i$i >>> 0) _abort(); else {
        HEAP32[$arrayidx325$i$i >> 2] = $add$ptr17$i$i;
        HEAP32[$add$ptr17$i$i + 24 >> 2] = $T$09$i$i;
        HEAP32[$add$ptr17$i$i + 12 >> 2] = $add$ptr17$i$i;
@@ -12053,7 +12053,7 @@ function _malloc($bytes) {
      } while (0);
      $fd344$i$i = $T$0$lcssa$i50$i + 8 | 0;
      $172 = HEAP32[$fd344$i$i >> 2] | 0;
-     $173 = HEAP32[38871] | 0;
+     $173 = HEAP32[38872] | 0;
      if ($173 >>> 0 <= $172 >>> 0 & $173 >>> 0 <= $T$0$lcssa$i50$i >>> 0) {
       HEAP32[$172 + 12 >> 2] = $add$ptr17$i$i;
       HEAP32[$fd344$i$i >> 2] = $add$ptr17$i$i;
@@ -12067,7 +12067,7 @@ function _malloc($bytes) {
     STACKTOP = sp;
     return $retval$0 | 0;
    }
-   $sp$0$i$i$i = 155916;
+   $sp$0$i$i$i = 155920;
    while (1) {
     $175 = HEAP32[$sp$0$i$i$i >> 2] | 0;
     if ($175 >>> 0 <= $114 >>> 0) {
@@ -12087,21 +12087,21 @@ function _malloc($bytes) {
    $cond$i$i$i = ($179 & 7 | 0) == 0 ? 0 : 0 - $179 & 7;
    $add$ptr4$i$i$i = $tbase$799$i + $cond$i$i$i | 0;
    $sub5$i$i$i = $sub16$i$i - $cond$i$i$i | 0;
-   HEAP32[38873] = $add$ptr4$i$i$i;
-   HEAP32[38870] = $sub5$i$i$i;
+   HEAP32[38874] = $add$ptr4$i$i$i;
+   HEAP32[38871] = $sub5$i$i$i;
    HEAP32[$add$ptr4$i$i$i + 4 >> 2] = $sub5$i$i$i | 1;
    HEAP32[$tbase$799$i + $sub16$i$i + 4 >> 2] = 40;
-   HEAP32[38874] = HEAP32[38989];
+   HEAP32[38875] = HEAP32[38990];
    $head$i$i = $cond13$i$i + 4 | 0;
    HEAP32[$head$i$i >> 2] = 27;
-   HEAP32[$add$ptr14$i$i >> 2] = HEAP32[38979];
-   HEAP32[$add$ptr14$i$i + 4 >> 2] = HEAP32[38980];
-   HEAP32[$add$ptr14$i$i + 8 >> 2] = HEAP32[38981];
-   HEAP32[$add$ptr14$i$i + 12 >> 2] = HEAP32[38982];
-   HEAP32[38979] = $tbase$799$i;
-   HEAP32[38980] = $tsize$798$i;
-   HEAP32[38982] = 0;
-   HEAP32[38981] = $add$ptr14$i$i;
+   HEAP32[$add$ptr14$i$i >> 2] = HEAP32[38980];
+   HEAP32[$add$ptr14$i$i + 4 >> 2] = HEAP32[38981];
+   HEAP32[$add$ptr14$i$i + 8 >> 2] = HEAP32[38982];
+   HEAP32[$add$ptr14$i$i + 12 >> 2] = HEAP32[38983];
+   HEAP32[38980] = $tbase$799$i;
+   HEAP32[38981] = $tsize$798$i;
+   HEAP32[38983] = 0;
+   HEAP32[38982] = $add$ptr14$i$i;
    $181 = $cond13$i$i + 24 | 0;
    do {
     $181$looptemp = $181;
@@ -12115,17 +12115,17 @@ function _malloc($bytes) {
     HEAP32[$cond13$i$i >> 2] = $sub$ptr$sub$i$i;
     $shr$i$i = $sub$ptr$sub$i$i >>> 3;
     if ($sub$ptr$sub$i$i >>> 0 < 256) {
-     $arrayidx$i$i = 155508 + ($shr$i$i << 1 << 2) | 0;
-     $183 = HEAP32[38867] | 0;
+     $arrayidx$i$i = 155512 + ($shr$i$i << 1 << 2) | 0;
+     $183 = HEAP32[38868] | 0;
      $shl39$i$i = 1 << $shr$i$i;
      if (!($183 & $shl39$i$i)) {
-      HEAP32[38867] = $183 | $shl39$i$i;
+      HEAP32[38868] = $183 | $shl39$i$i;
       $$pre$phi$i$iZ2D = $arrayidx$i$i + 8 | 0;
       $F$0$i$i = $arrayidx$i$i;
      } else {
       $184 = $arrayidx$i$i + 8 | 0;
       $185 = HEAP32[$184 >> 2] | 0;
-      if ((HEAP32[38871] | 0) >>> 0 > $185 >>> 0) _abort(); else {
+      if ((HEAP32[38872] | 0) >>> 0 > $185 >>> 0) _abort(); else {
        $$pre$phi$i$iZ2D = $184;
        $F$0$i$i = $185;
       }
@@ -12146,14 +12146,14 @@ function _malloc($bytes) {
      $add83$i$i = 14 - ($and73$i$i | $and69$i$i | $and78$i$i) + ($shl75$i$i << $and78$i$i >>> 15) | 0;
      $I57$0$i$i = $sub$ptr$sub$i$i >>> ($add83$i$i + 7 | 0) & 1 | $add83$i$i << 1;
     }
-    $arrayidx91$i$i = 155772 + ($I57$0$i$i << 2) | 0;
+    $arrayidx91$i$i = 155776 + ($I57$0$i$i << 2) | 0;
     HEAP32[$114 + 28 >> 2] = $I57$0$i$i;
     HEAP32[$114 + 20 >> 2] = 0;
     HEAP32[$add$ptr81$i$i >> 2] = 0;
-    $187 = HEAP32[38868] | 0;
+    $187 = HEAP32[38869] | 0;
     $shl95$i$i = 1 << $I57$0$i$i;
     if (!($187 & $shl95$i$i)) {
-     HEAP32[38868] = $187 | $shl95$i$i;
+     HEAP32[38869] = $187 | $shl95$i$i;
      HEAP32[$arrayidx91$i$i >> 2] = $114;
      HEAP32[$114 + 24 >> 2] = $arrayidx91$i$i;
      HEAP32[$114 + 12 >> 2] = $114;
@@ -12176,7 +12176,7 @@ function _malloc($bytes) {
        $T$010$i$i = $190;
       }
      }
-     if ((HEAP32[38871] | 0) >>> 0 > $arrayidx126$i$i >>> 0) _abort(); else {
+     if ((HEAP32[38872] | 0) >>> 0 > $arrayidx126$i$i >>> 0) _abort(); else {
       HEAP32[$arrayidx126$i$i >> 2] = $114;
       HEAP32[$114 + 24 >> 2] = $T$010$i$i;
       HEAP32[$114 + 12 >> 2] = $114;
@@ -12186,7 +12186,7 @@ function _malloc($bytes) {
     } while (0);
     $fd148$i$i = $T$0$lcssa$i$i + 8 | 0;
     $193 = HEAP32[$fd148$i$i >> 2] | 0;
-    $194 = HEAP32[38871] | 0;
+    $194 = HEAP32[38872] | 0;
     if ($194 >>> 0 <= $193 >>> 0 & $194 >>> 0 <= $T$0$lcssa$i$i >>> 0) {
      HEAP32[$193 + 12 >> 2] = $114;
      HEAP32[$fd148$i$i >> 2] = $114;
@@ -12197,13 +12197,13 @@ function _malloc($bytes) {
     } else _abort();
    }
   } while (0);
-  $196 = HEAP32[38870] | 0;
+  $196 = HEAP32[38871] | 0;
   if ($196 >>> 0 > $nb$0 >>> 0) {
    $sub260$i = $196 - $nb$0 | 0;
-   HEAP32[38870] = $sub260$i;
-   $197 = HEAP32[38873] | 0;
+   HEAP32[38871] = $sub260$i;
+   $197 = HEAP32[38874] | 0;
    $add$ptr262$i = $197 + $nb$0 | 0;
-   HEAP32[38873] = $add$ptr262$i;
+   HEAP32[38874] = $add$ptr262$i;
    HEAP32[$add$ptr262$i + 4 >> 2] = $sub260$i | 1;
    HEAP32[$197 + 4 >> 2] = $nb$0 | 3;
    $retval$0 = $197 + 8 | 0;
@@ -12632,17 +12632,17 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
  HEAP32[$output_bytes >> 2] = Math_imul(HEAP32[$out_n$addr >> 2] | 0, HEAP32[$bytes >> 2] | 0) | 0;
  HEAP32[$filter_bytes >> 2] = Math_imul(HEAP32[$img_n >> 2] | 0, HEAP32[$bytes >> 2] | 0) | 0;
  HEAP32[$width >> 2] = HEAP32[$x$addr >> 2];
- if ((HEAP32[$out_n$addr >> 2] | 0) != (HEAP32[(HEAP32[$s >> 2] | 0) + 8 >> 2] | 0)) if ((HEAP32[$out_n$addr >> 2] | 0) != ((HEAP32[(HEAP32[$s >> 2] | 0) + 8 >> 2] | 0) + 1 | 0)) ___assert_fail(39870, 39140, 4410, 39911);
+ if ((HEAP32[$out_n$addr >> 2] | 0) != (HEAP32[(HEAP32[$s >> 2] | 0) + 8 >> 2] | 0)) if ((HEAP32[$out_n$addr >> 2] | 0) != ((HEAP32[(HEAP32[$s >> 2] | 0) + 8 >> 2] | 0) + 1 | 0)) ___assert_fail(39888, 39158, 4410, 39929);
  $call = _stbi__malloc_mad3(HEAP32[$x$addr >> 2] | 0, HEAP32[$y$addr >> 2] | 0, HEAP32[$output_bytes >> 2] | 0, 0) | 0;
  HEAP32[(HEAP32[$a$addr >> 2] | 0) + 12 >> 2] = $call;
  if (!(HEAP32[(HEAP32[$a$addr >> 2] | 0) + 12 >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _stbi__err(39216) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(39234) | 0;
   $607 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $607 | 0;
  }
  if (!(_stbi__mad3sizes_valid(HEAP32[$img_n >> 2] | 0, HEAP32[$x$addr >> 2] | 0, HEAP32[$depth$addr >> 2] | 0, 7) | 0)) {
-  HEAP32[$retval >> 2] = _stbi__err(39344) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(39362) | 0;
   $607 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $607 | 0;
@@ -12651,7 +12651,7 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
  HEAP32[$img_width_bytes >> 2] = ((Math_imul($mul17, HEAP32[$depth$addr >> 2] | 0) | 0) + 7 | 0) >>> 3;
  HEAP32[$img_len >> 2] = Math_imul((HEAP32[$img_width_bytes >> 2] | 0) + 1 | 0, HEAP32[$y$addr >> 2] | 0) | 0;
  if ((HEAP32[$raw_len$addr >> 2] | 0) >>> 0 < (HEAP32[$img_len >> 2] | 0) >>> 0) {
-  HEAP32[$retval >> 2] = _stbi__err(39938) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(39956) | 0;
   $607 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $607 | 0;
@@ -12681,7 +12681,7 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
    HEAP32[$width >> 2] = HEAP32[$img_width_bytes >> 2];
   }
   HEAP32[$prior >> 2] = (HEAP32[$cur >> 2] | 0) + (0 - (HEAP32[$stride >> 2] | 0));
-  if (!(HEAP32[$j >> 2] | 0)) HEAP32[$filter >> 2] = HEAPU8[39992 + (HEAP32[$filter >> 2] | 0) >> 0];
+  if (!(HEAP32[$j >> 2] | 0)) HEAP32[$filter >> 2] = HEAPU8[40010 + (HEAP32[$filter >> 2] | 0) >> 0];
   HEAP32[$k >> 2] = 0;
   while (1) {
    if ((HEAP32[$k >> 2] | 0) >= (HEAP32[$filter_bytes >> 2] | 0)) break;
@@ -13013,11 +13013,11 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
   HEAP32[$j >> 2] = (HEAP32[$j >> 2] | 0) + 1;
  }
  if ((label | 0) == 13) {
-  HEAP32[$retval >> 2] = _stbi__err(39956) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(39974) | 0;
   $607 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $607 | 0;
- } else if ((label | 0) == 16) ___assert_fail(39971, 39140, 4432, 39911); else if ((label | 0) == 64) ___assert_fail(39997, 39140, 4494, 39911); else if ((label | 0) == 113) {
+ } else if ((label | 0) == 16) ___assert_fail(39989, 39158, 4432, 39929); else if ((label | 0) == 64) ___assert_fail(40015, 39158, 4494, 39929); else if ((label | 0) == 113) {
   L152 : do if ((HEAP32[$depth$addr >> 2] | 0) < 8) {
    HEAP32[$j >> 2] = 0;
    L154 : while (1) {
@@ -13026,7 +13026,7 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
     $add$ptr496 = (HEAP32[(HEAP32[$a$addr >> 2] | 0) + 12 >> 2] | 0) + (Math_imul(HEAP32[$stride >> 2] | 0, HEAP32[$j >> 2] | 0) | 0) | 0;
     $add$ptr498 = $add$ptr496 + (Math_imul(HEAP32[$x$addr >> 2] | 0, HEAP32[$out_n$addr >> 2] | 0) | 0) | 0;
     HEAP32[$in >> 2] = $add$ptr498 + (0 - (HEAP32[$img_width_bytes >> 2] | 0));
-    if (!(HEAP32[$color$addr >> 2] | 0)) $cond505 = HEAPU8[39720 + (HEAP32[$depth$addr >> 2] | 0) >> 0] | 0; else $cond505 = 1;
+    if (!(HEAP32[$color$addr >> 2] | 0)) $cond505 = HEAPU8[39738 + (HEAP32[$depth$addr >> 2] | 0) >> 0] | 0; else $cond505 = 1;
     HEAP8[$scale >> 0] = $cond505;
     do if ((HEAP32[$depth$addr >> 2] | 0) == 4) {
      HEAP32[$k >> 2] = Math_imul(HEAP32[$x$addr >> 2] | 0, HEAP32[$img_n >> 2] | 0) | 0;
@@ -13202,7 +13202,7 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
     } while (0);
     HEAP32[$j >> 2] = (HEAP32[$j >> 2] | 0) + 1;
    }
-   ___assert_fail(40014, 39140, 4583, 39911);
+   ___assert_fail(40032, 39158, 4583, 39929);
   } else if ((HEAP32[$depth$addr >> 2] | 0) == 16) {
    HEAP32[$cur826 >> 2] = HEAP32[(HEAP32[$a$addr >> 2] | 0) + 12 >> 2];
    HEAP32[$cur16 >> 2] = HEAP32[$cur826 >> 2];
@@ -13323,9 +13323,9 @@ function _ma_device_process_pcm_frames_playback__webaudio($pDevice, $frameCount,
   HEAP32[$pDevice$addr$i18 >> 2] = $2;
   HEAP32[$frameCount$addr$i19 >> 2] = $3;
   HEAP32[$pFramesOut$addr$i >> 2] = $4;
-  if (!(HEAP32[$pDevice$addr$i18 >> 2] | 0)) ___assert_fail(24947, 24969, 5848, 25127);
-  if ((HEAP32[$frameCount$addr$i19 >> 2] | 0) >>> 0 <= 0) ___assert_fail(25056, 24969, 5849, 25127);
-  if (!(HEAP32[$pFramesOut$addr$i >> 2] | 0)) ___assert_fail(25162, 24969, 5850, 25127);
+  if (!(HEAP32[$pDevice$addr$i18 >> 2] | 0)) ___assert_fail(24965, 24987, 5848, 25145);
+  if ((HEAP32[$frameCount$addr$i19 >> 2] | 0) >>> 0 <= 0) ___assert_fail(25074, 24987, 5849, 25145);
+  if (!(HEAP32[$pFramesOut$addr$i >> 2] | 0)) ___assert_fail(25180, 24987, 5850, 25145);
   $246 = HEAP32[$pDevice$addr$i18 >> 2] | 0;
   if (!((HEAPU8[(HEAP32[$pDevice$addr$i18 >> 2] | 0) + 384 + 384 + 46464 >> 0] | 0) >>> 6 & 1)) {
    _ma_pcm_converter_read($246 + 384 + 384 | 0, HEAP32[$pFramesOut$addr$i >> 2] | 0, HEAP32[$frameCount$addr$i19 >> 2] | 0, 0) | 0;
@@ -13406,10 +13406,10 @@ function _ma_device_process_pcm_frames_playback__webaudio($pDevice, $frameCount,
  HEAP32[$frameCount$addr$i >> 2] = $3;
  HEAP32[$pFramesInInternalFormat$addr$i >> 2] = $4;
  HEAP32[$pRB$addr$i >> 2] = $duplexRB;
- if (!(HEAP32[$pDevice$addr$i >> 2] | 0)) ___assert_fail(24947, 24969, 5947, 25013);
- if ((HEAP32[$frameCount$addr$i >> 2] | 0) >>> 0 <= 0) ___assert_fail(25056, 24969, 5948, 25013);
- if (!(HEAP32[$pFramesInInternalFormat$addr$i >> 2] | 0)) ___assert_fail(25071, 24969, 5949, 25013);
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 5950, 25013);
+ if (!(HEAP32[$pDevice$addr$i >> 2] | 0)) ___assert_fail(24965, 24987, 5947, 25031);
+ if ((HEAP32[$frameCount$addr$i >> 2] | 0) >>> 0 <= 0) ___assert_fail(25074, 24987, 5948, 25031);
+ if (!(HEAP32[$pFramesInInternalFormat$addr$i >> 2] | 0)) ___assert_fail(25089, 24987, 5949, 25031);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 5950, 25031);
  _memset($silentInputFrames$i | 0, 0, 4096) | 0;
  CSE$0 = HEAP32[$pDevice$addr$i >> 2] | 0;
  $16 = _ma_calculate_frame_count_after_src(HEAP32[CSE$0 + 8 >> 2] | 0, HEAP32[CSE$0 + 384 + 312 >> 2] | 0, HEAP32[$frameCount$addr$i >> 2] | 0, 0) | 0;
@@ -13858,7 +13858,7 @@ function _stbv_inverse_mdct($buffer, $n, $f, $blocktype) {
   HEAP32[$d1216 >> 2] = (HEAP32[$d1216 >> 2] | 0) + -16;
   HEAP32[$bitrev >> 2] = (HEAP32[$bitrev >> 2] | 0) + 4;
  }
- if ((HEAP32[$v >> 2] | 0) != (HEAP32[$buf2 >> 2] | 0)) ___assert_fail(35869, 35641, 2813, 35879);
+ if ((HEAP32[$v >> 2] | 0) != (HEAP32[$buf2 >> 2] | 0)) ___assert_fail(35887, 35659, 2813, 35897);
  HEAP32[$C >> 2] = HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1084 + (HEAP32[$blocktype$addr >> 2] << 2) >> 2];
  HEAP32[$d257 >> 2] = HEAP32[$v >> 2];
  HEAP32[$e258 >> 2] = (HEAP32[$v >> 2] | 0) + (HEAP32[$n2 >> 2] << 2) + -16;
@@ -14105,11 +14105,11 @@ function _ma_src_read_deinterleaved__linear($pSRC, $0, $1, $ppSamplesOut, $pUser
  HEAP32[$2 + 4 >> 2] = $1;
  HEAP32[$ppSamplesOut$addr >> 2] = $ppSamplesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
- if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32757, 24969, 31174, 32937);
+ if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32775, 24987, 31174, 32955);
  $7 = $frameCount$addr;
  $12 = HEAP32[$7 + 4 >> 2] | 0;
- if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25056, 24969, 31175, 32937);
- if (!(HEAP32[$ppSamplesOut$addr >> 2] | 0)) ___assert_fail(32808, 24969, 31176, 32937);
+ if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25074, 24987, 31175, 32955);
+ if (!(HEAP32[$ppSamplesOut$addr >> 2] | 0)) ___assert_fail(32826, 24987, 31176, 32955);
  _memcpy($ppNextSamplesOut | 0, HEAP32[$ppSamplesOut$addr >> 2] | 0, HEAP32[(HEAP32[$pSRC$addr >> 2] | 0) + 42048 + 8 >> 2] << 2 | 0) | 0;
  $conv = Math_fround((HEAP32[(HEAP32[$pSRC$addr >> 2] | 0) + 42048 >> 2] | 0) >>> 0);
  HEAPF32[$factor >> 2] = Math_fround($conv / Math_fround((HEAP32[(HEAP32[$pSRC$addr >> 2] | 0) + 42048 + 4 >> 2] | 0) >>> 0));
@@ -14366,7 +14366,7 @@ function _ma_src_read_deinterleaved__linear($pSRC, $0, $1, $ppSamplesOut, $pUser
    break;
   }
  }
- if ((label | 0) == 30) ___assert_fail(32971, 24969, 31302, 32937); else if ((label | 0) == 32) ___assert_fail(33066, 24969, 31303, 32937); else if ((label | 0) == 36) ___assert_fail(33161, 24969, 31323, 32937); else if ((label | 0) == 45) {
+ if ((label | 0) == 30) ___assert_fail(32989, 24987, 31302, 32955); else if ((label | 0) == 32) ___assert_fail(33084, 24987, 31303, 32955); else if ((label | 0) == 36) ___assert_fail(33179, 24987, 31323, 32955); else if ((label | 0) == 45) {
   $377 = $totalFramesRead;
   $379 = HEAP32[$377 >> 2] | 0;
   setTempRet0(HEAP32[$377 + 4 >> 2] | 0);
@@ -14404,13 +14404,13 @@ function _fmt_fp($f, $y, $w, $p, $fl, $t) {
   $8 = getTempRet0() | 0;
   $85 = $3;
   $pl$0 = 1;
-  $prefix$0 = 44855;
+  $prefix$0 = 44873;
   $y$addr$0 = $sub;
  } else {
   $8 = $1;
   $85 = $0;
   $pl$0 = ($fl & 2049 | 0) != 0 & 1;
-  $prefix$0 = ($fl & 2048 | 0) == 0 ? (($fl & 1 | 0) == 0 ? 44856 : 44861) : 44858;
+  $prefix$0 = ($fl & 2048 | 0) == 0 ? (($fl & 1 | 0) == 0 ? 44874 : 44879) : 44876;
   $y$addr$0 = $y;
  }
  do if (0 == 0 & ($8 & 2146435072 | 0) == 2146435072) {
@@ -14418,7 +14418,7 @@ function _fmt_fp($f, $y, $w, $p, $fl, $t) {
   $add = $pl$0 + 3 | 0;
   _pad_667($f, 32, $w, $add, $fl & -65537);
   _out($f, $prefix$0, $pl$0);
-  _out($f, $y$addr$0 != $y$addr$0 | 0.0 != 0.0 ? ($tobool37 ? 44882 : 44886) : $tobool37 ? 44874 : 44878, 3);
+  _out($f, $y$addr$0 != $y$addr$0 | 0.0 != 0.0 ? ($tobool37 ? 44900 : 44904) : $tobool37 ? 44892 : 44896, 3);
   _pad_667($f, 32, $w, $add, $fl ^ 8192);
   $add653$sink524 = $add;
  } else {
@@ -14876,7 +14876,7 @@ function _fmt_fp($f, $y, $w, $p, $fl, $t) {
     _out($f, $s668$1, $sub$ptr$lhs$cast694 - $s668$1 | 0);
     $d$5438 = $d$5438 + 4 | 0;
    } while ($d$5438 >>> 0 <= $z$0 >>> 0);
-   if (!(($fl & 8 | 0) == 0 & ($tobool609 ^ 1))) _out($f, 44890, 1);
+   if (!(($fl & 8 | 0) == 0 & ($tobool609 ^ 1))) _out($f, 44908, 1);
    if ($d$5438 >>> 0 < $z$9$lcssa >>> 0 & ($p$addr$3 | 0) > 0) {
     $d$6432 = $d$5438;
     $p$addr$4433 = $p$addr$3;
@@ -14926,7 +14926,7 @@ function _fmt_fp($f, $y, $w, $p, $fl, $t) {
        $s753$2 = $incdec$ptr776;
        break;
       }
-      _out($f, 44890, 1);
+      _out($f, 44908, 1);
       $s753$2 = $incdec$ptr776;
      } else {
       if ($s753$0 >>> 0 <= $buf >>> 0) {
@@ -15565,7 +15565,7 @@ function _stbv_vorbis_decode_packet_rest($f, $len, $m, $left_start, $left_end, $
   STACKTOP = sp;
   return $450 | 0;
  }
- do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35782, 35641, 3289, 35838); while (0);
+ do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35800, 35659, 3289, 35856); while (0);
  _memcpy($really_zero_channel | 0, $zero_channel | 0, HEAP32[(HEAP32[$f$addr >> 2] | 0) + 4 >> 2] << 2 | 0) | 0;
  HEAP32[$i >> 2] = 0;
  while (1) {
@@ -15605,7 +15605,7 @@ function _stbv_vorbis_decode_packet_rest($f, $len, $m, $left_start, $left_end, $
   _stbv_decode_residue(HEAP32[$f$addr >> 2] | 0, $residue_buffers, HEAP32[$ch >> 2] | 0, HEAP32[$n2 >> 2] | 0, HEAP32[$r >> 2] | 0, $do_not_decode);
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35782, 35641, 3322, 35838); while (0);
+ do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35800, 35659, 3322, 35856); while (0);
  HEAP32[$i >> 2] = (HEAPU16[HEAP32[$map >> 2] >> 1] | 0) - 1;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) < 0) break;
@@ -15707,7 +15707,7 @@ function _stbv_vorbis_decode_packet_rest($f, $len, $m, $left_start, $left_end, $
   $current_loc505 = (HEAP32[$f$addr >> 2] | 0) + 1060 | 0;
   HEAP32[$current_loc505 >> 2] = (HEAP32[$current_loc505 >> 2] | 0) + ((HEAP32[$right_start$addr >> 2] | 0) - (HEAP32[$left_start$addr >> 2] | 0));
  }
- do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35782, 35641, 3438, 35838); while (0);
+ do if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35800, 35659, 3438, 35856); while (0);
  HEAP32[HEAP32[$len$addr >> 2] >> 2] = HEAP32[$right_end$addr >> 2];
  HEAP32[$retval >> 2] = 1;
  $450 = HEAP32[$retval >> 2] | 0;
@@ -16113,11 +16113,11 @@ function _ma_src_read_deinterleaved__sinc($pSRC, $0, $1, $ppSamplesOut, $pUserDa
  HEAP32[$2 + 4 >> 2] = $1;
  HEAP32[$ppSamplesOut$addr >> 2] = $ppSamplesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
- if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32757, 24969, 31589, 32776);
+ if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32775, 24987, 31589, 32794);
  $7 = $frameCount$addr;
  $12 = HEAP32[$7 + 4 >> 2] | 0;
- if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25056, 24969, 31590, 32776);
- if (!(HEAP32[$ppSamplesOut$addr >> 2] | 0)) ___assert_fail(32808, 24969, 31591, 32776);
+ if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25074, 24987, 31590, 32794);
+ if (!(HEAP32[$ppSamplesOut$addr >> 2] | 0)) ___assert_fail(32826, 24987, 31591, 32794);
  $conv = Math_fround((HEAP32[(HEAP32[$pSRC$addr >> 2] | 0) + 42048 >> 2] | 0) >>> 0);
  HEAPF32[$factor >> 2] = Math_fround($conv / Math_fround((HEAP32[(HEAP32[$pSRC$addr >> 2] | 0) + 42048 + 4 >> 2] | 0) >>> 0));
  HEAPF32[$inverseFactor >> 2] = Math_fround(Math_fround(1.0) / Math_fround(HEAPF32[$factor >> 2]));
@@ -16375,7 +16375,7 @@ function _ma_src_read_deinterleaved__sinc($pSRC, $0, $1, $ppSamplesOut, $pUserDa
    }
   } while (0);
  }
- if ((label | 0) == 27) ___assert_fail(32835, 24969, 31662, 32776); else if ((label | 0) == 29) ___assert_fail(32850, 24969, 31663, 32776); else if ((label | 0) == 42) ___assert_fail(32757, 24969, 31418, 32873); else if ((label | 0) == 51) {
+ if ((label | 0) == 27) ___assert_fail(32853, 24987, 31662, 32794); else if ((label | 0) == 29) ___assert_fail(32868, 24987, 31663, 32794); else if ((label | 0) == 42) ___assert_fail(32775, 24987, 31418, 32891); else if ((label | 0) == 51) {
   HEAP8[$isEndOfInputLoaded233 >> 0] = $bf$load234 & -2;
   $364 = $totalOutputFramesRead;
   $365 = $364;
@@ -16386,7 +16386,7 @@ function _ma_src_read_deinterleaved__sinc($pSRC, $0, $1, $ppSamplesOut, $pUserDa
   setTempRet0($369 | 0);
   STACKTOP = sp;
   return $366 | 0;
- } else if ((label | 0) == 53) ___assert_fail(32907, 24969, 31861, 32776); else if ((label | 0) == 73) {
+ } else if ((label | 0) == 53) ___assert_fail(32925, 24987, 31861, 32794); else if ((label | 0) == 73) {
   $364 = $totalOutputFramesRead;
   $365 = $364;
   $366 = HEAP32[$365 >> 2] | 0;
@@ -16730,7 +16730,7 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
    } else while (1) {
     if ((HEAP32[$k >> 2] | 0) >= (HEAP32[(HEAP32[$s >> 2] | 0) + 8 >> 2] | 0)) break L11;
     $conv245 = (_stbi__get16be(HEAP32[$s >> 2] | 0) | 0) & 255;
-    $conv250 = (Math_imul($conv245, HEAPU8[39720 + (HEAP32[(HEAP32[$z$addr >> 2] | 0) + 16 >> 2] | 0) >> 0] | 0) | 0) & 255;
+    $conv250 = (Math_imul($conv245, HEAPU8[39738 + (HEAP32[(HEAP32[$z$addr >> 2] | 0) + 16 >> 2] | 0) >> 0] | 0) | 0) & 255;
     HEAP8[$tc + (HEAP32[$k >> 2] | 0) >> 0] = $conv250;
     HEAP32[$k >> 2] = (HEAP32[$k >> 2] | 0) + 1;
    }
@@ -16752,91 +16752,91 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
  switch (label | 0) {
  case 9:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39504) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39522) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 11:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39518) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39536) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 13:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39344) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39362) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 15:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39344) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39362) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 21:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39531) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39549) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 23:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39551) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39569) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 26:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39551) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39569) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 30:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39551) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39569) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 32:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39561) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39579) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 34:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39577) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39595) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 36:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39595) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39613) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 39:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39616) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39634) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 42:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39344) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39362) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
@@ -16850,42 +16850,42 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
   }
  case 46:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39344) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39362) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 48:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39630) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39648) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 50:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39645) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39663) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 52:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39645) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39663) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 57:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39630) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39648) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 59:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39658) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39676) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
@@ -16900,42 +16900,42 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
   }
  case 64:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39674) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39692) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 66:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39691) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39709) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 71:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39704) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39722) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 73:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39691) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39709) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 82:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39630) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39648) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 84:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39729) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39747) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
@@ -16957,14 +16957,14 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
   }
  case 96:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39216) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39234) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
   }
  case 99:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39737) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39755) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
@@ -16972,7 +16972,7 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
  case 101:
   {
    if (HEAP32[$first >> 2] | 0) {
-    HEAP32[$retval >> 2] = _stbi__err(39630) | 0;
+    HEAP32[$retval >> 2] = _stbi__err(39648) | 0;
     $237 = HEAP32[$retval >> 2] | 0;
     STACKTOP = sp;
     return $237 | 0;
@@ -16984,7 +16984,7 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
     return $237 | 0;
    }
    if (!(HEAP32[(HEAP32[$z$addr >> 2] | 0) + 4 >> 2] | 0)) {
-    HEAP32[$retval >> 2] = _stbi__err(39747) | 0;
+    HEAP32[$retval >> 2] = _stbi__err(39765) | 0;
     $237 = HEAP32[$retval >> 2] | 0;
     STACKTOP = sp;
     return $237 | 0;
@@ -17057,7 +17057,7 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
   }
  case 133:
   {
-   HEAP32[$retval >> 2] = _stbi__err(39630) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(39648) | 0;
    $237 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $237 | 0;
@@ -18055,10 +18055,10 @@ function _ma_device_process_pcm_frames_capture__webaudio($pDevice, $frameCount, 
   HEAP32[$frameCount$addr$i >> 2] = $3;
   HEAP32[$pFramesInInternalFormat$addr$i >> 2] = $4;
   HEAP32[$pRB$addr$i >> 2] = $duplexRB;
-  if (!(HEAP32[$pDevice$addr$i >> 2] | 0)) ___assert_fail(24947, 24969, 5896, 25374);
-  if ((HEAP32[$frameCount$addr$i >> 2] | 0) >>> 0 <= 0) ___assert_fail(25056, 24969, 5897, 25374);
-  if (!(HEAP32[$pFramesInInternalFormat$addr$i >> 2] | 0)) ___assert_fail(25071, 24969, 5898, 25374);
-  if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 5899, 25374);
+  if (!(HEAP32[$pDevice$addr$i >> 2] | 0)) ___assert_fail(24965, 24987, 5896, 25392);
+  if ((HEAP32[$frameCount$addr$i >> 2] | 0) >>> 0 <= 0) ___assert_fail(25074, 24987, 5897, 25392);
+  if (!(HEAP32[$pFramesInInternalFormat$addr$i >> 2] | 0)) ___assert_fail(25089, 24987, 5898, 25392);
+  if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 5899, 25392);
   HEAP32[(HEAP32[$pDevice$addr$i >> 2] | 0) + 47360 + 46912 >> 2] = HEAP32[$frameCount$addr$i >> 2];
   HEAP32[(HEAP32[$pDevice$addr$i >> 2] | 0) + 47360 + 46916 >> 2] = HEAP32[$pFramesInInternalFormat$addr$i >> 2];
   while (1) {
@@ -18089,11 +18089,11 @@ function _ma_device_process_pcm_frames_capture__webaudio($pDevice, $frameCount, 
    }
   }
   if ((label | 0) == 12) {
-   _ma_post_error(HEAP32[$pDevice$addr$i >> 2] | 0, 1, 25416, HEAP32[$result$i >> 2] | 0) | 0;
+   _ma_post_error(HEAP32[$pDevice$addr$i >> 2] | 0, 1, 25434, HEAP32[$result$i >> 2] | 0) | 0;
    STACKTOP = sp;
    return;
   } else if ((label | 0) == 16) {
-   _ma_post_error(HEAP32[$pDevice$addr$i >> 2] | 0, 1, 25471, HEAP32[$result$i >> 2] | 0) | 0;
+   _ma_post_error(HEAP32[$pDevice$addr$i >> 2] | 0, 1, 25489, HEAP32[$result$i >> 2] | 0) | 0;
    STACKTOP = sp;
    return;
   } else if ((label | 0) == 64) {
@@ -18104,9 +18104,9 @@ function _ma_device_process_pcm_frames_capture__webaudio($pDevice, $frameCount, 
  HEAP32[$pDevice$addr$i1 >> 2] = $2;
  HEAP32[$frameCount$addr$i2 >> 2] = $3;
  HEAP32[$pFrames$addr$i >> 2] = $4;
- if (!(HEAP32[$pDevice$addr$i1 >> 2] | 0)) ___assert_fail(24947, 24969, 5862, 25523);
- if ((HEAP32[$frameCount$addr$i2 >> 2] | 0) >>> 0 <= 0) ___assert_fail(25056, 24969, 5863, 25523);
- if (!(HEAP32[$pFrames$addr$i >> 2] | 0)) ___assert_fail(25556, 24969, 5864, 25523);
+ if (!(HEAP32[$pDevice$addr$i1 >> 2] | 0)) ___assert_fail(24965, 24987, 5862, 25541);
+ if ((HEAP32[$frameCount$addr$i2 >> 2] | 0) >>> 0 <= 0) ___assert_fail(25074, 24987, 5863, 25541);
+ if (!(HEAP32[$pFrames$addr$i >> 2] | 0)) ___assert_fail(25574, 24987, 5864, 25541);
  if ((HEAPU8[(HEAP32[$pDevice$addr$i1 >> 2] | 0) + 47360 + 384 + 46464 >> 0] | 0) >>> 6 & 1 | 0) {
   $40 = HEAP32[$pFrames$addr$i >> 2] | 0;
   $41 = HEAP32[$frameCount$addr$i2 >> 2] | 0;
@@ -18337,7 +18337,7 @@ function _stbir__resample_vertical_upsample($stbir_info, $n) {
  HEAP32[$n0 >> 2] = HEAP32[(HEAP32[$vertical_contributors >> 2] | 0) + (HEAP32[$contributor >> 2] << 3) >> 2];
  HEAP32[$n1 >> 2] = HEAP32[(HEAP32[$vertical_contributors >> 2] | 0) + (HEAP32[$contributor >> 2] << 3) + 4 >> 2];
  HEAP32[$output_row_start >> 2] = Math_imul(HEAP32[$n$addr >> 2] | 0, HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 28 >> 2] | 0) | 0;
- if (!(_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0)) ___assert_fail(42132, 40603, 1897, 42281);
+ if (!(_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0)) ___assert_fail(42150, 40621, 1897, 42299);
  _memset(HEAP32[$encode_buffer >> 2] | 0, 0, Math_imul(HEAP32[$output_w >> 2] << 2, HEAP32[$channels >> 2] | 0) | 0) | 0;
  HEAP32[$coefficient_counter >> 2] = 0;
  switch (HEAP32[$channels >> 2] | 0) {
@@ -18913,7 +18913,7 @@ function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_d
      $fl$4 = $spec$select;
      $p$2 = ($spec$select & 8 | 0) == 0 | ($p$0 | 0) > ($sub$ptr$sub269 | 0) ? $p$0 : $sub$ptr$sub269 + 1 | 0;
      $pl$1 = 0;
-     $prefix$1 = 44838;
+     $prefix$1 = 44856;
      label = 73;
      break;
     }
@@ -18932,14 +18932,14 @@ function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_d
       $135 = $127;
       $136 = $128;
       $pl$0 = 1;
-      $prefix$0 = 44838;
+      $prefix$0 = 44856;
       label = 72;
       break L79;
      } else {
       $135 = $122;
       $136 = $125;
       $pl$0 = ($spec$select & 2049 | 0) != 0 & 1;
-      $prefix$0 = ($spec$select & 2048 | 0) == 0 ? (($spec$select & 1 | 0) == 0 ? 44838 : 44840) : 44839;
+      $prefix$0 = ($spec$select & 2048 | 0) == 0 ? (($spec$select & 1 | 0) == 0 ? 44856 : 44858) : 44857;
       label = 72;
       break L79;
      }
@@ -18951,7 +18951,7 @@ function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_d
      $135 = HEAP32[$71 >> 2] | 0;
      $136 = HEAP32[$71 + 4 >> 2] | 0;
      $pl$0 = 0;
-     $prefix$0 = 44838;
+     $prefix$0 = 44856;
      label = 72;
      break;
     }
@@ -18962,21 +18962,21 @@ function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_d
      $fl$6 = $and220;
      $p$5 = 1;
      $pl$2 = 0;
-     $prefix$2 = 44838;
+     $prefix$2 = 44856;
      $sub$ptr$lhs$cast426$pre$phiZZZZ2D = $sub$ptr$lhs$cast318;
      break;
     }
    case 115:
     {
      $154 = HEAP32[$arg >> 2] | 0;
-     $cond350 = ($154 | 0) == 0 ? 44848 : $154;
+     $cond350 = ($154 | 0) == 0 ? 44866 : $154;
      $call351 = _memchr($cond350, 0, $p$0) | 0;
      $tobool352 = ($call351 | 0) == 0;
      $a$1 = $cond350;
      $fl$6 = $and220;
      $p$5 = $tobool352 ? $p$0 : $call351 - $cond350 | 0;
      $pl$2 = 0;
-     $prefix$2 = 44838;
+     $prefix$2 = 44856;
      $sub$ptr$lhs$cast426$pre$phiZZZZ2D = $tobool352 ? $cond350 + $p$0 | 0 : $call351;
      break;
     }
@@ -19020,7 +19020,7 @@ function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_d
      $fl$6 = $spec$select;
      $p$5 = $p$0;
      $pl$2 = 0;
-     $prefix$2 = 44838;
+     $prefix$2 = 44856;
      $sub$ptr$lhs$cast426$pre$phiZZZZ2D = $sub$ptr$lhs$cast318;
     }
    } while (0);
@@ -19034,7 +19034,7 @@ function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_d
     $fl$4 = $fl$3;
     $p$2 = $p$1;
     $pl$1 = $or$cond190 ? 0 : 2;
-    $prefix$1 = $or$cond190 ? 44838 : 44838 + ($t$1 >>> 4) | 0;
+    $prefix$1 = $or$cond190 ? 44856 : 44856 + ($t$1 >>> 4) | 0;
     label = 73;
    } else if ((label | 0) == 72) {
     label = 0;
@@ -19407,7 +19407,7 @@ function _stbir__decode_scanline($stbir_info, $n) {
    break;
   }
  default:
-  ___assert_fail(41928, 40603, 1368, 41977);
+  ___assert_fail(41946, 40621, 1368, 41995);
  } while (0);
  L94 : do if (!(HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 72 >> 2] & 1)) {
   HEAP32[$x >> 2] = 0 - (HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 144 >> 2] | 0);
@@ -19678,7 +19678,7 @@ function _stbi_zlib_compress($data, $data_len, $out_len, $quality) {
    HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
   }
  }
- if ((label | 0) == 41) ___assert_fail(40452, 40399, 922, 40478);
+ if ((label | 0) == 41) ___assert_fail(40470, 40417, 922, 40496);
  while (1) {
   if ((HEAP32[$i >> 2] | 0) >= (HEAP32[$data_len$addr >> 2] | 0)) break;
   $conv296 = HEAPU8[(HEAP32[$data$addr >> 2] | 0) + (HEAP32[$i >> 2] | 0) >> 0] | 0;
@@ -19832,7 +19832,7 @@ function _ImageFormat($image, $newFormat) {
   return;
  }
  if (!((HEAP32[$newFormat$addr >> 2] | 0) < 11 ? (HEAP32[(HEAP32[$image$addr >> 2] | 0) + 16 >> 2] | 0) < 11 : 0)) {
-  _TraceLog(4, 44386, sp_a);
+  _TraceLog(4, 44404, sp_a);
   STACKTOP = sp;
   return;
  }
@@ -20136,7 +20136,7 @@ function _stbir__resample_horizontal_downsample($stbir_info, $output_buffer) {
  HEAP32[$coefficient_width >> 2] = HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 128 >> 2];
  HEAP32[$filter_pixel_margin >> 2] = HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 144 >> 2];
  HEAP32[$max_x >> 2] = (HEAP32[$input_w >> 2] | 0) + (HEAP32[$filter_pixel_margin >> 2] << 1);
- if (_stbir__use_width_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0) ___assert_fail(41547, 40603, 1536, 41588);
+ if (_stbir__use_width_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0) ___assert_fail(41565, 40621, 1536, 41606);
  switch (HEAP32[$channels >> 2] | 0) {
  case 1:
   {
@@ -20169,7 +20169,7 @@ function _stbir__resample_horizontal_downsample($stbir_info, $output_buffer) {
     }
     HEAP32[$x >> 2] = (HEAP32[$x >> 2] | 0) + 1;
    }
-   if ((label | 0) == 9) ___assert_fail(41626, 40603, 1554, 41588); else if ((label | 0) == 47) {
+   if ((label | 0) == 9) ___assert_fail(41644, 40621, 1554, 41606); else if ((label | 0) == 47) {
     STACKTOP = sp;
     return;
    }
@@ -20210,7 +20210,7 @@ function _stbir__resample_horizontal_downsample($stbir_info, $output_buffer) {
     }
     HEAP32[$x >> 2] = (HEAP32[$x >> 2] | 0) + 1;
    }
-   if ((label | 0) == 17) ___assert_fail(41626, 40603, 1575, 41588); else if ((label | 0) == 47) {
+   if ((label | 0) == 17) ___assert_fail(41644, 40621, 1575, 41606); else if ((label | 0) == 47) {
     STACKTOP = sp;
     return;
    }
@@ -20255,7 +20255,7 @@ function _stbir__resample_horizontal_downsample($stbir_info, $output_buffer) {
     }
     HEAP32[$x >> 2] = (HEAP32[$x >> 2] | 0) + 1;
    }
-   if ((label | 0) == 25) ___assert_fail(41626, 40603, 1597, 41588); else if ((label | 0) == 47) {
+   if ((label | 0) == 25) ___assert_fail(41644, 40621, 1597, 41606); else if ((label | 0) == 47) {
     STACKTOP = sp;
     return;
    }
@@ -20304,7 +20304,7 @@ function _stbir__resample_horizontal_downsample($stbir_info, $output_buffer) {
     }
     HEAP32[$x >> 2] = (HEAP32[$x >> 2] | 0) + 1;
    }
-   if ((label | 0) == 33) ___assert_fail(41626, 40603, 1620, 41588); else if ((label | 0) == 47) {
+   if ((label | 0) == 33) ___assert_fail(41644, 40621, 1620, 41606); else if ((label | 0) == 47) {
     STACKTOP = sp;
     return;
    }
@@ -20346,7 +20346,7 @@ function _stbir__resample_horizontal_downsample($stbir_info, $output_buffer) {
     }
     HEAP32[$x >> 2] = (HEAP32[$x >> 2] | 0) + 1;
    }
-   if ((label | 0) == 41) ___assert_fail(41626, 40603, 1645, 41588); else if ((label | 0) == 47) {
+   if ((label | 0) == 41) ___assert_fail(41644, 40621, 1645, 41606); else if ((label | 0) == 47) {
     STACKTOP = sp;
     return;
    }
@@ -21281,11 +21281,11 @@ function _ma_channel_router__do_routing($pRouter, $0, $1, $ppSamplesOut, $ppSamp
  HEAP32[$2 + 4 >> 2] = $1;
  HEAP32[$ppSamplesOut$addr >> 2] = $ppSamplesOut;
  HEAP32[$ppSamplesIn$addr >> 2] = $ppSamplesIn;
- if (!(HEAP32[$pRouter$addr >> 2] | 0)) ___assert_fail(32557, 24969, 30722, 33268);
- if (HEAP8[(HEAP32[$pRouter$addr >> 2] | 0) + 4184 >> 0] & 1 | 0) ___assert_fail(33298, 24969, 30723, 33268);
+ if (!(HEAP32[$pRouter$addr >> 2] | 0)) ___assert_fail(32575, 24987, 30722, 33286);
+ if (HEAP8[(HEAP32[$pRouter$addr >> 2] | 0) + 4184 >> 0] & 1 | 0) ___assert_fail(33316, 24987, 30723, 33286);
  $9 = HEAP32[$pRouter$addr >> 2] | 0;
  if ((HEAPU8[(HEAP32[$pRouter$addr >> 2] | 0) + 4184 >> 0] | 0) >>> 1 & 1 | 0) {
-  if ((HEAP32[$9 >> 2] | 0) != (HEAP32[(HEAP32[$pRouter$addr >> 2] | 0) + 4 >> 2] | 0)) ___assert_fail(33326, 24969, 30727, 33268);
+  if ((HEAP32[$9 >> 2] | 0) != (HEAP32[(HEAP32[$pRouter$addr >> 2] | 0) + 4 >> 2] | 0)) ___assert_fail(33344, 24987, 30727, 33286);
   HEAP32[$iChannelIn >> 2] = 0;
   while (1) {
    if ((HEAP32[$iChannelIn >> 2] | 0) >>> 0 >= (HEAP32[HEAP32[$pRouter$addr >> 2] >> 2] | 0) >>> 0) break;
@@ -21353,8 +21353,8 @@ function _ma_channel_router__do_routing($pRouter, $0, $1, $ppSamplesOut, $ppSamp
   return;
  }
  if ((HEAPU8[$34 + 4184 >> 0] | 0) >>> 3 & 1 | 0) {
-  if ((HEAP32[HEAP32[$pRouter$addr >> 2] >> 2] | 0) != 2) ___assert_fail(33384, 24969, 30752, 33268);
-  if ((HEAP32[(HEAP32[$pRouter$addr >> 2] | 0) + 4 >> 2] | 0) != 1) ___assert_fail(33416, 24969, 30753, 33268);
+  if ((HEAP32[HEAP32[$pRouter$addr >> 2] >> 2] | 0) != 2) ___assert_fail(33402, 24987, 30752, 33286);
+  if ((HEAP32[(HEAP32[$pRouter$addr >> 2] | 0) + 4 >> 2] | 0) != 1) ___assert_fail(33434, 24987, 30753, 33286);
   $162 = $iFrame78;
   HEAP32[$162 >> 2] = 0;
   HEAP32[$162 + 4 >> 2] = 0;
@@ -21849,7 +21849,7 @@ function _free($mem) {
  var $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $2 = 0, $23 = 0, $24 = 0, $25 = 0, $27 = 0, $28 = 0, $29 = 0, $35 = 0, $36 = 0, $4 = 0, $42 = 0, $43 = 0, $44 = 0, $48 = 0, $49 = 0, $5 = 0, $50 = 0, $51 = 0, $53 = 0, $58 = 0, $59 = 0, $60 = 0, $63 = 0, $64 = 0, $65 = 0, $67 = 0, $68 = 0, $70 = 0, $73 = 0, $74 = 0, $9 = 0, $F510$0 = 0, $I534$0 = 0, $K583$0312 = 0, $R$1 = 0, $R$1$be = 0, $R$1$ph = 0, $R$3 = 0, $R332$1 = 0, $R332$1$be = 0, $R332$1$ph = 0, $R332$3 = 0, $RP$1 = 0, $RP$1$be = 0, $RP$1$ph = 0, $RP360$1 = 0, $RP360$1$be = 0, $RP360$1$ph = 0, $T$0$lcssa = 0, $T$0311 = 0, $add$ptr = 0, $add$ptr16 = 0, $add$ptr6 = 0, $add17 = 0, $add246 = 0, $add258 = 0, $add267 = 0, $add559 = 0, $and = 0, $and5 = 0, $and545 = 0, $and549 = 0, $and554 = 0, $arrayidx = 0, $arrayidx108 = 0, $arrayidx113 = 0, $arrayidx130 = 0, $arrayidx149 = 0, $arrayidx279 = 0, $arrayidx362 = 0, $arrayidx374 = 0, $arrayidx379 = 0, $arrayidx400 = 0, $arrayidx419 = 0, $arrayidx509 = 0, $arrayidx567 = 0, $arrayidx599 = 0, $arrayidx99 = 0, $bk343 = 0, $bk82 = 0, $child = 0, $child171 = 0, $child361 = 0, $child443 = 0, $dec = 0, $fd311 = 0, $fd322$pre$phiZ2D = 0, $fd347 = 0, $fd56 = 0, $fd620 = 0, $fd67$pre$phiZ2D = 0, $fd86 = 0, $head209 = 0, $head231 = 0, $p$1 = 0, $psize$1 = 0, $psize$2 = 0, $shl511 = 0, $shl546 = 0, $shl551 = 0, $shl573 = 0, $shr = 0, $shr268 = 0, $shr501 = 0, $shr535 = 0, $sp$0$i = 0, $sp$0$in$i = 0;
  if (!$mem) return;
  $add$ptr = $mem + -8 | 0;
- $0 = HEAP32[38871] | 0;
+ $0 = HEAP32[38872] | 0;
  if ($add$ptr >>> 0 < $0 >>> 0) _abort();
  $1 = HEAP32[$mem + -4 >> 2] | 0;
  $and = $1 & 3;
@@ -21862,7 +21862,7 @@ function _free($mem) {
   $add$ptr16 = $add$ptr + (0 - $2) | 0;
   $add17 = $2 + $and5 | 0;
   if ($add$ptr16 >>> 0 < $0 >>> 0) _abort();
-  if ((HEAP32[38872] | 0) == ($add$ptr16 | 0)) {
+  if ((HEAP32[38873] | 0) == ($add$ptr16 | 0)) {
    $head209 = $add$ptr6 + 4 | 0;
    $27 = HEAP32[$head209 >> 2] | 0;
    if (($27 & 3 | 0) != 3) {
@@ -21871,7 +21871,7 @@ function _free($mem) {
     $psize$1 = $add17;
     break;
    }
-   HEAP32[38869] = $add17;
+   HEAP32[38870] = $add17;
    HEAP32[$head209 >> 2] = $27 & -2;
    HEAP32[$add$ptr16 + 4 >> 2] = $add17 | 1;
    HEAP32[$add$ptr16 + $add17 >> 2] = $add17;
@@ -21881,13 +21881,13 @@ function _free($mem) {
   if ($2 >>> 0 < 256) {
    $4 = HEAP32[$add$ptr16 + 8 >> 2] | 0;
    $5 = HEAP32[$add$ptr16 + 12 >> 2] | 0;
-   $arrayidx = 155508 + ($shr << 1 << 2) | 0;
+   $arrayidx = 155512 + ($shr << 1 << 2) | 0;
    if (($4 | 0) != ($arrayidx | 0)) {
     if ($0 >>> 0 > $4 >>> 0) _abort();
     if ((HEAP32[$4 + 12 >> 2] | 0) != ($add$ptr16 | 0)) _abort();
    }
    if (($5 | 0) == ($4 | 0)) {
-    HEAP32[38867] = HEAP32[38867] & ~(1 << $shr);
+    HEAP32[38868] = HEAP32[38868] & ~(1 << $shr);
     $28 = $add$ptr16;
     $p$1 = $add$ptr16;
     $psize$1 = $add17;
@@ -21967,17 +21967,17 @@ function _free($mem) {
    $psize$1 = $add17;
   } else {
    $18 = HEAP32[$add$ptr16 + 28 >> 2] | 0;
-   $arrayidx130 = 155772 + ($18 << 2) | 0;
+   $arrayidx130 = 155776 + ($18 << 2) | 0;
    do if ((HEAP32[$arrayidx130 >> 2] | 0) == ($add$ptr16 | 0)) {
     HEAP32[$arrayidx130 >> 2] = $R$3;
     if (!$R$3) {
-     HEAP32[38868] = HEAP32[38868] & ~(1 << $18);
+     HEAP32[38869] = HEAP32[38869] & ~(1 << $18);
      $28 = $add$ptr16;
      $p$1 = $add$ptr16;
      $psize$1 = $add17;
      break L10;
     }
-   } else if ((HEAP32[38871] | 0) >>> 0 > $9 >>> 0) _abort(); else {
+   } else if ((HEAP32[38872] | 0) >>> 0 > $9 >>> 0) _abort(); else {
     $arrayidx149 = $9 + 16 | 0;
     HEAP32[((HEAP32[$arrayidx149 >> 2] | 0) == ($add$ptr16 | 0) ? $arrayidx149 : $9 + 20 | 0) >> 2] = $R$3;
     if (!$R$3) {
@@ -21987,7 +21987,7 @@ function _free($mem) {
      break L10;
     } else break;
    } while (0);
-   $23 = HEAP32[38871] | 0;
+   $23 = HEAP32[38872] | 0;
    if ($23 >>> 0 > $R$3 >>> 0) _abort();
    HEAP32[$R$3 + 24 >> 2] = $9;
    $child171 = $add$ptr16 + 16 | 0;
@@ -22002,7 +22002,7 @@ function _free($mem) {
     $28 = $add$ptr16;
     $p$1 = $add$ptr16;
     $psize$1 = $add17;
-   } else if ((HEAP32[38871] | 0) >>> 0 > $25 >>> 0) _abort(); else {
+   } else if ((HEAP32[38872] | 0) >>> 0 > $25 >>> 0) _abort(); else {
     HEAP32[$R$3 + 20 >> 2] = $25;
     HEAP32[$25 + 24 >> 2] = $R$3;
     $28 = $add$ptr16;
@@ -22021,20 +22021,20 @@ function _free($mem) {
  $29 = HEAP32[$head231 >> 2] | 0;
  if (!($29 & 1)) _abort();
  if (!($29 & 2)) {
-  if ((HEAP32[38873] | 0) == ($add$ptr6 | 0)) {
-   $add246 = (HEAP32[38870] | 0) + $psize$1 | 0;
-   HEAP32[38870] = $add246;
-   HEAP32[38873] = $p$1;
+  if ((HEAP32[38874] | 0) == ($add$ptr6 | 0)) {
+   $add246 = (HEAP32[38871] | 0) + $psize$1 | 0;
+   HEAP32[38871] = $add246;
+   HEAP32[38874] = $p$1;
    HEAP32[$p$1 + 4 >> 2] = $add246 | 1;
-   if (($p$1 | 0) != (HEAP32[38872] | 0)) return;
-   HEAP32[38872] = 0;
-   HEAP32[38869] = 0;
+   if (($p$1 | 0) != (HEAP32[38873] | 0)) return;
+   HEAP32[38873] = 0;
+   HEAP32[38870] = 0;
    return;
   }
-  if ((HEAP32[38872] | 0) == ($add$ptr6 | 0)) {
-   $add258 = (HEAP32[38869] | 0) + $psize$1 | 0;
-   HEAP32[38869] = $add258;
-   HEAP32[38872] = $28;
+  if ((HEAP32[38873] | 0) == ($add$ptr6 | 0)) {
+   $add258 = (HEAP32[38870] | 0) + $psize$1 | 0;
+   HEAP32[38870] = $add258;
+   HEAP32[38873] = $28;
    HEAP32[$p$1 + 4 >> 2] = $add258 | 1;
    HEAP32[$28 + $add258 >> 2] = $add258;
    return;
@@ -22044,17 +22044,17 @@ function _free($mem) {
   L111 : do if ($29 >>> 0 < 256) {
    $35 = HEAP32[$add$ptr6 + 8 >> 2] | 0;
    $36 = HEAP32[$add$ptr6 + 12 >> 2] | 0;
-   $arrayidx279 = 155508 + ($shr268 << 1 << 2) | 0;
+   $arrayidx279 = 155512 + ($shr268 << 1 << 2) | 0;
    if (($35 | 0) != ($arrayidx279 | 0)) {
-    if ((HEAP32[38871] | 0) >>> 0 > $35 >>> 0) _abort();
+    if ((HEAP32[38872] | 0) >>> 0 > $35 >>> 0) _abort();
     if ((HEAP32[$35 + 12 >> 2] | 0) != ($add$ptr6 | 0)) _abort();
    }
    if (($36 | 0) == ($35 | 0)) {
-    HEAP32[38867] = HEAP32[38867] & ~(1 << $shr268);
+    HEAP32[38868] = HEAP32[38868] & ~(1 << $shr268);
     break;
    }
    if (($36 | 0) == ($arrayidx279 | 0)) $fd322$pre$phiZ2D = $36 + 8 | 0; else {
-    if ((HEAP32[38871] | 0) >>> 0 > $36 >>> 0) _abort();
+    if ((HEAP32[38872] | 0) >>> 0 > $36 >>> 0) _abort();
     $fd311 = $36 + 8 | 0;
     if ((HEAP32[$fd311 >> 2] | 0) == ($add$ptr6 | 0)) $fd322$pre$phiZ2D = $fd311; else _abort();
    }
@@ -22099,14 +22099,14 @@ function _free($mem) {
      $R332$1 = $R332$1$be;
      $RP360$1 = $RP360$1$be;
     }
-    if ((HEAP32[38871] | 0) >>> 0 > $RP360$1 >>> 0) _abort(); else {
+    if ((HEAP32[38872] | 0) >>> 0 > $RP360$1 >>> 0) _abort(); else {
      HEAP32[$RP360$1 >> 2] = 0;
      $R332$3 = $R332$1;
      break;
     }
    } else {
     $44 = HEAP32[$add$ptr6 + 8 >> 2] | 0;
-    if ((HEAP32[38871] | 0) >>> 0 > $44 >>> 0) _abort();
+    if ((HEAP32[38872] | 0) >>> 0 > $44 >>> 0) _abort();
     $bk343 = $44 + 12 | 0;
     if ((HEAP32[$bk343 >> 2] | 0) != ($add$ptr6 | 0)) _abort();
     $fd347 = $43 + 8 | 0;
@@ -22119,19 +22119,19 @@ function _free($mem) {
    } while (0);
    if ($42 | 0) {
     $53 = HEAP32[$add$ptr6 + 28 >> 2] | 0;
-    $arrayidx400 = 155772 + ($53 << 2) | 0;
+    $arrayidx400 = 155776 + ($53 << 2) | 0;
     do if ((HEAP32[$arrayidx400 >> 2] | 0) == ($add$ptr6 | 0)) {
      HEAP32[$arrayidx400 >> 2] = $R332$3;
      if (!$R332$3) {
-      HEAP32[38868] = HEAP32[38868] & ~(1 << $53);
+      HEAP32[38869] = HEAP32[38869] & ~(1 << $53);
       break L111;
      }
-    } else if ((HEAP32[38871] | 0) >>> 0 > $42 >>> 0) _abort(); else {
+    } else if ((HEAP32[38872] | 0) >>> 0 > $42 >>> 0) _abort(); else {
      $arrayidx419 = $42 + 16 | 0;
      HEAP32[((HEAP32[$arrayidx419 >> 2] | 0) == ($add$ptr6 | 0) ? $arrayidx419 : $42 + 20 | 0) >> 2] = $R332$3;
      if (!$R332$3) break L111; else break;
     } while (0);
-    $58 = HEAP32[38871] | 0;
+    $58 = HEAP32[38872] | 0;
     if ($58 >>> 0 > $R332$3 >>> 0) _abort();
     HEAP32[$R332$3 + 24 >> 2] = $42;
     $child443 = $add$ptr6 + 16 | 0;
@@ -22142,7 +22142,7 @@ function _free($mem) {
      break;
     } while (0);
     $60 = HEAP32[$child443 + 4 >> 2] | 0;
-    if ($60 | 0) if ((HEAP32[38871] | 0) >>> 0 > $60 >>> 0) _abort(); else {
+    if ($60 | 0) if ((HEAP32[38872] | 0) >>> 0 > $60 >>> 0) _abort(); else {
      HEAP32[$R332$3 + 20 >> 2] = $60;
      HEAP32[$60 + 24 >> 2] = $R332$3;
      break;
@@ -22151,8 +22151,8 @@ function _free($mem) {
   } while (0);
   HEAP32[$p$1 + 4 >> 2] = $add267 | 1;
   HEAP32[$28 + $add267 >> 2] = $add267;
-  if (($p$1 | 0) == (HEAP32[38872] | 0)) {
-   HEAP32[38869] = $add267;
+  if (($p$1 | 0) == (HEAP32[38873] | 0)) {
+   HEAP32[38870] = $add267;
    return;
   } else $psize$2 = $add267;
  } else {
@@ -22163,17 +22163,17 @@ function _free($mem) {
  }
  $shr501 = $psize$2 >>> 3;
  if ($psize$2 >>> 0 < 256) {
-  $arrayidx509 = 155508 + ($shr501 << 1 << 2) | 0;
-  $63 = HEAP32[38867] | 0;
+  $arrayidx509 = 155512 + ($shr501 << 1 << 2) | 0;
+  $63 = HEAP32[38868] | 0;
   $shl511 = 1 << $shr501;
   if (!($63 & $shl511)) {
-   HEAP32[38867] = $63 | $shl511;
+   HEAP32[38868] = $63 | $shl511;
    $$pre$phiZ2D = $arrayidx509 + 8 | 0;
    $F510$0 = $arrayidx509;
   } else {
    $64 = $arrayidx509 + 8 | 0;
    $65 = HEAP32[$64 >> 2] | 0;
-   if ((HEAP32[38871] | 0) >>> 0 > $65 >>> 0) _abort(); else {
+   if ((HEAP32[38872] | 0) >>> 0 > $65 >>> 0) _abort(); else {
     $$pre$phiZ2D = $64;
     $F510$0 = $65;
    }
@@ -22194,14 +22194,14 @@ function _free($mem) {
   $add559 = 14 - ($and549 | $and545 | $and554) + ($shl551 << $and554 >>> 15) | 0;
   $I534$0 = $psize$2 >>> ($add559 + 7 | 0) & 1 | $add559 << 1;
  }
- $arrayidx567 = 155772 + ($I534$0 << 2) | 0;
+ $arrayidx567 = 155776 + ($I534$0 << 2) | 0;
  HEAP32[$p$1 + 28 >> 2] = $I534$0;
  HEAP32[$p$1 + 20 >> 2] = 0;
  HEAP32[$p$1 + 16 >> 2] = 0;
- $67 = HEAP32[38868] | 0;
+ $67 = HEAP32[38869] | 0;
  $shl573 = 1 << $I534$0;
  L197 : do if (!($67 & $shl573)) {
-  HEAP32[38868] = $67 | $shl573;
+  HEAP32[38869] = $67 | $shl573;
   HEAP32[$arrayidx567 >> 2] = $p$1;
   HEAP32[$p$1 + 24 >> 2] = $arrayidx567;
   HEAP32[$p$1 + 12 >> 2] = $p$1;
@@ -22223,7 +22223,7 @@ function _free($mem) {
      $T$0311 = $70;
     }
    }
-   if ((HEAP32[38871] | 0) >>> 0 > $arrayidx599 >>> 0) _abort(); else {
+   if ((HEAP32[38872] | 0) >>> 0 > $arrayidx599 >>> 0) _abort(); else {
     HEAP32[$arrayidx599 >> 2] = $p$1;
     HEAP32[$p$1 + 24 >> 2] = $T$0311;
     HEAP32[$p$1 + 12 >> 2] = $p$1;
@@ -22233,7 +22233,7 @@ function _free($mem) {
   } while (0);
   $fd620 = $T$0$lcssa + 8 | 0;
   $73 = HEAP32[$fd620 >> 2] | 0;
-  $74 = HEAP32[38871] | 0;
+  $74 = HEAP32[38872] | 0;
   if ($74 >>> 0 <= $73 >>> 0 & $74 >>> 0 <= $T$0$lcssa >>> 0) {
    HEAP32[$73 + 12 >> 2] = $p$1;
    HEAP32[$fd620 >> 2] = $p$1;
@@ -22243,15 +22243,15 @@ function _free($mem) {
    break;
   } else _abort();
  } while (0);
- $dec = (HEAP32[38875] | 0) + -1 | 0;
- HEAP32[38875] = $dec;
+ $dec = (HEAP32[38876] | 0) + -1 | 0;
+ HEAP32[38876] = $dec;
  if ($dec | 0) return;
- $sp$0$in$i = 155924;
+ $sp$0$in$i = 155928;
  while (1) {
   $sp$0$i = HEAP32[$sp$0$in$i >> 2] | 0;
   if (!$sp$0$i) break; else $sp$0$in$i = $sp$0$i + 8 | 0;
  }
- HEAP32[38875] = -1;
+ HEAP32[38876] = -1;
  return;
 }
 
@@ -22285,20 +22285,20 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
   return $182 | 0;
  }
  if (!(HEAP32[$pDevice$addr >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34106, -2) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34124, -2) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
  }
  if (!(HEAP32[$pConfig$addr >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34172, -2) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34190, -2) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
  }
  _memcpy($config | 0, HEAP32[$pConfig$addr >> 2] | 0, 160) | 0;
  if ((HEAP32[$config >> 2] | 0) != 1) if ((HEAP32[$config >> 2] | 0) != 2) if ((HEAP32[$config >> 2] | 0) != 3) if ((HEAP32[$config >> 2] | 0) != 4) {
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34238, -106) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34256, -106) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
@@ -22306,13 +22306,13 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  if ((HEAP32[$config >> 2] | 0) == 2) label = 14; else if ((HEAP32[$config >> 2] | 0) == 3) label = 14;
  if ((label | 0) == 14) {
   if ((HEAP32[$config + 92 + 8 >> 2] | 0) >>> 0 > 32) {
-   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34364, -106) | 0;
+   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34382, -106) | 0;
    $182 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $182 | 0;
   }
   if (!(_ma__is_channel_map_valid($config + 92 + 12 | 0, HEAP32[$config + 92 + 8 >> 2] | 0) | 0)) {
-   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34452, -106) | 0;
+   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34470, -106) | 0;
    $182 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $182 | 0;
@@ -22321,13 +22321,13 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  if ((HEAP32[$config >> 2] | 0) == 1) label = 21; else if ((HEAP32[$config >> 2] | 0) == 3) label = 21; else if ((HEAP32[$config >> 2] | 0) == 4) label = 21;
  if ((label | 0) == 21) {
   if ((HEAP32[$config + 44 + 8 >> 2] | 0) >>> 0 > 32) {
-   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34529, -106) | 0;
+   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34547, -106) | 0;
    $182 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $182 | 0;
   }
   if (!(_ma__is_channel_map_valid($config + 44 + 12 | 0, HEAP32[$config + 44 + 8 >> 2] | 0) | 0)) {
-   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34618, -106) | 0;
+   HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34636, -106) | 0;
    $182 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $182 | 0;
@@ -22340,7 +22340,7 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 20 >> 2] = HEAP32[$config + 36 >> 2];
  if (((HEAP32[$pDevice$addr >> 2] | 0) >>> 0) % 4 | 0 | 0) if (HEAP32[(HEAP32[$pContext$addr >> 2] | 0) + 4 >> 2] | 0) {
   CSE$11 = HEAP32[$pContext$addr >> 2] | 0;
-  FUNCTION_TABLE_viiii[HEAP32[CSE$11 + 4 >> 2] & 31](CSE$11 | 0, HEAP32[$pDevice$addr >> 2] | 0, 2, 34696);
+  FUNCTION_TABLE_viiii[HEAP32[CSE$11 + 4 >> 2] & 31](CSE$11 | 0, HEAP32[$pDevice$addr >> 2] | 0, 2, 34714);
  }
  $noPreZeroedOutputBuffer75 = (HEAP32[$pDevice$addr >> 2] | 0) + 324 | 0;
  HEAP8[$noPreZeroedOutputBuffer75 >> 0] = HEAP8[$noPreZeroedOutputBuffer75 >> 0] & -17 | (HEAP32[$config + 24 >> 2] & 1) << 4 & 255;
@@ -22422,14 +22422,14 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  $cmp268 = (_ma_mutex_init(HEAP32[$pContext$addr >> 2] | 0, (HEAP32[$pDevice$addr >> 2] | 0) + 28 | 0) | 0) != 0;
  $120 = HEAP32[$pContext$addr >> 2] | 0;
  if ($cmp268) {
-  HEAP32[$retval >> 2] = _ma_context_post_error($120, 0, 1, 34804, -311) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error($120, 0, 1, 34822, -311) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
  }
  if (_ma_event_init($120, (HEAP32[$pDevice$addr >> 2] | 0) + 60 | 0) | 0) {
   _ma_mutex_uninit((HEAP32[$pDevice$addr >> 2] | 0) + 28 | 0);
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34828, -312) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34846, -312) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
@@ -22437,7 +22437,7 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  if (_ma_event_init(HEAP32[$pContext$addr >> 2] | 0, (HEAP32[$pDevice$addr >> 2] | 0) + 144 | 0) | 0) {
   _ma_event_uninit((HEAP32[$pDevice$addr >> 2] | 0) + 60 | 0);
   _ma_mutex_uninit((HEAP32[$pDevice$addr >> 2] | 0) + 28 | 0);
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34873, -312) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34891, -312) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
@@ -22446,7 +22446,7 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
   _ma_event_uninit((HEAP32[$pDevice$addr >> 2] | 0) + 144 | 0);
   _ma_event_uninit((HEAP32[$pDevice$addr >> 2] | 0) + 60 | 0);
   _ma_mutex_uninit((HEAP32[$pDevice$addr >> 2] | 0) + 28 | 0);
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34917, -312) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34935, -312) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
@@ -22464,7 +22464,7 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  do if ((label | 0) == 62) {
   if (HEAP8[(HEAP32[$pDevice$addr >> 2] | 0) + 47360 >> 0] | 0) break;
   if (!(_ma_context__try_get_device_name_by_id(HEAP32[$pContext$addr >> 2] | 0, 2, HEAP32[$config + 92 >> 2] | 0, (HEAP32[$pDevice$addr >> 2] | 0) + 47360 | 0, 256) | 0)) break;
-  _ma_strncpy_s((HEAP32[$pDevice$addr >> 2] | 0) + 47360 | 0, 256, (HEAP32[$config + 92 >> 2] | 0) == 0 ? 26277 : 34960, -1) | 0;
+  _ma_strncpy_s((HEAP32[$pDevice$addr >> 2] | 0) + 47360 | 0, 256, (HEAP32[$config + 92 >> 2] | 0) == 0 ? 26295 : 34978, -1) | 0;
  } while (0);
  do if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 1) label = 68; else {
   if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 3) {
@@ -22476,7 +22476,7 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
  do if ((label | 0) == 68) {
   if (HEAP8[(HEAP32[$pDevice$addr >> 2] | 0) + 384 >> 0] | 0) break;
   if (!(_ma_context__try_get_device_name_by_id(HEAP32[$pContext$addr >> 2] | 0, 1, HEAP32[$config + 44 >> 2] | 0, (HEAP32[$pDevice$addr >> 2] | 0) + 384 | 0, 256) | 0)) break;
-  _ma_strncpy_s((HEAP32[$pDevice$addr >> 2] | 0) + 384 | 0, 256, (HEAP32[$config + 44 >> 2] | 0) == 0 ? 26253 : 34975, -1) | 0;
+  _ma_strncpy_s((HEAP32[$pDevice$addr >> 2] | 0) + 384 | 0, 256, (HEAP32[$config + 44 >> 2] | 0) == 0 ? 26271 : 34993, -1) | 0;
  } while (0);
  do if (_ma_context_is_backend_asynchronous(HEAP32[$pContext$addr >> 2] | 0) | 0) {
   HEAP32[$pDevice$addr$i392 >> 2] = HEAP32[$pDevice$addr >> 2];
@@ -22491,14 +22491,14 @@ function _ma_device_init($pContext, $pConfig, $pDevice) {
    break;
   }
   _ma_device_uninit($171);
-  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 34991, -313) | 0;
+  HEAP32[$retval >> 2] = _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 1, 35009, -313) | 0;
   $182 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $182 | 0;
  } while (0);
  HEAP32[$pDevice$addr$i >> 2] = HEAP32[$pDevice$addr >> 2];
  HEAP32[$state$i >> 2] = HEAP32[(HEAP32[$pDevice$addr$i >> 2] | 0) + 12 >> 2];
- if ((HEAP32[$state$i >> 2] | 0) != 1) ___assert_fail(35023, 24969, 26422, 35058);
+ if ((HEAP32[$state$i >> 2] | 0) != 1) ___assert_fail(35041, 24987, 26422, 35076);
  HEAP32[$retval >> 2] = 0;
  $182 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
@@ -23230,52 +23230,52 @@ function _stbir__resample_horizontal_upsample($stbir_info, $output_buffer) {
  switch (label | 0) {
  case 4:
   {
-   ___assert_fail(41643, 40603, 1460, 41652);
+   ___assert_fail(41661, 40621, 1460, 41670);
    break;
   }
  case 6:
   {
-   ___assert_fail(41688, 40603, 1461, 41652);
+   ___assert_fail(41706, 40621, 1461, 41670);
    break;
   }
  case 8:
   {
-   ___assert_fail(41738, 40603, 1462, 41652);
+   ___assert_fail(41756, 40621, 1462, 41670);
    break;
   }
  case 10:
   {
-   ___assert_fail(41788, 40603, 1463, 41652);
+   ___assert_fail(41806, 40621, 1463, 41670);
    break;
   }
  case 12:
   {
-   ___assert_fail(41858, 40603, 1464, 41652);
+   ___assert_fail(41876, 40621, 1464, 41670);
    break;
   }
  case 17:
   {
-   ___assert_fail(41626, 40603, 1472, 41652);
+   ___assert_fail(41644, 40621, 1472, 41670);
    break;
   }
  case 22:
   {
-   ___assert_fail(41626, 40603, 1481, 41652);
+   ___assert_fail(41644, 40621, 1481, 41670);
    break;
   }
  case 27:
   {
-   ___assert_fail(41626, 40603, 1491, 41652);
+   ___assert_fail(41644, 40621, 1491, 41670);
    break;
   }
  case 32:
   {
-   ___assert_fail(41626, 40603, 1502, 41652);
+   ___assert_fail(41644, 40621, 1502, 41670);
    break;
   }
  case 37:
   {
-   ___assert_fail(41626, 40603, 1515, 41652);
+   ___assert_fail(41644, 40621, 1515, 41670);
    break;
   }
  case 43:
@@ -23542,7 +23542,7 @@ function _stbir__encode_scanline($stbir_info, $num_pixels, $output_buffer, $enco
    return;
   }
  default:
-  ___assert_fail(41928, 40603, 1861, 42049);
+  ___assert_fail(41946, 40621, 1861, 42067);
  }
 }
 
@@ -23800,9 +23800,9 @@ function _dispose_chunk($p, $psize) {
   if (!($0 & 3)) return;
   $add$ptr5 = $p + (0 - $1) | 0;
   $add6 = $1 + $psize | 0;
-  $2 = HEAP32[38871] | 0;
+  $2 = HEAP32[38872] | 0;
   if ($add$ptr5 >>> 0 < $2 >>> 0) _abort();
-  if ((HEAP32[38872] | 0) == ($add$ptr5 | 0)) {
+  if ((HEAP32[38873] | 0) == ($add$ptr5 | 0)) {
    $head201 = $add$ptr + 4 | 0;
    $27 = HEAP32[$head201 >> 2] | 0;
    if (($27 & 3 | 0) != 3) {
@@ -23810,7 +23810,7 @@ function _dispose_chunk($p, $psize) {
     $psize$addr$1 = $add6;
     break;
    }
-   HEAP32[38869] = $add6;
+   HEAP32[38870] = $add6;
    HEAP32[$head201 >> 2] = $27 & -2;
    HEAP32[$add$ptr5 + 4 >> 2] = $add6 | 1;
    HEAP32[$add$ptr >> 2] = $add6;
@@ -23820,13 +23820,13 @@ function _dispose_chunk($p, $psize) {
   if ($1 >>> 0 < 256) {
    $4 = HEAP32[$add$ptr5 + 8 >> 2] | 0;
    $5 = HEAP32[$add$ptr5 + 12 >> 2] | 0;
-   $arrayidx = 155508 + ($shr << 1 << 2) | 0;
+   $arrayidx = 155512 + ($shr << 1 << 2) | 0;
    if (($4 | 0) != ($arrayidx | 0)) {
     if ($2 >>> 0 > $4 >>> 0) _abort();
     if ((HEAP32[$4 + 12 >> 2] | 0) != ($add$ptr5 | 0)) _abort();
    }
    if (($5 | 0) == ($4 | 0)) {
-    HEAP32[38867] = HEAP32[38867] & ~(1 << $shr);
+    HEAP32[38868] = HEAP32[38868] & ~(1 << $shr);
     $p$addr$1 = $add$ptr5;
     $psize$addr$1 = $add6;
     break;
@@ -23903,16 +23903,16 @@ function _dispose_chunk($p, $psize) {
    $psize$addr$1 = $add6;
   } else {
    $18 = HEAP32[$add$ptr5 + 28 >> 2] | 0;
-   $arrayidx118 = 155772 + ($18 << 2) | 0;
+   $arrayidx118 = 155776 + ($18 << 2) | 0;
    do if ((HEAP32[$arrayidx118 >> 2] | 0) == ($add$ptr5 | 0)) {
     HEAP32[$arrayidx118 >> 2] = $R$3;
     if (!$R$3) {
-     HEAP32[38868] = HEAP32[38868] & ~(1 << $18);
+     HEAP32[38869] = HEAP32[38869] & ~(1 << $18);
      $p$addr$1 = $add$ptr5;
      $psize$addr$1 = $add6;
      break L1;
     }
-   } else if ((HEAP32[38871] | 0) >>> 0 > $9 >>> 0) _abort(); else {
+   } else if ((HEAP32[38872] | 0) >>> 0 > $9 >>> 0) _abort(); else {
     $arrayidx138 = $9 + 16 | 0;
     HEAP32[((HEAP32[$arrayidx138 >> 2] | 0) == ($add$ptr5 | 0) ? $arrayidx138 : $9 + 20 | 0) >> 2] = $R$3;
     if (!$R$3) {
@@ -23921,7 +23921,7 @@ function _dispose_chunk($p, $psize) {
      break L1;
     } else break;
    } while (0);
-   $23 = HEAP32[38871] | 0;
+   $23 = HEAP32[38872] | 0;
    if ($23 >>> 0 > $R$3 >>> 0) _abort();
    HEAP32[$R$3 + 24 >> 2] = $9;
    $child161 = $add$ptr5 + 16 | 0;
@@ -23935,7 +23935,7 @@ function _dispose_chunk($p, $psize) {
    if (!$25) {
     $p$addr$1 = $add$ptr5;
     $psize$addr$1 = $add6;
-   } else if ((HEAP32[38871] | 0) >>> 0 > $25 >>> 0) _abort(); else {
+   } else if ((HEAP32[38872] | 0) >>> 0 > $25 >>> 0) _abort(); else {
     HEAP32[$R$3 + 20 >> 2] = $25;
     HEAP32[$25 + 24 >> 2] = $R$3;
     $p$addr$1 = $add$ptr5;
@@ -23947,25 +23947,25 @@ function _dispose_chunk($p, $psize) {
   $p$addr$1 = $p;
   $psize$addr$1 = $psize;
  } while (0);
- $28 = HEAP32[38871] | 0;
+ $28 = HEAP32[38872] | 0;
  if ($add$ptr >>> 0 < $28 >>> 0) _abort();
  $head223 = $add$ptr + 4 | 0;
  $29 = HEAP32[$head223 >> 2] | 0;
  if (!($29 & 2)) {
-  if ((HEAP32[38873] | 0) == ($add$ptr | 0)) {
-   $add230 = (HEAP32[38870] | 0) + $psize$addr$1 | 0;
-   HEAP32[38870] = $add230;
-   HEAP32[38873] = $p$addr$1;
+  if ((HEAP32[38874] | 0) == ($add$ptr | 0)) {
+   $add230 = (HEAP32[38871] | 0) + $psize$addr$1 | 0;
+   HEAP32[38871] = $add230;
+   HEAP32[38874] = $p$addr$1;
    HEAP32[$p$addr$1 + 4 >> 2] = $add230 | 1;
-   if (($p$addr$1 | 0) != (HEAP32[38872] | 0)) return;
-   HEAP32[38872] = 0;
-   HEAP32[38869] = 0;
+   if (($p$addr$1 | 0) != (HEAP32[38873] | 0)) return;
+   HEAP32[38873] = 0;
+   HEAP32[38870] = 0;
    return;
   }
-  if ((HEAP32[38872] | 0) == ($add$ptr | 0)) {
-   $add248 = (HEAP32[38869] | 0) + $psize$addr$1 | 0;
-   HEAP32[38869] = $add248;
-   HEAP32[38872] = $p$addr$1;
+  if ((HEAP32[38873] | 0) == ($add$ptr | 0)) {
+   $add248 = (HEAP32[38870] | 0) + $psize$addr$1 | 0;
+   HEAP32[38870] = $add248;
+   HEAP32[38873] = $p$addr$1;
    HEAP32[$p$addr$1 + 4 >> 2] = $add248 | 1;
    HEAP32[$p$addr$1 + $add248 >> 2] = $add248;
    return;
@@ -23975,13 +23975,13 @@ function _dispose_chunk($p, $psize) {
   L99 : do if ($29 >>> 0 < 256) {
    $35 = HEAP32[$add$ptr + 8 >> 2] | 0;
    $36 = HEAP32[$add$ptr + 12 >> 2] | 0;
-   $arrayidx271 = 155508 + ($shr259 << 1 << 2) | 0;
+   $arrayidx271 = 155512 + ($shr259 << 1 << 2) | 0;
    if (($35 | 0) != ($arrayidx271 | 0)) {
     if ($28 >>> 0 > $35 >>> 0) _abort();
     if ((HEAP32[$35 + 12 >> 2] | 0) != ($add$ptr | 0)) _abort();
    }
    if (($36 | 0) == ($35 | 0)) {
-    HEAP32[38867] = HEAP32[38867] & ~(1 << $shr259);
+    HEAP32[38868] = HEAP32[38868] & ~(1 << $shr259);
     break;
    }
    if (($36 | 0) == ($arrayidx271 | 0)) $fd318$pre$phiZ2D = $36 + 8 | 0; else {
@@ -24050,19 +24050,19 @@ function _dispose_chunk($p, $psize) {
    } while (0);
    if ($40 | 0) {
     $49 = HEAP32[$add$ptr + 28 >> 2] | 0;
-    $arrayidx399 = 155772 + ($49 << 2) | 0;
+    $arrayidx399 = 155776 + ($49 << 2) | 0;
     do if ((HEAP32[$arrayidx399 >> 2] | 0) == ($add$ptr | 0)) {
      HEAP32[$arrayidx399 >> 2] = $R328$3;
      if (!$R328$3) {
-      HEAP32[38868] = HEAP32[38868] & ~(1 << $49);
+      HEAP32[38869] = HEAP32[38869] & ~(1 << $49);
       break L99;
      }
-    } else if ((HEAP32[38871] | 0) >>> 0 > $40 >>> 0) _abort(); else {
+    } else if ((HEAP32[38872] | 0) >>> 0 > $40 >>> 0) _abort(); else {
      $arrayidx420 = $40 + 16 | 0;
      HEAP32[((HEAP32[$arrayidx420 >> 2] | 0) == ($add$ptr | 0) ? $arrayidx420 : $40 + 20 | 0) >> 2] = $R328$3;
      if (!$R328$3) break L99; else break;
     } while (0);
-    $54 = HEAP32[38871] | 0;
+    $54 = HEAP32[38872] | 0;
     if ($54 >>> 0 > $R328$3 >>> 0) _abort();
     HEAP32[$R328$3 + 24 >> 2] = $40;
     $child445 = $add$ptr + 16 | 0;
@@ -24073,7 +24073,7 @@ function _dispose_chunk($p, $psize) {
      break;
     } while (0);
     $56 = HEAP32[$child445 + 4 >> 2] | 0;
-    if ($56 | 0) if ((HEAP32[38871] | 0) >>> 0 > $56 >>> 0) _abort(); else {
+    if ($56 | 0) if ((HEAP32[38872] | 0) >>> 0 > $56 >>> 0) _abort(); else {
      HEAP32[$R328$3 + 20 >> 2] = $56;
      HEAP32[$56 + 24 >> 2] = $R328$3;
      break;
@@ -24082,8 +24082,8 @@ function _dispose_chunk($p, $psize) {
   } while (0);
   HEAP32[$p$addr$1 + 4 >> 2] = $add258 | 1;
   HEAP32[$p$addr$1 + $add258 >> 2] = $add258;
-  if (($p$addr$1 | 0) == (HEAP32[38872] | 0)) {
-   HEAP32[38869] = $add258;
+  if (($p$addr$1 | 0) == (HEAP32[38873] | 0)) {
+   HEAP32[38870] = $add258;
    return;
   } else $psize$addr$2 = $add258;
  } else {
@@ -24094,17 +24094,17 @@ function _dispose_chunk($p, $psize) {
  }
  $shr507 = $psize$addr$2 >>> 3;
  if ($psize$addr$2 >>> 0 < 256) {
-  $arrayidx516 = 155508 + ($shr507 << 1 << 2) | 0;
-  $59 = HEAP32[38867] | 0;
+  $arrayidx516 = 155512 + ($shr507 << 1 << 2) | 0;
+  $59 = HEAP32[38868] | 0;
   $shl519 = 1 << $shr507;
   if (!($59 & $shl519)) {
-   HEAP32[38867] = $59 | $shl519;
+   HEAP32[38868] = $59 | $shl519;
    $$pre$phiZ2D = $arrayidx516 + 8 | 0;
    $F517$0 = $arrayidx516;
   } else {
    $60 = $arrayidx516 + 8 | 0;
    $61 = HEAP32[$60 >> 2] | 0;
-   if ((HEAP32[38871] | 0) >>> 0 > $61 >>> 0) _abort(); else {
+   if ((HEAP32[38872] | 0) >>> 0 > $61 >>> 0) _abort(); else {
     $$pre$phiZ2D = $60;
     $F517$0 = $61;
    }
@@ -24125,14 +24125,14 @@ function _dispose_chunk($p, $psize) {
   $add570 = 14 - ($and560 | $and556 | $and565) + ($shl562 << $and565 >>> 15) | 0;
   $I545$0 = $psize$addr$2 >>> ($add570 + 7 | 0) & 1 | $add570 << 1;
  }
- $arrayidx579 = 155772 + ($I545$0 << 2) | 0;
+ $arrayidx579 = 155776 + ($I545$0 << 2) | 0;
  HEAP32[$p$addr$1 + 28 >> 2] = $I545$0;
  HEAP32[$p$addr$1 + 20 >> 2] = 0;
  HEAP32[$p$addr$1 + 16 >> 2] = 0;
- $63 = HEAP32[38868] | 0;
+ $63 = HEAP32[38869] | 0;
  $shl586 = 1 << $I545$0;
  if (!($63 & $shl586)) {
-  HEAP32[38868] = $63 | $shl586;
+  HEAP32[38869] = $63 | $shl586;
   HEAP32[$arrayidx579 >> 2] = $p$addr$1;
   HEAP32[$p$addr$1 + 24 >> 2] = $arrayidx579;
   HEAP32[$p$addr$1 + 12 >> 2] = $p$addr$1;
@@ -24155,7 +24155,7 @@ function _dispose_chunk($p, $psize) {
     $T$012 = $66;
    }
   }
-  if ((HEAP32[38871] | 0) >>> 0 > $arrayidx613 >>> 0) _abort();
+  if ((HEAP32[38872] | 0) >>> 0 > $arrayidx613 >>> 0) _abort();
   HEAP32[$arrayidx613 >> 2] = $p$addr$1;
   HEAP32[$p$addr$1 + 24 >> 2] = $T$012;
   HEAP32[$p$addr$1 + 12 >> 2] = $p$addr$1;
@@ -24164,7 +24164,7 @@ function _dispose_chunk($p, $psize) {
  } while (0);
  $fd635 = $T$0$lcssa + 8 | 0;
  $69 = HEAP32[$fd635 >> 2] | 0;
- $70 = HEAP32[38871] | 0;
+ $70 = HEAP32[38872] | 0;
  if (!($70 >>> 0 <= $69 >>> 0 & $70 >>> 0 <= $T$0$lcssa >>> 0)) _abort();
  HEAP32[$69 + 12 >> 2] = $p$addr$1;
  HEAP32[$fd635 >> 2] = $p$addr$1;
@@ -24741,20 +24741,20 @@ function _stbir__resize_allocated($info, $input_data, $input_stride_in_bytes, $o
  if (HEAP32[$input_stride_in_bytes$addr >> 2] | 0) $cond = HEAP32[$input_stride_in_bytes$addr >> 2] | 0; else {
   CSE$0 = HEAP32[$info$addr >> 2] | 0;
   $mul = Math_imul(HEAP32[CSE$0 + 64 >> 2] | 0, HEAP32[CSE$0 + 4 >> 2] | 0) | 0;
-  $cond = Math_imul($mul, HEAPU8[40579 + (HEAP32[$type$addr >> 2] | 0) >> 0] | 0) | 0;
+  $cond = Math_imul($mul, HEAPU8[40597 + (HEAP32[$type$addr >> 2] | 0) >> 0] | 0) | 0;
  }
  HEAP32[$width_stride_input >> 2] = $cond;
  if (HEAP32[$output_stride_in_bytes$addr >> 2] | 0) $cond11 = HEAP32[$output_stride_in_bytes$addr >> 2] | 0; else {
   CSE$1 = HEAP32[$info$addr >> 2] | 0;
   $mul6 = Math_imul(HEAP32[CSE$1 + 64 >> 2] | 0, HEAP32[CSE$1 + 20 >> 2] | 0) | 0;
-  $cond11 = Math_imul($mul6, HEAPU8[40579 + (HEAP32[$type$addr >> 2] | 0) >> 0] | 0) | 0;
+  $cond11 = Math_imul($mul6, HEAPU8[40597 + (HEAP32[$type$addr >> 2] | 0) >> 0] | 0) | 0;
  }
  HEAP32[$width_stride_output >> 2] = $cond11;
- if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0) < 0) ___assert_fail(40583, 40603, 2312, 40654);
- if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0) > 64) ___assert_fail(40678, 40603, 2313, 40654);
+ if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0) < 0) ___assert_fail(40601, 40621, 2312, 40672);
+ if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0) > 64) ___assert_fail(40696, 40621, 2313, 40672);
  if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0) >= 0) if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0) <= 64) {
-  if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40699, 40603, 2318, 40654);
-  if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 84 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40800, 40603, 2319, 40654);
+  if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40717, 40621, 2318, 40672);
+  if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 84 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40818, 40621, 2319, 40672);
   if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0) >>> 0 >= 6) {
    HEAP32[$retval >> 2] = 0;
    $203 = HEAP32[$retval >> 2] | 0;
@@ -24772,8 +24772,8 @@ function _stbir__resize_allocated($info, $input_data, $input_stride_in_bytes, $o
    if (!(HEAP32[$flags$addr >> 2] & 1)) label = 26;
   } else label = 26;
   do if ((label | 0) == 26) {
-   if ((HEAP32[$alpha_channel$addr >> 2] | 0) < 0) ___assert_fail(40899, 40603, 2330, 40654);
-   if ((HEAP32[$alpha_channel$addr >> 2] | 0) < (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0)) break; else ___assert_fail(40899, 40603, 2330, 40654);
+   if ((HEAP32[$alpha_channel$addr >> 2] | 0) < 0) ___assert_fail(40917, 40621, 2330, 40672);
+   if ((HEAP32[$alpha_channel$addr >> 2] | 0) < (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0)) break; else ___assert_fail(40917, 40621, 2330, 40672);
   } while (0);
   if ((HEAP32[$alpha_channel$addr >> 2] | 0) >= (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 64 >> 2] | 0)) {
    HEAP32[$retval >> 2] = 0;
@@ -24781,14 +24781,14 @@ function _stbir__resize_allocated($info, $input_data, $input_stride_in_bytes, $o
    STACKTOP = sp;
    return $203 | 0;
   }
-  if (!(HEAP32[$tempmem$addr >> 2] | 0)) ___assert_fail(40952, 40603, 2336, 40654);
+  if (!(HEAP32[$tempmem$addr >> 2] | 0)) ___assert_fail(40970, 40621, 2336, 40672);
   if (!(HEAP32[$tempmem$addr >> 2] | 0)) {
    HEAP32[$retval >> 2] = 0;
    $203 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $203 | 0;
   }
-  if ((HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) >>> 0 < (HEAP32[$memory_required >> 2] | 0) >>> 0) ___assert_fail(40960, 40603, 2341, 40654);
+  if ((HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) >>> 0 < (HEAP32[$memory_required >> 2] | 0) >>> 0) ___assert_fail(40978, 40621, 2341, 40672);
   if ((HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) >>> 0 < (HEAP32[$memory_required >> 2] | 0) >>> 0) {
    HEAP32[$retval >> 2] = 0;
    $203 = HEAP32[$retval >> 2] | 0;
@@ -24846,14 +24846,14 @@ function _stbir__resize_allocated($info, $input_data, $input_stride_in_bytes, $o
    HEAP32[CSE$16 + 180 >> 2] = (HEAP32[CSE$16 + 120 >> 2] | 0) + (HEAP32[CSE$16 + 204 >> 2] | 0);
    CSE$17 = HEAP32[$info$addr >> 2] | 0;
    HEAP32[CSE$17 + 184 >> 2] = (HEAP32[CSE$17 + 180 >> 2] | 0) + (HEAP32[CSE$17 + 212 >> 2] | 0);
-   if (((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 184 >> 2] | 0) + (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 216 >> 2] | 0) | 0) == ((HEAP32[$tempmem$addr >> 2] | 0) + (HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) | 0)) break; else ___assert_fail(41001, 40603, 2385, 40654);
+   if (((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 184 >> 2] | 0) + (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 216 >> 2] | 0) | 0) == ((HEAP32[$tempmem$addr >> 2] | 0) + (HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) | 0)) break; else ___assert_fail(41019, 40621, 2385, 40672);
   } else {
    CSE$18 = HEAP32[$info$addr >> 2] | 0;
    HEAP32[CSE$18 + 124 >> 2] = (HEAP32[$135 + 120 >> 2] | 0) + (HEAP32[CSE$18 + 204 >> 2] | 0);
    CSE$19 = HEAP32[$info$addr >> 2] | 0;
    HEAP32[CSE$19 + 180 >> 2] = (HEAP32[CSE$19 + 124 >> 2] | 0) + (HEAP32[CSE$19 + 208 >> 2] | 0);
    HEAP32[(HEAP32[$info$addr >> 2] | 0) + 184 >> 2] = 0;
-   if (((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 180 >> 2] | 0) + (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 212 >> 2] | 0) | 0) == ((HEAP32[$tempmem$addr >> 2] | 0) + (HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) | 0)) break; else ___assert_fail(41135, 40603, 2393, 40654);
+   if (((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 180 >> 2] | 0) + (HEAP32[(HEAP32[$info$addr >> 2] | 0) + 212 >> 2] | 0) | 0) == ((HEAP32[$tempmem$addr >> 2] | 0) + (HEAP32[$tempmem_size_in_bytes$addr >> 2] | 0) | 0)) break; else ___assert_fail(41153, 40621, 2393, 40672);
   } while (0);
   HEAP32[(HEAP32[$info$addr >> 2] | 0) + 176 >> 2] = -1;
   $180 = Math_fround(HEAPF32[(HEAP32[$info$addr >> 2] | 0) + 56 >> 2]);
@@ -25055,7 +25055,7 @@ function ___intscan($f, $base, $pok, $0, $1) {
   } while (0);
   L63 : do if ((label | 0) == 47) {
    if (!($base$addr$1135 + -1 & $base$addr$1135)) {
-    $conv176 = HEAP8[44829 + (($base$addr$1135 * 23 | 0) >>> 5 & 7) >> 0] | 0;
+    $conv176 = HEAP8[44847 + (($base$addr$1135 * 23 | 0) >>> 5 & 7) >> 0] | 0;
     $51 = HEAP8[18849 + $c$1137 >> 0] | 0;
     $conv179159 = $51 & 255;
     if ($base$addr$1135 >>> 0 > $conv179159 >>> 0) {
@@ -25247,572 +25247,572 @@ function ___intscan($f, $base, $pok, $0, $1) {
 function _emscripten_webgl1_get_proc_address($name) {
  $name = $name | 0;
  var $retval$0 = 0, $tobool638 = 0;
- do if (!(_strcmp($name, 45435) | 0)) $retval$0 = 7; else if (!(_strcmp($name, 45451) | 0)) $retval$0 = 8; else if (!(_strcmp($name, 45466) | 0)) $retval$0 = 3; else if (!(_strcmp($name, 45487) | 0)) $retval$0 = 9; else if (!(_strcmp($name, 45500) | 0)) $retval$0 = 10; else if (!(_strcmp($name, 45518) | 0)) $retval$0 = 11; else if (!(_strcmp($name, 45537) | 0)) $retval$0 = 12; else if (!(_strcmp($name, 45551) | 0)) $retval$0 = 1; else if (!(_strcmp($name, 45564) | 0)) $retval$0 = 8; else if (!(_strcmp($name, 45580) | 0)) $retval$0 = 13; else if (!(_strcmp($name, 45604) | 0)) $retval$0 = 14; else if (!(_strcmp($name, 45616) | 0)) $retval$0 = 6; else if (!(_strcmp($name, 45636) | 0)) $retval$0 = 7; else if (!(_strcmp($name, 45649) | 0)) $retval$0 = 8; else if (!(_strcmp($name, 45665) | 0)) $retval$0 = 15; else if (!(_strcmp($name, 45690) | 0)) $retval$0 = 9; else if (!(_strcmp($name, 45698) | 0)) $retval$0 = 2; else if (!(_strcmp($name, 45711) | 0)) $retval$0 = 1; else if (!(_strcmp($name, 45725) | 0)) $retval$0 = 10; else {
-  if (!(_strcmp($name, 45740) | 0)) {
+ do if (!(_strcmp($name, 45453) | 0)) $retval$0 = 7; else if (!(_strcmp($name, 45469) | 0)) $retval$0 = 8; else if (!(_strcmp($name, 45484) | 0)) $retval$0 = 3; else if (!(_strcmp($name, 45505) | 0)) $retval$0 = 9; else if (!(_strcmp($name, 45518) | 0)) $retval$0 = 10; else if (!(_strcmp($name, 45536) | 0)) $retval$0 = 11; else if (!(_strcmp($name, 45555) | 0)) $retval$0 = 12; else if (!(_strcmp($name, 45569) | 0)) $retval$0 = 1; else if (!(_strcmp($name, 45582) | 0)) $retval$0 = 8; else if (!(_strcmp($name, 45598) | 0)) $retval$0 = 13; else if (!(_strcmp($name, 45622) | 0)) $retval$0 = 14; else if (!(_strcmp($name, 45634) | 0)) $retval$0 = 6; else if (!(_strcmp($name, 45654) | 0)) $retval$0 = 7; else if (!(_strcmp($name, 45667) | 0)) $retval$0 = 8; else if (!(_strcmp($name, 45683) | 0)) $retval$0 = 15; else if (!(_strcmp($name, 45708) | 0)) $retval$0 = 9; else if (!(_strcmp($name, 45716) | 0)) $retval$0 = 2; else if (!(_strcmp($name, 45729) | 0)) $retval$0 = 1; else if (!(_strcmp($name, 45743) | 0)) $retval$0 = 10; else {
+  if (!(_strcmp($name, 45758) | 0)) {
    $retval$0 = 9;
    break;
   }
-  if (!(_strcmp($name, 45752) | 0)) {
+  if (!(_strcmp($name, 45770) | 0)) {
    $retval$0 = 11;
    break;
   }
-  if (!(_strcmp($name, 45768) | 0)) {
+  if (!(_strcmp($name, 45786) | 0)) {
    $retval$0 = 1;
    break;
   }
-  if (!(_strcmp($name, 45791) | 0)) {
+  if (!(_strcmp($name, 45809) | 0)) {
    $retval$0 = 1;
    break;
   }
-  if (!(_strcmp($name, 45817) | 0)) {
+  if (!(_strcmp($name, 45835) | 0)) {
    $retval$0 = 2;
    break;
   }
-  if (!(_strcmp($name, 45834) | 0)) {
+  if (!(_strcmp($name, 45852) | 0)) {
    $retval$0 = 3;
    break;
   }
-  if (!(_strcmp($name, 45854) | 0)) {
+  if (!(_strcmp($name, 45872) | 0)) {
    $retval$0 = 1;
    break;
   }
-  if (!(_strcmp($name, 45870) | 0)) {
+  if (!(_strcmp($name, 45888) | 0)) {
    $retval$0 = 16;
    break;
   }
-  if (!(_strcmp($name, 45885) | 0)) {
+  if (!(_strcmp($name, 45903) | 0)) {
    $retval$0 = 12;
    break;
   }
-  if (!(_strcmp($name, 45896) | 0)) {
+  if (!(_strcmp($name, 45914) | 0)) {
    $retval$0 = 15;
    break;
   }
-  if (!(_strcmp($name, 45912) | 0)) {
+  if (!(_strcmp($name, 45930) | 0)) {
    $retval$0 = 16;
    break;
   }
-  if (!(_strcmp($name, 45933) | 0)) {
+  if (!(_strcmp($name, 45951) | 0)) {
    $retval$0 = 13;
    break;
   }
-  if (!(_strcmp($name, 45949) | 0)) {
+  if (!(_strcmp($name, 45967) | 0)) {
    $retval$0 = 17;
    break;
   }
-  if (!(_strcmp($name, 45971) | 0)) {
+  if (!(_strcmp($name, 45989) | 0)) {
    $retval$0 = 14;
    break;
   }
-  if (!(_strcmp($name, 45986) | 0)) {
+  if (!(_strcmp($name, 46004) | 0)) {
    $retval$0 = 18;
    break;
   }
-  if (!(_strcmp($name, 46003) | 0)) {
+  if (!(_strcmp($name, 46021) | 0)) {
    $retval$0 = 15;
    break;
   }
-  if (!(_strcmp($name, 46015) | 0)) {
+  if (!(_strcmp($name, 46033) | 0)) {
    $retval$0 = 16;
    break;
   }
-  if (!(_strcmp($name, 46027) | 0)) {
+  if (!(_strcmp($name, 46045) | 0)) {
    $retval$0 = 1;
    break;
   }
-  if (!(_strcmp($name, 46041) | 0)) {
+  if (!(_strcmp($name, 46059) | 0)) {
    $retval$0 = 19;
    break;
   }
-  if (!(_strcmp($name, 46056) | 0)) {
+  if (!(_strcmp($name, 46074) | 0)) {
    $retval$0 = 17;
    break;
   }
-  if (!(_strcmp($name, 46066) | 0)) {
+  if (!(_strcmp($name, 46084) | 0)) {
    $retval$0 = 18;
    break;
   }
-  if (!(_strcmp($name, 46093) | 0)) {
+  if (!(_strcmp($name, 46111) | 0)) {
    $retval$0 = 4;
    break;
   }
-  if (!(_strcmp($name, 46106) | 0)) {
+  if (!(_strcmp($name, 46124) | 0)) {
    $retval$0 = 10;
    break;
   }
-  if (!(_strcmp($name, 46121) | 0)) {
+  if (!(_strcmp($name, 46139) | 0)) {
    $retval$0 = 19;
    break;
   }
-  if (!(_strcmp($name, 46130) | 0)) {
+  if (!(_strcmp($name, 46148) | 0)) {
    $retval$0 = 20;
    break;
   }
-  if (!(_strcmp($name, 46156) | 0)) {
+  if (!(_strcmp($name, 46174) | 0)) {
    $retval$0 = 2;
    break;
   }
-  if (!(_strcmp($name, 46165) | 0)) {
+  if (!(_strcmp($name, 46183) | 0)) {
    $retval$0 = 3;
    break;
   }
-  if (!(_strcmp($name, 46173) | 0)) {
+  if (!(_strcmp($name, 46191) | 0)) {
    $retval$0 = 11;
    break;
   }
-  if (!(_strcmp($name, 46199) | 0)) {
+  if (!(_strcmp($name, 46217) | 0)) {
    $retval$0 = 39;
    break;
   }
-  if (!(_strcmp($name, 46222) | 0)) {
+  if (!(_strcmp($name, 46240) | 0)) {
    $retval$0 = 21;
    break;
   }
-  if (!(_strcmp($name, 46234) | 0)) {
+  if (!(_strcmp($name, 46252) | 0)) {
    $retval$0 = 20;
    break;
   }
-  if (!(_strcmp($name, 46247) | 0)) {
+  if (!(_strcmp($name, 46265) | 0)) {
    $retval$0 = 22;
-   break;
-  }
-  if (!(_strcmp($name, 46264) | 0)) {
-   $retval$0 = 21;
    break;
   }
   if (!(_strcmp($name, 46282) | 0)) {
+   $retval$0 = 21;
+   break;
+  }
+  if (!(_strcmp($name, 46300) | 0)) {
    $retval$0 = 22;
    break;
   }
-  if (!(_strcmp($name, 46301) | 0)) {
+  if (!(_strcmp($name, 46319) | 0)) {
    $retval$0 = 23;
    break;
   }
-  if (!(_strcmp($name, 46315) | 0)) {
+  if (!(_strcmp($name, 46333) | 0)) {
    $retval$0 = 1;
    break;
   }
-  if (!(_strcmp($name, 46333) | 0)) {
+  if (!(_strcmp($name, 46351) | 0)) {
    $retval$0 = 2;
    break;
   }
-  if (!(_strcmp($name, 46352) | 0)) {
+  if (!(_strcmp($name, 46370) | 0)) {
    $retval$0 = 12;
    break;
   }
-  if (!(_strcmp($name, 46373) | 0)) {
+  if (!(_strcmp($name, 46391) | 0)) {
    $retval$0 = 7;
    break;
   }
-  if (!(_strcmp($name, 46393) | 0)) {
+  if (!(_strcmp($name, 46411) | 0)) {
    $retval$0 = 24;
    break;
   }
-  if (!(_strcmp($name, 46407) | 0)) {
+  if (!(_strcmp($name, 46425) | 0)) {
    $retval$0 = 5;
    break;
   }
-  if (!(_strcmp($name, 46430) | 0)) {
+  if (!(_strcmp($name, 46448) | 0)) {
    $retval$0 = 2;
    break;
   }
-  if (!(_strcmp($name, 46441) | 0)) {
+  if (!(_strcmp($name, 46459) | 0)) {
    $retval$0 = 25;
    break;
   }
-  if (!(_strcmp($name, 46453) | 0)) {
+  if (!(_strcmp($name, 46471) | 0)) {
    $retval$0 = 13;
    break;
   }
-  if (!(_strcmp($name, 46491) | 0)) {
+  if (!(_strcmp($name, 46509) | 0)) {
    $retval$0 = 26;
    break;
   }
-  if (!(_strcmp($name, 46505) | 0)) {
+  if (!(_strcmp($name, 46523) | 0)) {
    $retval$0 = 6;
    break;
   }
-  if (!(_strcmp($name, 46520) | 0)) {
+  if (!(_strcmp($name, 46538) | 0)) {
    $retval$0 = 14;
    break;
   }
-  if (!(_strcmp($name, 46540) | 0)) {
+  if (!(_strcmp($name, 46558) | 0)) {
    $retval$0 = 7;
    break;
   }
-  if (!(_strcmp($name, 46569) | 0)) {
+  if (!(_strcmp($name, 46587) | 0)) {
    $retval$0 = 8;
    break;
   }
-  if (!(_strcmp($name, 46583) | 0)) {
+  if (!(_strcmp($name, 46601) | 0)) {
    $retval$0 = 15;
    break;
   }
-  if (!(_strcmp($name, 46602) | 0)) {
+  if (!(_strcmp($name, 46620) | 0)) {
    $retval$0 = 16;
-   break;
-  }
-  if (!(_strcmp($name, 46629) | 0)) {
-   $retval$0 = 17;
    break;
   }
   if (!(_strcmp($name, 46647) | 0)) {
    $retval$0 = 17;
    break;
   }
-  if (!(_strcmp($name, 46659) | 0)) {
-   $retval$0 = 9;
-   break;
-  }
-  if (!(_strcmp($name, 46679) | 0)) {
-   $retval$0 = 10;
-   break;
-  }
-  if (!(_strcmp($name, 46699) | 0)) {
-   $retval$0 = 11;
-   break;
-  }
-  if (!(_strcmp($name, 46714) | 0)) {
-   $retval$0 = 12;
-   break;
-  }
-  if (!(_strcmp($name, 46729) | 0)) {
-   $retval$0 = 8;
-   break;
-  }
-  if (!(_strcmp($name, 46750) | 0)) {
-   $retval$0 = 13;
-   break;
-  }
-  if (!(_strcmp($name, 46770) | 0)) {
-   $retval$0 = 14;
-   break;
-  }
-  if (!(_strcmp($name, 46790) | 0)) {
-   $retval$0 = 15;
-   break;
-  }
-  if (!(_strcmp($name, 46816) | 0)) {
-   $retval$0 = 27;
-   break;
-  }
-  if (!(_strcmp($name, 46823) | 0)) {
-   $retval$0 = 18;
-   break;
-  }
-  if (!(_strcmp($name, 46834) | 0)) {
-   $retval$0 = 19;
-   break;
-  }
-  if (!(_strcmp($name, 46846) | 0)) {
-   $retval$0 = 20;
-   break;
-  }
-  if (!(_strcmp($name, 46862) | 0)) {
-   $retval$0 = 21;
-   break;
-  }
-  if (!(_strcmp($name, 46874) | 0)) {
-   $retval$0 = 22;
-   break;
-  }
-  if (!(_strcmp($name, 46891) | 0)) {
-   $retval$0 = 23;
-   break;
-  }
-  if (!(_strcmp($name, 46902) | 0)) {
-   $retval$0 = 24;
-   break;
-  }
-  if (!(_strcmp($name, 46914) | 0)) {
-   $retval$0 = 2;
-   break;
-  }
-  if (!(_strcmp($name, 46926) | 0)) {
-   $retval$0 = 23;
-   break;
-  }
-  if (!(_strcmp($name, 46940) | 0)) {
-   $retval$0 = 28;
-   break;
-  }
-  if (!(_strcmp($name, 46954) | 0)) {
-   $retval$0 = 2;
-   break;
-  }
-  if (!(_strcmp($name, 46970) | 0)) {
-   $retval$0 = 3;
-   break;
-  }
-  if (!(_strcmp($name, 46983) | 0)) {
-   $retval$0 = 4;
-   break;
-  }
-  if (!(_strcmp($name, 47007) | 0)) {
-   $retval$0 = 18;
-   break;
-  }
-  if (!(_strcmp($name, 47029) | 0)) {
-   $retval$0 = 1;
-   break;
-  }
-  if (!(_strcmp($name, 47046) | 0)) {
-   $retval$0 = 19;
-   break;
-  }
-  if (!(_strcmp($name, 47056) | 0)) {
-   $retval$0 = 40;
-   break;
-  }
-  if (!(_strcmp($name, 47071) | 0)) {
-   $retval$0 = 20;
-   break;
-  }
-  if (!(_strcmp($name, 47086) | 0)) {
-   $retval$0 = 16;
-   break;
-  }
-  if (!(_strcmp($name, 47100) | 0)) {
-   $retval$0 = 21;
-   break;
-  }
-  if (!(_strcmp($name, 47122) | 0)) {
-   $retval$0 = 24;
-   break;
-  }
-  if (!(_strcmp($name, 47136) | 0)) {
-   $retval$0 = 29;
-   break;
-  }
-  if (!(_strcmp($name, 47158) | 0)) {
+  if (!(_strcmp($name, 46665) | 0)) {
    $retval$0 = 17;
    break;
   }
-  if (!(_strcmp($name, 47170) | 0)) {
-   $retval$0 = 22;
+  if (!(_strcmp($name, 46677) | 0)) {
+   $retval$0 = 9;
    break;
   }
-  if (!(_strcmp($name, 47190) | 0)) {
-   $retval$0 = 2;
+  if (!(_strcmp($name, 46697) | 0)) {
+   $retval$0 = 10;
    break;
   }
-  if (!(_strcmp($name, 47203) | 0)) {
-   $retval$0 = 1;
+  if (!(_strcmp($name, 46717) | 0)) {
+   $retval$0 = 11;
    break;
   }
-  if (!(_strcmp($name, 47219) | 0)) {
+  if (!(_strcmp($name, 46732) | 0)) {
+   $retval$0 = 12;
+   break;
+  }
+  if (!(_strcmp($name, 46747) | 0)) {
+   $retval$0 = 8;
+   break;
+  }
+  if (!(_strcmp($name, 46768) | 0)) {
+   $retval$0 = 13;
+   break;
+  }
+  if (!(_strcmp($name, 46788) | 0)) {
+   $retval$0 = 14;
+   break;
+  }
+  if (!(_strcmp($name, 46808) | 0)) {
+   $retval$0 = 15;
+   break;
+  }
+  if (!(_strcmp($name, 46834) | 0)) {
+   $retval$0 = 27;
+   break;
+  }
+  if (!(_strcmp($name, 46841) | 0)) {
    $retval$0 = 18;
    break;
   }
-  if (!(_strcmp($name, 47236) | 0)) {
+  if (!(_strcmp($name, 46852) | 0)) {
    $retval$0 = 19;
    break;
   }
-  if (!(_strcmp($name, 47252) | 0)) {
+  if (!(_strcmp($name, 46864) | 0)) {
    $retval$0 = 20;
    break;
   }
-  if (!(_strcmp($name, 47269) | 0)) {
-   $retval$0 = 3;
-   break;
-  }
-  if (!(_strcmp($name, 47285) | 0)) {
-   $retval$0 = 1;
-   break;
-  }
-  if (!(_strcmp($name, 47297) | 0)) {
+  if (!(_strcmp($name, 46880) | 0)) {
    $retval$0 = 21;
    break;
   }
-  if (!(_strcmp($name, 47310) | 0)) {
-   $retval$0 = 30;
-   break;
-  }
-  if (!(_strcmp($name, 47322) | 0)) {
+  if (!(_strcmp($name, 46892) | 0)) {
    $retval$0 = 22;
    break;
   }
-  if (!(_strcmp($name, 47335) | 0)) {
-   $retval$0 = 1;
-   break;
-  }
-  if (!(_strcmp($name, 47347) | 0)) {
+  if (!(_strcmp($name, 46909) | 0)) {
    $retval$0 = 23;
    break;
   }
-  if (!(_strcmp($name, 47360) | 0)) {
+  if (!(_strcmp($name, 46920) | 0)) {
    $retval$0 = 24;
    break;
   }
-  if (!(_strcmp($name, 47372) | 0)) {
-   $retval$0 = 25;
+  if (!(_strcmp($name, 46932) | 0)) {
+   $retval$0 = 2;
    break;
   }
-  if (!(_strcmp($name, 47385) | 0)) {
-   $retval$0 = 1;
-   break;
-  }
-  if (!(_strcmp($name, 47397) | 0)) {
-   $retval$0 = 26;
-   break;
-  }
-  if (!(_strcmp($name, 47410) | 0)) {
+  if (!(_strcmp($name, 46944) | 0)) {
    $retval$0 = 23;
    break;
   }
-  if (!(_strcmp($name, 47422) | 0)) {
-   $retval$0 = 27;
-   break;
-  }
-  if (!(_strcmp($name, 47435) | 0)) {
-   $retval$0 = 1;
-   break;
-  }
-  if (!(_strcmp($name, 47447) | 0)) {
+  if (!(_strcmp($name, 46958) | 0)) {
    $retval$0 = 28;
    break;
   }
-  if (!(_strcmp($name, 47460) | 0)) {
-   $retval$0 = 41;
-   break;
-  }
-  if (!(_strcmp($name, 47472) | 0)) {
-   $retval$0 = 29;
-   break;
-  }
-  if (!(_strcmp($name, 47485) | 0)) {
-   $retval$0 = 24;
-   break;
-  }
-  if (!(_strcmp($name, 47504) | 0)) {
-   $retval$0 = 25;
-   break;
-  }
-  if (!(_strcmp($name, 47523) | 0)) {
-   $retval$0 = 26;
-   break;
-  }
-  if (!(_strcmp($name, 47542) | 0)) {
-   $retval$0 = 25;
-   break;
-  }
-  if (!(_strcmp($name, 47555) | 0)) {
-   $retval$0 = 26;
-   break;
-  }
-  if (!(_strcmp($name, 47573) | 0)) {
+  if (!(_strcmp($name, 46972) | 0)) {
    $retval$0 = 2;
    break;
   }
-  if (!(_strcmp($name, 47590) | 0)) {
-   $retval$0 = 31;
-   break;
-  }
-  if (!(_strcmp($name, 47608) | 0)) {
-   $retval$0 = 2;
-   break;
-  }
-  if (!(_strcmp($name, 47625) | 0)) {
-   $retval$0 = 32;
-   break;
-  }
-  if (!(_strcmp($name, 47643) | 0)) {
-   $retval$0 = 2;
-   break;
-  }
-  if (!(_strcmp($name, 47660) | 0)) {
-   $retval$0 = 33;
-   break;
-  }
-  if (!(_strcmp($name, 47678) | 0)) {
-   $retval$0 = 2;
-   break;
-  }
-  if (!(_strcmp($name, 47695) | 0)) {
-   $retval$0 = 34;
-   break;
-  }
-  if (!(_strcmp($name, 47713) | 0)) {
+  if (!(_strcmp($name, 46988) | 0)) {
    $retval$0 = 3;
    break;
   }
-  if (!(_strcmp($name, 47735) | 0)) {
-   $retval$0 = 27;
+  if (!(_strcmp($name, 47001) | 0)) {
+   $retval$0 = 4;
    break;
   }
-  if (!(_strcmp($name, 47746) | 0)) {
-   $retval$0 = 35;
+  if (!(_strcmp($name, 47025) | 0)) {
+   $retval$0 = 18;
    break;
   }
-  if (!(_strcmp($name, 47762) | 0)) {
-   $retval$0 = 36;
+  if (!(_strcmp($name, 47047) | 0)) {
+   $retval$0 = 1;
    break;
   }
-  if (!(_strcmp($name, 47781) | 0)) {
-   $retval$0 = 25;
+  if (!(_strcmp($name, 47064) | 0)) {
+   $retval$0 = 19;
    break;
   }
-  if (!(_strcmp($name, 47794) | 0)) {
-   $retval$0 = 37;
-   break;
-  }
-  if (!(_strcmp($name, 47810) | 0)) {
-   $retval$0 = 27;
-   break;
-  }
-  if (!(_strcmp($name, 47824) | 0)) {
-   $retval$0 = 38;
-   break;
-  }
-  if (!(_strcmp($name, 47842) | 0)) {
-   $retval$0 = 30;
-   break;
-  }
-  if (!(_strcmp($name, 47858) | 0)) {
-   $retval$0 = 31;
-   break;
-  }
-  if (!(_strcmp($name, 47880) | 0)) {
-   $retval$0 = 32;
-   break;
-  }
-  if (!(_strcmp($name, 47903) | 0)) {
-   $retval$0 = 33;
-   break;
-  }
-  if (!(_strcmp($name, 47927) | 0)) {
-   $retval$0 = 34;
-   break;
-  }
-  if (!(_strcmp($name, 47952) | 0)) {
-   $retval$0 = 28;
-   break;
-  }
-  if (!(_strcmp($name, 47973) | 0)) {
-   $retval$0 = 39;
-   break;
-  }
-  if (!(_strcmp($name, 47997) | 0)) {
+  if (!(_strcmp($name, 47074) | 0)) {
    $retval$0 = 40;
    break;
   }
-  if (!(_strcmp($name, 48018) | 0)) {
+  if (!(_strcmp($name, 47089) | 0)) {
+   $retval$0 = 20;
+   break;
+  }
+  if (!(_strcmp($name, 47104) | 0)) {
+   $retval$0 = 16;
+   break;
+  }
+  if (!(_strcmp($name, 47118) | 0)) {
+   $retval$0 = 21;
+   break;
+  }
+  if (!(_strcmp($name, 47140) | 0)) {
+   $retval$0 = 24;
+   break;
+  }
+  if (!(_strcmp($name, 47154) | 0)) {
+   $retval$0 = 29;
+   break;
+  }
+  if (!(_strcmp($name, 47176) | 0)) {
+   $retval$0 = 17;
+   break;
+  }
+  if (!(_strcmp($name, 47188) | 0)) {
+   $retval$0 = 22;
+   break;
+  }
+  if (!(_strcmp($name, 47208) | 0)) {
+   $retval$0 = 2;
+   break;
+  }
+  if (!(_strcmp($name, 47221) | 0)) {
+   $retval$0 = 1;
+   break;
+  }
+  if (!(_strcmp($name, 47237) | 0)) {
+   $retval$0 = 18;
+   break;
+  }
+  if (!(_strcmp($name, 47254) | 0)) {
+   $retval$0 = 19;
+   break;
+  }
+  if (!(_strcmp($name, 47270) | 0)) {
+   $retval$0 = 20;
+   break;
+  }
+  if (!(_strcmp($name, 47287) | 0)) {
+   $retval$0 = 3;
+   break;
+  }
+  if (!(_strcmp($name, 47303) | 0)) {
+   $retval$0 = 1;
+   break;
+  }
+  if (!(_strcmp($name, 47315) | 0)) {
+   $retval$0 = 21;
+   break;
+  }
+  if (!(_strcmp($name, 47328) | 0)) {
+   $retval$0 = 30;
+   break;
+  }
+  if (!(_strcmp($name, 47340) | 0)) {
+   $retval$0 = 22;
+   break;
+  }
+  if (!(_strcmp($name, 47353) | 0)) {
+   $retval$0 = 1;
+   break;
+  }
+  if (!(_strcmp($name, 47365) | 0)) {
+   $retval$0 = 23;
+   break;
+  }
+  if (!(_strcmp($name, 47378) | 0)) {
+   $retval$0 = 24;
+   break;
+  }
+  if (!(_strcmp($name, 47390) | 0)) {
+   $retval$0 = 25;
+   break;
+  }
+  if (!(_strcmp($name, 47403) | 0)) {
+   $retval$0 = 1;
+   break;
+  }
+  if (!(_strcmp($name, 47415) | 0)) {
    $retval$0 = 26;
    break;
   }
-  if (!(_strcmp($name, 48037) | 0)) {
-   $retval$0 = 41;
+  if (!(_strcmp($name, 47428) | 0)) {
+   $retval$0 = 23;
    break;
   }
-  if (!(_strcmp($name, 48056) | 0)) {
+  if (!(_strcmp($name, 47440) | 0)) {
+   $retval$0 = 27;
+   break;
+  }
+  if (!(_strcmp($name, 47453) | 0)) {
+   $retval$0 = 1;
+   break;
+  }
+  if (!(_strcmp($name, 47465) | 0)) {
    $retval$0 = 28;
    break;
   }
-  if (!(_strcmp($name, 48083) | 0)) {
+  if (!(_strcmp($name, 47478) | 0)) {
+   $retval$0 = 41;
+   break;
+  }
+  if (!(_strcmp($name, 47490) | 0)) {
+   $retval$0 = 29;
+   break;
+  }
+  if (!(_strcmp($name, 47503) | 0)) {
+   $retval$0 = 24;
+   break;
+  }
+  if (!(_strcmp($name, 47522) | 0)) {
+   $retval$0 = 25;
+   break;
+  }
+  if (!(_strcmp($name, 47541) | 0)) {
+   $retval$0 = 26;
+   break;
+  }
+  if (!(_strcmp($name, 47560) | 0)) {
+   $retval$0 = 25;
+   break;
+  }
+  if (!(_strcmp($name, 47573) | 0)) {
+   $retval$0 = 26;
+   break;
+  }
+  if (!(_strcmp($name, 47591) | 0)) {
+   $retval$0 = 2;
+   break;
+  }
+  if (!(_strcmp($name, 47608) | 0)) {
+   $retval$0 = 31;
+   break;
+  }
+  if (!(_strcmp($name, 47626) | 0)) {
+   $retval$0 = 2;
+   break;
+  }
+  if (!(_strcmp($name, 47643) | 0)) {
+   $retval$0 = 32;
+   break;
+  }
+  if (!(_strcmp($name, 47661) | 0)) {
+   $retval$0 = 2;
+   break;
+  }
+  if (!(_strcmp($name, 47678) | 0)) {
+   $retval$0 = 33;
+   break;
+  }
+  if (!(_strcmp($name, 47696) | 0)) {
+   $retval$0 = 2;
+   break;
+  }
+  if (!(_strcmp($name, 47713) | 0)) {
+   $retval$0 = 34;
+   break;
+  }
+  if (!(_strcmp($name, 47731) | 0)) {
+   $retval$0 = 3;
+   break;
+  }
+  if (!(_strcmp($name, 47753) | 0)) {
+   $retval$0 = 27;
+   break;
+  }
+  if (!(_strcmp($name, 47764) | 0)) {
+   $retval$0 = 35;
+   break;
+  }
+  if (!(_strcmp($name, 47780) | 0)) {
+   $retval$0 = 36;
+   break;
+  }
+  if (!(_strcmp($name, 47799) | 0)) {
+   $retval$0 = 25;
+   break;
+  }
+  if (!(_strcmp($name, 47812) | 0)) {
+   $retval$0 = 37;
+   break;
+  }
+  if (!(_strcmp($name, 47828) | 0)) {
+   $retval$0 = 27;
+   break;
+  }
+  if (!(_strcmp($name, 47842) | 0)) {
+   $retval$0 = 38;
+   break;
+  }
+  if (!(_strcmp($name, 47860) | 0)) {
+   $retval$0 = 30;
+   break;
+  }
+  if (!(_strcmp($name, 47876) | 0)) {
+   $retval$0 = 31;
+   break;
+  }
+  if (!(_strcmp($name, 47898) | 0)) {
+   $retval$0 = 32;
+   break;
+  }
+  if (!(_strcmp($name, 47921) | 0)) {
+   $retval$0 = 33;
+   break;
+  }
+  if (!(_strcmp($name, 47945) | 0)) {
+   $retval$0 = 34;
+   break;
+  }
+  if (!(_strcmp($name, 47970) | 0)) {
+   $retval$0 = 28;
+   break;
+  }
+  if (!(_strcmp($name, 47991) | 0)) {
+   $retval$0 = 39;
+   break;
+  }
+  if (!(_strcmp($name, 48015) | 0)) {
+   $retval$0 = 40;
+   break;
+  }
+  if (!(_strcmp($name, 48036) | 0)) {
+   $retval$0 = 26;
+   break;
+  }
+  if (!(_strcmp($name, 48055) | 0)) {
+   $retval$0 = 41;
+   break;
+  }
+  if (!(_strcmp($name, 48074) | 0)) {
+   $retval$0 = 28;
+   break;
+  }
+  if (!(_strcmp($name, 48101) | 0)) {
    $retval$0 = 42;
    break;
   }
-  $tobool638 = (_strcmp($name, 48112) | 0) == 0;
+  $tobool638 = (_strcmp($name, 48130) | 0) == 0;
   return ($tobool638 ? 7 : 0) | 0;
  } while (0);
  return $retval$0 | 0;
@@ -26059,7 +26059,7 @@ function _stbir__resample_vertical_downsample($stbir_info, $n) {
  HEAP32[$ring_buffer_length >> 2] = ((HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 160 >> 2] | 0) >>> 0) / 4 | 0;
  HEAP32[$n0 >> 2] = HEAP32[(HEAP32[$vertical_contributors >> 2] | 0) + (HEAP32[$contributor >> 2] << 3) >> 2];
  HEAP32[$n1 >> 2] = HEAP32[(HEAP32[$vertical_contributors >> 2] | 0) + (HEAP32[$contributor >> 2] << 3) + 4 >> 2];
- if (_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0) ___assert_fail(41265, 40603, 2004, 41419);
+ if (_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0) ___assert_fail(41283, 40621, 2004, 41437);
  HEAP32[$k >> 2] = HEAP32[$n0 >> 2];
  while (1) {
   if ((HEAP32[$k >> 2] | 0) > (HEAP32[$n1 >> 2] | 0)) break;
@@ -26526,8 +26526,8 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
  HEAP32[sp_a + 1084 >> 2] = $ri;
  HEAP32[$valid >> 2] = 0;
  HEAP32[$headerToken >> 2] = _stbi__hdr_gettoken(HEAP32[$s$addr >> 2] | 0, $buffer) | 0;
- if (_strcmp(HEAP32[$headerToken >> 2] | 0, 39244) | 0) if (_strcmp(HEAP32[$headerToken >> 2] | 0, 39255) | 0) {
-  $tobool = (_stbi__err(39262) | 0) != 0;
+ if (_strcmp(HEAP32[$headerToken >> 2] | 0, 39262) | 0) if (_strcmp(HEAP32[$headerToken >> 2] | 0, 39273) | 0) {
+  $tobool = (_stbi__err(39280) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool ? 0 : 0;
   $138 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -26536,18 +26536,18 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
  while (1) {
   HEAP32[$token >> 2] = _stbi__hdr_gettoken(HEAP32[$s$addr >> 2] | 0, $buffer) | 0;
   if (!(HEAP8[HEAP32[$token >> 2] >> 0] | 0)) break;
-  if (!(_strcmp(HEAP32[$token >> 2] | 0, 39270) | 0)) HEAP32[$valid >> 2] = 1;
+  if (!(_strcmp(HEAP32[$token >> 2] | 0, 39288) | 0)) HEAP32[$valid >> 2] = 1;
  }
  if (!(HEAP32[$valid >> 2] | 0)) {
-  $tobool19 = (_stbi__err(39293) | 0) != 0;
+  $tobool19 = (_stbi__err(39311) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool19 ? 0 : 0;
   $138 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $138 | 0;
  }
  HEAP32[$token >> 2] = _stbi__hdr_gettoken(HEAP32[$s$addr >> 2] | 0, $buffer) | 0;
- if (_strncmp(HEAP32[$token >> 2] | 0, 39312, 3) | 0) {
-  $tobool28 = (_stbi__err(39316) | 0) != 0;
+ if (_strncmp(HEAP32[$token >> 2] | 0, 39330, 3) | 0) {
+  $tobool28 = (_stbi__err(39334) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool28 ? 0 : 0;
   $138 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -26560,8 +26560,8 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
   if ((HEAP8[HEAP32[$token >> 2] >> 0] | 0) != 32) break;
   HEAP32[$token >> 2] = $20 + 1;
  }
- if (_strncmp($20, 39340, 3) | 0) {
-  $tobool39 = (_stbi__err(39316) | 0) != 0;
+ if (_strncmp($20, 39358, 3) | 0) {
+  $tobool39 = (_stbi__err(39334) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool39 ? 0 : 0;
   $138 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -26574,7 +26574,7 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
  if (HEAP32[$comp$addr >> 2] | 0) HEAP32[HEAP32[$comp$addr >> 2] >> 2] = 3;
  if (!(HEAP32[$req_comp$addr >> 2] | 0)) HEAP32[$req_comp$addr >> 2] = 3;
  if (!(_stbi__mad4sizes_valid(HEAP32[$width >> 2] | 0, HEAP32[$height >> 2] | 0, HEAP32[$req_comp$addr >> 2] | 0, 4, 0) | 0)) {
-  $tobool55 = (_stbi__err(39344) | 0) != 0;
+  $tobool55 = (_stbi__err(39362) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool55 ? 0 : 0;
   $138 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -26582,7 +26582,7 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
  }
  HEAP32[$hdr_data >> 2] = _stbi__malloc_mad4(HEAP32[$width >> 2] | 0, HEAP32[$height >> 2] | 0, HEAP32[$req_comp$addr >> 2] | 0, 4, 0) | 0;
  if (!(HEAP32[$hdr_data >> 2] | 0)) {
-  $tobool62 = (_stbi__err(39216) | 0) != 0;
+  $tobool62 = (_stbi__err(39234) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool62 ? 0 : 0;
   $138 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -26693,14 +26693,14 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
   } else if ((label | 0) == 39) {
    _free(HEAP32[$hdr_data >> 2] | 0);
    _free(HEAP32[$scanline >> 2] | 0);
-   $tobool123 = (_stbi__err(39354) | 0) != 0;
+   $tobool123 = (_stbi__err(39372) | 0) != 0;
    HEAP32[$retval >> 2] = $tobool123 ? 0 : 0;
    $138 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $138 | 0;
   } else if ((label | 0) == 42) {
    _free(HEAP32[$hdr_data >> 2] | 0);
-   $tobool133 = (_stbi__err(39216) | 0) != 0;
+   $tobool133 = (_stbi__err(39234) | 0) != 0;
    HEAP32[$retval >> 2] = $tobool133 ? 0 : 0;
    $138 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
@@ -26708,7 +26708,7 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
   } else if ((label | 0) == 49) {
    _free(HEAP32[$hdr_data >> 2] | 0);
    _free(HEAP32[$scanline >> 2] | 0);
-   $tobool159 = (_stbi__err(39386) | 0) != 0;
+   $tobool159 = (_stbi__err(39404) | 0) != 0;
    HEAP32[$retval >> 2] = $tobool159 ? 0 : 0;
    $138 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
@@ -26716,7 +26716,7 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
   } else if ((label | 0) == 54) {
    _free(HEAP32[$hdr_data >> 2] | 0);
    _free(HEAP32[$scanline >> 2] | 0);
-   $tobool179 = (_stbi__err(39386) | 0) != 0;
+   $tobool179 = (_stbi__err(39404) | 0) != 0;
    HEAP32[$retval >> 2] = $tobool179 ? 0 : 0;
    $138 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
@@ -27008,10 +27008,10 @@ function _LoadDDS($agg$result, $fileName) {
  HEAP32[$image + 8 >> 2] = 0;
  HEAP32[$image + 12 >> 2] = 0;
  HEAP32[$image + 16 >> 2] = 0;
- HEAP32[$ddsFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$ddsFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39129) | 0;
  if (!(HEAP32[$ddsFile >> 2] | 0)) {
   HEAP32[$vararg_buffer >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 43669, $vararg_buffer);
+  _TraceLog(4, 43687, $vararg_buffer);
   HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -27025,23 +27025,23 @@ function _LoadDDS($agg$result, $fileName) {
   _fread($ddsHeader, 124, 1, HEAP32[$ddsFile >> 2] | 0) | 0;
   HEAP32[$vararg_buffer4 >> 2] = HEAP32[$fileName$addr >> 2];
   HEAP32[$vararg_buffer4 + 4 >> 2] = 124;
-  _TraceLog(2, 43751, $vararg_buffer4);
+  _TraceLog(2, 43769, $vararg_buffer4);
   $12 = HEAP32[$ddsHeader + 72 >> 2] | 0;
   HEAP32[$vararg_buffer8 >> 2] = HEAP32[$fileName$addr >> 2];
   HEAP32[$vararg_buffer8 + 4 >> 2] = $12;
-  _TraceLog(2, 43781, $vararg_buffer8);
+  _TraceLog(2, 43799, $vararg_buffer8);
   $14 = HEAP32[$ddsHeader + 72 + 4 >> 2] | 0;
   HEAP32[$vararg_buffer12 >> 2] = HEAP32[$fileName$addr >> 2];
   HEAP32[$vararg_buffer12 + 4 >> 2] = $14;
-  _TraceLog(2, 43817, $vararg_buffer12);
+  _TraceLog(2, 43835, $vararg_buffer12);
   $16 = HEAP32[$ddsHeader + 72 + 8 >> 2] | 0;
   HEAP32[$vararg_buffer16 >> 2] = HEAP32[$fileName$addr >> 2];
   HEAP32[$vararg_buffer16 + 4 >> 2] = $16;
-  _TraceLog(2, 43856, $vararg_buffer16);
+  _TraceLog(2, 43874, $vararg_buffer16);
   $18 = HEAP32[$ddsHeader + 72 + 12 >> 2] | 0;
   HEAP32[$vararg_buffer20 >> 2] = HEAP32[$fileName$addr >> 2];
   HEAP32[$vararg_buffer20 + 4 >> 2] = $18;
-  _TraceLog(2, 43883, $vararg_buffer20);
+  _TraceLog(2, 43901, $vararg_buffer20);
   HEAP32[$image + 4 >> 2] = HEAP32[$ddsHeader + 12 >> 2];
   HEAP32[$image + 8 >> 2] = HEAP32[$ddsHeader + 8 >> 2];
   if (!(HEAP32[$ddsHeader + 24 >> 2] | 0)) HEAP32[$image + 12 >> 2] = 1; else HEAP32[$image + 12 >> 2] = HEAP32[$ddsHeader + 24 >> 2];
@@ -27121,7 +27121,7 @@ function _LoadDDS($agg$result, $fileName) {
    $113 = HEAP32[$ddsHeader + 16 >> 2] | 0;
    if ((HEAP32[$ddsHeader + 24 >> 2] | 0) >>> 0 > 1) HEAP32[$size235 >> 2] = $113 << 1; else HEAP32[$size235 >> 2] = $113;
    HEAP32[$vararg_buffer24 >> 2] = HEAP32[$ddsHeader + 16 >> 2];
-   _TraceLog(2, 43913, $vararg_buffer24);
+   _TraceLog(2, 43931, $vararg_buffer24);
    HEAP32[$image >> 2] = _malloc(HEAP32[$size235 >> 2] | 0) | 0;
    _fread(HEAP32[$image >> 2] | 0, HEAP32[$size235 >> 2] | 0, 1, HEAP32[$ddsFile >> 2] | 0) | 0;
    $119 = HEAP32[$ddsHeader + 72 + 8 >> 2] | 0;
@@ -27164,7 +27164,7 @@ function _LoadDDS($agg$result, $fileName) {
  } while (0);
  if ((label | 0) == 7) {
   HEAP32[$vararg_buffer1 >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 43703, $vararg_buffer1);
+  _TraceLog(4, 43721, $vararg_buffer1);
  }
  _fclose(HEAP32[$ddsFile >> 2] | 0) | 0;
  HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
@@ -27226,29 +27226,29 @@ function _DrawCircleSector($center, $radius, $startAngle, $endAngle, $segments, 
  while (1) {
   if ((HEAP32[$i >> 2] | 0) >= ((HEAP32[$segments$addr >> 2] | 0) / 2 | 0 | 0)) break;
   _rlColor4ub(HEAP8[$color >> 0] | 0, HEAP8[$color + 1 >> 0] | 0, HEAP8[$color + 2 >> 0] | 0, HEAP8[$color + 3 >> 0] | 0);
-  $26 = Math_fround(HEAPF32[38827]);
-  $div32 = Math_fround($26 / Math_fround(HEAP32[38832] | 0));
-  $28 = Math_fround(HEAPF32[38828]);
-  _rlTexCoord2f($div32, Math_fround($28 / Math_fround(HEAP32[38833] | 0)));
+  $26 = Math_fround(HEAPF32[38828]);
+  $div32 = Math_fround($26 / Math_fround(HEAP32[38833] | 0));
+  $28 = Math_fround(HEAPF32[38829]);
+  _rlTexCoord2f($div32, Math_fround($28 / Math_fround(HEAP32[38834] | 0)));
   $30 = Math_fround(HEAPF32[$center >> 2]);
   _rlVertex2f($30, Math_fround(HEAPF32[$center + 4 >> 2]));
-  $32 = Math_fround(HEAPF32[38827]);
-  $div36 = Math_fround($32 / Math_fround(HEAP32[38832] | 0));
-  $34 = Math_fround(HEAPF32[38828]);
-  $add = Math_fround($34 + Math_fround(HEAPF32[38830]));
-  _rlTexCoord2f($div36, Math_fround($add / Math_fround(HEAP32[38833] | 0)));
+  $32 = Math_fround(HEAPF32[38828]);
+  $div36 = Math_fround($32 / Math_fround(HEAP32[38833] | 0));
+  $34 = Math_fround(HEAPF32[38829]);
+  $add = Math_fround($34 + Math_fround(HEAPF32[38831]));
+  _rlTexCoord2f($div36, Math_fround($add / Math_fround(HEAP32[38834] | 0)));
   $37 = Math_fround(HEAPF32[$center >> 2]);
   $39 = Math_fround(+_llvm_sin_f32(+Math_fround(Math_fround(HEAPF32[$angle >> 2]) * Math_fround(.0174532924))));
   $add42 = Math_fround($37 + Math_fround($39 * Math_fround(HEAPF32[$radius$addr >> 2])));
   $41 = Math_fround(HEAPF32[$center + 4 >> 2]);
   $43 = Math_fround(+_llvm_cos_f32(+Math_fround(Math_fround(HEAPF32[$angle >> 2]) * Math_fround(.0174532924))));
   _rlVertex2f($add42, Math_fround($41 + Math_fround($43 * Math_fround(HEAPF32[$radius$addr >> 2]))));
-  $45 = Math_fround(HEAPF32[38827]);
-  $add47 = Math_fround($45 + Math_fround(HEAPF32[38829]));
-  $div49 = Math_fround($add47 / Math_fround(HEAP32[38832] | 0));
-  $48 = Math_fround(HEAPF32[38828]);
-  $add50 = Math_fround($48 + Math_fround(HEAPF32[38830]));
-  _rlTexCoord2f($div49, Math_fround($add50 / Math_fround(HEAP32[38833] | 0)));
+  $45 = Math_fround(HEAPF32[38828]);
+  $add47 = Math_fround($45 + Math_fround(HEAPF32[38830]));
+  $div49 = Math_fround($add47 / Math_fround(HEAP32[38833] | 0));
+  $48 = Math_fround(HEAPF32[38829]);
+  $add50 = Math_fround($48 + Math_fround(HEAPF32[38831]));
+  _rlTexCoord2f($div49, Math_fround($add50 / Math_fround(HEAP32[38834] | 0)));
   $51 = Math_fround(HEAPF32[$center >> 2]);
   $52 = Math_fround(HEAPF32[$angle >> 2]);
   $54 = Math_fround(+_llvm_sin_f32(+Math_fround(Math_fround($52 + Math_fround(HEAPF32[$stepLength >> 2])) * Math_fround(.0174532924))));
@@ -27257,11 +27257,11 @@ function _DrawCircleSector($center, $radius, $startAngle, $endAngle, $segments, 
   $57 = Math_fround(HEAPF32[$angle >> 2]);
   $59 = Math_fround(+_llvm_cos_f32(+Math_fround(Math_fround($57 + Math_fround(HEAPF32[$stepLength >> 2])) * Math_fround(.0174532924))));
   _rlVertex2f($add57, Math_fround($56 + Math_fround($59 * Math_fround(HEAPF32[$radius$addr >> 2]))));
-  $61 = Math_fround(HEAPF32[38827]);
-  $add63 = Math_fround($61 + Math_fround(HEAPF32[38829]));
-  $div65 = Math_fround($add63 / Math_fround(HEAP32[38832] | 0));
-  $64 = Math_fround(HEAPF32[38828]);
-  _rlTexCoord2f($div65, Math_fround($64 / Math_fround(HEAP32[38833] | 0)));
+  $61 = Math_fround(HEAPF32[38828]);
+  $add63 = Math_fround($61 + Math_fround(HEAPF32[38830]));
+  $div65 = Math_fround($add63 / Math_fround(HEAP32[38833] | 0));
+  $64 = Math_fround(HEAPF32[38829]);
+  _rlTexCoord2f($div65, Math_fround($64 / Math_fround(HEAP32[38834] | 0)));
   $66 = Math_fround(HEAPF32[$center >> 2]);
   $67 = Math_fround(HEAPF32[$angle >> 2]);
   $69 = Math_fround(+_llvm_sin_f32(+Math_fround(Math_fround($67 + Math_fround(Math_fround(HEAPF32[$stepLength >> 2]) * Math_fround(2.0))) * Math_fround(.0174532924))));
@@ -27281,29 +27281,29 @@ function _DrawCircleSector($center, $radius, $startAngle, $endAngle, $segments, 
   return;
  }
  _rlColor4ub(HEAP8[$color >> 0] | 0, HEAP8[$color + 1 >> 0] | 0, HEAP8[$color + 2 >> 0] | 0, HEAP8[$color + 3 >> 0] | 0);
- $84 = Math_fround(HEAPF32[38827]);
- $div88 = Math_fround($84 / Math_fround(HEAP32[38832] | 0));
- $86 = Math_fround(HEAPF32[38828]);
- _rlTexCoord2f($div88, Math_fround($86 / Math_fround(HEAP32[38833] | 0)));
+ $84 = Math_fround(HEAPF32[38828]);
+ $div88 = Math_fround($84 / Math_fround(HEAP32[38833] | 0));
+ $86 = Math_fround(HEAPF32[38829]);
+ _rlTexCoord2f($div88, Math_fround($86 / Math_fround(HEAP32[38834] | 0)));
  $88 = Math_fround(HEAPF32[$center >> 2]);
  _rlVertex2f($88, Math_fround(HEAPF32[$center + 4 >> 2]));
- $90 = Math_fround(HEAPF32[38827]);
- $div94 = Math_fround($90 / Math_fround(HEAP32[38832] | 0));
- $92 = Math_fround(HEAPF32[38828]);
- $add95 = Math_fround($92 + Math_fround(HEAPF32[38830]));
- _rlTexCoord2f($div94, Math_fround($add95 / Math_fround(HEAP32[38833] | 0)));
+ $90 = Math_fround(HEAPF32[38828]);
+ $div94 = Math_fround($90 / Math_fround(HEAP32[38833] | 0));
+ $92 = Math_fround(HEAPF32[38829]);
+ $add95 = Math_fround($92 + Math_fround(HEAPF32[38831]));
+ _rlTexCoord2f($div94, Math_fround($add95 / Math_fround(HEAP32[38834] | 0)));
  $95 = Math_fround(HEAPF32[$center >> 2]);
  $97 = Math_fround(+_llvm_sin_f32(+Math_fround(Math_fround(HEAPF32[$angle >> 2]) * Math_fround(.0174532924))));
  $add101 = Math_fround($95 + Math_fround($97 * Math_fround(HEAPF32[$radius$addr >> 2])));
  $99 = Math_fround(HEAPF32[$center + 4 >> 2]);
  $101 = Math_fround(+_llvm_cos_f32(+Math_fround(Math_fround(HEAPF32[$angle >> 2]) * Math_fround(.0174532924))));
  _rlVertex2f($add101, Math_fround($99 + Math_fround($101 * Math_fround(HEAPF32[$radius$addr >> 2]))));
- $103 = Math_fround(HEAPF32[38827]);
- $add106 = Math_fround($103 + Math_fround(HEAPF32[38829]));
- $div108 = Math_fround($add106 / Math_fround(HEAP32[38832] | 0));
- $106 = Math_fround(HEAPF32[38828]);
- $add109 = Math_fround($106 + Math_fround(HEAPF32[38830]));
- _rlTexCoord2f($div108, Math_fround($add109 / Math_fround(HEAP32[38833] | 0)));
+ $103 = Math_fround(HEAPF32[38828]);
+ $add106 = Math_fround($103 + Math_fround(HEAPF32[38830]));
+ $div108 = Math_fround($add106 / Math_fround(HEAP32[38833] | 0));
+ $106 = Math_fround(HEAPF32[38829]);
+ $add109 = Math_fround($106 + Math_fround(HEAPF32[38831]));
+ _rlTexCoord2f($div108, Math_fround($add109 / Math_fround(HEAP32[38834] | 0)));
  $109 = Math_fround(HEAPF32[$center >> 2]);
  $110 = Math_fround(HEAPF32[$angle >> 2]);
  $112 = Math_fround(+_llvm_sin_f32(+Math_fround(Math_fround($110 + Math_fround(HEAPF32[$stepLength >> 2])) * Math_fround(.0174532924))));
@@ -27312,11 +27312,11 @@ function _DrawCircleSector($center, $radius, $startAngle, $endAngle, $segments, 
  $115 = Math_fround(HEAPF32[$angle >> 2]);
  $117 = Math_fround(+_llvm_cos_f32(+Math_fround(Math_fround($115 + Math_fround(HEAPF32[$stepLength >> 2])) * Math_fround(.0174532924))));
  _rlVertex2f($add116, Math_fround($114 + Math_fround($117 * Math_fround(HEAPF32[$radius$addr >> 2]))));
- $119 = Math_fround(HEAPF32[38827]);
- $add122 = Math_fround($119 + Math_fround(HEAPF32[38829]));
- $div124 = Math_fround($add122 / Math_fround(HEAP32[38832] | 0));
- $122 = Math_fround(HEAPF32[38828]);
- _rlTexCoord2f($div124, Math_fround($122 / Math_fround(HEAP32[38833] | 0)));
+ $119 = Math_fround(HEAPF32[38828]);
+ $add122 = Math_fround($119 + Math_fround(HEAPF32[38830]));
+ $div124 = Math_fround($add122 / Math_fround(HEAP32[38833] | 0));
+ $122 = Math_fround(HEAPF32[38829]);
+ _rlTexCoord2f($div124, Math_fround($122 / Math_fround(HEAP32[38834] | 0)));
  $124 = Math_fround(HEAPF32[$center >> 2]);
  _rlVertex2f($124, Math_fround(HEAPF32[$center + 4 >> 2]));
  _rlEnd();
@@ -27340,7 +27340,7 @@ function _GetImageDataNormalized($image) {
  $pixel100 = sp_a + 16 | 0;
  HEAP32[$pixels >> 2] = _malloc((Math_imul(HEAP32[$image + 4 >> 2] | 0, HEAP32[$image + 8 >> 2] | 0) | 0) << 4) | 0;
  if ((HEAP32[$image + 16 >> 2] | 0) >= 11) {
-  _TraceLog(4, 44056, sp_a);
+  _TraceLog(4, 44074, sp_a);
   $179 = HEAP32[$pixels >> 2] | 0;
   STACKTOP = sp;
   return $179 | 0;
@@ -27527,14 +27527,14 @@ function _stbi_write_png_to_mem($pixels, $stride_bytes, $x, $y, $n, $out_len) {
  HEAP32[$ctype + 8 >> 2] = HEAP32[4062];
  HEAP32[$ctype + 12 >> 2] = HEAP32[4063];
  HEAP32[$ctype + 16 >> 2] = HEAP32[4064];
- HEAP8[$sig >> 0] = HEAP8[40514] | 0;
- HEAP8[$sig + 1 >> 0] = HEAP8[40515] | 0;
- HEAP8[$sig + 2 >> 0] = HEAP8[40516] | 0;
- HEAP8[$sig + 3 >> 0] = HEAP8[40517] | 0;
- HEAP8[$sig + 4 >> 0] = HEAP8[40518] | 0;
- HEAP8[$sig + 5 >> 0] = HEAP8[40519] | 0;
- HEAP8[$sig + 6 >> 0] = HEAP8[40520] | 0;
- HEAP8[$sig + 7 >> 0] = HEAP8[40521] | 0;
+ HEAP8[$sig >> 0] = HEAP8[40532] | 0;
+ HEAP8[$sig + 1 >> 0] = HEAP8[40533] | 0;
+ HEAP8[$sig + 2 >> 0] = HEAP8[40534] | 0;
+ HEAP8[$sig + 3 >> 0] = HEAP8[40535] | 0;
+ HEAP8[$sig + 4 >> 0] = HEAP8[40536] | 0;
+ HEAP8[$sig + 5 >> 0] = HEAP8[40537] | 0;
+ HEAP8[$sig + 6 >> 0] = HEAP8[40538] | 0;
+ HEAP8[$sig + 7 >> 0] = HEAP8[40539] | 0;
  if (!(HEAP32[$stride_bytes$addr >> 2] | 0)) HEAP32[$stride_bytes$addr >> 2] = Math_imul(HEAP32[$x$addr >> 2] | 0, HEAP32[$n$addr >> 2] | 0) | 0;
  if ((HEAP32[$force_filter >> 2] | 0) >= 5) HEAP32[$force_filter >> 2] = -1;
  $add = (Math_imul(HEAP32[$x$addr >> 2] | 0, HEAP32[$n$addr >> 2] | 0) | 0) + 1 | 0;
@@ -27615,10 +27615,10 @@ function _stbi_write_png_to_mem($pixels, $stride_bytes, $x, $y, $n, $out_len) {
  HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = 0;
  HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = 13;
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + 4;
- HEAP8[HEAP32[$o >> 2] >> 0] = HEAP8[40522] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP8[40523] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP8[40524] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP8[40525] | 0;
+ HEAP8[HEAP32[$o >> 2] >> 0] = HEAP8[40540] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP8[40541] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP8[40542] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP8[40543] | 0;
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + 4;
  HEAP8[HEAP32[$o >> 2] >> 0] = HEAP32[$x$addr >> 2] >> 24;
  HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP32[$x$addr >> 2] >> 16;
@@ -27652,10 +27652,10 @@ function _stbi_write_png_to_mem($pixels, $stride_bytes, $x, $y, $n, $out_len) {
  HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP32[$zlen >> 2] >> 8;
  HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP32[$zlen >> 2];
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + 4;
- HEAP8[HEAP32[$o >> 2] >> 0] = HEAP8[40527] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP8[40528] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP8[40529] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP8[40530] | 0;
+ HEAP8[HEAP32[$o >> 2] >> 0] = HEAP8[40545] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP8[40546] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP8[40547] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP8[40548] | 0;
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + 4;
  _memmove(HEAP32[$o >> 2] | 0, HEAP32[$zlib >> 2] | 0, HEAP32[$zlen >> 2] | 0) | 0;
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + (HEAP32[$zlen >> 2] | 0);
@@ -27666,13 +27666,13 @@ function _stbi_write_png_to_mem($pixels, $stride_bytes, $x, $y, $n, $out_len) {
  HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = 0;
  HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = 0;
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + 4;
- HEAP8[HEAP32[$o >> 2] >> 0] = HEAP8[40532] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP8[40533] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP8[40534] | 0;
- HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP8[40535] | 0;
+ HEAP8[HEAP32[$o >> 2] >> 0] = HEAP8[40550] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 1 >> 0] = HEAP8[40551] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 2 >> 0] = HEAP8[40552] | 0;
+ HEAP8[(HEAP32[$o >> 2] | 0) + 3 >> 0] = HEAP8[40553] | 0;
  HEAP32[$o >> 2] = (HEAP32[$o >> 2] | 0) + 4;
  _stbiw__wpcrc($o, 0);
- if ((HEAP32[$o >> 2] | 0) != ((HEAP32[$out >> 2] | 0) + (HEAP32[HEAP32[$out_len$addr >> 2] >> 2] | 0) | 0)) ___assert_fail(40537, 40399, 1155, 40557);
+ if ((HEAP32[$o >> 2] | 0) != ((HEAP32[$out >> 2] | 0) + (HEAP32[HEAP32[$out_len$addr >> 2] >> 2] | 0) | 0)) ___assert_fail(40555, 40417, 1155, 40575);
  HEAP32[$retval >> 2] = HEAP32[$out >> 2];
  $167 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
@@ -27698,9 +27698,9 @@ function _GetImageData($image) {
  $pixel108 = sp_a + 28 | 0;
  if (HEAP32[$image + 4 >> 2] | 0) if (HEAP32[$image + 8 >> 2] | 0) {
   HEAP32[$pixels >> 2] = _malloc((Math_imul(HEAP32[$image + 4 >> 2] | 0, HEAP32[$image + 8 >> 2] | 0) | 0) << 2) | 0;
-  L4 : do if ((HEAP32[$image + 16 >> 2] | 0) >= 11) _TraceLog(4, 44056, $vararg_buffer); else {
+  L4 : do if ((HEAP32[$image + 16 >> 2] | 0) >= 11) _TraceLog(4, 44074, $vararg_buffer); else {
    if ((HEAP32[$image + 16 >> 2] | 0) == 8) label = 9; else if ((HEAP32[$image + 16 >> 2] | 0) == 9) label = 9; else if ((HEAP32[$image + 16 >> 2] | 0) == 10) label = 9;
-   if ((label | 0) == 9) _TraceLog(4, 44120, $vararg_buffer1);
+   if ((label | 0) == 9) _TraceLog(4, 44138, $vararg_buffer1);
    HEAP32[$i >> 2] = 0;
    HEAP32[$k >> 2] = 0;
    while (1) {
@@ -27863,12 +27863,12 @@ function _stbi__convert_format16($data, $img_n, $req_comp, $x, $y) {
   STACKTOP = sp;
   return $168 | 0;
  }
- if (!((HEAP32[$req_comp$addr >> 2] | 0) >= 1 & (HEAP32[$req_comp$addr >> 2] | 0) <= 4)) ___assert_fail(39427, 39140, 1637, 39458);
+ if (!((HEAP32[$req_comp$addr >> 2] | 0) >= 1 & (HEAP32[$req_comp$addr >> 2] | 0) <= 4)) ___assert_fail(39445, 39158, 1637, 39476);
  $mul = Math_imul(HEAP32[$req_comp$addr >> 2] | 0, HEAP32[$x$addr >> 2] | 0) | 0;
  HEAP32[$good >> 2] = _stbi__malloc((Math_imul($mul, HEAP32[$y$addr >> 2] | 0) | 0) << 1) | 0;
  if (!(HEAP32[$good >> 2] | 0)) {
   _free(HEAP32[$data$addr >> 2] | 0);
-  $tobool = (_stbi__err(39216) | 0) != 0;
+  $tobool = (_stbi__err(39234) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool ? 0 : 0;
   $168 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -28065,7 +28065,7 @@ function _stbi__convert_format16($data, $img_n, $req_comp, $x, $y) {
   } while (0);
   HEAP32[$j >> 2] = (HEAP32[$j >> 2] | 0) + 1;
  }
- if ((label | 0) == 46) ___assert_fail(39481, 39140, 1666, 39458);
+ if ((label | 0) == 46) ___assert_fail(39499, 39158, 1666, 39476);
  _free($14);
  HEAP32[$retval >> 2] = HEAP32[$good >> 2];
  $168 = HEAP32[$retval >> 2] | 0;
@@ -28107,11 +28107,11 @@ function _stbi__convert_format($data, $img_n, $req_comp, $x, $y) {
   STACKTOP = sp;
   return $168 | 0;
  }
- if (!((HEAP32[$req_comp$addr >> 2] | 0) >= 1 & (HEAP32[$req_comp$addr >> 2] | 0) <= 4)) ___assert_fail(39427, 39140, 1588, 39483);
+ if (!((HEAP32[$req_comp$addr >> 2] | 0) >= 1 & (HEAP32[$req_comp$addr >> 2] | 0) <= 4)) ___assert_fail(39445, 39158, 1588, 39501);
  HEAP32[$good >> 2] = _stbi__malloc_mad3(HEAP32[$req_comp$addr >> 2] | 0, HEAP32[$x$addr >> 2] | 0, HEAP32[$y$addr >> 2] | 0, 0) | 0;
  if (!(HEAP32[$good >> 2] | 0)) {
   _free(HEAP32[$data$addr >> 2] | 0);
-  $tobool = (_stbi__err(39216) | 0) != 0;
+  $tobool = (_stbi__err(39234) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool ? 0 : 0;
   $168 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -28308,7 +28308,7 @@ function _stbi__convert_format($data, $img_n, $req_comp, $x, $y) {
   } while (0);
   HEAP32[$j >> 2] = (HEAP32[$j >> 2] | 0) + 1;
  }
- if ((label | 0) == 46) ___assert_fail(39481, 39140, 1617, 39483);
+ if ((label | 0) == 46) ___assert_fail(39499, 39158, 1617, 39501);
  _free($14);
  HEAP32[$retval >> 2] = HEAP32[$good >> 2];
  $168 = HEAP32[$retval >> 2] | 0;
@@ -28328,17 +28328,17 @@ function _ProcessGestureEvent($event) {
  $$compoundliteral = sp + 16 | 0;
  $$compoundliteral72 = sp + 8 | 0;
  $$compoundliteral159 = sp;
- HEAP32[38713] = HEAP32[$event + 4 >> 2];
+ HEAP32[38714] = HEAP32[$event + 4 >> 2];
  $cmp1 = (HEAP32[$event >> 2] | 0) == 1;
- if ((HEAP32[38713] | 0) >= 2) {
+ if ((HEAP32[38714] | 0) >= 2) {
   if ($cmp1) {
    $position115 = $event + 24 | 0;
-   HEAP32[38715] = HEAP32[$position115 >> 2];
-   HEAP32[38716] = HEAP32[$position115 + 4 >> 2];
+   HEAP32[38716] = HEAP32[$position115 >> 2];
+   HEAP32[38717] = HEAP32[$position115 + 4 >> 2];
    $arrayidx118 = $event + 24 + 8 | 0;
-   HEAP32[38726] = HEAP32[$arrayidx118 >> 2];
-   HEAP32[38727] = HEAP32[$arrayidx118 + 4 >> 2];
-   HEAP32[38712] = 4;
+   HEAP32[38727] = HEAP32[$arrayidx118 >> 2];
+   HEAP32[38728] = HEAP32[$arrayidx118 + 4 >> 2];
+   HEAP32[38713] = 4;
    +_GetCurrentTime();
    STACKTOP = sp;
    return;
@@ -28348,93 +28348,93 @@ function _ProcessGestureEvent($event) {
     STACKTOP = sp;
     return;
    }
-   HEAPF32[38730] = Math_fround(0.0);
+   HEAPF32[38731] = Math_fround(0.0);
    HEAPF32[$$compoundliteral159 >> 2] = Math_fround(0.0);
    HEAPF32[$$compoundliteral159 + 4 >> 2] = Math_fround(0.0);
+   HEAP32[38714] = 0;
    HEAP32[38713] = 0;
-   HEAP32[38712] = 0;
    STACKTOP = sp;
    return;
   };
-  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38724];
-  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38725];
-  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38728];
-  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38729];
-  HEAPF32[38730] = Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16));
-  HEAP32[38715] = HEAP32[38724];
+  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38725];
+  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38726];
+  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38729];
+  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38730];
+  HEAPF32[38731] = Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16));
   HEAP32[38716] = HEAP32[38725];
-  HEAP32[38726] = HEAP32[38728];
+  HEAP32[38717] = HEAP32[38726];
   HEAP32[38727] = HEAP32[38729];
+  HEAP32[38728] = HEAP32[38730];
   $position128 = $event + 24 | 0;
-  HEAP32[38724] = HEAP32[$position128 >> 2];
-  HEAP32[38725] = HEAP32[$position128 + 4 >> 2];
+  HEAP32[38725] = HEAP32[$position128 >> 2];
+  HEAP32[38726] = HEAP32[$position128 + 4 >> 2];
   $arrayidx131 = $event + 24 + 8 | 0;
-  HEAP32[38728] = HEAP32[$arrayidx131 >> 2];
-  HEAP32[38729] = HEAP32[$arrayidx131 + 4 >> 2];
-  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38715];
-  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38716];
-  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38724];
-  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38725];
+  HEAP32[38729] = HEAP32[$arrayidx131 >> 2];
+  HEAP32[38730] = HEAP32[$arrayidx131 + 4 >> 2];
+  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38716];
+  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38717];
+  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38725];
+  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38726];
   if (Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16)) >= Math_fround(.00499999989)) label = 41; else {
-   HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38726];
-   HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38727];
-   HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38728];
-   HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38729];
+   HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38727];
+   HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38728];
+   HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38729];
+   HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38730];
    if (Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16)) >= Math_fround(.00499999989)) label = 41; else {
-    HEAP32[38712] = 4;
+    HEAP32[38713] = 4;
     +_GetCurrentTime();
    }
   }
   do if ((label | 0) == 41) {
-   HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38724];
-   HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38725];
-   HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38728];
-   HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38729];
+   HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38725];
+   HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38726];
+   HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38729];
+   HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38730];
    $call142 = Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16));
-   if (Math_fround($call142 - Math_fround(HEAPF32[38730])) < Math_fround(0.0)) {
-    HEAP32[38712] = 256;
+   if (Math_fround($call142 - Math_fround(HEAPF32[38731])) < Math_fround(0.0)) {
+    HEAP32[38713] = 256;
     break;
    } else {
-    HEAP32[38712] = 512;
+    HEAP32[38713] = 512;
     break;
    }
   } while (0);
-  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38724];
-  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38725];
-  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38728];
-  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38729];
+  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38725];
+  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38726];
+  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38729];
+  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38730];
   Math_fround(_Vector2Angle($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16));
   STACKTOP = sp;
   return;
  }
  if ($cmp1) {
-  HEAP32[38714] = (HEAP32[38714] | 0) + 1;
-  if ((HEAP32[38712] | 0) == 0 & (HEAP32[38714] | 0) >= 2) {
+  HEAP32[38715] = (HEAP32[38715] | 0) + 1;
+  if ((HEAP32[38713] | 0) == 0 & (HEAP32[38715] | 0) >= 2) {
    $call = +_GetCurrentTime();
    if ($call - +HEAPF64[19274] < 300.0) {
     $position = $event + 24 | 0;
-    HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38715];
-    HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38716];
+    HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38716];
+    HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38717];
     HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[$position >> 2];
     HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[$position + 4 >> 2];
     if (Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16)) < Math_fround(.0299999993)) {
-     HEAP32[38712] = 2;
-     HEAP32[38714] = 0;
+     HEAP32[38713] = 2;
+     HEAP32[38715] = 0;
     } else label = 7;
    } else label = 7;
   } else label = 7;
   if ((label | 0) == 7) {
-   HEAP32[38714] = 1;
-   HEAP32[38712] = 1;
+   HEAP32[38715] = 1;
+   HEAP32[38713] = 1;
   }
   $position11 = $event + 24 | 0;
-  HEAP32[38715] = HEAP32[$position11 >> 2];
-  HEAP32[38716] = HEAP32[$position11 + 4 >> 2];
+  HEAP32[38716] = HEAP32[$position11 >> 2];
+  HEAP32[38717] = HEAP32[$position11 + 4 >> 2];
   $position13 = $event + 24 | 0;
-  HEAP32[38717] = HEAP32[$position13 >> 2];
-  HEAP32[38718] = HEAP32[$position13 + 4 >> 2];
-  HEAP32[38719] = HEAP32[38715];
+  HEAP32[38718] = HEAP32[$position13 >> 2];
+  HEAP32[38719] = HEAP32[$position13 + 4 >> 2];
   HEAP32[38720] = HEAP32[38716];
+  HEAP32[38721] = HEAP32[38717];
   HEAPF64[19274] = +_GetCurrentTime();
   HEAP32[5040] = HEAP32[$event + 8 >> 2];
   HEAPF32[$$compoundliteral >> 2] = Math_fround(0.0);
@@ -28447,88 +28447,88 @@ function _ProcessGestureEvent($event) {
    STACKTOP = sp;
    return;
   }
-  if ((HEAP32[38712] | 0) == 8) HEAPF64[19274] = +_GetCurrentTime();
-  if (!(HEAP8[155976] & 1)) {
+  if ((HEAP32[38713] | 0) == 8) HEAPF64[19274] = +_GetCurrentTime();
+  if (!(HEAP8[155980] & 1)) {
    HEAPF64[19275] = +_GetCurrentTime();
-   HEAP8[155976] = 1;
+   HEAP8[155980] = 1;
   }
   $position88 = $event + 24 | 0;
-  HEAP32[38724] = HEAP32[$position88 >> 2];
-  HEAP32[38725] = HEAP32[$position88 + 4 >> 2];
-  if ((HEAP32[38712] | 0) == 4) {
-   if (HEAP8[155977] & 1) {
+  HEAP32[38725] = HEAP32[$position88 >> 2];
+  HEAP32[38726] = HEAP32[$position88 + 4 >> 2];
+  if ((HEAP32[38713] | 0) == 4) {
+   if (HEAP8[155981] & 1) {
     $position95 = $event + 24 | 0;
-    HEAP32[38715] = HEAP32[$position95 >> 2];
-    HEAP32[38716] = HEAP32[$position95 + 4 >> 2];
+    HEAP32[38716] = HEAP32[$position95 >> 2];
+    HEAP32[38717] = HEAP32[$position95 + 4 >> 2];
    }
-   HEAP8[155977] = 0;
-   HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38715];
-   HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38716];
-   HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38724];
-   HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38725];
+   HEAP8[155981] = 0;
+   HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38716];
+   HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38717];
+   HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38725];
+   HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38726];
    if (Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16)) >= Math_fround(.0149999997)) {
     HEAPF64[19274] = +_GetCurrentTime();
-    HEAP32[38712] = 8;
+    HEAP32[38713] = 8;
    }
   }
   STACKTOP = sp;
   return;
  }
- if ((HEAP32[38712] | 0) == 8) {
+ if ((HEAP32[38713] | 0) == 8) {
   $position23 = $event + 24 | 0;
-  HEAP32[38719] = HEAP32[$position23 >> 2];
-  HEAP32[38720] = HEAP32[$position23 + 4 >> 2];
+  HEAP32[38720] = HEAP32[$position23 >> 2];
+  HEAP32[38721] = HEAP32[$position23 + 4 >> 2];
  };
- HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38715];
- HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38716];
- HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38719];
- HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38720];
- HEAPF32[38721] = Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16));
- $10 = Math_fround(HEAPF32[38721]);
+ HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38716];
+ HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38717];
+ HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38720];
+ HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38721];
+ HEAPF32[38722] = Math_fround(_Vector2Distance($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16));
+ $10 = Math_fround(HEAPF32[38722]);
  $call27 = +_GetCurrentTime();
- HEAPF32[38722] = Math_fround($10 / Math_fround($call27 - +HEAPF64[19275]));
- HEAP8[155976] = 0;
- do if (Math_fround(HEAPF32[38722]) > Math_fround(.000500000024)) if ((HEAP32[5040] | 0) == (HEAP32[$event + 8 >> 2] | 0)) {
-  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38715];
-  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38716];
-  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38719];
-  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38720];
-  HEAPF32[38723] = Math_fround(Math_fround(360.0) - Math_fround(_Vector2Angle($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16)));
-  $cmp39 = Math_fround(HEAPF32[38723]) < Math_fround(30.0);
-  if ($cmp39 | Math_fround(HEAPF32[38723]) > Math_fround(330.0)) {
-   HEAP32[38712] = 16;
+ HEAPF32[38723] = Math_fround($10 / Math_fround($call27 - +HEAPF64[19275]));
+ HEAP8[155980] = 0;
+ do if (Math_fround(HEAPF32[38723]) > Math_fround(.000500000024)) if ((HEAP32[5040] | 0) == (HEAP32[$event + 8 >> 2] | 0)) {
+  HEAP32[$moveDownPosition$byval_copy15 >> 2] = HEAP32[38716];
+  HEAP32[$moveDownPosition$byval_copy15 + 4 >> 2] = HEAP32[38717];
+  HEAP32[$moveDownPosition2$byval_copy16 >> 2] = HEAP32[38720];
+  HEAP32[$moveDownPosition2$byval_copy16 + 4 >> 2] = HEAP32[38721];
+  HEAPF32[38724] = Math_fround(Math_fround(360.0) - Math_fround(_Vector2Angle($moveDownPosition$byval_copy15, $moveDownPosition2$byval_copy16)));
+  $cmp39 = Math_fround(HEAPF32[38724]) < Math_fround(30.0);
+  if ($cmp39 | Math_fround(HEAPF32[38724]) > Math_fround(330.0)) {
+   HEAP32[38713] = 16;
    break;
   }
-  $cmp45 = Math_fround(HEAPF32[38723]) > Math_fround(30.0);
-  if ($cmp45 & Math_fround(HEAPF32[38723]) < Math_fround(120.0)) {
-   HEAP32[38712] = 64;
+  $cmp45 = Math_fround(HEAPF32[38724]) > Math_fround(30.0);
+  if ($cmp45 & Math_fround(HEAPF32[38724]) < Math_fround(120.0)) {
+   HEAP32[38713] = 64;
    break;
   }
-  $cmp52 = Math_fround(HEAPF32[38723]) > Math_fround(120.0);
-  if ($cmp52 & Math_fround(HEAPF32[38723]) < Math_fround(210.0)) {
-   HEAP32[38712] = 32;
+  $cmp52 = Math_fround(HEAPF32[38724]) > Math_fround(120.0);
+  if ($cmp52 & Math_fround(HEAPF32[38724]) < Math_fround(210.0)) {
+   HEAP32[38713] = 32;
    break;
   }
-  $cmp59 = Math_fround(HEAPF32[38723]) > Math_fround(210.0);
-  if ($cmp59 & Math_fround(HEAPF32[38723]) < Math_fround(300.0)) {
-   HEAP32[38712] = 128;
+  $cmp59 = Math_fround(HEAPF32[38724]) > Math_fround(210.0);
+  if ($cmp59 & Math_fround(HEAPF32[38724]) < Math_fround(300.0)) {
+   HEAP32[38713] = 128;
    break;
   } else {
-   HEAP32[38712] = 0;
+   HEAP32[38713] = 0;
    break;
   }
  } else label = 23; else label = 23; while (0);
  if ((label | 0) == 23) {
-  HEAPF32[38721] = Math_fround(0.0);
   HEAPF32[38722] = Math_fround(0.0);
   HEAPF32[38723] = Math_fround(0.0);
-  HEAP32[38712] = 0;
+  HEAPF32[38724] = Math_fround(0.0);
+  HEAP32[38713] = 0;
  }
  HEAPF32[$$compoundliteral72 >> 2] = Math_fround(0.0);
  HEAPF32[$$compoundliteral72 + 4 >> 2] = Math_fround(0.0);
- HEAP32[38717] = HEAP32[$$compoundliteral72 >> 2];
- HEAP32[38718] = HEAP32[$$compoundliteral72 + 4 >> 2];
- HEAP32[38713] = 0;
+ HEAP32[38718] = HEAP32[$$compoundliteral72 >> 2];
+ HEAP32[38719] = HEAP32[$$compoundliteral72 + 4 >> 2];
+ HEAP32[38714] = 0;
  STACKTOP = sp;
  return;
 }
@@ -28721,13 +28721,13 @@ function _rlglInit($width, $height) {
  HEAP32[$width$addr >> 2] = $width;
  HEAP32[$height$addr >> 2] = $height;
  HEAP32[$vararg_buffer >> 2] = _glGetString(7936) | 0;
- _TraceLog(3, 20696, $vararg_buffer);
+ _TraceLog(3, 20714, $vararg_buffer);
  HEAP32[$vararg_buffer2 >> 2] = _glGetString(7937) | 0;
- _TraceLog(3, 20714, $vararg_buffer2);
+ _TraceLog(3, 20732, $vararg_buffer2);
  HEAP32[$vararg_buffer5 >> 2] = _glGetString(7938) | 0;
- _TraceLog(3, 20732, $vararg_buffer5);
+ _TraceLog(3, 20750, $vararg_buffer5);
  HEAP32[$vararg_buffer8 >> 2] = _glGetString(35724) | 0;
- _TraceLog(3, 20750, $vararg_buffer8);
+ _TraceLog(3, 20768, $vararg_buffer8);
  HEAP32[$numExt >> 2] = 0;
  HEAP32[$extList >> 2] = _malloc(2048) | 0;
  HEAP32[$extensions >> 2] = _glGetString(7939) | 0;
@@ -28746,72 +28746,72 @@ function _rlglInit($width, $height) {
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
  HEAP32[$vararg_buffer11 >> 2] = HEAP32[$numExt >> 2];
- _TraceLog(3, 20768, $vararg_buffer11);
+ _TraceLog(3, 20786, $vararg_buffer11);
  HEAP32[$i17 >> 2] = 0;
  while (1) {
   $23 = HEAP32[$extList >> 2] | 0;
   if ((HEAP32[$i17 >> 2] | 0) >= (HEAP32[$numExt >> 2] | 0)) break;
-  if (!(_strcmp(HEAP32[$23 + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20803) | 0)) {
-   HEAP32[38707] = _eglGetProcAddress(47997) | 0;
-   HEAP32[38628] = _eglGetProcAddress(47952) | 0;
-   HEAP32[38706] = _eglGetProcAddress(47973) | 0;
-   if ((HEAP32[38707] | 0) != 0 & (HEAP32[38628] | 0) != 0 & (HEAP32[38706] | 0) != 0) HEAP8[155965] = 1;
+  if (!(_strcmp(HEAP32[$23 + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20821) | 0)) {
+   HEAP32[38708] = _eglGetProcAddress(48015) | 0;
+   HEAP32[38629] = _eglGetProcAddress(47970) | 0;
+   HEAP32[38707] = _eglGetProcAddress(47991) | 0;
+   if ((HEAP32[38708] | 0) != 0 & (HEAP32[38629] | 0) != 0 & (HEAP32[38707] | 0) != 0) HEAP8[155969] = 1;
   }
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20830) | 0)) HEAP8[155967] = 1;
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20850) | 0)) HEAP8[155968] = 1;
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20922) | 0)) label = 18; else if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20954) | 0)) label = 18; else if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20987) | 0)) label = 18;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20848) | 0)) HEAP8[155971] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20868) | 0)) HEAP8[155972] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20940) | 0)) label = 18; else if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 20972) | 0)) label = 18; else if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21005) | 0)) label = 18;
   if ((label | 0) == 18) {
    label = 0;
-   HEAP8[155969] = 1;
+   HEAP8[155973] = 1;
   }
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21027) | 0)) label = 21; else if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21063) | 0)) label = 21;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21045) | 0)) label = 21; else if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21081) | 0)) label = 21;
   if ((label | 0) == 21) {
    label = 0;
-   HEAP8[155970] = 1;
-  }
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21096) | 0)) HEAP8[155971] = 1;
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21121) | 0)) HEAP8[155972] = 1;
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21154) | 0)) HEAP8[155973] = 1;
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21190) | 0)) {
    HEAP8[155974] = 1;
-   _glGetFloatv(34047, 154820);
   }
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21224) | 0)) HEAP8[155966] = 1;
-  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21252) | 0)) HEAP8[155975] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21114) | 0)) HEAP8[155975] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21139) | 0)) HEAP8[155976] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21172) | 0)) HEAP8[155977] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21208) | 0)) {
+   HEAP8[155978] = 1;
+   _glGetFloatv(34047, 154824);
+  }
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21242) | 0)) HEAP8[155970] = 1;
+  if (!(_strcmp(HEAP32[(HEAP32[$extList >> 2] | 0) + (HEAP32[$i17 >> 2] << 2) >> 2] | 0, 21270) | 0)) HEAP8[155979] = 1;
   HEAP32[$i17 >> 2] = (HEAP32[$i17 >> 2] | 0) + 1;
  }
  _free($23);
  _free(HEAP32[$extensionsDup >> 2] | 0);
- if (HEAP8[155965] & 1) _TraceLog(3, 21272, $vararg_buffer14); else _TraceLog(4, 21347, $vararg_buffer16);
- if (HEAP8[155967] & 1) _TraceLog(3, 21408, $vararg_buffer18); else _TraceLog(4, 21483, $vararg_buffer20);
- if (HEAP8[155969] & 1) _TraceLog(3, 21575, $vararg_buffer22);
- if (HEAP8[155970] & 1) _TraceLog(3, 21621, $vararg_buffer24);
- if (HEAP8[155971] & 1) _TraceLog(3, 21668, $vararg_buffer26);
- if (HEAP8[155972] & 1) _TraceLog(3, 21719, $vararg_buffer28);
- if (HEAP8[155973] & 1) _TraceLog(3, 21766, $vararg_buffer30);
- if (HEAP8[155974] & 1) {
-  HEAPF64[$vararg_buffer32 >> 3] = +Math_fround(HEAPF32[38705]);
-  _TraceLog(3, 21813, $vararg_buffer32);
+ if (HEAP8[155969] & 1) _TraceLog(3, 21290, $vararg_buffer14); else _TraceLog(4, 21365, $vararg_buffer16);
+ if (HEAP8[155971] & 1) _TraceLog(3, 21426, $vararg_buffer18); else _TraceLog(4, 21501, $vararg_buffer20);
+ if (HEAP8[155973] & 1) _TraceLog(3, 21593, $vararg_buffer22);
+ if (HEAP8[155974] & 1) _TraceLog(3, 21639, $vararg_buffer24);
+ if (HEAP8[155975] & 1) _TraceLog(3, 21686, $vararg_buffer26);
+ if (HEAP8[155976] & 1) _TraceLog(3, 21737, $vararg_buffer28);
+ if (HEAP8[155977] & 1) _TraceLog(3, 21784, $vararg_buffer30);
+ if (HEAP8[155978] & 1) {
+  HEAPF64[$vararg_buffer32 >> 3] = +Math_fround(HEAPF32[38706]);
+  _TraceLog(3, 21831, $vararg_buffer32);
  }
- if (HEAP8[155966] & 1) _TraceLog(3, 21879, $vararg_buffer35);
- if (HEAP8[155975] & 1) _TraceLog(3, 21932, $vararg_buffer37);
- HEAP8[$pixels >> 0] = HEAP8[21967] | 0;
- HEAP8[$pixels + 1 >> 0] = HEAP8[21968] | 0;
- HEAP8[$pixels + 2 >> 0] = HEAP8[21969] | 0;
- HEAP8[$pixels + 3 >> 0] = HEAP8[21970] | 0;
- HEAP32[38625] = _rlLoadTexture($pixels, 1, 1, 7, 1) | 0;
- if (HEAP32[38625] | 0) {
-  HEAP32[$vararg_buffer39 >> 2] = HEAP32[38625];
-  _TraceLog(3, 21971, $vararg_buffer39);
- } else _TraceLog(4, 22022, $vararg_buffer42);
+ if (HEAP8[155970] & 1) _TraceLog(3, 21897, $vararg_buffer35);
+ if (HEAP8[155979] & 1) _TraceLog(3, 21950, $vararg_buffer37);
+ HEAP8[$pixels >> 0] = HEAP8[21985] | 0;
+ HEAP8[$pixels + 1 >> 0] = HEAP8[21986] | 0;
+ HEAP8[$pixels + 2 >> 0] = HEAP8[21987] | 0;
+ HEAP8[$pixels + 3 >> 0] = HEAP8[21988] | 0;
+ HEAP32[38626] = _rlLoadTexture($pixels, 1, 1, 7, 1) | 0;
+ if (HEAP32[38626] | 0) {
+  HEAP32[$vararg_buffer39 >> 2] = HEAP32[38626];
+  _TraceLog(3, 21989, $vararg_buffer39);
+ } else _TraceLog(4, 22040, $vararg_buffer42);
  _LoadShaderDefault($tmp);
- HEAP32[38708] = HEAP32[$tmp >> 2];
- HEAP32[38709] = HEAP32[$tmp + 4 >> 2];
- HEAP32[38626] = HEAP32[38708];
+ HEAP32[38709] = HEAP32[$tmp >> 2];
+ HEAP32[38710] = HEAP32[$tmp + 4 >> 2];
  HEAP32[38627] = HEAP32[38709];
+ HEAP32[38628] = HEAP32[38710];
  _LoadBuffersDefault();
  _MatrixIdentity($tmp177);
- dest = 154424;
+ dest = 154428;
  src = $tmp177;
  stop = dest + 64 | 0;
  do {
@@ -28819,17 +28819,17 @@ function _rlglInit($width, $height) {
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- HEAP32[38622] = _malloc(4096) | 0;
+ HEAP32[38623] = _malloc(4096) | 0;
  HEAP32[$i179 >> 2] = 0;
  while (1) {
   if ((HEAP32[$i179 >> 2] | 0) >= 256) break;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i179 >> 2] << 4) >> 2] = 7;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i179 >> 2] << 4) + 4 >> 2] = 0;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i179 >> 2] << 4) + 8 >> 2] = 0;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i179 >> 2] << 4) + 12 >> 2] = HEAP32[38625];
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i179 >> 2] << 4) >> 2] = 7;
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i179 >> 2] << 4) + 4 >> 2] = 0;
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i179 >> 2] << 4) + 8 >> 2] = 0;
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i179 >> 2] << 4) + 12 >> 2] = HEAP32[38626];
   HEAP32[$i179 >> 2] = (HEAP32[$i179 >> 2] | 0) + 1;
  }
- HEAP32[38623] = 1;
+ HEAP32[38624] = 1;
  HEAP32[$i191 >> 2] = 0;
  while (1) {
   if ((HEAP32[$i191 >> 2] | 0) >= 32) break;
@@ -28846,7 +28846,7 @@ function _rlglInit($width, $height) {
   HEAP32[$i191 >> 2] = (HEAP32[$i191 >> 2] | 0) + 1;
  }
  _MatrixIdentity($tmp201);
- dest = 154288;
+ dest = 154292;
  src = $tmp201;
  stop = dest + 64 | 0;
  do {
@@ -28855,7 +28855,7 @@ function _rlglInit($width, $height) {
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
  _MatrixIdentity($tmp202);
- dest = 154356;
+ dest = 154360;
  src = $tmp202;
  stop = dest + 64 | 0;
  do {
@@ -28863,7 +28863,7 @@ function _rlglInit($width, $height) {
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- HEAP32[38588] = 154356;
+ HEAP32[38589] = 154360;
  _glDepthFunc(515);
  _glDisable(2929);
  _glBlendFunc(770, 771);
@@ -28874,9 +28874,9 @@ function _rlglInit($width, $height) {
  _glClearColor(0.0, 0.0, 0.0, 1.0);
  _glClearDepthf(1.0);
  _glClear(16640);
- HEAP32[38629] = HEAP32[$width$addr >> 2];
- HEAP32[38630] = HEAP32[$height$addr >> 2];
- _TraceLog(3, 22061, $vararg_buffer44);
+ HEAP32[38630] = HEAP32[$width$addr >> 2];
+ HEAP32[38631] = HEAP32[$height$addr >> 2];
+ _TraceLog(3, 22079, $vararg_buffer44);
  STACKTOP = sp;
  return;
 }
@@ -28923,7 +28923,7 @@ function _jar_mod_load($modctx, $mod_data, $mod_data_size) {
   HEAP16[$i >> 1] = (HEAP16[$i >> 1] | 0) + 1 << 16 >> 16;
  }
  if (HEAP16[$10 + 3552 >> 1] | 0) HEAP32[$modmemory >> 2] = (HEAP32[$modmemory >> 2] | 0) + 1084; else {
-  _memcopy((HEAP32[$modctx$addr >> 2] | 0) + 1080 | 0, 36816, 4);
+  _memcopy((HEAP32[$modctx$addr >> 2] | 0) + 1080 | 0, 36834, 4);
   CSE$5 = HEAP32[$modctx$addr >> 2] | 0;
   _memcopy(CSE$5 + 950 | 0, CSE$5 + 20 + 450 | 0, 130);
   _memclear((HEAP32[$modctx$addr >> 2] | 0) + 20 + 450 | 0, 0, 480);
@@ -29228,7 +29228,7 @@ function _LoadFontDefault() {
  $testPosX = sp_a + 2972 | 0;
  $i31 = sp_a + 2968 | 0;
  $tmp76 = sp_a + 2948 | 0;
- HEAP32[38837] = 224;
+ HEAP32[38838] = 224;
  _memcpy($defaultFontData | 0, 12080, 2048) | 0;
  HEAP32[$charsHeight >> 2] = 10;
  HEAP32[$charsDivisor >> 2] = 1;
@@ -29285,48 +29285,48 @@ function _LoadFontDefault() {
  HEAP32[$imFont$byval_copy2 + 12 >> 2] = HEAP32[$imFont + 12 >> 2];
  HEAP32[$imFont$byval_copy2 + 16 >> 2] = HEAP32[$imFont + 16 >> 2];
  _LoadTextureFromImage($tmp, $imFont$byval_copy2);
- HEAP32[38838] = HEAP32[$tmp >> 2];
- HEAP32[38839] = HEAP32[$tmp + 4 >> 2];
- HEAP32[38840] = HEAP32[$tmp + 8 >> 2];
- HEAP32[38841] = HEAP32[$tmp + 12 >> 2];
- HEAP32[38842] = HEAP32[$tmp + 16 >> 2];
- HEAP32[38844] = _malloc((HEAP32[38837] | 0) * 36 | 0) | 0;
- HEAP32[38843] = _malloc(HEAP32[38837] << 4) | 0;
+ HEAP32[38839] = HEAP32[$tmp >> 2];
+ HEAP32[38840] = HEAP32[$tmp + 4 >> 2];
+ HEAP32[38841] = HEAP32[$tmp + 8 >> 2];
+ HEAP32[38842] = HEAP32[$tmp + 12 >> 2];
+ HEAP32[38843] = HEAP32[$tmp + 16 >> 2];
+ HEAP32[38845] = _malloc((HEAP32[38838] | 0) * 36 | 0) | 0;
+ HEAP32[38844] = _malloc(HEAP32[38838] << 4) | 0;
  HEAP32[$currentLine >> 2] = 0;
  HEAP32[$currentPosX >> 2] = HEAP32[$charsDivisor >> 2];
  HEAP32[$testPosX >> 2] = HEAP32[$charsDivisor >> 2];
  HEAP32[$i31 >> 2] = 0;
  while (1) {
-  if ((HEAP32[$i31 >> 2] | 0) >= (HEAP32[38837] | 0)) break;
+  if ((HEAP32[$i31 >> 2] | 0) >= (HEAP32[38838] | 0)) break;
   CSE$0 = HEAP32[$i31 >> 2] | 0;
-  HEAP32[(HEAP32[38844] | 0) + ((CSE$0 | 0) * 36 | 0) >> 2] = 32 + (CSE$0 | 0);
+  HEAP32[(HEAP32[38845] | 0) + ((CSE$0 | 0) * 36 | 0) >> 2] = 32 + (CSE$0 | 0);
   $conv = Math_fround(HEAP32[$currentPosX >> 2] | 0);
-  HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) >> 2] = $conv;
+  HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) >> 2] = $conv;
   CSE$1 = HEAP32[$charsDivisor >> 2] | 0;
   $conv41 = Math_fround(CSE$1 + (Math_imul(HEAP32[$currentLine >> 2] | 0, (HEAP32[$charsHeight >> 2] | 0) + CSE$1 | 0) | 0) | 0);
-  HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) + 4 >> 2] = $conv41;
+  HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) + 4 >> 2] = $conv41;
   $conv44 = Math_fround(HEAP32[$charsWidth + (HEAP32[$i31 >> 2] << 2) >> 2] | 0);
-  HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) + 8 >> 2] = $conv44;
+  HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) + 8 >> 2] = $conv44;
   $conv46 = Math_fround(HEAP32[$charsHeight >> 2] | 0);
-  HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) + 12 >> 2] = $conv46;
-  $52 = Math_fround(HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) + 8 >> 2]);
+  HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) + 12 >> 2] = $conv46;
+  $52 = Math_fround(HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) + 8 >> 2]);
   $conv52 = ~~Math_fround($52 + Math_fround(HEAP32[$charsDivisor >> 2] | 0));
   HEAP32[$testPosX >> 2] = (HEAP32[$testPosX >> 2] | 0) + $conv52;
-  if ((HEAP32[$testPosX >> 2] | 0) >= (HEAP32[38839] | 0)) {
+  if ((HEAP32[$testPosX >> 2] | 0) >= (HEAP32[38840] | 0)) {
    HEAP32[$currentLine >> 2] = (HEAP32[$currentLine >> 2] | 0) + 1;
    HEAP32[$currentPosX >> 2] = (HEAP32[$charsDivisor >> 2] << 1) + (HEAP32[$charsWidth + (HEAP32[$i31 >> 2] << 2) >> 2] | 0);
    HEAP32[$testPosX >> 2] = HEAP32[$currentPosX >> 2];
    $conv61 = Math_fround(HEAP32[$charsDivisor >> 2] | 0);
-   HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) >> 2] = $conv61;
+   HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) >> 2] = $conv61;
    CSE$2 = HEAP32[$charsDivisor >> 2] | 0;
    $conv67 = Math_fround(CSE$2 + (Math_imul(HEAP32[$currentLine >> 2] | 0, (HEAP32[$charsHeight >> 2] | 0) + CSE$2 | 0) | 0) | 0);
-   HEAPF32[(HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) + 4 >> 2] = $conv67;
+   HEAPF32[(HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) + 4 >> 2] = $conv67;
   } else HEAP32[$currentPosX >> 2] = HEAP32[$testPosX >> 2];
-  HEAP32[(HEAP32[38844] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 4 >> 2] = 0;
-  HEAP32[(HEAP32[38844] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 8 >> 2] = 0;
-  HEAP32[(HEAP32[38844] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 12 >> 2] = 0;
-  $image = (HEAP32[38844] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 16 | 0;
-  $arrayidx75 = (HEAP32[38843] | 0) + (HEAP32[$i31 >> 2] << 4) | 0;
+  HEAP32[(HEAP32[38845] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 4 >> 2] = 0;
+  HEAP32[(HEAP32[38845] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 8 >> 2] = 0;
+  HEAP32[(HEAP32[38845] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 12 >> 2] = 0;
+  $image = (HEAP32[38845] | 0) + ((HEAP32[$i31 >> 2] | 0) * 36 | 0) + 16 | 0;
+  $arrayidx75 = (HEAP32[38844] | 0) + (HEAP32[$i31 >> 2] << 4) | 0;
   HEAP32[$imFont$byval_copy1 >> 2] = HEAP32[$imFont >> 2];
   HEAP32[$imFont$byval_copy1 + 4 >> 2] = HEAP32[$imFont + 4 >> 2];
   HEAP32[$imFont$byval_copy1 + 8 >> 2] = HEAP32[$imFont + 8 >> 2];
@@ -29350,9 +29350,9 @@ function _LoadFontDefault() {
  HEAP32[$imFont$byval_copy2 + 12 >> 2] = HEAP32[$imFont + 12 >> 2];
  HEAP32[$imFont$byval_copy2 + 16 >> 2] = HEAP32[$imFont + 16 >> 2];
  _UnloadImage($imFont$byval_copy2);
- HEAP32[38836] = ~~Math_fround(HEAPF32[(HEAP32[38843] | 0) + 12 >> 2]);
- HEAP32[$vararg_buffer >> 2] = HEAP32[38838];
- _TraceLog(3, 39066, $vararg_buffer);
+ HEAP32[38837] = ~~Math_fround(HEAPF32[(HEAP32[38844] | 0) + 12 >> 2]);
+ HEAP32[$vararg_buffer >> 2] = HEAP32[38839];
+ _TraceLog(3, 39084, $vararg_buffer);
  STACKTOP = sp;
  return;
 }
@@ -29584,11 +29584,11 @@ function _drmp3_src_read_frames_linear($pSRC, $0, $1, $pFramesOut, $flush) {
  HEAP32[$2 + 4 >> 2] = $1;
  HEAP32[$pFramesOut$addr >> 2] = $pFramesOut;
  HEAP32[$flush$addr >> 2] = $flush;
- if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32757, 36861, 2461, 37034);
+ if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32775, 36879, 2461, 37052);
  $7 = $frameCount$addr;
  $12 = HEAP32[$7 + 4 >> 2] | 0;
- if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25056, 36861, 2462, 37034);
- if (!(HEAP32[$pFramesOut$addr >> 2] | 0)) ___assert_fail(25162, 36861, 2463, 37034);
+ if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25074, 36879, 2462, 37052);
+ if (!(HEAP32[$pFramesOut$addr >> 2] | 0)) ___assert_fail(25180, 36879, 2463, 37052);
  do if (!(HEAP8[(HEAP32[$pSRC$addr >> 2] | 0) + 5160 + 8 >> 0] & 1)) {
   CSE$0 = HEAP32[$pSRC$addr >> 2] | 0;
   $22 = _drmp3_src_cache_read_frames(CSE$0 + 1052 | 0, 1, 0, CSE$0 + 28 | 0) | 0;
@@ -29887,7 +29887,7 @@ function _stbv_imdct_step3_iter0_loop($n, $e, $i_off, $k_off, $A) {
  HEAP32[$A$addr >> 2] = $A;
  HEAP32[$ee0 >> 2] = (HEAP32[$e$addr >> 2] | 0) + (HEAP32[$i_off$addr >> 2] << 2);
  HEAP32[$ee2 >> 2] = (HEAP32[$ee0 >> 2] | 0) + (HEAP32[$k_off$addr >> 2] << 2);
- if (HEAP32[$n$addr >> 2] & 3 | 0) ___assert_fail(35897, 35641, 2410, 35910);
+ if (HEAP32[$n$addr >> 2] & 3 | 0) ___assert_fail(35915, 35659, 2410, 35928);
  HEAP32[$i >> 2] = HEAP32[$n$addr >> 2] >> 2;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) <= 0) break;
@@ -30021,7 +30021,7 @@ function _LoadMusicStream($agg$result, $fileName) {
  HEAP32[$music + 24 >> 2] = 0;
  HEAP32[$music + 28 >> 2] = 0;
  HEAP8[$musicLoaded >> 0] = 0;
- $call = _IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 38491) | 0;
+ $call = _IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 38509) | 0;
  $1 = HEAP32[$fileName$addr >> 2] | 0;
  do if ($call) {
   HEAP32[$music + 4 >> 2] = _stb_vorbis_open_filename($1, 0, 0) | 0;
@@ -30040,7 +30040,7 @@ function _LoadMusicStream($agg$result, $fileName) {
    HEAP8[$musicLoaded >> 0] = 1;
   }
  } else {
-  if (_IsFileExtension($1, 38496) | 0) {
+  if (_IsFileExtension($1, 38514) | 0) {
    HEAP32[$ctxMp3 >> 2] = _malloc(21176) | 0;
    HEAP32[$music + 4 >> 2] = HEAP32[$ctxMp3 >> 2];
    HEAP32[$result >> 2] = _drmp3_init_file(HEAP32[$ctxMp3 >> 2] | 0, HEAP32[$fileName$addr >> 2] | 0, 0) | 0;
@@ -30062,7 +30062,7 @@ function _LoadMusicStream($agg$result, $fileName) {
    HEAP8[$musicLoaded >> 0] = 1;
    break;
   }
-  if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 38513) | 0) {
+  if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 38531) | 0) {
    HEAP32[$ctxXm >> 2] = 0;
    HEAP32[$result29 >> 2] = _jar_xm_create_context_from_file($ctxXm, 48e3, HEAP32[$fileName$addr >> 2] | 0) | 0;
    if (HEAP32[$result29 >> 2] | 0) break;
@@ -30083,7 +30083,7 @@ function _LoadMusicStream($agg$result, $fileName) {
    HEAP32[$music + 4 >> 2] = HEAP32[$ctxXm >> 2];
    break;
   }
-  if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 38517) | 0) {
+  if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 38535) | 0) {
    HEAP32[$ctxMod >> 2] = _malloc(5884) | 0;
    HEAP32[$music + 4 >> 2] = HEAP32[$ctxMod >> 2];
    _jar_mod_init(HEAP32[$ctxMod >> 2] | 0) | 0;
@@ -30104,17 +30104,17 @@ function _LoadMusicStream($agg$result, $fileName) {
  } while (0);
  if (HEAP8[$musicLoaded >> 0] & 1) {
   HEAP32[$vararg_buffer1 >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(3, 38558, $vararg_buffer1);
+  _TraceLog(3, 38576, $vararg_buffer1);
   HEAP32[$vararg_buffer4 >> 2] = HEAP32[$music + 8 >> 2];
-  _TraceLog(3, 38595, $vararg_buffer4);
+  _TraceLog(3, 38613, $vararg_buffer4);
   HEAP32[$vararg_buffer7 >> 2] = HEAP32[$music + 16 >> 2];
-  _TraceLog(3, 38616, $vararg_buffer7);
+  _TraceLog(3, 38634, $vararg_buffer7);
   HEAP32[$vararg_buffer10 >> 2] = HEAP32[$music + 16 + 4 >> 2];
-  _TraceLog(3, 38638, $vararg_buffer10);
-  if ((HEAP32[$music + 16 + 8 >> 2] | 0) == 1) $cond112 = 38501; else $cond112 = (HEAP32[$music + 16 + 8 >> 2] | 0) == 2 ? 38506 : 38662;
+  _TraceLog(3, 38656, $vararg_buffer10);
+  if ((HEAP32[$music + 16 + 8 >> 2] | 0) == 1) $cond112 = 38519; else $cond112 = (HEAP32[$music + 16 + 8 >> 2] | 0) == 2 ? 38524 : 38680;
   HEAP32[$vararg_buffer13 >> 2] = HEAP32[$music + 16 + 8 >> 2];
   HEAP32[$vararg_buffer13 + 4 >> 2] = $cond112;
-  _TraceLog(3, 38668, $vararg_buffer13);
+  _TraceLog(3, 38686, $vararg_buffer13);
   HEAP32[$agg$result >> 2] = HEAP32[$music >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$music + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$music + 8 >> 2];
@@ -30142,7 +30142,7 @@ function _LoadMusicStream($agg$result, $fileName) {
   }
  } while (0);
  HEAP32[$vararg_buffer >> 2] = HEAP32[$fileName$addr >> 2];
- _TraceLog(4, 38522, $vararg_buffer);
+ _TraceLog(4, 38540, $vararg_buffer);
  HEAP32[$agg$result >> 2] = HEAP32[$music >> 2];
  HEAP32[$agg$result + 4 >> 2] = HEAP32[$music + 4 >> 2];
  HEAP32[$agg$result + 8 >> 2] = HEAP32[$music + 8 >> 2];
@@ -30635,7 +30635,7 @@ function _stbir__normalize_downsample_coefficients($contributors, $coefficients,
   }
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- if ((label | 0) == 11) ___assert_fail(42315, 40603, 1140, 42328); else if ((label | 0) == 13) ___assert_fail(42369, 40603, 1141, 42328); else if ((label | 0) == 22) {
+ if ((label | 0) == 11) ___assert_fail(42333, 40621, 1140, 42346); else if ((label | 0) == 13) ___assert_fail(42387, 40621, 1141, 42346); else if ((label | 0) == 22) {
   HEAP32[$j >> 2] = 0;
   while (1) {
    if ((HEAP32[$j >> 2] | 0) >= (HEAP32[$num_contributors >> 2] | 0)) break;
@@ -31335,16 +31335,16 @@ function __emscripten_dceable_type_decls() {
  _emscripten_glTexSubImage2D(0, 0, 0, 0, 0, 0, 0, 0, 0);
  _emscripten_glUniform1f(0, Math_fround(0.0));
  _emscripten_glUniform1fv(0, 0, 0);
- _emscripten_glUniform1i(0, 0);
- _emscripten_glUniform1iv(0, 0, 0);
- _emscripten_glUniform2f(0, Math_fround(0.0), Math_fround(0.0));
- _emscripten_glUniform2fv(0, 0, 0);
  _pthread_create(0, 0, 0, 0) | 0;
  _pthread_join(0, 0) | 0;
  _pthread_cond_init(0, 0) | 0;
  _pthread_cond_destroy(0) | 0;
  _pthread_attr_init(0) | 0;
  _pthread_attr_destroy(0) | 0;
+ _emscripten_glUniform1i(0, 0);
+ _emscripten_glUniform1iv(0, 0, 0);
+ _emscripten_glUniform2f(0, Math_fround(0.0), Math_fround(0.0));
+ _emscripten_glUniform2fv(0, 0, 0);
  _emscripten_glUniform2i(0, 0, 0);
  _emscripten_glUniform2iv(0, 0, 0);
  _emscripten_glUniform3f(0, Math_fround(0.0), Math_fround(0.0), Math_fround(0.0));
@@ -31703,7 +31703,7 @@ function _ma_device__on_read_from_client($pDSP, $pFramesOut, $frameCount, $pUser
  HEAP32[$frameCount$addr >> 2] = $frameCount;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pDevice >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24947, 24969, 5770, 25715);
+ if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24965, 24987, 5770, 25733);
  $3 = HEAP32[$pFramesOut$addr >> 2] | 0;
  $4 = HEAP32[$frameCount$addr >> 2] | 0;
  HEAP32[$pDevice$addr$i >> 2] = HEAP32[$pDevice >> 2];
@@ -31901,7 +31901,7 @@ function _stbv_codebook_decode_deinterleave_repeat($f, $c, $outputs, $ch, $c_int
   } while (0);
   HEAP32[$total_decode$addr >> 2] = (HEAP32[$total_decode$addr >> 2] | 0) - (HEAP32[$effective >> 2] | 0);
  }
- if ((label | 0) == 13) ___assert_fail(35987, 35641, 1834, 36023); else if ((label | 0) == 15) {
+ if ((label | 0) == 13) ___assert_fail(36005, 35659, 1834, 36041); else if ((label | 0) == 15) {
   if (!(HEAP8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] | 0)) if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1384 >> 2] | 0) {
    HEAP32[$retval >> 2] = 0;
    $110 = HEAP32[$retval >> 2] | 0;
@@ -31948,8 +31948,8 @@ function _drmp3_decode_next_frame_ex($pMP3, $pPCMFrames, $discard) {
  HEAP32[$pPCMFrames$addr >> 2] = $pPCMFrames;
  HEAP32[$discard$addr >> 2] = $discard;
  HEAP32[$pcmFramesRead >> 2] = 0;
- if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37097, 36861, 2706, 37181);
- if (!(HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 6696 >> 2] | 0)) ___assert_fail(37208, 36861, 2707, 37181);
+ if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37115, 36879, 2706, 37199);
+ if (!(HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 6696 >> 2] | 0)) ___assert_fail(37226, 36879, 2707, 37199);
  if (HEAP8[(HEAP32[$pMP3$addr >> 2] | 0) + 21156 >> 0] & 1 | 0) {
   HEAP32[$retval >> 2] = 0;
   $108 = HEAP32[$retval >> 2] | 0;
@@ -32203,7 +32203,7 @@ function _try_realloc_chunk($p, $nb) {
  $0 = HEAP32[$head >> 2] | 0;
  $and = $0 & -8;
  $add$ptr = $p + $and | 0;
- $1 = HEAP32[38871] | 0;
+ $1 = HEAP32[38872] | 0;
  $and2 = $0 & 3;
  if (!(($and2 | 0) != 1 & $1 >>> 0 <= $p >>> 0 & $add$ptr >>> 0 > $p >>> 0)) _abort();
  $head6 = $add$ptr + 4 | 0;
@@ -32214,7 +32214,7 @@ function _try_realloc_chunk($p, $nb) {
    $newp$2 = 0;
    return $newp$2 | 0;
   }
-  if ($and >>> 0 >= ($nb + 4 | 0) >>> 0) if (($and - $nb | 0) >>> 0 <= HEAP32[38987] << 1 >>> 0) {
+  if ($and >>> 0 >= ($nb + 4 | 0) >>> 0) if (($and - $nb | 0) >>> 0 <= HEAP32[38988] << 1 >>> 0) {
    $newp$2 = $p;
    return $newp$2 | 0;
   }
@@ -32235,8 +32235,8 @@ function _try_realloc_chunk($p, $nb) {
   $newp$2 = $p;
   return $newp$2 | 0;
  }
- if ((HEAP32[38873] | 0) == ($add$ptr | 0)) {
-  $add = (HEAP32[38870] | 0) + $and | 0;
+ if ((HEAP32[38874] | 0) == ($add$ptr | 0)) {
+  $add = (HEAP32[38871] | 0) + $and | 0;
   $sub40 = $add - $nb | 0;
   $add$ptr41 = $p + $nb | 0;
   if ($add >>> 0 <= $nb >>> 0) {
@@ -32245,13 +32245,13 @@ function _try_realloc_chunk($p, $nb) {
   }
   HEAP32[$head >> 2] = $0 & 1 | $nb | 2;
   HEAP32[$add$ptr41 + 4 >> 2] = $sub40 | 1;
-  HEAP32[38873] = $add$ptr41;
-  HEAP32[38870] = $sub40;
+  HEAP32[38874] = $add$ptr41;
+  HEAP32[38871] = $sub40;
   $newp$2 = $p;
   return $newp$2 | 0;
  }
- if ((HEAP32[38872] | 0) == ($add$ptr | 0)) {
-  $add58 = (HEAP32[38869] | 0) + $and | 0;
+ if ((HEAP32[38873] | 0) == ($add$ptr | 0)) {
+  $add58 = (HEAP32[38870] | 0) + $and | 0;
   if ($add58 >>> 0 < $nb >>> 0) {
    $newp$2 = 0;
    return $newp$2 | 0;
@@ -32274,8 +32274,8 @@ function _try_realloc_chunk($p, $nb) {
    $storemerge = 0;
    $storemerge3 = 0;
   }
-  HEAP32[38869] = $storemerge3;
-  HEAP32[38872] = $storemerge;
+  HEAP32[38870] = $storemerge3;
+  HEAP32[38873] = $storemerge;
   $newp$2 = $p;
   return $newp$2 | 0;
  }
@@ -32293,13 +32293,13 @@ function _try_realloc_chunk($p, $nb) {
  L49 : do if ($2 >>> 0 < 256) {
   $11 = HEAP32[$add$ptr + 8 >> 2] | 0;
   $12 = HEAP32[$add$ptr + 12 >> 2] | 0;
-  $arrayidx = 155508 + ($shr << 1 << 2) | 0;
+  $arrayidx = 155512 + ($shr << 1 << 2) | 0;
   if (($11 | 0) != ($arrayidx | 0)) {
    if ($1 >>> 0 > $11 >>> 0) _abort();
    if ((HEAP32[$11 + 12 >> 2] | 0) != ($add$ptr | 0)) _abort();
   }
   if (($12 | 0) == ($11 | 0)) {
-   HEAP32[38867] = HEAP32[38867] & ~(1 << $shr);
+   HEAP32[38868] = HEAP32[38868] & ~(1 << $shr);
    break;
   }
   if (($12 | 0) == ($arrayidx | 0)) $fd148$pre$phiZ2D = $12 + 8 | 0; else {
@@ -32368,19 +32368,19 @@ function _try_realloc_chunk($p, $nb) {
   } while (0);
   if ($16 | 0) {
    $25 = HEAP32[$add$ptr + 28 >> 2] | 0;
-   $arrayidx206 = 155772 + ($25 << 2) | 0;
+   $arrayidx206 = 155776 + ($25 << 2) | 0;
    do if ((HEAP32[$arrayidx206 >> 2] | 0) == ($add$ptr | 0)) {
     HEAP32[$arrayidx206 >> 2] = $R$3;
     if (!$R$3) {
-     HEAP32[38868] = HEAP32[38868] & ~(1 << $25);
+     HEAP32[38869] = HEAP32[38869] & ~(1 << $25);
      break L49;
     }
-   } else if ((HEAP32[38871] | 0) >>> 0 > $16 >>> 0) _abort(); else {
+   } else if ((HEAP32[38872] | 0) >>> 0 > $16 >>> 0) _abort(); else {
     $arrayidx226 = $16 + 16 | 0;
     HEAP32[((HEAP32[$arrayidx226 >> 2] | 0) == ($add$ptr | 0) ? $arrayidx226 : $16 + 20 | 0) >> 2] = $R$3;
     if (!$R$3) break L49; else break;
    } while (0);
-   $30 = HEAP32[38871] | 0;
+   $30 = HEAP32[38872] | 0;
    if ($30 >>> 0 > $R$3 >>> 0) _abort();
    HEAP32[$R$3 + 24 >> 2] = $16;
    $child249 = $add$ptr + 16 | 0;
@@ -32391,7 +32391,7 @@ function _try_realloc_chunk($p, $nb) {
     break;
    } while (0);
    $32 = HEAP32[$child249 + 4 >> 2] | 0;
-   if ($32 | 0) if ((HEAP32[38871] | 0) >>> 0 > $32 >>> 0) _abort(); else {
+   if ($32 | 0) if ((HEAP32[38872] | 0) >>> 0 > $32 >>> 0) _abort(); else {
     HEAP32[$R$3 + 20 >> 2] = $32;
     HEAP32[$32 + 24 >> 2] = $R$3;
     break;
@@ -32431,7 +32431,7 @@ function _ma_device__post_init_setup($pDevice, $deviceType) {
  $converterConfig153 = sp_a;
  HEAP32[$pDevice$addr >> 2] = $pDevice;
  HEAP32[$deviceType$addr >> 2] = $deviceType;
- if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24947, 24969, 25494, 32530);
+ if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24965, 24987, 25494, 32548);
  do if ((HEAP32[$deviceType$addr >> 2] | 0) == 2 | (HEAP32[$deviceType$addr >> 2] | 0) == 3) {
   if (HEAP8[(HEAP32[$pDevice$addr >> 2] | 0) + 47360 + 260 >> 0] & 1 | 0) {
    CSE$2 = (HEAP32[$pDevice$addr >> 2] | 0) + 47360 | 0;
@@ -32580,10 +32580,10 @@ function _stbir__calculate_memory($info) {
  CSE$9 = HEAP32[$info$addr >> 2] | 0;
  $mul33 = (Math_imul(HEAP32[CSE$9 + 20 >> 2] | 0, HEAP32[CSE$9 + 64 >> 2] | 0) | 0) << 2;
  HEAP32[(HEAP32[$info$addr >> 2] | 0) + 216 >> 2] = $mul33;
- if (!(HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0)) ___assert_fail(43087, 40603, 2265, 43116);
- if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40699, 40603, 2266, 43116);
- if (!(HEAP32[(HEAP32[$info$addr >> 2] | 0) + 84 >> 2] | 0)) ___assert_fail(43140, 40603, 2267, 43116);
- if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 84 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40800, 40603, 2268, 43116);
+ if (!(HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0)) ___assert_fail(43105, 40621, 2265, 43134);
+ if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 80 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40717, 40621, 2266, 43134);
+ if (!(HEAP32[(HEAP32[$info$addr >> 2] | 0) + 84 >> 2] | 0)) ___assert_fail(43158, 40621, 2267, 43134);
+ if ((HEAP32[(HEAP32[$info$addr >> 2] | 0) + 84 >> 2] | 0) >>> 0 >= 6) ___assert_fail(40818, 40621, 2268, 43134);
  $tobool = (_stbir__use_height_upsampling(HEAP32[$info$addr >> 2] | 0) | 0) != 0;
  $70 = HEAP32[$info$addr >> 2] | 0;
  if ($tobool) {
@@ -32690,10 +32690,10 @@ function _InitGraphicsDevice($width, $height) {
  $$compoundliteral = sp + 160 | 0;
  HEAP32[$width$addr >> 2] = $width;
  HEAP32[$height$addr >> 2] = $height;
- HEAP32[38734] = HEAP32[$width$addr >> 2];
- HEAP32[38735] = HEAP32[$height$addr >> 2];
+ HEAP32[38735] = HEAP32[$width$addr >> 2];
+ HEAP32[38736] = HEAP32[$height$addr >> 2];
  _MatrixIdentity($tmp);
- dest = 154944;
+ dest = 154948;
  src = $tmp;
  stop = dest + 64 | 0;
  do {
@@ -32703,15 +32703,15 @@ function _InitGraphicsDevice($width, $height) {
  } while ((dest | 0) < (stop | 0));
  _glfwSetErrorCallback(2) | 0;
  if (!(_glfwInit() | 0)) {
-  _TraceLog(4, 24260, $vararg_buffer);
+  _TraceLog(4, 24278, $vararg_buffer);
   HEAP8[$retval >> 0] = 0;
   $$pre_trunc = HEAP8[$retval >> 0] | 0;
   $63 = $$pre_trunc & 1;
   STACKTOP = sp;
   return $63 | 0;
  }
- HEAP32[38752] = HEAP32[38734];
  HEAP32[38753] = HEAP32[38735];
+ HEAP32[38754] = HEAP32[38736];
  _glfwDefaultWindowHints();
  if (0 | 0) _glfwWindowHint(131076, 0); else _glfwWindowHint(131076, 1);
  if (0 | 0) _glfwWindowHint(131075, 1); else _glfwWindowHint(131075, 0);
@@ -32736,80 +32736,80 @@ function _InitGraphicsDevice($width, $height) {
   }
  } while (0);
  if (0) {
-  HEAP32[38754] = ((HEAP32[38752] | 0) / 2 | 0) - ((HEAP32[38734] | 0) / 2 | 0);
   HEAP32[38755] = ((HEAP32[38753] | 0) / 2 | 0) - ((HEAP32[38735] | 0) / 2 | 0);
-  if ((HEAP32[38754] | 0) < 0) HEAP32[38754] = 0;
+  HEAP32[38756] = ((HEAP32[38754] | 0) / 2 | 0) - ((HEAP32[38736] | 0) / 2 | 0);
   if ((HEAP32[38755] | 0) < 0) HEAP32[38755] = 0;
+  if ((HEAP32[38756] | 0) < 0) HEAP32[38756] = 0;
   HEAP32[$count >> 2] = 0;
   HEAP32[$modes >> 2] = _glfwGetVideoModes(_glfwGetPrimaryMonitor() | 0, $count | 0) | 0;
   HEAP32[$i >> 2] = 0;
   while (1) {
    if ((HEAP32[$i >> 2] | 0) >= (HEAP32[$count >> 2] | 0)) break;
-   if ((HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) >> 2] | 0) >= (HEAP32[38734] | 0)) if ((HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) + 4 >> 2] | 0) >= (HEAP32[38735] | 0)) {
+   if ((HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) >> 2] | 0) >= (HEAP32[38735] | 0)) if ((HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) + 4 >> 2] | 0) >= (HEAP32[38736] | 0)) {
     label = 29;
     break;
    }
    HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
   }
   if ((label | 0) == 29) {
-   HEAP32[38752] = HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) >> 2];
-   HEAP32[38753] = HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) + 4 >> 2];
+   HEAP32[38753] = HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) >> 2];
+   HEAP32[38754] = HEAP32[(HEAP32[$modes >> 2] | 0) + ((HEAP32[$i >> 2] | 0) * 24 | 0) + 4 >> 2];
   }
-  $28 = HEAP32[38753] | 0;
-  HEAP32[$vararg_buffer1 >> 2] = HEAP32[38752];
+  $28 = HEAP32[38754] | 0;
+  HEAP32[$vararg_buffer1 >> 2] = HEAP32[38753];
   HEAP32[$vararg_buffer1 + 4 >> 2] = $28;
-  _TraceLog(4, 24286, $vararg_buffer1);
-  _SetupFramebuffer(HEAP32[38752] | 0, HEAP32[38753] | 0);
-  $31 = HEAP32[38752] | 0;
-  $32 = HEAP32[38753] | 0;
-  $33 = HEAP32[38733] | 0;
-  HEAP32[38731] = _glfwCreateWindow($31 | 0, $32 | 0, $33 | 0, _glfwGetPrimaryMonitor() | 0, 0) | 0;
+  _TraceLog(4, 24304, $vararg_buffer1);
+  _SetupFramebuffer(HEAP32[38753] | 0, HEAP32[38754] | 0);
+  $31 = HEAP32[38753] | 0;
+  $32 = HEAP32[38754] | 0;
+  $33 = HEAP32[38734] | 0;
+  HEAP32[38732] = _glfwCreateWindow($31 | 0, $32 | 0, $33 | 0, _glfwGetPrimaryMonitor() | 0, 0) | 0;
  } else {
-  HEAP32[38731] = _glfwCreateWindow(HEAP32[38734] | 0, HEAP32[38735] | 0, HEAP32[38733] | 0, 0, 0) | 0;
-  if (HEAP32[38731] | 0) {
-   HEAP32[38756] = HEAP32[38734];
+  HEAP32[38732] = _glfwCreateWindow(HEAP32[38735] | 0, HEAP32[38736] | 0, HEAP32[38734] | 0, 0, 0) | 0;
+  if (HEAP32[38732] | 0) {
    HEAP32[38757] = HEAP32[38735];
+   HEAP32[38758] = HEAP32[38736];
   }
  }
- if (!(HEAP32[38731] | 0)) {
+ if (!(HEAP32[38732] | 0)) {
   _glfwTerminate();
-  _TraceLog(4, 24324, $vararg_buffer4);
+  _TraceLog(4, 24342, $vararg_buffer4);
   HEAP8[$retval >> 0] = 0;
   $$pre_trunc = HEAP8[$retval >> 0] | 0;
   $63 = $$pre_trunc & 1;
   STACKTOP = sp;
   return $63 | 0;
  }
- _TraceLog(3, 24357, $vararg_buffer6);
- $42 = HEAP32[38757] | 0;
- HEAP32[$vararg_buffer8 >> 2] = HEAP32[38756];
+ _TraceLog(3, 24375, $vararg_buffer6);
+ $42 = HEAP32[38758] | 0;
+ HEAP32[$vararg_buffer8 >> 2] = HEAP32[38757];
  HEAP32[$vararg_buffer8 + 4 >> 2] = $42;
- _TraceLog(3, 24397, $vararg_buffer8);
- $44 = HEAP32[38735] | 0;
- HEAP32[$vararg_buffer12 >> 2] = HEAP32[38734];
+ _TraceLog(3, 24415, $vararg_buffer8);
+ $44 = HEAP32[38736] | 0;
+ HEAP32[$vararg_buffer12 >> 2] = HEAP32[38735];
  HEAP32[$vararg_buffer12 + 4 >> 2] = $44;
- _TraceLog(3, 24418, $vararg_buffer12);
- $46 = HEAP32[38759] | 0;
- HEAP32[$$compoundliteral$byval_copy >> 2] = HEAP32[38758];
+ _TraceLog(3, 24436, $vararg_buffer12);
+ $46 = HEAP32[38760] | 0;
+ HEAP32[$$compoundliteral$byval_copy >> 2] = HEAP32[38759];
  HEAP32[$$compoundliteral$byval_copy + 4 >> 2] = $46;
- _TraceLog(3, 24439, $$compoundliteral$byval_copy);
- _glfwSetWindowSizeCallback(HEAP32[38731] | 0, 1) | 0;
- _glfwSetCursorEnterCallback(HEAP32[38731] | 0, 3) | 0;
- _glfwSetKeyCallback(HEAP32[38731] | 0, 3) | 0;
- _glfwSetMouseButtonCallback(HEAP32[38731] | 0, 3) | 0;
- _glfwSetCursorPosCallback(HEAP32[38731] | 0, 1) | 0;
- _glfwSetCharCallback(HEAP32[38731] | 0, 4) | 0;
- _glfwSetScrollCallback(HEAP32[38731] | 0, 2) | 0;
- _glfwSetWindowIconifyCallback(HEAP32[38731] | 0, 5) | 0;
- _glfwSetDropCallback(HEAP32[38731] | 0, 2) | 0;
- _glfwMakeContextCurrent(HEAP32[38731] | 0);
+ _TraceLog(3, 24457, $$compoundliteral$byval_copy);
+ _glfwSetWindowSizeCallback(HEAP32[38732] | 0, 1) | 0;
+ _glfwSetCursorEnterCallback(HEAP32[38732] | 0, 3) | 0;
+ _glfwSetKeyCallback(HEAP32[38732] | 0, 3) | 0;
+ _glfwSetMouseButtonCallback(HEAP32[38732] | 0, 3) | 0;
+ _glfwSetCursorPosCallback(HEAP32[38732] | 0, 1) | 0;
+ _glfwSetCharCallback(HEAP32[38732] | 0, 4) | 0;
+ _glfwSetScrollCallback(HEAP32[38732] | 0, 2) | 0;
+ _glfwSetWindowIconifyCallback(HEAP32[38732] | 0, 5) | 0;
+ _glfwSetDropCallback(HEAP32[38732] | 0, 2) | 0;
+ _glfwMakeContextCurrent(HEAP32[38732] | 0);
  if (0 | 0) {
   _glfwSwapInterval(1);
-  _TraceLog(3, 24464, $vararg_buffer20);
+  _TraceLog(3, 24482, $vararg_buffer20);
  }
- _rlglInit(HEAP32[38734] | 0, HEAP32[38735] | 0);
- HEAP32[$fbWidth >> 2] = HEAP32[38756];
- HEAP32[$fbHeight >> 2] = HEAP32[38757];
+ _rlglInit(HEAP32[38735] | 0, HEAP32[38736] | 0);
+ HEAP32[$fbWidth >> 2] = HEAP32[38757];
+ HEAP32[$fbHeight >> 2] = HEAP32[38758];
  _SetupViewport(HEAP32[$fbWidth >> 2] | 0, HEAP32[$fbHeight >> 2] | 0);
  HEAP8[$$compoundliteral >> 0] = -11;
  HEAP8[$$compoundliteral + 1 >> 0] = -11;
@@ -32988,7 +32988,7 @@ function _ImageMipmaps($image) {
   HEAP32[$vararg_buffer >> 2] = HEAP32[$mipWidth >> 2];
   HEAP32[$vararg_buffer + 4 >> 2] = $24;
   HEAP32[$vararg_buffer + 8 >> 2] = $25;
-  _TraceLog(2, 44440, $vararg_buffer);
+  _TraceLog(2, 44458, $vararg_buffer);
   HEAP32[$mipCount >> 2] = (HEAP32[$mipCount >> 2] | 0) + 1;
   $call22 = _GetPixelDataSize(HEAP32[$mipWidth >> 2] | 0, HEAP32[$mipHeight >> 2] | 0, HEAP32[(HEAP32[$image$addr >> 2] | 0) + 16 >> 2] | 0) | 0;
   HEAP32[$mipSize >> 2] = (HEAP32[$mipSize >> 2] | 0) + $call22;
@@ -32996,13 +32996,13 @@ function _ImageMipmaps($image) {
  $34 = HEAP32[$mipCount >> 2] | 0;
  HEAP32[$vararg_buffer3 >> 2] = HEAP32[(HEAP32[$image$addr >> 2] | 0) + 12 >> 2];
  HEAP32[$vararg_buffer3 + 4 >> 2] = $34;
- _TraceLog(2, 44485, $vararg_buffer3);
+ _TraceLog(2, 44503, $vararg_buffer3);
  HEAP32[$vararg_buffer7 >> 2] = HEAP32[$mipSize >> 2];
- _TraceLog(2, 44530, $vararg_buffer7);
+ _TraceLog(2, 44548, $vararg_buffer7);
  HEAP32[$imCopy$byval_copy >> 2] = HEAP32[HEAP32[$image$addr >> 2] >> 2];
- _TraceLog(2, 44562, $imCopy$byval_copy);
+ _TraceLog(2, 44580, $imCopy$byval_copy);
  if ((HEAP32[(HEAP32[$image$addr >> 2] | 0) + 12 >> 2] | 0) >= (HEAP32[$mipCount >> 2] | 0)) {
-  _TraceLog(4, 44746, $vararg_buffer25);
+  _TraceLog(4, 44764, $vararg_buffer25);
   STACKTOP = sp;
   return;
  }
@@ -33010,8 +33010,8 @@ function _ImageMipmaps($image) {
  if (HEAP32[$temp >> 2] | 0) {
   HEAP32[HEAP32[$image$addr >> 2] >> 2] = HEAP32[$temp >> 2];
   HEAP32[$vararg_buffer13 >> 2] = HEAP32[$temp >> 2];
-  _TraceLog(2, 44600, $vararg_buffer13);
- } else _TraceLog(4, 44642, $vararg_buffer16);
+  _TraceLog(2, 44618, $vararg_buffer13);
+ } else _TraceLog(4, 44660, $vararg_buffer16);
  $49 = HEAP32[HEAP32[$image$addr >> 2] >> 2] | 0;
  CSE$0 = HEAP32[$image$addr >> 2] | 0;
  HEAP32[$nextmip >> 2] = $49 + (_GetPixelDataSize(HEAP32[CSE$0 + 4 >> 2] | 0, HEAP32[CSE$0 + 8 >> 2] | 0, HEAP32[CSE$0 + 16 >> 2] | 0) | 0);
@@ -33037,7 +33037,7 @@ function _ImageMipmaps($image) {
   HEAP32[$vararg_buffer18 + 8 >> 2] = $69;
   HEAP32[$vararg_buffer18 + 12 >> 2] = $70;
   HEAP32[$vararg_buffer18 + 16 >> 2] = $71;
-  _TraceLog(2, 44689, $vararg_buffer18);
+  _TraceLog(2, 44707, $vararg_buffer18);
   _ImageResize($imCopy, HEAP32[$mipWidth >> 2] | 0, HEAP32[$mipHeight >> 2] | 0);
   _memcpy(HEAP32[$nextmip >> 2] | 0, HEAP32[$imCopy >> 2] | 0, HEAP32[$mipSize >> 2] | 0) | 0;
   HEAP32[$nextmip >> 2] = (HEAP32[$nextmip >> 2] | 0) + (HEAP32[$mipSize >> 2] | 0);
@@ -33078,7 +33078,7 @@ function _DrawBuffersDefault() {
  $i = sp + 4 | 0;
  $i68 = sp;
  dest = $matProjection;
- src = 154288;
+ src = 154292;
  stop = dest + 64 | 0;
  do {
   HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -33086,7 +33086,7 @@ function _DrawBuffersDefault() {
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
  dest = $matModelView;
- src = 154356;
+ src = 154360;
  stop = dest + 64 | 0;
  do {
   HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -33118,10 +33118,10 @@ function _DrawBuffersDefault() {
    } while ((dest | 0) < (stop | 0));
    _SetStereoView($3, $modelview$byval_copy, $matMVP$byval_copy);
   }
-  if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) > 0) {
-   _glUseProgram(HEAP32[38626] | 0);
+  if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) > 0) {
+   _glUseProgram(HEAP32[38627] | 0);
    dest = $modelview$byval_copy;
-   src = 154356;
+   src = 154360;
    stop = dest + 64 | 0;
    do {
     HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -33129,7 +33129,7 @@ function _DrawBuffersDefault() {
     src = src + 4 | 0;
    } while ((dest | 0) < (stop | 0));
    dest = $matMVP$byval_copy;
-   src = 154288;
+   src = 154292;
    stop = dest + 64 | 0;
    do {
     HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -33137,7 +33137,7 @@ function _DrawBuffersDefault() {
     src = src + 4 | 0;
    } while ((dest | 0) < (stop | 0));
    _MatrixMultiply($matMVP, $modelview$byval_copy, $matMVP$byval_copy);
-   $8 = HEAP32[(HEAP32[38627] | 0) + 24 >> 2] | 0;
+   $8 = HEAP32[(HEAP32[38628] | 0) + 24 >> 2] | 0;
    dest = $matMVP$byval_copy;
    src = $matMVP;
    stop = dest + 64 | 0;
@@ -33148,51 +33148,51 @@ function _DrawBuffersDefault() {
    } while ((dest | 0) < (stop | 0));
    _MatrixToFloatV($tmp, $matMVP$byval_copy);
    _glUniformMatrix4fv($8 | 0, 1, 0, $tmp | 0);
-   _glUniform4f(HEAP32[(HEAP32[38627] | 0) + 44 >> 2] | 0, 1.0, 1.0, 1.0, 1.0);
-   _glUniform1i(HEAP32[(HEAP32[38627] | 0) + 56 >> 2] | 0, 0);
+   _glUniform4f(HEAP32[(HEAP32[38628] | 0) + 44 >> 2] | 0, 1.0, 1.0, 1.0, 1.0);
+   _glUniform1i(HEAP32[(HEAP32[38628] | 0) + 56 >> 2] | 0, 0);
    HEAP32[$vertexOffset >> 2] = 0;
-   if (HEAP8[155965] & 1) FUNCTION_TABLE_vi[HEAP32[38628] & 31](HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 28 >> 2] | 0); else {
-    _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 >> 2] | 0);
-    _glVertexAttribPointer(HEAP32[HEAP32[38627] >> 2] | 0, 3, 5126, 0, 0, 0);
-    _glEnableVertexAttribArray(HEAP32[HEAP32[38627] >> 2] | 0);
-    _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 + 4 >> 2] | 0);
-    _glVertexAttribPointer(HEAP32[(HEAP32[38627] | 0) + 4 >> 2] | 0, 2, 5126, 0, 0, 0);
-    _glEnableVertexAttribArray(HEAP32[(HEAP32[38627] | 0) + 4 >> 2] | 0);
-    _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 + 8 >> 2] | 0);
-    _glVertexAttribPointer(HEAP32[(HEAP32[38627] | 0) + 20 >> 2] | 0, 4, 5121, 1, 0, 0);
-    _glEnableVertexAttribArray(HEAP32[(HEAP32[38627] | 0) + 20 >> 2] | 0);
-    _glBindBuffer(34963, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 + 12 >> 2] | 0);
+   if (HEAP8[155969] & 1) FUNCTION_TABLE_vi[HEAP32[38629] & 31](HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 28 >> 2] | 0); else {
+    _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 >> 2] | 0);
+    _glVertexAttribPointer(HEAP32[HEAP32[38628] >> 2] | 0, 3, 5126, 0, 0, 0);
+    _glEnableVertexAttribArray(HEAP32[HEAP32[38628] >> 2] | 0);
+    _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 + 4 >> 2] | 0);
+    _glVertexAttribPointer(HEAP32[(HEAP32[38628] | 0) + 4 >> 2] | 0, 2, 5126, 0, 0, 0);
+    _glEnableVertexAttribArray(HEAP32[(HEAP32[38628] | 0) + 4 >> 2] | 0);
+    _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 + 8 >> 2] | 0);
+    _glVertexAttribPointer(HEAP32[(HEAP32[38628] | 0) + 20 >> 2] | 0, 4, 5121, 1, 0, 0);
+    _glEnableVertexAttribArray(HEAP32[(HEAP32[38628] | 0) + 20 >> 2] | 0);
+    _glBindBuffer(34963, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 + 12 >> 2] | 0);
    }
    _glActiveTexture(33984);
    HEAP32[$i >> 2] = 0;
    while (1) {
-    if ((HEAP32[$i >> 2] | 0) >= (HEAP32[38623] | 0)) break;
-    _glBindTexture(3553, HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i >> 2] << 4) + 12 >> 2] | 0);
-    if ((HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i >> 2] << 4) >> 2] | 0) == 1) label = 13; else if ((HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i >> 2] << 4) >> 2] | 0) == 4) label = 13; else _glDrawElements(4, ((HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i >> 2] << 4) + 4 >> 2] | 0) / 4 | 0) * 6 | 0, 5123, ((HEAP32[$vertexOffset >> 2] << 1 >>> 0) / 4 | 0) * 6 | 0);
+    if ((HEAP32[$i >> 2] | 0) >= (HEAP32[38624] | 0)) break;
+    _glBindTexture(3553, HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i >> 2] << 4) + 12 >> 2] | 0);
+    if ((HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i >> 2] << 4) >> 2] | 0) == 1) label = 13; else if ((HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i >> 2] << 4) >> 2] | 0) == 4) label = 13; else _glDrawElements(4, ((HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i >> 2] << 4) + 4 >> 2] | 0) / 4 | 0) * 6 | 0, 5123, ((HEAP32[$vertexOffset >> 2] << 1 >>> 0) / 4 | 0) * 6 | 0);
     if ((label | 0) == 13) {
      label = 0;
-     CSE$1 = (HEAP32[38622] | 0) + (HEAP32[$i >> 2] << 4) | 0;
+     CSE$1 = (HEAP32[38623] | 0) + (HEAP32[$i >> 2] << 4) | 0;
      _glDrawArrays(HEAP32[CSE$1 >> 2] | 0, HEAP32[$vertexOffset >> 2] | 0, HEAP32[CSE$1 + 4 >> 2] | 0);
     }
-    CSE$0 = (HEAP32[38622] | 0) + (HEAP32[$i >> 2] << 4) | 0;
+    CSE$0 = (HEAP32[38623] | 0) + (HEAP32[$i >> 2] << 4) | 0;
     HEAP32[$vertexOffset >> 2] = (HEAP32[$vertexOffset >> 2] | 0) + ((HEAP32[CSE$0 + 4 >> 2] | 0) + (HEAP32[CSE$0 + 8 >> 2] | 0));
     HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
    }
-   if (!(HEAP8[155965] & 1)) {
+   if (!(HEAP8[155969] & 1)) {
     _glBindBuffer(34962, 0);
     _glBindBuffer(34963, 0);
    }
    _glBindTexture(3553, 0);
   }
-  if (HEAP8[155965] & 1) FUNCTION_TABLE_vi[HEAP32[38628] & 31](0);
+  if (HEAP8[155969] & 1) FUNCTION_TABLE_vi[HEAP32[38629] & 31](0);
   _glUseProgram(0);
   HEAP32[$eye >> 2] = (HEAP32[$eye >> 2] | 0) + 1;
  }
- HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] = 0;
- HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 4 >> 2] = 0;
- HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 >> 2] = 0;
+ HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] = 0;
+ HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 4 >> 2] = 0;
+ HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 >> 2] = 0;
  HEAPF32[5039] = Math_fround(-1.0);
- dest = 154288;
+ dest = 154292;
  src = $matProjection;
  stop = dest + 64 | 0;
  do {
@@ -33200,7 +33200,7 @@ function _DrawBuffersDefault() {
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- dest = 154356;
+ dest = 154360;
  src = $matModelView;
  stop = dest + 64 | 0;
  do {
@@ -33211,15 +33211,15 @@ function _DrawBuffersDefault() {
  HEAP32[$i68 >> 2] = 0;
  while (1) {
   if ((HEAP32[$i68 >> 2] | 0) >= 256) break;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i68 >> 2] << 4) >> 2] = 7;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i68 >> 2] << 4) + 4 >> 2] = 0;
-  HEAP32[(HEAP32[38622] | 0) + (HEAP32[$i68 >> 2] << 4) + 12 >> 2] = HEAP32[38625];
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i68 >> 2] << 4) >> 2] = 7;
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i68 >> 2] << 4) + 4 >> 2] = 0;
+  HEAP32[(HEAP32[38623] | 0) + (HEAP32[$i68 >> 2] << 4) + 12 >> 2] = HEAP32[38626];
   HEAP32[$i68 >> 2] = (HEAP32[$i68 >> 2] | 0) + 1;
  }
- HEAP32[38623] = 1;
- $inc81 = (HEAP32[38624] | 0) + 1 | 0;
- HEAP32[38624] = $inc81;
- HEAP32[38624] = (HEAP32[38624] | 0) >= 1 ? 0 : $inc81;
+ HEAP32[38624] = 1;
+ $inc81 = (HEAP32[38625] | 0) + 1 | 0;
+ HEAP32[38625] = $inc81;
+ HEAP32[38625] = (HEAP32[38625] | 0) >= 1 ? 0 : $inc81;
  STACKTOP = sp;
  return;
 }
@@ -33265,36 +33265,36 @@ function _rlLoadTexture($data, $width, $height, $format, $mipmapCount) {
  HEAP32[$mipmapCount$addr >> 2] = $mipmapCount;
  _glBindTexture(3553, 0);
  HEAP32[$id >> 2] = 0;
- if (!(HEAP8[155969] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 11 | (HEAP32[$format$addr >> 2] | 0) == 12 | (HEAP32[$format$addr >> 2] | 0) == 13 | (HEAP32[$format$addr >> 2] | 0) == 14) {
-  _TraceLog(4, 23510, $vararg_buffer);
+ if (!(HEAP8[155973] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 11 | (HEAP32[$format$addr >> 2] | 0) == 12 | (HEAP32[$format$addr >> 2] | 0) == 13 | (HEAP32[$format$addr >> 2] | 0) == 14) {
+  _TraceLog(4, 23528, $vararg_buffer);
   HEAP32[$retval >> 2] = HEAP32[$id >> 2];
   $63 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $63 | 0;
  }
- if ((HEAP8[155970] & 1 ^ 1) & (HEAP32[$format$addr >> 2] | 0) == 15) {
-  _TraceLog(4, 23554, $vararg_buffer7);
+ if ((HEAP8[155974] & 1 ^ 1) & (HEAP32[$format$addr >> 2] | 0) == 15) {
+  _TraceLog(4, 23572, $vararg_buffer7);
   HEAP32[$retval >> 2] = HEAP32[$id >> 2];
   $63 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $63 | 0;
  }
- if (!(HEAP8[155971] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 16 | (HEAP32[$format$addr >> 2] | 0) == 17) {
-  _TraceLog(4, 23599, $vararg_buffer9);
+ if (!(HEAP8[155975] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 16 | (HEAP32[$format$addr >> 2] | 0) == 17) {
+  _TraceLog(4, 23617, $vararg_buffer9);
   HEAP32[$retval >> 2] = HEAP32[$id >> 2];
   $63 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $63 | 0;
  }
- if (!(HEAP8[155972] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 18 | (HEAP32[$format$addr >> 2] | 0) == 19) {
-  _TraceLog(4, 23644, $vararg_buffer11);
+ if (!(HEAP8[155976] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 18 | (HEAP32[$format$addr >> 2] | 0) == 19) {
+  _TraceLog(4, 23662, $vararg_buffer11);
   HEAP32[$retval >> 2] = HEAP32[$id >> 2];
   $63 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $63 | 0;
  }
- if (!(HEAP8[155973] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 20 | (HEAP32[$format$addr >> 2] | 0) == 21) {
-  _TraceLog(4, 23689, $vararg_buffer13);
+ if (!(HEAP8[155977] & 1)) if ((HEAP32[$format$addr >> 2] | 0) == 20 | (HEAP32[$format$addr >> 2] | 0) == 21) {
+  _TraceLog(4, 23707, $vararg_buffer13);
   HEAP32[$retval >> 2] = HEAP32[$id >> 2];
   $63 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -33307,7 +33307,7 @@ function _rlLoadTexture($data, $width, $height, $format, $mipmapCount) {
  HEAP32[$mipHeight >> 2] = HEAP32[$height$addr >> 2];
  HEAP32[$mipOffset >> 2] = 0;
  HEAP32[$vararg_buffer15 >> 2] = HEAP32[$data$addr >> 2];
- _TraceLog(2, 23734, $vararg_buffer15);
+ _TraceLog(2, 23752, $vararg_buffer15);
  HEAP32[$i >> 2] = 0;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) >= (HEAP32[$mipmapCount$addr >> 2] | 0)) break;
@@ -33322,7 +33322,7 @@ function _rlLoadTexture($data, $width, $height, $format, $mipmapCount) {
   HEAP32[$vararg_buffer17 + 8 >> 2] = $33;
   HEAP32[$vararg_buffer17 + 12 >> 2] = $34;
   HEAP32[$vararg_buffer17 + 16 >> 2] = $35;
-  _TraceLog(2, 23778, $vararg_buffer17);
+  _TraceLog(2, 23796, $vararg_buffer17);
   do if ((HEAP32[$glInternalFormat >> 2] | 0) != -1) {
    $38 = HEAP32[$i >> 2] | 0;
    $39 = HEAP32[$glInternalFormat >> 2] | 0;
@@ -33343,7 +33343,7 @@ function _rlLoadTexture($data, $width, $height, $format, $mipmapCount) {
   if ((HEAP32[$mipHeight >> 2] | 0) < 1) HEAP32[$mipHeight >> 2] = 1;
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- if (HEAP8[155967] & 1) {
+ if (HEAP8[155971] & 1) {
   _glTexParameteri(3553, 10242, 10497);
   _glTexParameteri(3553, 10243, 10497);
  } else {
@@ -33361,8 +33361,8 @@ function _rlLoadTexture($data, $width, $height, $format, $mipmapCount) {
   HEAP32[$vararg_buffer24 + 4 >> 2] = $59;
   HEAP32[$vararg_buffer24 + 8 >> 2] = $60;
   HEAP32[$vararg_buffer24 + 12 >> 2] = $61;
-  _TraceLog(3, 23831, $vararg_buffer24);
- } else _TraceLog(4, 43938, $vararg_buffer30);
+  _TraceLog(3, 23849, $vararg_buffer24);
+ } else _TraceLog(4, 43956, $vararg_buffer30);
  HEAP32[$retval >> 2] = HEAP32[$id >> 2];
  $63 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
@@ -33605,13 +33605,13 @@ function _drmp3_src_cache_read_frames($pCache, $0, $1, $pFramesOut) {
  $6 = $totalFramesRead;
  HEAP32[$6 >> 2] = 0;
  HEAP32[$6 + 4 >> 2] = 0;
- if (!(HEAP32[$pCache$addr >> 2] | 0)) ___assert_fail(36923, 36861, 2304, 36944);
- if (!(HEAP32[HEAP32[$pCache$addr >> 2] >> 2] | 0)) ___assert_fail(36972, 36861, 2305, 36944);
- if (!(HEAP32[(HEAP32[HEAP32[$pCache$addr >> 2] >> 2] | 0) + 20 >> 2] | 0)) ___assert_fail(36999, 36861, 2306, 36944);
+ if (!(HEAP32[$pCache$addr >> 2] | 0)) ___assert_fail(36941, 36879, 2304, 36962);
+ if (!(HEAP32[HEAP32[$pCache$addr >> 2] >> 2] | 0)) ___assert_fail(36990, 36879, 2305, 36962);
+ if (!(HEAP32[(HEAP32[HEAP32[$pCache$addr >> 2] >> 2] | 0) + 20 >> 2] | 0)) ___assert_fail(37017, 36879, 2306, 36962);
  $16 = $frameCount$addr;
  $21 = HEAP32[$16 + 4 >> 2] | 0;
- if (!($21 >>> 0 > 0 | ($21 | 0) == 0 & (HEAP32[$16 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25056, 36861, 2307, 36944);
- if (!(HEAP32[$pFramesOut$addr >> 2] | 0)) ___assert_fail(25162, 36861, 2308, 36944);
+ if (!($21 >>> 0 > 0 | ($21 | 0) == 0 & (HEAP32[$16 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25074, 36879, 2307, 36962);
+ if (!(HEAP32[$pFramesOut$addr >> 2] | 0)) ___assert_fail(25180, 36879, 2308, 36962);
  HEAP32[$channels >> 2] = HEAP32[(HEAP32[HEAP32[$pCache$addr >> 2] >> 2] | 0) + 8 >> 2];
  while (1) {
   $31 = $frameCount$addr;
@@ -33692,7 +33692,7 @@ function _drmp3_src_cache_read_frames($pCache, $0, $1, $pFramesOut) {
    break;
   }
  }
- if ((label | 0) == 17) ___assert_fail(25056, 36861, 2332, 36944); else if ((label | 0) == 22) {
+ if ((label | 0) == 17) ___assert_fail(25074, 36879, 2332, 36962); else if ((label | 0) == 22) {
   $204 = $totalFramesRead;
   $206 = HEAP32[$204 >> 2] | 0;
   setTempRet0(HEAP32[$204 + 4 >> 2] | 0);
@@ -33737,7 +33737,7 @@ function _OnAudioBufferDSPRead($pDSP, $pFramesOut, $frameCount, $pUserData) {
  HEAP32[$subBufferSizeInFrames >> 2] = (HEAP32[(HEAP32[$audioBuffer >> 2] | 0) + 46552 >> 2] | 0) >>> 0 > 1 ? ($4 >>> 0) / 2 | 0 : $4;
  HEAP32[$currentSubBufferIndex >> 2] = ((HEAP32[(HEAP32[$audioBuffer >> 2] | 0) + 46548 >> 2] | 0) >>> 0) / ((HEAP32[$subBufferSizeInFrames >> 2] | 0) >>> 0) | 0;
  if ((HEAP32[$currentSubBufferIndex >> 2] | 0) >>> 0 > 1) {
-  _TraceLog(2, 38139, sp_a);
+  _TraceLog(2, 38157, sp_a);
   HEAP32[$retval >> 2] = 0;
   $82 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -33950,8 +33950,8 @@ function _drmp3_read_src($pSRC, $0, $1, $pFramesOut, $pUserData) {
  $8 = $totalFramesRead;
  HEAP32[$8 >> 2] = 0;
  HEAP32[$8 + 4 >> 2] = 0;
- if (!(HEAP32[$pMP3 >> 2] | 0)) ___assert_fail(37097, 36861, 2606, 37235);
- if (!(HEAP32[(HEAP32[$pMP3 >> 2] | 0) + 6696 >> 2] | 0)) ___assert_fail(37208, 36861, 2607, 37235);
+ if (!(HEAP32[$pMP3 >> 2] | 0)) ___assert_fail(37115, 36879, 2606, 37253);
+ if (!(HEAP32[(HEAP32[$pMP3 >> 2] | 0) + 6696 >> 2] | 0)) ___assert_fail(37226, 36879, 2607, 37253);
  while (1) {
   $15 = $frameCount$addr;
   $20 = HEAP32[$15 + 4 >> 2] | 0;
@@ -34024,7 +34024,7 @@ function _drmp3_read_src($pSRC, $0, $1, $pFramesOut, $pUserData) {
    break;
   }
  }
- if ((label | 0) == 18) ___assert_fail(37250, 36861, 2672, 37235); else if ((label | 0) == 21) {
+ if ((label | 0) == 18) ___assert_fail(37268, 36879, 2672, 37253); else if ((label | 0) == 21) {
   $128 = $totalFramesRead;
   $130 = HEAP32[$128 >> 2] | 0;
   setTempRet0(HEAP32[$128 + 4 >> 2] | 0);
@@ -34176,10 +34176,10 @@ function _stbir__calculate_coefficients_upsample($filter, $scale, $in_first_pixe
  HEAPF32[$total_filter >> 2] = Math_fround(0.0);
  $sub = (HEAP32[$in_last_pixel$addr >> 2] | 0) - (HEAP32[$in_first_pixel$addr >> 2] | 0) | 0;
  $div = Math_fround(Math_fround(1.0) / Math_fround(HEAPF32[$scale$addr >> 2]));
- if (($sub | 0) > (~~+Math_ceil(+(+Math_fround(Math_fround(FUNCTION_TABLE_ff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) + 4 >> 2] & 7]($div)) * Math_fround(2.0)))) | 0)) ___assert_fail(42676, 40603, 1043, 42775);
+ if (($sub | 0) > (~~+Math_ceil(+(+Math_fround(Math_fround(FUNCTION_TABLE_ff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) + 4 >> 2] & 7]($div)) * Math_fround(2.0)))) | 0)) ___assert_fail(42694, 40621, 1043, 42793);
  HEAP32[HEAP32[$contributor$addr >> 2] >> 2] = HEAP32[$in_first_pixel$addr >> 2];
  HEAP32[(HEAP32[$contributor$addr >> 2] | 0) + 4 >> 2] = HEAP32[$in_last_pixel$addr >> 2];
- if ((HEAP32[(HEAP32[$contributor$addr >> 2] | 0) + 4 >> 2] | 0) < (HEAP32[HEAP32[$contributor$addr >> 2] >> 2] | 0)) ___assert_fail(42528, 40603, 1048, 42775);
+ if ((HEAP32[(HEAP32[$contributor$addr >> 2] | 0) + 4 >> 2] | 0) < (HEAP32[HEAP32[$contributor$addr >> 2] >> 2] | 0)) ___assert_fail(42546, 40621, 1048, 42793);
  HEAP32[$i >> 2] = 0;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) > ((HEAP32[$in_last_pixel$addr >> 2] | 0) - (HEAP32[$in_first_pixel$addr >> 2] | 0) | 0)) break;
@@ -34205,9 +34205,9 @@ function _stbir__calculate_coefficients_upsample($filter, $scale, $in_first_pixe
  $add31 = Math_fround(Math_fround((HEAP32[$in_last_pixel$addr >> 2] | 0) + 1 | 0) + Math_fround(.5));
  $sub32 = Math_fround($add31 - Math_fround(HEAPF32[$in_center_of_out$addr >> 2]));
  $div33 = Math_fround(Math_fround(1.0) / Math_fround(HEAPF32[$scale$addr >> 2]));
- if (!(Math_fround(FUNCTION_TABLE_fff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) >> 2] & 7]($sub32, $div33)) == Math_fround(0.0))) ___assert_fail(42814, 40603, 1066, 42775);
- if (!(+Math_fround(HEAPF32[$total_filter >> 2]) > .9)) ___assert_fail(42922, 40603, 1068, 42775);
- if (!(Math_fround(HEAPF32[$total_filter >> 2]) < Math_fround(1.10000002))) ___assert_fail(42941, 40603, 1069, 42775);
+ if (!(Math_fround(FUNCTION_TABLE_fff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) >> 2] & 7]($sub32, $div33)) == Math_fround(0.0))) ___assert_fail(42832, 40621, 1066, 42793);
+ if (!(+Math_fround(HEAPF32[$total_filter >> 2]) > .9)) ___assert_fail(42940, 40621, 1068, 42793);
+ if (!(Math_fround(HEAPF32[$total_filter >> 2]) < Math_fround(1.10000002))) ___assert_fail(42959, 40621, 1069, 42793);
  HEAPF32[$filter_scale >> 2] = Math_fround(Math_fround(1.0) / Math_fround(HEAPF32[$total_filter >> 2]));
  HEAP32[$i >> 2] = 0;
  while (1) {
@@ -34458,7 +34458,7 @@ function _drmp3_L3_decode_scalefactors($hdr, $ist_pos, $bs, $gr, $scf, $ch) {
   while (1) {
    if ((HEAP32[$i >> 2] | 0) >= 10) break L13;
    $arrayidx105 = $iscf + (11 + (HEAP32[$i >> 2] | 0)) | 0;
-   HEAP8[$arrayidx105 >> 0] = (HEAPU8[$arrayidx105 >> 0] | 0) + (HEAPU8[36851 + (HEAP32[$i >> 2] | 0) >> 0] | 0);
+   HEAP8[$arrayidx105 >> 0] = (HEAPU8[$arrayidx105 >> 0] | 0) + (HEAPU8[36869 + (HEAP32[$i >> 2] | 0) >> 0] | 0);
    HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
   }
  } while (0);
@@ -34505,11 +34505,11 @@ function _LoadImage($agg$result, $fileName) {
  HEAP32[$image + 8 >> 2] = 0;
  HEAP32[$image + 12 >> 2] = 0;
  HEAP32[$image + 16 >> 2] = 0;
- do if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43167) | 0) {
+ do if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43185) | 0) {
   HEAP32[$imgWidth >> 2] = 0;
   HEAP32[$imgHeight >> 2] = 0;
   HEAP32[$imgBpp >> 2] = 0;
-  HEAP32[$imFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39111) | 0;
+  HEAP32[$imFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39129) | 0;
   if (HEAP32[$imFile >> 2] | 0) {
    HEAP32[$image >> 2] = _stbi_load_from_file(HEAP32[$imFile >> 2] | 0, $imgWidth, $imgHeight, $imgBpp, 0) | 0;
    _fclose(HEAP32[$imFile >> 2] | 0) | 0;
@@ -34530,9 +34530,9 @@ function _LoadImage($agg$result, $fileName) {
    }
    if ((HEAP32[$imgBpp >> 2] | 0) == 4) HEAP32[$image + 16 >> 2] = 7;
   }
- } else if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43172) | 0) {
+ } else if (_IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43190) | 0) {
   HEAP32[$imgBpp25 >> 2] = 0;
-  HEAP32[$imFile26 >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39111) | 0;
+  HEAP32[$imFile26 >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39129) | 0;
   HEAP32[$image >> 2] = _stbi_loadf_from_file(HEAP32[$imFile26 >> 2] | 0, $image + 4 | 0, $image + 8 | 0, $imgBpp25, 0) | 0;
   _fclose(HEAP32[$imFile26 >> 2] | 0) | 0;
   HEAP32[$image + 12 >> 2] = 1;
@@ -34549,7 +34549,7 @@ function _LoadImage($agg$result, $fileName) {
    break;
   } else {
    HEAP32[$image$byval_copy >> 2] = HEAP32[$fileName$addr >> 2];
-   _TraceLog(4, 43177, $image$byval_copy);
+   _TraceLog(4, 43195, $image$byval_copy);
    HEAP32[$image$byval_copy >> 2] = HEAP32[$image >> 2];
    HEAP32[$image$byval_copy + 4 >> 2] = HEAP32[$image + 4 >> 2];
    HEAP32[$image$byval_copy + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -34559,7 +34559,7 @@ function _LoadImage($agg$result, $fileName) {
    break;
   }
  } else {
-  $call50 = _IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43213) | 0;
+  $call50 = _IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43231) | 0;
   $20 = HEAP32[$fileName$addr >> 2] | 0;
   if ($call50) {
    _LoadDDS($tmp, $20);
@@ -34570,7 +34570,7 @@ function _LoadImage($agg$result, $fileName) {
    HEAP32[$image + 16 >> 2] = HEAP32[$tmp + 16 >> 2];
    break;
   }
-  $call53 = _IsFileExtension($20, 43218) | 0;
+  $call53 = _IsFileExtension($20, 43236) | 0;
   $21 = HEAP32[$fileName$addr >> 2] | 0;
   if ($call53) {
    _LoadKTX($tmp55, $21);
@@ -34581,7 +34581,7 @@ function _LoadImage($agg$result, $fileName) {
    HEAP32[$image + 16 >> 2] = HEAP32[$tmp55 + 16 >> 2];
    break;
   }
-  $call57 = _IsFileExtension($21, 43223) | 0;
+  $call57 = _IsFileExtension($21, 43241) | 0;
   $22 = HEAP32[$fileName$addr >> 2] | 0;
   if ($call57) {
    _LoadASTC($tmp59, $22);
@@ -34593,7 +34593,7 @@ function _LoadImage($agg$result, $fileName) {
    break;
   } else {
    HEAP32[$vararg_buffer1 >> 2] = $22;
-   _TraceLog(4, 43177, $vararg_buffer1);
+   _TraceLog(4, 43195, $vararg_buffer1);
    break;
   }
  } while (0);
@@ -34604,7 +34604,7 @@ function _LoadImage($agg$result, $fileName) {
   HEAP32[$vararg_buffer4 >> 2] = $24;
   HEAP32[$vararg_buffer4 + 4 >> 2] = $25;
   HEAP32[$vararg_buffer4 + 8 >> 2] = $26;
-  _TraceLog(3, 43229, $vararg_buffer4);
+  _TraceLog(3, 43247, $vararg_buffer4);
   HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -34614,7 +34614,7 @@ function _LoadImage($agg$result, $fileName) {
   return;
  } else {
   HEAP32[$vararg_buffer9 >> 2] = $24;
-  _TraceLog(4, 43268, $vararg_buffer9);
+  _TraceLog(4, 43286, $vararg_buffer9);
   HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -34873,7 +34873,7 @@ function _ImageCrop($image, $crop) {
    return;
   }
  }
- _TraceLog(4, 44331, $vararg_buffer);
+ _TraceLog(4, 44349, $vararg_buffer);
  STACKTOP = sp;
  return;
 }
@@ -35118,7 +35118,7 @@ function _stbv_vorbis_find_page($f, $end, $last) {
    while (1) {
     if ((HEAP32[$i >> 2] | 0) >= 4) break;
     $conv12 = (_stbv_get8(HEAP32[$f$addr >> 2] | 0) | 0) & 255;
-    if (($conv12 | 0) != (HEAPU8[36134 + (HEAP32[$i >> 2] | 0) >> 0] | 0)) break;
+    if (($conv12 | 0) != (HEAPU8[36152 + (HEAP32[$i >> 2] | 0) >> 0] | 0)) break;
     HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
    }
    if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 96 >> 2] | 0) {
@@ -35130,7 +35130,7 @@ function _stbv_vorbis_find_page($f, $end, $last) {
     while (1) {
      if ((HEAP32[$i25 >> 2] | 0) >>> 0 >= 4) break;
      CSE$0 = HEAP32[$i25 >> 2] | 0;
-     HEAP8[$header + CSE$0 >> 0] = HEAP8[36134 + CSE$0 >> 0] | 0;
+     HEAP8[$header + CSE$0 >> 0] = HEAP8[36152 + CSE$0 >> 0] | 0;
      HEAP32[$i25 >> 2] = (HEAP32[$i25 >> 2] | 0) + 1;
     }
     while (1) {
@@ -35276,7 +35276,7 @@ function _ma_pcm_converter_read($pDSP, $pFramesOut, $0, $1) {
   return $169 | 0;
  }
  if (!((HEAPU8[(HEAP32[$pDSP$addr >> 2] | 0) + 46464 >> 0] | 0) >>> 6 & 1)) {
-  if (((HEAPU8[(HEAP32[$pDSP$addr >> 2] | 0) + 46464 >> 0] | 0) >>> 2 & 1 | 0) != 1) ___assert_fail(25187, 24969, 32512, 25229);
+  if (((HEAPU8[(HEAP32[$pDSP$addr >> 2] | 0) + 46464 >> 0] | 0) >>> 2 & 1 | 0) != 1) ___assert_fail(25205, 24987, 32512, 25247);
   HEAP32[$data >> 2] = HEAP32[$pDSP$addr >> 2];
   HEAP32[$data + 4 >> 2] = HEAP32[(HEAP32[$pDSP$addr >> 2] | 0) + 4 >> 2];
   $154 = $frameCount$addr;
@@ -35661,40 +35661,40 @@ function _LoadBuffersDefault() {
   HEAP32[144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 8 >> 2] = 0;
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- _TraceLog(3, 22108, $vararg_buffer);
+ _TraceLog(3, 22126, $vararg_buffer);
  HEAP32[$i83 >> 2] = 0;
  while (1) {
   if ((HEAP32[$i83 >> 2] | 0) >= 1) break;
-  if (HEAP8[155965] & 1) {
-   FUNCTION_TABLE_vii[HEAP32[38707] & 63](1, 144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 28 | 0);
-   FUNCTION_TABLE_vi[HEAP32[38628] & 31](HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 28 >> 2] | 0);
+  if (HEAP8[155969] & 1) {
+   FUNCTION_TABLE_vii[HEAP32[38708] & 63](1, 144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 28 | 0);
+   FUNCTION_TABLE_vi[HEAP32[38629] & 31](HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 28 >> 2] | 0);
   }
   _glGenBuffers(1, 144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 | 0);
   _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 >> 2] | 0);
   _glBufferData(34962, 98304, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 12 >> 2] | 0, 35048);
-  _glEnableVertexAttribArray(HEAP32[HEAP32[38627] >> 2] | 0);
-  _glVertexAttribPointer(HEAP32[HEAP32[38627] >> 2] | 0, 3, 5126, 0, 0, 0);
+  _glEnableVertexAttribArray(HEAP32[HEAP32[38628] >> 2] | 0);
+  _glVertexAttribPointer(HEAP32[HEAP32[38628] >> 2] | 0, 3, 5126, 0, 0, 0);
   _glGenBuffers(1, 144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 + 4 | 0);
   _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 + 4 >> 2] | 0);
   _glBufferData(34962, 65536, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 16 >> 2] | 0, 35048);
-  _glEnableVertexAttribArray(HEAP32[(HEAP32[38627] | 0) + 4 >> 2] | 0);
-  _glVertexAttribPointer(HEAP32[(HEAP32[38627] | 0) + 4 >> 2] | 0, 2, 5126, 0, 0, 0);
+  _glEnableVertexAttribArray(HEAP32[(HEAP32[38628] | 0) + 4 >> 2] | 0);
+  _glVertexAttribPointer(HEAP32[(HEAP32[38628] | 0) + 4 >> 2] | 0, 2, 5126, 0, 0, 0);
   _glGenBuffers(1, 144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 + 8 | 0);
   _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 + 8 >> 2] | 0);
   _glBufferData(34962, 32768, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 20 >> 2] | 0, 35048);
-  _glEnableVertexAttribArray(HEAP32[(HEAP32[38627] | 0) + 20 >> 2] | 0);
-  _glVertexAttribPointer(HEAP32[(HEAP32[38627] | 0) + 20 >> 2] | 0, 4, 5121, 1, 0, 0);
+  _glEnableVertexAttribArray(HEAP32[(HEAP32[38628] | 0) + 20 >> 2] | 0);
+  _glVertexAttribPointer(HEAP32[(HEAP32[38628] | 0) + 20 >> 2] | 0, 4, 5121, 1, 0, 0);
   _glGenBuffers(1, 144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 + 12 | 0);
   _glBindBuffer(34963, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 32 + 12 >> 2] | 0);
   _glBufferData(34963, 24576, HEAP32[144640 + ((HEAP32[$i83 >> 2] | 0) * 48 | 0) + 24 >> 2] | 0, 35044);
   HEAP32[$i83 >> 2] = (HEAP32[$i83 >> 2] | 0) + 1;
  }
- _TraceLog(3, 22156, $vararg_buffer1);
- if (!(HEAP8[155965] & 1)) {
+ _TraceLog(3, 22174, $vararg_buffer1);
+ if (!(HEAP8[155969] & 1)) {
   STACKTOP = sp;
   return;
  }
- FUNCTION_TABLE_vi[HEAP32[38628] & 31](0);
+ FUNCTION_TABLE_vi[HEAP32[38629] & 31](0);
  STACKTOP = sp;
  return;
 }
@@ -35934,8 +35934,8 @@ function _ma_rb_acquire_write($pRB, $pSizeInBytes, $ppBufferOut) {
  HEAP32[$encodedOffset$addr$i >> 2] = HEAP32[$readOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i >> 2] = $readOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i >> 2] = $readOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
@@ -35944,8 +35944,8 @@ function _ma_rb_acquire_write($pRB, $pSizeInBytes, $ppBufferOut) {
  HEAP32[$encodedOffset$addr$i15 >> 2] = HEAP32[$writeOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i16 >> 2] = $writeOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i17 >> 2] = $writeOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i16 >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i17 >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i16 >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i17 >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i14 >> 2] = HEAP32[$encodedOffset$addr$i15 >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i16 >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i14 >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i13 >> 2] = HEAP32[$encodedOffset$addr$i15 >> 2];
@@ -35955,7 +35955,7 @@ function _ma_rb_acquire_write($pRB, $pSizeInBytes, $ppBufferOut) {
  if ((HEAP32[$bytesRequested >> 2] | 0) >>> 0 > (HEAP32[$bytesAvailable >> 2] | 0) >>> 0) HEAP32[$bytesRequested >> 2] = HEAP32[$bytesAvailable >> 2];
  HEAP32[HEAP32[$pSizeInBytes$addr >> 2] >> 2] = HEAP32[$bytesRequested >> 2];
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 32723, 25578);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 32723, 25596);
  $42 = HEAP32[HEAP32[$pRB$addr$i >> 2] >> 2] | 0;
  HEAP32[$encodedOffset$addr$i$i26 >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 20 >> 2];
  HEAP32[HEAP32[$ppBufferOut$addr >> 2] >> 2] = $42 + (HEAP32[$encodedOffset$addr$i$i26 >> 2] & 2147483647);
@@ -36020,7 +36020,7 @@ function _stbv_is_whole_packet_present($f, $end_page) {
    label = 17;
    break;
   }
-  if (_memcmp(HEAP32[$p >> 2] | 0, 36134, 4) | 0) {
+  if (_memcmp(HEAP32[$p >> 2] | 0, 36152, 4) | 0) {
    label = 19;
    break;
   }
@@ -36249,10 +36249,10 @@ function _ma_device_init_by_type__webaudio($pContext, $pConfig, $deviceType, $pD
  HEAP32[$pConfig$addr >> 2] = $pConfig;
  HEAP32[$deviceType$addr >> 2] = $deviceType;
  HEAP32[$pDevice$addr >> 2] = $pDevice;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 25063, 27197);
- if (!(HEAP32[$pConfig$addr >> 2] | 0)) ___assert_fail(27230, 24969, 25064, 27197);
- if ((HEAP32[$deviceType$addr >> 2] | 0) == 3) ___assert_fail(27252, 24969, 25065, 27197);
- if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24947, 24969, 25066, 27197);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 25063, 27215);
+ if (!(HEAP32[$pConfig$addr >> 2] | 0)) ___assert_fail(27248, 24987, 25064, 27215);
+ if ((HEAP32[$deviceType$addr >> 2] | 0) == 3) ___assert_fail(27270, 24987, 25065, 27215);
+ if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24965, 24987, 25066, 27215);
  if ((HEAP32[$deviceType$addr >> 2] | 0) == 2) if (!(_ma_is_capture_supported__webaudio() | 0)) {
   HEAP32[$retval >> 2] = -104;
   $66 = HEAP32[$retval >> 2] | 0;
@@ -36401,7 +36401,7 @@ function _drmp3_get_mp3_and_pcm_frame_count($pMP3, $pMP3FrameCount, $pPCMFrameCo
   HEAP32[$57 >> 2] = $55;
   HEAP32[$57 + 4 >> 2] = $56;
  }
- if ((label | 0) == 10) ___assert_fail(37612, 36861, 3368, 37625);
+ if ((label | 0) == 10) ___assert_fail(37630, 36879, 3368, 37643);
  if (!(_drmp3_seek_to_start_of_stream($25) | 0)) {
   HEAP32[$retval >> 2] = 0;
   $93 = HEAP32[$retval >> 2] | 0;
@@ -36481,8 +36481,8 @@ function _ma_rb_acquire_read($pRB, $pSizeInBytes, $ppBufferOut) {
  HEAP32[$encodedOffset$addr$i >> 2] = HEAP32[$writeOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i >> 2] = $writeOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i >> 2] = $writeOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
@@ -36491,8 +36491,8 @@ function _ma_rb_acquire_read($pRB, $pSizeInBytes, $ppBufferOut) {
  HEAP32[$encodedOffset$addr$i13 >> 2] = HEAP32[$readOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i14 >> 2] = $readOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i15 >> 2] = $readOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i14 >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i15 >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i14 >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i15 >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i12 >> 2] = HEAP32[$encodedOffset$addr$i13 >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i14 >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i12 >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i11 >> 2] = HEAP32[$encodedOffset$addr$i13 >> 2];
@@ -36502,7 +36502,7 @@ function _ma_rb_acquire_read($pRB, $pSizeInBytes, $ppBufferOut) {
  if ((HEAP32[$bytesRequested >> 2] | 0) >>> 0 > (HEAP32[$bytesAvailable >> 2] | 0) >>> 0) HEAP32[$bytesRequested >> 2] = HEAP32[$bytesAvailable >> 2];
  HEAP32[HEAP32[$pSizeInBytes$addr >> 2] >> 2] = HEAP32[$bytesRequested >> 2];
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 32717, 25269);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 32717, 25287);
  $42 = HEAP32[HEAP32[$pRB$addr$i >> 2] >> 2] | 0;
  HEAP32[$encodedOffset$addr$i$i24 >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 16 >> 2];
  HEAP32[HEAP32[$ppBufferOut$addr >> 2] >> 2] = $42 + (HEAP32[$encodedOffset$addr$i$i24 >> 2] & 2147483647);
@@ -36521,7 +36521,7 @@ function _ma_format_converter_init_callbacks__default($pConverter) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $pConverter$addr = sp_a;
  HEAP32[$pConverter$addr >> 2] = $pConverter;
- if (!(HEAP32[$pConverter$addr >> 2] | 0)) ___assert_fail(33661, 24969, 29406, 33686);
+ if (!(HEAP32[$pConverter$addr >> 2] | 0)) ___assert_fail(33679, 24987, 29406, 33704);
  switch (HEAP32[HEAP32[$pConverter$addr >> 2] >> 2] | 0) {
  case 1:
   {
@@ -36719,9 +36719,9 @@ function _drmp3_seek_to_pcm_frame__seek_table($pMP3, $0, $1) {
  $2 = $frameIndex$addr;
  HEAP32[$2 >> 2] = $0;
  HEAP32[$2 + 4 >> 2] = $1;
- if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37097, 36861, 3244, 37519);
- if (!(HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 21136 >> 2] | 0)) ___assert_fail(37555, 36861, 3245, 37519);
- if ((HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 21140 >> 2] | 0) >>> 0 <= 0) ___assert_fail(37587, 36861, 3246, 37519);
+ if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37115, 36879, 3244, 37537);
+ if (!(HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 21136 >> 2] | 0)) ___assert_fail(37573, 36879, 3245, 37537);
+ if ((HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 21140 >> 2] | 0) >>> 0 <= 0) ___assert_fail(37605, 36879, 3246, 37537);
  $12 = $frameIndex$addr;
  if (_drmp3_find_closest_seek_point(HEAP32[$pMP3$addr >> 2] | 0, HEAP32[$12 >> 2] | 0, HEAP32[$12 + 4 >> 2] | 0, $priorSeekPointIndex) | 0) {
   $arrayidx = (HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 21136 >> 2] | 0) + ((HEAP32[$priorSeekPointIndex >> 2] | 0) * 24 | 0) | 0;
@@ -36868,7 +36868,7 @@ function _stbv_vorbis_decode_initial($f, $p_left_start, $p_left_end, $p_right_st
   STACKTOP = sp;
   return $64 | 0;
  } else if ((label | 0) == 13) {
-  do if (HEAP32[$6 + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35782, 35641, 3140, 36107); while (0);
+  do if (HEAP32[$6 + 80 >> 2] | 0) if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 80 + 4 >> 2] | 0) == (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 92 >> 2] | 0)) break; else ___assert_fail(35800, 35659, 3140, 36125); while (0);
   $15 = HEAP32[$f$addr >> 2] | 0;
   HEAP32[$i >> 2] = _stbv_get_bits($15, _stbv_ilog((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 408 >> 2] | 0) - 1 | 0) | 0) | 0;
   if ((HEAP32[$i >> 2] | 0) == -1) {
@@ -37264,7 +37264,7 @@ function _stbv_compute_sorted_huffman($c, $lengths, $values) {
    }
    HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
   }
-  if ((HEAP32[$k >> 2] | 0) == (HEAP32[(HEAP32[$c$addr >> 2] | 0) + 2092 >> 2] | 0)) break; else ___assert_fail(36309, 35641, 1160, 36332);
+  if ((HEAP32[$k >> 2] | 0) == (HEAP32[(HEAP32[$c$addr >> 2] | 0) + 2092 >> 2] | 0)) break; else ___assert_fail(36327, 35659, 1160, 36350);
  } while (0);
  CSE$0 = HEAP32[$c$addr >> 2] | 0;
  _qsort(HEAP32[CSE$0 + 2084 >> 2] | 0, HEAP32[CSE$0 + 2092 >> 2] | 0, 4, 6);
@@ -37309,7 +37309,7 @@ function _stbv_compute_sorted_huffman($c, $lengths, $values) {
   } while (0);
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- if ((label | 0) == 29) ___assert_fail(36360, 35641, 1190, 36332); else if ((label | 0) == 34) {
+ if ((label | 0) == 29) ___assert_fail(36378, 35659, 1190, 36350); else if ((label | 0) == 34) {
   STACKTOP = sp;
   return;
  }
@@ -37357,7 +37357,7 @@ function _stbv_compute_codewords($c, $len, $n, $values) {
  }
  $8 = HEAP32[$c$addr >> 2] | 0;
  if ((HEAP32[$k >> 2] | 0) == (HEAP32[$n$addr >> 2] | 0)) {
-  if (HEAP32[$8 + 2092 >> 2] | 0) ___assert_fail(36427, 35641, 1063, 36450);
+  if (HEAP32[$8 + 2092 >> 2] | 0) ___assert_fail(36445, 35659, 1063, 36468);
   HEAP32[$retval >> 2] = 1;
   $69 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -37431,7 +37431,7 @@ function _stbv_compute_codewords($c, $len, $n, $values) {
   $69 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $69 | 0;
- } else if ((label | 0) == 23) ___assert_fail(36473, 35641, 1086, 36450); else if ((label | 0) == 27) ___assert_fail(36490, 35641, 1091, 36450); else if ((label | 0) == 31) ___assert_fail(36517, 35641, 1093, 36450); else if ((label | 0) == 34) {
+ } else if ((label | 0) == 23) ___assert_fail(36491, 35659, 1086, 36468); else if ((label | 0) == 27) ___assert_fail(36508, 35659, 1091, 36468); else if ((label | 0) == 31) ___assert_fail(36535, 35659, 1093, 36468); else if ((label | 0) == 34) {
   HEAP32[$retval >> 2] = 1;
   $69 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -37531,23 +37531,23 @@ function _stbi__compute_huffman_codes($a) {
   }
  }
  if ((label | 0) == 9) {
-  HEAP32[$retval >> 2] = _stbi__err(40200) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40218) | 0;
   $45 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $45 | 0;
  } else if ((label | 0) == 14) {
-  HEAP32[$retval >> 2] = _stbi__err(40200) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40218) | 0;
   $45 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $45 | 0;
- } else if ((label | 0) == 19) ___assert_fail(40216, 39140, 4122, 40224); else if ((label | 0) == 22) {
-  HEAP32[$retval >> 2] = _stbi__err(40200) | 0;
+ } else if ((label | 0) == 19) ___assert_fail(40234, 39158, 4122, 40242); else if ((label | 0) == 22) {
+  HEAP32[$retval >> 2] = _stbi__err(40218) | 0;
   $45 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $45 | 0;
  } else if ((label | 0) == 25) {
   if ((HEAP32[$n >> 2] | 0) != (HEAP32[$ntot >> 2] | 0)) {
-   HEAP32[$retval >> 2] = _stbi__err(40200) | 0;
+   HEAP32[$retval >> 2] = _stbi__err(40218) | 0;
    $45 = HEAP32[$retval >> 2] | 0;
    STACKTOP = sp;
    return $45 | 0;
@@ -37672,7 +37672,7 @@ function _stbi__parse_huffman_block($a) {
   } while (0);
  }
  if ((label | 0) == 4) {
-  HEAP32[$retval >> 2] = _stbi__err(40025) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40043) | 0;
   $64 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $64 | 0;
@@ -37688,12 +37688,12 @@ function _stbi__parse_huffman_block($a) {
   STACKTOP = sp;
   return $64 | 0;
  } else if ((label | 0) == 15) {
-  HEAP32[$retval >> 2] = _stbi__err(40025) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40043) | 0;
   $64 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $64 | 0;
  } else if ((label | 0) == 19) {
-  HEAP32[$retval >> 2] = _stbi__err(40042) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40060) | 0;
   $64 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $64 | 0;
@@ -37880,7 +37880,7 @@ function _stbv_codebook_decode_scalar_raw($f, $c) {
    return $89 | 0;
   }
  }
- if (HEAP8[(HEAP32[$c$addr >> 2] | 0) + 23 >> 0] | 0) ___assert_fail(36064, 35641, 1652, 36075);
+ if (HEAP8[(HEAP32[$c$addr >> 2] | 0) + 23 >> 0] | 0) ___assert_fail(36082, 35659, 1652, 36093);
  HEAP32[$i >> 2] = 0;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) >= (HEAP32[(HEAP32[$c$addr >> 2] | 0) + 4 >> 2] | 0)) {
@@ -37969,7 +37969,7 @@ function _stbi__zbuild_huffman($z, $sizelist, $num) {
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
  if ((label | 0) == 7) {
-  HEAP32[$retval >> 2] = _stbi__err(40252) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40270) | 0;
   $74 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $74 | 0;
@@ -37992,7 +37992,7 @@ function _stbi__zbuild_huffman($z, $sizelist, $num) {
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
  if ((label | 0) == 13) {
-  HEAP32[$retval >> 2] = _stbi__err(40200) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40218) | 0;
   $74 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $74 | 0;
@@ -38378,7 +38378,7 @@ function _ma_context_init($backends, $backendCount, $pConfig, $pContext) {
   HEAP32[$pBackendsToIterate >> 2] = $defaultBackends;
   HEAP32[$backendsToIterateCount >> 2] = 14;
  }
- if (!(HEAP32[$pBackendsToIterate >> 2] | 0)) ___assert_fail(33858, 24969, 25878, 33891);
+ if (!(HEAP32[$pBackendsToIterate >> 2] | 0)) ___assert_fail(33876, 24987, 25878, 33909);
  HEAP32[$iBackend >> 2] = 0;
  while (1) {
   if ((HEAP32[$iBackend >> 2] | 0) >>> 0 >= (HEAP32[$backendsToIterateCount >> 2] | 0) >>> 0) {
@@ -38400,10 +38400,10 @@ function _ma_context_init($backends, $backendCount, $pConfig, $pContext) {
  }
  CSE$0 = HEAP32[$pContext$addr >> 2] | 0;
  HEAP32[$result >> 2] = _ma_mutex_init(CSE$0 | 0, CSE$0 + 16 | 0) | 0;
- if (HEAP32[$result >> 2] | 0) _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 2, 33907, -311) | 0;
+ if (HEAP32[$result >> 2] | 0) _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 2, 33925, -311) | 0;
  CSE$1 = HEAP32[$pContext$addr >> 2] | 0;
  HEAP32[$result >> 2] = _ma_mutex_init(CSE$1 | 0, CSE$1 + 48 | 0) | 0;
- if (HEAP32[$result >> 2] | 0) _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 2, 34003, -311) | 0;
+ if (HEAP32[$result >> 2] | 0) _ma_context_post_error(HEAP32[$pContext$addr >> 2] | 0, 0, 2, 34021, -311) | 0;
  HEAP32[HEAP32[$pContext$addr >> 2] >> 2] = HEAP32[$backend >> 2];
  HEAP32[$retval >> 2] = HEAP32[$result >> 2];
  $42 = HEAP32[$retval >> 2] | 0;
@@ -38529,77 +38529,77 @@ function _SetupFramebuffer($width, $height) {
  $screenRatio = sp + 40 | 0;
  HEAP32[sp + 128 >> 2] = $width;
  HEAP32[sp + 124 >> 2] = $height;
- if ((HEAP32[38734] | 0) <= (HEAP32[38752] | 0)) if ((HEAP32[38735] | 0) <= (HEAP32[38753] | 0)) {
-  if ((HEAP32[38734] | 0) >= (HEAP32[38752] | 0)) if ((HEAP32[38735] | 0) >= (HEAP32[38753] | 0)) {
-   HEAP32[38756] = HEAP32[38734];
+ if ((HEAP32[38735] | 0) <= (HEAP32[38753] | 0)) if ((HEAP32[38736] | 0) <= (HEAP32[38754] | 0)) {
+  if ((HEAP32[38735] | 0) >= (HEAP32[38753] | 0)) if ((HEAP32[38736] | 0) >= (HEAP32[38754] | 0)) {
    HEAP32[38757] = HEAP32[38735];
-   HEAP32[38758] = 0;
+   HEAP32[38758] = HEAP32[38736];
    HEAP32[38759] = 0;
+   HEAP32[38760] = 0;
    STACKTOP = sp;
    return;
   }
-  $39 = HEAP32[38735] | 0;
-  $40 = HEAP32[38752] | 0;
-  $41 = HEAP32[38753] | 0;
-  HEAP32[$vararg_buffer8 >> 2] = HEAP32[38734];
+  $39 = HEAP32[38736] | 0;
+  $40 = HEAP32[38753] | 0;
+  $41 = HEAP32[38754] | 0;
+  HEAP32[$vararg_buffer8 >> 2] = HEAP32[38735];
   HEAP32[$vararg_buffer8 + 4 >> 2] = $39;
   HEAP32[$vararg_buffer8 + 8 >> 2] = $40;
   HEAP32[$vararg_buffer8 + 12 >> 2] = $41;
-  _TraceLog(3, 24806, $vararg_buffer8);
-  $conv27 = Math_fround(HEAP32[38752] | 0);
-  HEAPF32[$displayRatio >> 2] = Math_fround($conv27 / Math_fround(HEAP32[38753] | 0));
-  $conv30 = Math_fround(HEAP32[38734] | 0);
-  HEAPF32[$screenRatio >> 2] = Math_fround($conv30 / Math_fround(HEAP32[38735] | 0));
+  _TraceLog(3, 24824, $vararg_buffer8);
+  $conv27 = Math_fround(HEAP32[38753] | 0);
+  HEAPF32[$displayRatio >> 2] = Math_fround($conv27 / Math_fround(HEAP32[38754] | 0));
+  $conv30 = Math_fround(HEAP32[38735] | 0);
+  HEAPF32[$screenRatio >> 2] = Math_fround($conv30 / Math_fround(HEAP32[38736] | 0));
   $46 = Math_fround(HEAPF32[$displayRatio >> 2]);
   if ($46 <= Math_fround(HEAPF32[$screenRatio >> 2])) {
-   HEAP32[38756] = HEAP32[38734];
-   $conv36 = Math_fround(HEAP32[38734] | 0);
-   HEAP32[38757] = ~~+_llvm_round_f64(+(+Math_fround($conv36 / Math_fround(HEAPF32[$displayRatio >> 2]))));
-   HEAP32[38758] = 0;
-   HEAP32[38759] = (HEAP32[38757] | 0) - (HEAP32[38735] | 0);
+   HEAP32[38757] = HEAP32[38735];
+   $conv36 = Math_fround(HEAP32[38735] | 0);
+   HEAP32[38758] = ~~+_llvm_round_f64(+(+Math_fround($conv36 / Math_fround(HEAPF32[$displayRatio >> 2]))));
+   HEAP32[38759] = 0;
+   HEAP32[38760] = (HEAP32[38758] | 0) - (HEAP32[38736] | 0);
    STACKTOP = sp;
    return;
   } else {
-   $conv42 = Math_fround(HEAP32[38735] | 0);
-   HEAP32[38756] = ~~+_llvm_round_f64(+(+Math_fround($conv42 * Math_fround(HEAPF32[$displayRatio >> 2]))));
-   HEAP32[38757] = HEAP32[38735];
-   HEAP32[38758] = (HEAP32[38756] | 0) - (HEAP32[38734] | 0);
-   HEAP32[38759] = 0;
+   $conv42 = Math_fround(HEAP32[38736] | 0);
+   HEAP32[38757] = ~~+_llvm_round_f64(+(+Math_fround($conv42 * Math_fround(HEAPF32[$displayRatio >> 2]))));
+   HEAP32[38758] = HEAP32[38736];
+   HEAP32[38759] = (HEAP32[38757] | 0) - (HEAP32[38735] | 0);
+   HEAP32[38760] = 0;
    STACKTOP = sp;
    return;
   }
  }
- $5 = HEAP32[38735] | 0;
- $6 = HEAP32[38752] | 0;
- $7 = HEAP32[38753] | 0;
- HEAP32[$vararg_buffer >> 2] = HEAP32[38734];
+ $5 = HEAP32[38736] | 0;
+ $6 = HEAP32[38753] | 0;
+ $7 = HEAP32[38754] | 0;
+ HEAP32[$vararg_buffer >> 2] = HEAP32[38735];
  HEAP32[$vararg_buffer + 4 >> 2] = $5;
  HEAP32[$vararg_buffer + 8 >> 2] = $6;
  HEAP32[$vararg_buffer + 12 >> 2] = $7;
- _TraceLog(4, 24663, $vararg_buffer);
- $conv = Math_fround(HEAP32[38752] | 0);
- HEAPF32[$widthRatio >> 2] = Math_fround($conv / Math_fround(HEAP32[38734] | 0));
- $conv3 = Math_fround(HEAP32[38753] | 0);
- HEAPF32[$heightRatio >> 2] = Math_fround($conv3 / Math_fround(HEAP32[38735] | 0));
+ _TraceLog(4, 24681, $vararg_buffer);
+ $conv = Math_fround(HEAP32[38753] | 0);
+ HEAPF32[$widthRatio >> 2] = Math_fround($conv / Math_fround(HEAP32[38735] | 0));
+ $conv3 = Math_fround(HEAP32[38754] | 0);
+ HEAPF32[$heightRatio >> 2] = Math_fround($conv3 / Math_fround(HEAP32[38736] | 0));
  $12 = Math_fround(HEAPF32[$widthRatio >> 2]);
  if ($12 <= Math_fround(HEAPF32[$heightRatio >> 2])) {
-  HEAP32[38756] = HEAP32[38752];
-  $conv9 = Math_fround(HEAP32[38735] | 0);
-  HEAP32[38757] = ~~+_llvm_round_f64(+(+Math_fround($conv9 * Math_fround(HEAPF32[$widthRatio >> 2]))));
-  HEAP32[38758] = 0;
-  HEAP32[38759] = (HEAP32[38753] | 0) - (HEAP32[38757] | 0);
- } else {
-  $conv12 = Math_fround(HEAP32[38734] | 0);
-  HEAP32[38756] = ~~+_llvm_round_f64(+(+Math_fround($conv12 * Math_fround(HEAPF32[$heightRatio >> 2]))));
   HEAP32[38757] = HEAP32[38753];
-  HEAP32[38758] = (HEAP32[38752] | 0) - (HEAP32[38756] | 0);
+  $conv9 = Math_fround(HEAP32[38736] | 0);
+  HEAP32[38758] = ~~+_llvm_round_f64(+(+Math_fround($conv9 * Math_fround(HEAPF32[$widthRatio >> 2]))));
   HEAP32[38759] = 0;
+  HEAP32[38760] = (HEAP32[38754] | 0) - (HEAP32[38758] | 0);
+ } else {
+  $conv12 = Math_fround(HEAP32[38735] | 0);
+  HEAP32[38757] = ~~+_llvm_round_f64(+(+Math_fround($conv12 * Math_fround(HEAPF32[$heightRatio >> 2]))));
+  HEAP32[38758] = HEAP32[38754];
+  HEAP32[38759] = (HEAP32[38753] | 0) - (HEAP32[38757] | 0);
+  HEAP32[38760] = 0;
  }
- $conv17 = Math_fround(HEAP32[38756] | 0);
- HEAPF32[$scaleRatio >> 2] = Math_fround($conv17 / Math_fround(HEAP32[38734] | 0));
+ $conv17 = Math_fround(HEAP32[38757] | 0);
+ HEAPF32[$scaleRatio >> 2] = Math_fround($conv17 / Math_fround(HEAP32[38735] | 0));
  $28 = Math_fround(HEAPF32[$scaleRatio >> 2]);
  _MatrixScale($tmp, $28, Math_fround(HEAPF32[$scaleRatio >> 2]), Math_fround(1.0));
- dest = 154944;
+ dest = 154948;
  src = $tmp;
  stop = dest + 64 | 0;
  do {
@@ -38607,12 +38607,12 @@ function _SetupFramebuffer($width, $height) {
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- HEAP32[38756] = HEAP32[38752];
  HEAP32[38757] = HEAP32[38753];
- $33 = HEAP32[38757] | 0;
- HEAP32[$vararg_buffer4 >> 2] = HEAP32[38756];
+ HEAP32[38758] = HEAP32[38754];
+ $33 = HEAP32[38758] | 0;
+ HEAP32[$vararg_buffer4 >> 2] = HEAP32[38757];
  HEAP32[$vararg_buffer4 + 4 >> 2] = $33;
- _TraceLog(4, 24741, $vararg_buffer4);
+ _TraceLog(4, 24759, $vararg_buffer4);
  STACKTOP = sp;
  return;
 }
@@ -38849,10 +38849,10 @@ function _stbir__calculate_coefficients_downsample($filter, $scale_ratio, $out_f
  HEAP32[$coefficient_group$addr >> 2] = $coefficient_group;
  $sub = (HEAP32[$out_last_pixel$addr >> 2] | 0) - (HEAP32[$out_first_pixel$addr >> 2] | 0) | 0;
  $4 = Math_fround(HEAPF32[$scale_ratio$addr >> 2]);
- if (($sub | 0) > (~~+Math_ceil(+(+Math_fround(Math_fround(FUNCTION_TABLE_ff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) + 4 >> 2] & 7]($4)) * Math_fround(2.0)))) | 0)) ___assert_fail(42382, 40603, 1091, 42487);
+ if (($sub | 0) > (~~+Math_ceil(+(+Math_fround(Math_fround(FUNCTION_TABLE_ff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) + 4 >> 2] & 7]($4)) * Math_fround(2.0)))) | 0)) ___assert_fail(42400, 40621, 1091, 42505);
  HEAP32[HEAP32[$contributor$addr >> 2] >> 2] = HEAP32[$out_first_pixel$addr >> 2];
  HEAP32[(HEAP32[$contributor$addr >> 2] | 0) + 4 >> 2] = HEAP32[$out_last_pixel$addr >> 2];
- if ((HEAP32[(HEAP32[$contributor$addr >> 2] | 0) + 4 >> 2] | 0) < (HEAP32[HEAP32[$contributor$addr >> 2] >> 2] | 0)) ___assert_fail(42528, 40603, 1096, 42487);
+ if ((HEAP32[(HEAP32[$contributor$addr >> 2] | 0) + 4 >> 2] | 0) < (HEAP32[HEAP32[$contributor$addr >> 2] >> 2] | 0)) ___assert_fail(42546, 40621, 1096, 42505);
  HEAP32[$i >> 2] = 0;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) > ((HEAP32[$out_last_pixel$addr >> 2] | 0) - (HEAP32[$out_first_pixel$addr >> 2] | 0) | 0)) break;
@@ -38869,7 +38869,7 @@ function _stbir__calculate_coefficients_downsample($filter, $scale_ratio, $out_f
  $add24 = Math_fround(Math_fround((HEAP32[$out_last_pixel$addr >> 2] | 0) + 1 | 0) + Math_fround(.5));
  $sub25 = Math_fround($add24 - Math_fround(HEAPF32[$out_center_of_in$addr >> 2]));
  $33 = Math_fround(HEAPF32[$scale_ratio$addr >> 2]);
- if (!(Math_fround(FUNCTION_TABLE_fff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) >> 2] & 7]($sub25, $33)) == Math_fround(0.0))) ___assert_fail(42563, 40603, 1105, 42487);
+ if (!(Math_fround(FUNCTION_TABLE_fff[HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) >> 2] & 7]($sub25, $33)) == Math_fround(0.0))) ___assert_fail(42581, 40621, 1105, 42505);
  HEAP32[$i >> 2] = (HEAP32[$out_last_pixel$addr >> 2] | 0) - (HEAP32[$out_first_pixel$addr >> 2] | 0);
  while (1) {
   if ((HEAP32[$i >> 2] | 0) < 0) {
@@ -39340,82 +39340,82 @@ function _rlGetGlTextureFormats($format, $glInternalFormat, $glFormat, $glType) 
   }
  case 8:
   {
-   if (HEAP8[155968] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 6409;
+   if (HEAP8[155972] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 6409;
    HEAP32[HEAP32[$glFormat$addr >> 2] >> 2] = 6409;
    HEAP32[HEAP32[$glType$addr >> 2] >> 2] = 5126;
    break;
   }
  case 9:
   {
-   if (HEAP8[155968] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 6407;
+   if (HEAP8[155972] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 6407;
    HEAP32[HEAP32[$glFormat$addr >> 2] >> 2] = 6407;
    HEAP32[HEAP32[$glType$addr >> 2] >> 2] = 5126;
    break;
   }
  case 10:
   {
-   if (HEAP8[155968] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 6408;
+   if (HEAP8[155972] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 6408;
    HEAP32[HEAP32[$glFormat$addr >> 2] >> 2] = 6408;
    HEAP32[HEAP32[$glType$addr >> 2] >> 2] = 5126;
    break;
   }
  case 11:
   {
-   if (HEAP8[155969] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33776;
+   if (HEAP8[155973] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33776;
    break;
   }
  case 12:
   {
-   if (HEAP8[155969] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33777;
+   if (HEAP8[155973] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33777;
    break;
   }
  case 13:
   {
-   if (HEAP8[155969] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33778;
+   if (HEAP8[155973] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33778;
    break;
   }
  case 14:
   {
-   if (HEAP8[155969] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33779;
+   if (HEAP8[155973] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 33779;
    break;
   }
  case 15:
   {
-   if (HEAP8[155970] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 36196;
+   if (HEAP8[155974] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 36196;
    break;
   }
  case 16:
   {
-   if (HEAP8[155971] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37492;
+   if (HEAP8[155975] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37492;
    break;
   }
  case 17:
   {
-   if (HEAP8[155971] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37496;
+   if (HEAP8[155975] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37496;
    break;
   }
  case 18:
   {
-   if (HEAP8[155972] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 35840;
+   if (HEAP8[155976] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 35840;
    break;
   }
  case 19:
   {
-   if (HEAP8[155972] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 35842;
+   if (HEAP8[155976] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 35842;
    break;
   }
  case 20:
   {
-   if (HEAP8[155973] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37808;
+   if (HEAP8[155977] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37808;
    break;
   }
  case 21:
   {
-   if (HEAP8[155973] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37815;
+   if (HEAP8[155977] & 1) HEAP32[HEAP32[$glInternalFormat$addr >> 2] >> 2] = 37815;
    break;
   }
  default:
-  _TraceLog(4, 23893, sp);
+  _TraceLog(4, 23911, sp);
  } while (0);
  STACKTOP = sp;
  return;
@@ -39459,7 +39459,7 @@ function _ma_rb_commit_write($pRB, $sizeInBytes, $pBufferOut) {
  }
  $1 = HEAP32[$pBufferOut$addr >> 2] | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 32723, 25578);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 32723, 25596);
  $5 = HEAP32[HEAP32[$pRB$addr$i >> 2] >> 2] | 0;
  HEAP32[$encodedOffset$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 20 >> 2];
  if (($1 | 0) != ($5 + (HEAP32[$encodedOffset$addr$i$i >> 2] & 2147483647) | 0)) {
@@ -39472,8 +39472,8 @@ function _ma_rb_commit_write($pRB, $sizeInBytes, $pBufferOut) {
  HEAP32[$encodedOffset$addr$i >> 2] = HEAP32[$writeOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i >> 2] = $writeOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i >> 2] = $writeOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i13 >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i13 >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
@@ -39531,8 +39531,8 @@ function _OnSendAudioDataToDevice($pDevice, $pFramesOut, $pFramesInput, $frameCo
  $0 = HEAP32[$pFramesOut$addr >> 2] | 0;
  $mul = Math_imul(HEAP32[$frameCount$addr >> 2] | 0, HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 384 + 268 >> 2] | 0) | 0;
  _memset($0 | 0, 0, Math_imul($mul, _ma_get_bytes_per_sample(HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 384 + 264 >> 2] | 0) | 0) | 0) | 0;
- _ma_mutex_lock(155268);
- HEAP32[$audioBuffer >> 2] = HEAP32[38825];
+ _ma_mutex_lock(155272);
+ HEAP32[$audioBuffer >> 2] = HEAP32[38826];
  while (1) {
   if (!(HEAP32[$audioBuffer >> 2] | 0)) break;
   L4 : do if (HEAP8[(HEAP32[$audioBuffer >> 2] | 0) + 46536 >> 0] & 1) if (!(HEAP8[(HEAP32[$audioBuffer >> 2] | 0) + 46537 >> 0] & 1)) {
@@ -39577,11 +39577,11 @@ function _OnSendAudioDataToDevice($pDevice, $pFramesOut, $pFramesInput, $frameCo
     }
     if ((HEAP32[$framesToRead >> 2] | 0) >>> 0 > 0) break L4;
    }
-   _TraceLog(2, 38276, $vararg_buffer);
+   _TraceLog(2, 38294, $vararg_buffer);
   } while (0);
   HEAP32[$audioBuffer >> 2] = HEAP32[(HEAP32[$audioBuffer >> 2] | 0) + 46564 >> 2];
  }
- _ma_mutex_unlock(155268);
+ _ma_mutex_unlock(155272);
  STACKTOP = sp;
  return;
 }
@@ -39624,7 +39624,7 @@ function _ma_rb_commit_read($pRB, $sizeInBytes, $pBufferOut) {
  }
  $1 = HEAP32[$pBufferOut$addr >> 2] | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 32717, 25269);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 32717, 25287);
  $5 = HEAP32[HEAP32[$pRB$addr$i >> 2] >> 2] | 0;
  HEAP32[$encodedOffset$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 16 >> 2];
  if (($1 | 0) != ($5 + (HEAP32[$encodedOffset$addr$i$i >> 2] & 2147483647) | 0)) {
@@ -39637,8 +39637,8 @@ function _ma_rb_commit_read($pRB, $sizeInBytes, $pBufferOut) {
  HEAP32[$encodedOffset$addr$i >> 2] = HEAP32[$readOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i >> 2] = $readOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i >> 2] = $readOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i13 >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i13 >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
@@ -39707,7 +39707,7 @@ function _EmscriptenTouchCallback($eventType, $touchEvent, $userData) {
  HEAPF32[$$compoundliteral24 + 4 >> 2] = Math_fround(HEAP32[(HEAP32[$touchEvent$addr >> 2] | 0) + 20 + 52 + 40 >> 2] | 0);
  HEAP32[$arrayidx23 >> 2] = HEAP32[$$compoundliteral24 >> 2];
  HEAP32[$arrayidx23 + 4 >> 2] = HEAP32[$$compoundliteral24 + 4 >> 2];
- _emscripten_get_element_css_size(24094, $canvasWidth | 0, $canvasHeight | 0) | 0;
+ _emscripten_get_element_css_size(24112, $canvasWidth | 0, $canvasHeight | 0) | 0;
  $conv36 = Math_fround(_GetScreenWidth() | 0);
  $div = Math_fround($conv36 / Math_fround(+HEAPF64[$canvasWidth >> 3]));
  $position38 = $gestureEvent + 24 | 0;
@@ -39838,10 +39838,10 @@ function _LoadASTC($agg$result, $fileName) {
  HEAP32[$image + 8 >> 2] = 0;
  HEAP32[$image + 12 >> 2] = 0;
  HEAP32[$image + 16 >> 2] = 0;
- HEAP32[$astcFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$astcFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39129) | 0;
  if (!(HEAP32[$astcFile >> 2] | 0)) {
   HEAP32[$vararg_buffer >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 43299, $vararg_buffer);
+  _TraceLog(4, 43317, $vararg_buffer);
   HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -39855,18 +39855,18 @@ function _LoadASTC($agg$result, $fileName) {
   HEAP32[$image + 4 >> 2] = (HEAPU8[$astcHeader + 7 + 2 >> 0] | 0) << 16 | (HEAPU8[$astcHeader + 7 + 1 >> 0] | 0) << 8 | (HEAPU8[$astcHeader + 7 >> 0] | 0);
   HEAP32[$image + 8 >> 2] = (HEAPU8[$astcHeader + 10 + 2 >> 0] | 0) << 16 | (HEAPU8[$astcHeader + 10 + 1 >> 0] | 0) << 8 | (HEAPU8[$astcHeader + 10 >> 0] | 0);
   HEAP32[$vararg_buffer4 >> 2] = HEAP32[$image + 4 >> 2];
-  _TraceLog(2, 43383, $vararg_buffer4);
+  _TraceLog(2, 43401, $vararg_buffer4);
   HEAP32[$vararg_buffer7 >> 2] = HEAP32[$image + 8 >> 2];
-  _TraceLog(2, 43404, $vararg_buffer7);
+  _TraceLog(2, 43422, $vararg_buffer7);
   $conv52 = HEAPU8[$astcHeader + 5 >> 0] | 0;
   HEAP32[$vararg_buffer10 >> 2] = HEAPU8[$astcHeader + 4 >> 0];
   HEAP32[$vararg_buffer10 + 4 >> 2] = $conv52;
-  _TraceLog(2, 43426, $vararg_buffer10);
+  _TraceLog(2, 43444, $vararg_buffer10);
   HEAP32[$image + 12 >> 2] = 1;
   HEAP32[$bpp >> 2] = 128 / (Math_imul(HEAPU8[$astcHeader + 4 >> 0] | 0, HEAPU8[$astcHeader + 5 >> 0] | 0) | 0) | 0;
   if (!((HEAP32[$bpp >> 2] | 0) == 8 | (HEAP32[$bpp >> 2] | 0) == 2)) {
    HEAP32[$vararg_buffer14 >> 2] = HEAP32[$fileName$addr >> 2];
-   _TraceLog(4, 43451, $vararg_buffer14);
+   _TraceLog(4, 43469, $vararg_buffer14);
    break;
   }
   $mul65 = Math_imul(HEAP32[$image + 4 >> 2] | 0, HEAP32[$image + 8 >> 2] | 0) | 0;
@@ -39881,7 +39881,7 @@ function _LoadASTC($agg$result, $fileName) {
  } while (0);
  if ((label | 0) == 7) {
   HEAP32[$vararg_buffer1 >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 43334, $vararg_buffer1);
+  _TraceLog(4, 43352, $vararg_buffer1);
  }
  _fclose(HEAP32[$astcFile >> 2] | 0) | 0;
  HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
@@ -39918,12 +39918,12 @@ function _UpdateAudioStream($stream, $data, $samplesCount) {
  HEAP32[$samplesCount$addr >> 2] = $samplesCount;
  HEAP32[$audioBuffer >> 2] = HEAP32[$stream + 12 >> 2];
  if (!(HEAP32[$audioBuffer >> 2] | 0)) {
-  _TraceLog(5, 38985, sp_a + 16 | 0);
+  _TraceLog(5, 39003, sp_a + 16 | 0);
   STACKTOP = sp;
   return;
  }
  if (!(HEAP8[(HEAP32[$audioBuffer >> 2] | 0) + 46544 >> 0] & 1)) if (!(HEAP8[(HEAP32[$audioBuffer >> 2] | 0) + 46544 + 1 >> 0] & 1)) {
-  _TraceLog(5, 38923, $vararg_buffer1);
+  _TraceLog(5, 38941, $vararg_buffer1);
   STACKTOP = sp;
   return;
  }
@@ -39940,7 +39940,7 @@ function _UpdateAudioStream($stream, $data, $samplesCount) {
  $totalFramesProcessed = (HEAP32[$audioBuffer >> 2] | 0) + 46556 | 0;
  HEAP32[$totalFramesProcessed >> 2] = (HEAP32[$totalFramesProcessed >> 2] | 0) + (HEAP32[$subBufferSizeInFrames >> 2] | 0);
  if ((HEAP32[$subBufferSizeInFrames >> 2] | 0) >>> 0 < (((HEAP32[$samplesCount$addr >> 2] | 0) >>> 0) / ((HEAP32[$stream + 8 >> 2] | 0) >>> 0) | 0) >>> 0) {
-  _TraceLog(5, 38855, $vararg_buffer);
+  _TraceLog(5, 38873, $vararg_buffer);
   STACKTOP = sp;
   return;
  }
@@ -40068,10 +40068,10 @@ function _LoadKTX($agg$result, $fileName) {
  HEAP32[$image + 8 >> 2] = 0;
  HEAP32[$image + 12 >> 2] = 0;
  HEAP32[$image + 16 >> 2] = 0;
- HEAP32[$ktxFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$ktxFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 39129) | 0;
  if (!(HEAP32[$ktxFile >> 2] | 0)) {
   HEAP32[$vararg_buffer >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 43500, $vararg_buffer);
+  _TraceLog(4, 43518, $vararg_buffer);
   HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -40086,11 +40086,11 @@ function _LoadKTX($agg$result, $fileName) {
   HEAP32[$image + 8 >> 2] = HEAP32[$ktxHeader + 40 >> 2];
   HEAP32[$image + 12 >> 2] = HEAP32[$ktxHeader + 56 >> 2];
   HEAP32[$vararg_buffer4 >> 2] = HEAP32[$ktxHeader + 36 >> 2];
-  _TraceLog(2, 43587, $vararg_buffer4);
+  _TraceLog(2, 43605, $vararg_buffer4);
   HEAP32[$vararg_buffer7 >> 2] = HEAP32[$ktxHeader + 40 >> 2];
-  _TraceLog(2, 43613, $vararg_buffer7);
+  _TraceLog(2, 43631, $vararg_buffer7);
   HEAP32[$vararg_buffer10 >> 2] = HEAP32[$ktxHeader + 28 >> 2];
-  _TraceLog(2, 43640, $vararg_buffer10);
+  _TraceLog(2, 43658, $vararg_buffer10);
   L12 : do if ((HEAP32[$ktxHeader + 60 >> 2] | 0) >>> 0 > 0) {
    HEAP32[$i >> 2] = 0;
    while (1) {
@@ -40114,7 +40114,7 @@ function _LoadKTX($agg$result, $fileName) {
  } while (0);
  if ((label | 0) == 9) {
   HEAP32[$vararg_buffer1 >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 43540, $vararg_buffer1);
+  _TraceLog(4, 43558, $vararg_buffer1);
  }
  _fclose(HEAP32[$ktxFile >> 2] | 0) | 0;
  HEAP32[$agg$result >> 2] = HEAP32[$image >> 2];
@@ -40146,7 +40146,7 @@ function _stbir__buffer_loop_upsample($stbir_info) {
  $div = Math_fround(Math_fround(1.0) / Math_fround(HEAPF32[$scale_ratio >> 2]));
  $call = Math_fround(FUNCTION_TABLE_ff[HEAP32[17360 + (HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 84 >> 2] << 3) + 4 >> 2] & 7]($div));
  HEAPF32[$out_scanlines_radius >> 2] = Math_fround($call * Math_fround(HEAPF32[$scale_ratio >> 2]));
- if (!(_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0)) ___assert_fail(42132, 40603, 2069, 42173);
+ if (!(_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0)) ___assert_fail(42150, 40621, 2069, 42191);
  HEAP32[$y >> 2] = 0;
  while (1) {
   if ((HEAP32[$y >> 2] | 0) >= (HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 24 >> 2] | 0)) {
@@ -40187,7 +40187,7 @@ function _stbir__buffer_loop_upsample($stbir_info) {
   _stbir__resample_vertical_upsample($45, HEAP32[$y >> 2] | 0);
   HEAP32[$y >> 2] = (HEAP32[$y >> 2] | 0) + 1;
  }
- if ((label | 0) == 6) ___assert_fail(42201, 40603, 2078, 42173); else if ((label | 0) == 19) {
+ if ((label | 0) == 6) ___assert_fail(42219, 40621, 2078, 42191); else if ((label | 0) == 19) {
   STACKTOP = sp;
   return;
  }
@@ -40220,7 +40220,7 @@ function _ma_worker_thread($pData) {
  $onStop = sp_a;
  HEAP32[$pData$addr >> 2] = $pData;
  HEAP32[$pDevice >> 2] = HEAP32[$pData$addr >> 2];
- if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24947, 24969, 25584, 33777);
+ if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24965, 24987, 25584, 33795);
  HEAP32[$pDevice$addr$i >> 2] = HEAP32[$pDevice >> 2];
  HEAP32[$newState$addr$i >> 2] = 1;
  HEAP32[(HEAP32[$pDevice$addr$i >> 2] | 0) + 12 >> 2] = HEAP32[$newState$addr$i >> 2];
@@ -40246,7 +40246,7 @@ function _ma_worker_thread($pData) {
   HEAP32[(HEAP32[$pDevice$addr$i50 >> 2] | 0) + 12 >> 2] = HEAP32[$newState$addr$i51 >> 2];
   _ma_event_signal((HEAP32[$pDevice >> 2] | 0) + 144 | 0) | 0;
   $27 = HEAP32[$pDevice >> 2] | 0;
-  if (HEAP32[(HEAP32[HEAP32[$pDevice >> 2] >> 2] | 0) + 132 >> 2] | 0) FUNCTION_TABLE_ii[HEAP32[(HEAP32[$27 >> 2] | 0) + 132 >> 2] & 31](HEAP32[$pDevice >> 2] | 0) | 0; else _ma_post_error($27, 1, 33829, -105) | 0;
+  if (HEAP32[(HEAP32[HEAP32[$pDevice >> 2] >> 2] | 0) + 132 >> 2] | 0) FUNCTION_TABLE_ii[HEAP32[(HEAP32[$27 >> 2] | 0) + 132 >> 2] & 31](HEAP32[$pDevice >> 2] | 0) | 0; else _ma_post_error($27, 1, 33847, -105) | 0;
   HEAP32[$pDevice$addr$i53 >> 2] = HEAP32[$pDevice >> 2];
   HEAP32[$state$i54 >> 2] = HEAP32[(HEAP32[$pDevice$addr$i53 >> 2] | 0) + 12 >> 2];
   if (HEAP32[$state$i54 >> 2] | 0) if (HEAP32[(HEAP32[HEAP32[$pDevice >> 2] >> 2] | 0) + 128 >> 2] | 0) FUNCTION_TABLE_ii[HEAP32[(HEAP32[HEAP32[$pDevice >> 2] >> 2] | 0) + 128 >> 2] & 31](HEAP32[$pDevice >> 2] | 0) | 0;
@@ -40261,7 +40261,7 @@ function _ma_worker_thread($pData) {
    _ma_event_signal((HEAP32[$pDevice >> 2] | 0) + 228 | 0) | 0;
   }
  }
- if ((label | 0) == 6) ___assert_fail(33794, 24969, 25618, 33777); else if ((label | 0) == 18) {
+ if ((label | 0) == 6) ___assert_fail(33812, 24987, 25618, 33795); else if ((label | 0) == 18) {
   _ma_event_signal($14 + 228 | 0) | 0;
   STACKTOP = sp;
   return 0;
@@ -40440,8 +40440,8 @@ function _ma_rb_pointer_distance($pRB) {
  HEAP32[$encodedOffset$addr$i >> 2] = HEAP32[$readOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i >> 2] = $readOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i >> 2] = $readOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i >> 2] = HEAP32[$encodedOffset$addr$i >> 2];
@@ -40450,8 +40450,8 @@ function _ma_rb_pointer_distance($pRB) {
  HEAP32[$encodedOffset$addr$i6 >> 2] = HEAP32[$writeOffset >> 2];
  HEAP32[$pOffsetInBytes$addr$i7 >> 2] = $writeOffsetInBytes;
  HEAP32[$pOffsetLoopFlag$addr$i8 >> 2] = $writeOffsetLoopFlag;
- if (!(HEAP32[$pOffsetInBytes$addr$i7 >> 2] | 0)) ___assert_fail(25289, 24969, 32734, 25318);
- if (!(HEAP32[$pOffsetLoopFlag$addr$i8 >> 2] | 0)) ___assert_fail(25344, 24969, 32735, 25318);
+ if (!(HEAP32[$pOffsetInBytes$addr$i7 >> 2] | 0)) ___assert_fail(25307, 24987, 32734, 25336);
+ if (!(HEAP32[$pOffsetLoopFlag$addr$i8 >> 2] | 0)) ___assert_fail(25362, 24987, 32735, 25336);
  HEAP32[$encodedOffset$addr$i$i5 >> 2] = HEAP32[$encodedOffset$addr$i6 >> 2];
  HEAP32[HEAP32[$pOffsetInBytes$addr$i7 >> 2] >> 2] = HEAP32[$encodedOffset$addr$i$i5 >> 2] & 2147483647;
  HEAP32[$encodedOffset$addr$i6$i4 >> 2] = HEAP32[$encodedOffset$addr$i6 >> 2];
@@ -40887,54 +40887,54 @@ function _rlEnd() {
  $addTexCoords = sp + 8 | 0;
  $i72 = sp + 4 | 0;
  $i100 = sp;
- L1 : do if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) != (HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 >> 2] | 0)) {
-  CSE$0 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ L1 : do if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) != (HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 >> 2] | 0)) {
+  CSE$0 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
   HEAP32[$addColors >> 2] = (HEAP32[CSE$0 >> 2] | 0) - (HEAP32[CSE$0 + 8 >> 2] | 0);
   HEAP32[$i >> 2] = 0;
   while (1) {
    if ((HEAP32[$i >> 2] | 0) >= (HEAP32[$addColors >> 2] | 0)) break L1;
-   CSE$1 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
-   CSE$2 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 20 >> 2] | 0;
-   CSE$3 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
+   CSE$1 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
+   CSE$2 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 20 >> 2] | 0;
+   CSE$3 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
    HEAP8[CSE$2 + CSE$3 >> 0] = HEAP8[CSE$2 + (CSE$3 - 4) >> 0] | 0;
-   CSE$4 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
-   CSE$5 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 20 >> 2] | 0;
-   CSE$6 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
+   CSE$4 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
+   CSE$5 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 20 >> 2] | 0;
+   CSE$6 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
    HEAP8[CSE$5 + (CSE$6 + 1) >> 0] = HEAP8[CSE$5 + (CSE$6 - 3) >> 0] | 0;
-   CSE$7 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
-   CSE$8 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 20 >> 2] | 0;
-   CSE$9 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
+   CSE$7 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
+   CSE$8 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 20 >> 2] | 0;
+   CSE$9 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
    HEAP8[CSE$8 + (CSE$9 + 2) >> 0] = HEAP8[CSE$8 + (CSE$9 - 2) >> 0] | 0;
-   CSE$10 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
-   CSE$11 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 20 >> 2] | 0;
-   CSE$12 = HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
+   CSE$10 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
+   CSE$11 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 20 >> 2] | 0;
+   CSE$12 = HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 >> 2] << 2 | 0;
    HEAP8[CSE$11 + (CSE$12 + 3) >> 0] = HEAP8[CSE$11 + (CSE$12 - 1) >> 0] | 0;
-   $cCounter60 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 | 0;
+   $cCounter60 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 | 0;
    HEAP32[$cCounter60 >> 2] = (HEAP32[$cCounter60 >> 2] | 0) + 1;
    HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
   }
  } while (0);
- L7 : do if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) != (HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 4 >> 2] | 0)) {
-  CSE$13 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ L7 : do if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) != (HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 4 >> 2] | 0)) {
+  CSE$13 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
   HEAP32[$addTexCoords >> 2] = (HEAP32[CSE$13 >> 2] | 0) - (HEAP32[CSE$13 + 4 >> 2] | 0);
   HEAP32[$i72 >> 2] = 0;
   while (1) {
    if ((HEAP32[$i72 >> 2] | 0) >= (HEAP32[$addTexCoords >> 2] | 0)) break L7;
-   CSE$14 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+   CSE$14 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
    HEAPF32[(HEAP32[CSE$14 + 16 >> 2] | 0) + (HEAP32[CSE$14 + 4 >> 2] << 1 << 2) >> 2] = Math_fround(0.0);
-   CSE$15 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+   CSE$15 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
    HEAPF32[(HEAP32[CSE$15 + 16 >> 2] | 0) + ((HEAP32[CSE$15 + 4 >> 2] << 1) + 1 << 2) >> 2] = Math_fround(0.0);
-   $tcCounter89 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 4 | 0;
+   $tcCounter89 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 4 | 0;
    HEAP32[$tcCounter89 >> 2] = (HEAP32[$tcCounter89 >> 2] | 0) + 1;
    HEAP32[$i72 >> 2] = (HEAP32[$i72 >> 2] | 0) + 1;
   }
  } while (0);
  HEAPF32[5039] = Math_fround(Math_fround(HEAPF32[5039]) + Math_fround(.0000499999987));
- if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) < 8188) {
+ if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) < 8188) {
   STACKTOP = sp;
   return;
  }
- HEAP32[$i100 >> 2] = HEAP32[38605];
+ HEAP32[$i100 >> 2] = HEAP32[38606];
  while (1) {
   if ((HEAP32[$i100 >> 2] | 0) < 0) break;
   _rlPopMatrix();
@@ -41132,7 +41132,7 @@ function _stbi__hdr_to_ldr($data, $x, $y, $comp) {
  HEAP32[$output >> 2] = _stbi__malloc_mad3(HEAP32[$x$addr >> 2] | 0, HEAP32[$y$addr >> 2] | 0, HEAP32[$comp$addr >> 2] | 0, 0) | 0;
  if (!(HEAP32[$output >> 2] | 0)) {
   _free(HEAP32[$data$addr >> 2] | 0);
-  $tobool3 = (_stbi__err(39216) | 0) != 0;
+  $tobool3 = (_stbi__err(39234) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool3 ? 0 : 0;
   $46 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -41199,7 +41199,7 @@ function _stbir__buffer_loop_downsample($stbir_info) {
  HEAPF32[$in_pixels_radius >> 2] = Math_fround($call / Math_fround(HEAPF32[$scale_ratio >> 2]));
  HEAP32[$pixel_margin >> 2] = HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 148 >> 2];
  HEAP32[$max_y >> 2] = (HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 8 >> 2] | 0) + (HEAP32[$pixel_margin >> 2] | 0);
- if (_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0) ___assert_fail(41265, 40603, 2170, 41307);
+ if (_stbir__use_height_upsampling(HEAP32[$stbir_info$addr >> 2] | 0) | 0) ___assert_fail(41283, 40621, 2170, 41325);
  HEAP32[$y >> 2] = 0 - (HEAP32[$pixel_margin >> 2] | 0);
  while (1) {
   if ((HEAP32[$y >> 2] | 0) >= (HEAP32[$max_y >> 2] | 0)) {
@@ -41226,7 +41226,7 @@ function _stbir__buffer_loop_downsample($stbir_info) {
   }
   HEAP32[$y >> 2] = (HEAP32[$y >> 2] | 0) + 1;
  }
- if ((label | 0) == 6) ___assert_fail(41337, 40603, 2179, 41307); else if ((label | 0) == 16) {
+ if ((label | 0) == 6) ___assert_fail(41355, 40621, 2179, 41325); else if ((label | 0) == 16) {
   CSE$0 = HEAP32[$stbir_info$addr >> 2] | 0;
   _stbir__empty_ring_buffer(CSE$0 | 0, HEAP32[CSE$0 + 24 >> 2] | 0);
   STACKTOP = sp;
@@ -41410,7 +41410,7 @@ function _InitAudioBuffer($format, $channels, $sampleRate, $bufferSizeInFrames, 
  HEAP32[$usage$addr >> 2] = $usage;
  HEAP32[$audioBuffer >> 2] = _calloc(1, 46592) | 0;
  if (!(HEAP32[$audioBuffer >> 2] | 0)) {
-  _TraceLog(5, 38014, sp_a);
+  _TraceLog(5, 38032, sp_a);
   HEAP32[$retval >> 2] = 0;
   $26 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -41436,7 +41436,7 @@ function _InitAudioBuffer($format, $channels, $sampleRate, $bufferSizeInFrames, 
  HEAP32[$dspConfig + 100 >> 2] = 1;
  HEAP32[$result >> 2] = _ma_pcm_converter_init($dspConfig, HEAP32[$audioBuffer >> 2] | 0) | 0;
  if (HEAP32[$result >> 2] | 0) {
-  _TraceLog(5, 38077, $vararg_buffer1);
+  _TraceLog(5, 38095, $vararg_buffer1);
   _free(HEAP32[$audioBuffer >> 2] | 0);
   HEAP32[$retval >> 2] = 0;
   $26 = HEAP32[$retval >> 2] | 0;
@@ -42053,7 +42053,7 @@ function _stbi__do_png($p, $x, $y, $n, $req_comp, $ri) {
  HEAP32[$ri$addr >> 2] = $ri;
  HEAP32[$result >> 2] = 0;
  if ((HEAP32[$req_comp$addr >> 2] | 0) < 0 | (HEAP32[$req_comp$addr >> 2] | 0) > 4) {
-  $tobool = (_stbi__err(39414) | 0) != 0;
+  $tobool = (_stbi__err(39432) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool ? 0 : 0;
   $71 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -42120,9 +42120,9 @@ function _jar_xm_create_context_from_file($ctx, $rate, $filename) {
  HEAP32[$ctx$addr >> 2] = $ctx;
  HEAP32[$rate$addr >> 2] = $rate;
  HEAP32[$filename$addr >> 2] = $filename;
- HEAP32[$xmf >> 2] = _fopen(HEAP32[$filename$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$xmf >> 2] = _fopen(HEAP32[$filename$addr >> 2] | 0, 39129) | 0;
  if (!(HEAP32[$xmf >> 2] | 0)) {
-  _fprintf(HEAP32[5053] | 0, 36610, sp_a) | 0;
+  _fprintf(HEAP32[5053] | 0, 36628, sp_a) | 0;
   _fflush(HEAP32[5053] | 0) | 0;
   HEAP32[HEAP32[$ctx$addr >> 2] >> 2] = 0;
   HEAP32[$retval >> 2] = 3;
@@ -42135,7 +42135,7 @@ function _jar_xm_create_context_from_file($ctx, $rate, $filename) {
  _rewind(HEAP32[$xmf >> 2] | 0);
  if ((HEAP32[$size >> 2] | 0) == -1) {
   _fclose(HEAP32[$xmf >> 2] | 0) | 0;
-  _fprintf(HEAP32[5053] | 0, 36636, sp_a + 8 | 0) | 0;
+  _fprintf(HEAP32[5053] | 0, 36654, sp_a + 8 | 0) | 0;
   _fflush(HEAP32[5053] | 0) | 0;
   HEAP32[HEAP32[$ctx$addr >> 2] >> 2] = 0;
   HEAP32[$retval >> 2] = 4;
@@ -42160,7 +42160,7 @@ function _jar_xm_create_context_from_file($ctx, $rate, $filename) {
     }
    case 1:
     {
-     _fprintf(HEAP32[5053] | 0, 36688, $vararg_buffer5) | 0;
+     _fprintf(HEAP32[5053] | 0, 36706, $vararg_buffer5) | 0;
      _fflush(HEAP32[5053] | 0) | 0;
      HEAP32[HEAP32[$ctx$addr >> 2] >> 2] = 0;
      HEAP32[$retval >> 2] = 1;
@@ -42170,14 +42170,14 @@ function _jar_xm_create_context_from_file($ctx, $rate, $filename) {
     }
    case 2:
     {
-     _fprintf(HEAP32[5053] | 0, 36734, $vararg_buffer7) | 0;
+     _fprintf(HEAP32[5053] | 0, 36752, $vararg_buffer7) | 0;
      _fflush(HEAP32[5053] | 0) | 0;
      _exit(1);
      break;
     }
    default:
     {
-     _fprintf(HEAP32[5053] | 0, 36775, $vararg_buffer9) | 0;
+     _fprintf(HEAP32[5053] | 0, 36793, $vararg_buffer9) | 0;
      _fflush(HEAP32[5053] | 0) | 0;
      _exit(1);
     }
@@ -42185,7 +42185,7 @@ function _jar_xm_create_context_from_file($ctx, $rate, $filename) {
   }
  }
  _fclose(HEAP32[$xmf >> 2] | 0) | 0;
- _fprintf(HEAP32[5053] | 0, HEAP32[$data >> 2] | 0 ? 36651 : 36666, $vararg_buffer3) | 0;
+ _fprintf(HEAP32[5053] | 0, HEAP32[$data >> 2] | 0 ? 36669 : 36684, $vararg_buffer3) | 0;
  _fflush(HEAP32[5053] | 0) | 0;
  _free(HEAP32[$data >> 2] | 0);
  HEAP32[HEAP32[$ctx$addr >> 2] >> 2] = 0;
@@ -42850,7 +42850,7 @@ function _ma_device_start($pDevice) {
  HEAP32[$pDevice$addr >> 2] = $pDevice;
  $1 = HEAP32[$pDevice$addr >> 2] | 0;
  if (!(HEAP32[$pDevice$addr >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _ma_post_error($1, 1, 35302, -2) | 0;
+  HEAP32[$retval >> 2] = _ma_post_error($1, 1, 35320, -2) | 0;
   $38 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $38 | 0;
@@ -42859,7 +42859,7 @@ function _ma_device_start($pDevice) {
  HEAP32[$state$i >> 2] = HEAP32[(HEAP32[$pDevice$addr$i >> 2] | 0) + 12 >> 2];
  $6 = HEAP32[$pDevice$addr >> 2] | 0;
  if (!(HEAP32[$state$i >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _ma_post_error($6, 1, 35369, -201) | 0;
+  HEAP32[$retval >> 2] = _ma_post_error($6, 1, 35387, -201) | 0;
   $38 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $38 | 0;
@@ -42867,7 +42867,7 @@ function _ma_device_start($pDevice) {
  HEAP32[$pDevice$addr$i24 >> 2] = $6;
  HEAP32[$state$i25 >> 2] = HEAP32[(HEAP32[$pDevice$addr$i24 >> 2] | 0) + 12 >> 2];
  if ((HEAP32[$state$i25 >> 2] | 0) == 2) {
-  HEAP32[$retval >> 2] = _ma_post_error(HEAP32[$pDevice$addr >> 2] | 0, 2, 35423, -3) | 0;
+  HEAP32[$retval >> 2] = _ma_post_error(HEAP32[$pDevice$addr >> 2] | 0, 2, 35441, -3) | 0;
   $38 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $38 | 0;
@@ -42876,7 +42876,7 @@ function _ma_device_start($pDevice) {
  _ma_mutex_lock((HEAP32[$pDevice$addr >> 2] | 0) + 28 | 0);
  HEAP32[$pDevice$addr$i27 >> 2] = HEAP32[$pDevice$addr >> 2];
  HEAP32[$state$i28 >> 2] = HEAP32[(HEAP32[$pDevice$addr$i27 >> 2] | 0) + 12 >> 2];
- if ((HEAP32[$state$i28 >> 2] | 0) != 1) ___assert_fail(35023, 24969, 26542, 35484);
+ if ((HEAP32[$state$i28 >> 2] | 0) != 1) ___assert_fail(35041, 24987, 26542, 35502);
  HEAP32[$pDevice$addr$i30 >> 2] = HEAP32[$pDevice$addr >> 2];
  HEAP32[$newState$addr$i >> 2] = 3;
  HEAP32[(HEAP32[$pDevice$addr$i30 >> 2] | 0) + 12 >> 2] = HEAP32[$newState$addr$i >> 2];
@@ -43187,7 +43187,7 @@ function _ma_device_stop($pDevice) {
  HEAP32[$pDevice$addr >> 2] = $pDevice;
  $1 = HEAP32[$pDevice$addr >> 2] | 0;
  if (!(HEAP32[$pDevice$addr >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _ma_post_error($1, 1, 35073, -2) | 0;
+  HEAP32[$retval >> 2] = _ma_post_error($1, 1, 35091, -2) | 0;
   $37 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $37 | 0;
@@ -43196,7 +43196,7 @@ function _ma_device_stop($pDevice) {
  HEAP32[$state$i >> 2] = HEAP32[(HEAP32[$pDevice$addr$i >> 2] | 0) + 12 >> 2];
  $6 = HEAP32[$pDevice$addr >> 2] | 0;
  if (!(HEAP32[$state$i >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _ma_post_error($6, 1, 35139, -201) | 0;
+  HEAP32[$retval >> 2] = _ma_post_error($6, 1, 35157, -201) | 0;
   $37 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $37 | 0;
@@ -43204,7 +43204,7 @@ function _ma_device_stop($pDevice) {
  HEAP32[$pDevice$addr$i26 >> 2] = $6;
  HEAP32[$state$i27 >> 2] = HEAP32[(HEAP32[$pDevice$addr$i26 >> 2] | 0) + 12 >> 2];
  if ((HEAP32[$state$i27 >> 2] | 0) == 1) {
-  HEAP32[$retval >> 2] = _ma_post_error(HEAP32[$pDevice$addr >> 2] | 0, 2, 35192, -3) | 0;
+  HEAP32[$retval >> 2] = _ma_post_error(HEAP32[$pDevice$addr >> 2] | 0, 2, 35210, -3) | 0;
   $37 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $37 | 0;
@@ -43213,7 +43213,7 @@ function _ma_device_stop($pDevice) {
  _ma_mutex_lock((HEAP32[$pDevice$addr >> 2] | 0) + 28 | 0);
  HEAP32[$pDevice$addr$i29 >> 2] = HEAP32[$pDevice$addr >> 2];
  HEAP32[$state$i30 >> 2] = HEAP32[(HEAP32[$pDevice$addr$i29 >> 2] | 0) + 12 >> 2];
- if ((HEAP32[$state$i30 >> 2] | 0) != 2) ___assert_fail(35252, 24969, 26592, 35287);
+ if ((HEAP32[$state$i30 >> 2] | 0) != 2) ___assert_fail(35270, 24987, 26592, 35305);
  HEAP32[$pDevice$addr$i34 >> 2] = HEAP32[$pDevice$addr >> 2];
  HEAP32[$newState$addr$i35 >> 2] = 4;
  HEAP32[(HEAP32[$pDevice$addr$i34 >> 2] | 0) + 12 >> 2] = HEAP32[$newState$addr$i35 >> 2];
@@ -43326,7 +43326,7 @@ function _stbi__expand_png_palette($a, $palette, $len, $pal_img_n) {
  HEAP32[$orig >> 2] = HEAP32[(HEAP32[$a$addr >> 2] | 0) + 12 >> 2];
  HEAP32[$p >> 2] = _stbi__malloc_mad2(HEAP32[$pixel_count >> 2] | 0, HEAP32[$pal_img_n$addr >> 2] | 0, 0) | 0;
  if (!(HEAP32[$p >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _stbi__err(39216) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(39234) | 0;
   $59 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $59 | 0;
@@ -43460,7 +43460,7 @@ function _stbi__ldr_to_hdr($data, $x, $y, $comp) {
  HEAP32[$output >> 2] = _stbi__malloc_mad4(HEAP32[$x$addr >> 2] | 0, HEAP32[$y$addr >> 2] | 0, HEAP32[$comp$addr >> 2] | 0, 4, 0) | 0;
  if (!(HEAP32[$output >> 2] | 0)) {
   _free(HEAP32[$data$addr >> 2] | 0);
-  $tobool3 = (_stbi__err(39216) | 0) != 0;
+  $tobool3 = (_stbi__err(39234) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool3 ? 0 : 0;
   $44 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -43749,7 +43749,7 @@ function _stbv_convert_channels_short_interleaved($buf_c, $buffer, $data_c, $dat
  HEAP32[$len$addr >> 2] = $len;
  $4 = HEAP32[$buf_c$addr >> 2] | 0;
  if ((HEAP32[$data_c$addr >> 2] | 0) <= 6 ? ((HEAP32[$buf_c$addr >> 2] | 0) <= 2 ? (HEAP32[$buf_c$addr >> 2] | 0) != (HEAP32[$data_c$addr >> 2] | 0) : 0) : 0) {
-  if (($4 | 0) != 2) ___assert_fail(36541, 35641, 5168, 36552);
+  if (($4 | 0) != 2) ___assert_fail(36559, 35659, 5168, 36570);
   HEAP32[$i >> 2] = 0;
   while (1) {
    if ((HEAP32[$i >> 2] | 0) >= (HEAP32[$buf_c$addr >> 2] | 0)) break;
@@ -44107,15 +44107,15 @@ function _SaveKTX($image, $fileName) {
  $dataSize = sp_a + 12 | 0;
  HEAP32[$fileName$addr >> 2] = $fileName;
  HEAP32[$success >> 2] = 0;
- HEAP32[$ktxFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 40449) | 0;
+ HEAP32[$ktxFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 40467) | 0;
  if (!(HEAP32[$ktxFile >> 2] | 0)) {
   HEAP32[$vararg_buffer >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(4, 44235, $vararg_buffer);
+  _TraceLog(4, 44253, $vararg_buffer);
   $28 = HEAP32[$success >> 2] | 0;
   STACKTOP = sp;
   return $28 | 0;
  }
- _strncpy($ktxHeader, 44276, 12) | 0;
+ _strncpy($ktxHeader, 44294, 12) | 0;
  HEAP32[$ktxHeader + 12 >> 2] = 0;
  HEAP32[$ktxHeader + 16 >> 2] = 0;
  HEAP32[$ktxHeader + 20 >> 2] = 1;
@@ -44131,7 +44131,7 @@ function _SaveKTX($image, $fileName) {
  HEAP32[$ktxHeader + 60 >> 2] = 0;
  _rlGetGlTextureFormats(HEAP32[$image + 16 >> 2] | 0, $ktxHeader + 28 | 0, $ktxHeader + 24 | 0, $ktxHeader + 16 | 0);
  HEAP32[$ktxHeader + 32 >> 2] = HEAP32[$ktxHeader + 24 >> 2];
- L5 : do if ((HEAP32[$ktxHeader + 24 >> 2] | 0) == -1) _TraceLog(4, 44288, sp_a + 8 | 0); else {
+ L5 : do if ((HEAP32[$ktxHeader + 24 >> 2] | 0) == -1) _TraceLog(4, 44306, sp_a + 8 | 0); else {
   HEAP32[$success >> 2] = _fwrite($ktxHeader, 64, 1, HEAP32[$ktxFile >> 2] | 0) | 0;
   HEAP32[$width14 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$height16 >> 2] = HEAP32[$image + 8 >> 2];
@@ -44254,7 +44254,7 @@ function _stbi__parse_uncompressed_block($a) {
   $num_bits6 = (HEAP32[$a$addr >> 2] | 0) + 8 | 0;
   HEAP32[$num_bits6 >> 2] = (HEAP32[$num_bits6 >> 2] | 0) - 8;
  }
- if (HEAP32[$7 + 8 >> 2] | 0) ___assert_fail(40262, 39140, 4149, 40279);
+ if (HEAP32[$7 + 8 >> 2] | 0) ___assert_fail(40280, 39158, 4149, 40297);
  while (1) {
   if ((HEAP32[$k >> 2] | 0) >= 4) break;
   $call14 = _stbi__zget8(HEAP32[$a$addr >> 2] | 0) | 0;
@@ -44265,13 +44265,13 @@ function _stbi__parse_uncompressed_block($a) {
  HEAP32[$len >> 2] = (HEAPU8[$header + 1 >> 0] << 8) + (HEAPU8[$header >> 0] | 0);
  HEAP32[$nlen >> 2] = (HEAPU8[$header + 3 >> 0] << 8) + (HEAPU8[$header + 2 >> 0] | 0);
  if ((HEAP32[$nlen >> 2] | 0) != (HEAP32[$len >> 2] ^ 65535 | 0)) {
-  HEAP32[$retval >> 2] = _stbi__err(40310) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40328) | 0;
   $49 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $49 | 0;
  }
  if (((HEAP32[HEAP32[$a$addr >> 2] >> 2] | 0) + (HEAP32[$len >> 2] | 0) | 0) >>> 0 > (HEAP32[(HEAP32[$a$addr >> 2] | 0) + 4 >> 2] | 0) >>> 0) {
-  HEAP32[$retval >> 2] = _stbi__err(40323) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40341) | 0;
   $49 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $49 | 0;
@@ -44291,6 +44291,68 @@ function _stbi__parse_uncompressed_block($a) {
  $49 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $49 | 0;
+}
+
+function _main() {
+ var $agg$tmp1 = 0, $agg$tmp6 = 0, $call = 0, $call5 = 0, $music$byval_copy1 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 64 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(64);
+ $music$byval_copy1 = sp + 24 | 0;
+ $agg$tmp1 = sp + 12 | 0;
+ $agg$tmp6 = sp;
+ _InitWindow(864, 576, 20548);
+ _InitAudioDevice();
+ _LoadMusicStream($music$byval_copy1, 20579);
+ HEAP32[38562] = HEAP32[$music$byval_copy1 >> 2];
+ HEAP32[38563] = HEAP32[$music$byval_copy1 + 4 >> 2];
+ HEAP32[38564] = HEAP32[$music$byval_copy1 + 8 >> 2];
+ HEAP32[38565] = HEAP32[$music$byval_copy1 + 12 >> 2];
+ HEAP32[38566] = HEAP32[$music$byval_copy1 + 16 >> 2];
+ HEAP32[38567] = HEAP32[$music$byval_copy1 + 20 >> 2];
+ HEAP32[38568] = HEAP32[$music$byval_copy1 + 24 >> 2];
+ HEAP32[38569] = HEAP32[$music$byval_copy1 + 28 >> 2];
+ HEAP32[$music$byval_copy1 >> 2] = HEAP32[38562];
+ HEAP32[$music$byval_copy1 + 4 >> 2] = HEAP32[38563];
+ HEAP32[$music$byval_copy1 + 8 >> 2] = HEAP32[38564];
+ HEAP32[$music$byval_copy1 + 12 >> 2] = HEAP32[38565];
+ HEAP32[$music$byval_copy1 + 16 >> 2] = HEAP32[38566];
+ HEAP32[$music$byval_copy1 + 20 >> 2] = HEAP32[38567];
+ HEAP32[$music$byval_copy1 + 24 >> 2] = HEAP32[38568];
+ HEAP32[$music$byval_copy1 + 28 >> 2] = HEAP32[38569];
+ _PlayMusicStream($music$byval_copy1);
+ $call = __Znwm(28) | 0;
+ HEAP32[$agg$tmp1 >> 2] = 0;
+ HEAP32[$agg$tmp1 + 4 >> 2] = 0;
+ HEAP32[$agg$tmp1 + 8 >> 2] = 0;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp1, 20620, __ZNSt3__211char_traitsIcE6lengthEPKc(20620) | 0);
+ HEAPF32[$music$byval_copy1 >> 2] = Math_fround(432.0);
+ HEAPF32[$music$byval_copy1 + 4 >> 2] = Math_fround(288.0);
+ __ZN4NaveC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERK7Vector2($call, $agg$tmp1, $music$byval_copy1);
+ HEAP32[38570] = $call;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp1);
+ $call5 = __Znwm(20) | 0;
+ HEAP32[$agg$tmp6 >> 2] = 0;
+ HEAP32[$agg$tmp6 + 4 >> 2] = 0;
+ HEAP32[$agg$tmp6 + 8 >> 2] = 0;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp6, 20639, __ZNSt3__211char_traitsIcE6lengthEPKc(20639) | 0);
+ __ZN10BackgroundC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE($call5, $agg$tmp6);
+ HEAP32[38571] = $call5;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp6);
+ _emscripten_set_main_loop(1, 0, 1);
+ HEAP32[$music$byval_copy1 >> 2] = HEAP32[38562];
+ HEAP32[$music$byval_copy1 + 4 >> 2] = HEAP32[38563];
+ HEAP32[$music$byval_copy1 + 8 >> 2] = HEAP32[38564];
+ HEAP32[$music$byval_copy1 + 12 >> 2] = HEAP32[38565];
+ HEAP32[$music$byval_copy1 + 16 >> 2] = HEAP32[38566];
+ HEAP32[$music$byval_copy1 + 20 >> 2] = HEAP32[38567];
+ HEAP32[$music$byval_copy1 + 24 >> 2] = HEAP32[38568];
+ HEAP32[$music$byval_copy1 + 28 >> 2] = HEAP32[38569];
+ _UnloadMusicStream($music$byval_copy1);
+ _CloseAudioDevice();
+ _CloseWindow();
+ STACKTOP = sp;
+ return 0;
 }
 
 function _ma_device__pcm_converter__on_read_from_buffer_capture($pConverter, $pFramesOut, $frameCount, $pUserData) {
@@ -44318,7 +44380,7 @@ function _ma_device__pcm_converter__on_read_from_buffer_capture($pConverter, $pF
  HEAP32[$frameCount$addr >> 2] = $frameCount;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pDevice >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24947, 24969, 5785, 25746);
+ if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24965, 24987, 5785, 25764);
  if (!(HEAP32[(HEAP32[$pDevice >> 2] | 0) + 47360 + 46912 >> 2] | 0)) {
   HEAP32[$retval >> 2] = 0;
   $31 = HEAP32[$retval >> 2] | 0;
@@ -44372,7 +44434,7 @@ function _ma_device__pcm_converter__on_read_from_buffer_playback($pConverter, $p
  HEAP32[$frameCount$addr >> 2] = $frameCount;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pDevice >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24947, 24969, 5817, 25800);
+ if (!(HEAP32[$pDevice >> 2] | 0)) ___assert_fail(24965, 24987, 5817, 25818);
  if (!(HEAP32[(HEAP32[$pDevice >> 2] | 0) + 384 + 46912 >> 2] | 0)) {
   HEAP32[$retval >> 2] = 0;
   $31 = HEAP32[$retval >> 2] | 0;
@@ -44435,7 +44497,7 @@ function _stbi__de_iphone($z) {
   STACKTOP = sp;
   return;
  }
- if ((HEAP32[(HEAP32[$s >> 2] | 0) + 12 >> 2] | 0) != 4) ___assert_fail(39755, 39140, 4767, 39773);
+ if ((HEAP32[(HEAP32[$s >> 2] | 0) + 12 >> 2] | 0) != 4) ___assert_fail(39773, 39158, 4767, 39791);
  HEAP32[$i >> 2] = 0;
  if (!0) {
   while (1) {
@@ -44552,9 +44614,9 @@ function _InitAudioDevice() {
  $config = sp_a + 88 | 0;
  _ma_context_config_init($contextConfig);
  HEAP32[$contextConfig >> 2] = 4;
- HEAP32[$result >> 2] = _ma_context_init(0, 0, $contextConfig, 155064) | 0;
+ HEAP32[$result >> 2] = _ma_context_init(0, 0, $contextConfig, 155068) | 0;
  if (HEAP32[$result >> 2] | 0) {
-  _TraceLog(5, 37659, sp_a);
+  _TraceLog(5, 37677, sp_a);
   STACKTOP = sp;
   return;
  }
@@ -44568,50 +44630,50 @@ function _InitAudioDevice() {
  HEAP32[$config + 4 >> 2] = 44100;
  HEAP32[$config + 32 >> 2] = 5;
  HEAP32[$config + 40 >> 2] = 0;
- HEAP32[$result >> 2] = _ma_device_init(155064, $config, 48192) | 0;
+ HEAP32[$result >> 2] = _ma_device_init(155068, $config, 48192) | 0;
  if (HEAP32[$result >> 2] | 0) {
-  _TraceLog(5, 37694, sp_a + 8 | 0);
-  _ma_context_uninit(155064) | 0;
+  _TraceLog(5, 37712, sp_a + 8 | 0);
+  _ma_context_uninit(155068) | 0;
   STACKTOP = sp;
   return;
  }
  HEAP32[$result >> 2] = _ma_device_start(48192) | 0;
  if (HEAP32[$result >> 2] | 0) {
-  _TraceLog(5, 37737, sp_a + 16 | 0);
+  _TraceLog(5, 37755, sp_a + 16 | 0);
   _ma_device_uninit(48192);
-  _ma_context_uninit(155064) | 0;
+  _ma_context_uninit(155068) | 0;
   STACKTOP = sp;
   return;
  }
- if (_ma_mutex_init(155064, 155268) | 0) {
-  _TraceLog(5, 37775, sp_a + 24 | 0);
+ if (_ma_mutex_init(155068, 155272) | 0) {
+  _TraceLog(5, 37793, sp_a + 24 | 0);
   _ma_device_uninit(48192);
-  _ma_context_uninit(155064) | 0;
+  _ma_context_uninit(155068) | 0;
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(3, 37815, sp_a + 32 | 0);
-  HEAP32[$vararg_buffer9 >> 2] = _ma_get_backend_name(HEAP32[38766] | 0) | 0;
-  _TraceLog(3, 37853, $vararg_buffer9);
+  _TraceLog(3, 37833, sp_a + 32 | 0);
+  HEAP32[$vararg_buffer9 >> 2] = _ma_get_backend_name(HEAP32[38767] | 0) | 0;
+  _TraceLog(3, 37871, $vararg_buffer9);
   $call24 = _ma_get_format_name(HEAP32[12210] | 0) | 0;
   $call25 = _ma_get_format_name(HEAP32[12220] | 0) | 0;
   HEAP32[$vararg_buffer11 >> 2] = $call24;
   HEAP32[$vararg_buffer11 + 4 >> 2] = $call25;
-  _TraceLog(3, 37883, $vararg_buffer11);
+  _TraceLog(3, 37901, $vararg_buffer11);
   $7 = HEAP32[12221] | 0;
   HEAP32[$vararg_buffer15 >> 2] = HEAP32[12211];
   HEAP32[$vararg_buffer15 + 4 >> 2] = $7;
-  _TraceLog(3, 37906, $vararg_buffer15);
+  _TraceLog(3, 37924, $vararg_buffer15);
   $9 = HEAP32[12222] | 0;
   HEAP32[$vararg_buffer19 >> 2] = HEAP32[12050];
   HEAP32[$vararg_buffer19 + 4 >> 2] = $9;
-  _TraceLog(3, 37931, $vararg_buffer19);
+  _TraceLog(3, 37949, $vararg_buffer19);
   HEAP32[$vararg_buffer23 >> 2] = HEAP32[12231];
-  _TraceLog(3, 37959, $vararg_buffer23);
+  _TraceLog(3, 37977, $vararg_buffer23);
   _InitAudioBufferPool();
   HEAP32[$vararg_buffer26 >> 2] = 16;
-  _TraceLog(3, 37981, $vararg_buffer26);
-  HEAP8[155986] = 1;
+  _TraceLog(3, 37999, $vararg_buffer26);
+  HEAP8[155990] = 1;
   STACKTOP = sp;
   return;
  }
@@ -44861,7 +44923,7 @@ function _ma_pcm_rb_acquire_write($pRB, $pSizeInFrames, $ppBufferOut) {
  }
  $2 = HEAP32[HEAP32[$pSizeInFrames$addr >> 2] >> 2] | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $8 = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i >> 2] = $8;
@@ -44876,7 +44938,7 @@ function _ma_pcm_rb_acquire_write($pRB, $pSizeInFrames, $ppBufferOut) {
  }
  $15 = HEAP32[$sizeInBytes >> 2] | 0;
  HEAP32[$pRB$addr$i8 >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i8 >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i8 >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $21 = HEAP32[(HEAP32[$pRB$addr$i8 >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i6 >> 2] = HEAP32[(HEAP32[$pRB$addr$i8 >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i7 >> 2] = $21;
@@ -45038,7 +45100,7 @@ function _ma_pcm_rb_acquire_read($pRB, $pSizeInFrames, $ppBufferOut) {
  }
  $3 = HEAP32[HEAP32[$pSizeInFrames$addr >> 2] >> 2] | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $9 = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i >> 2] = $9;
@@ -45053,7 +45115,7 @@ function _ma_pcm_rb_acquire_read($pRB, $pSizeInFrames, $ppBufferOut) {
  }
  $16 = HEAP32[$sizeInBytes >> 2] | 0;
  HEAP32[$pRB$addr$i9 >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i9 >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i9 >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $22 = HEAP32[(HEAP32[$pRB$addr$i9 >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i7 >> 2] = HEAP32[(HEAP32[$pRB$addr$i9 >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i8 >> 2] = $22;
@@ -45104,38 +45166,38 @@ function _KeyCallback($window, $key, $scancode, $action, $mods) {
   return;
  }
  if ((HEAP32[$mods$addr >> 2] | 0) != 2) {
-  HEAP32[$vararg_buffer20 >> 2] = HEAP32[38764];
-  _TakeScreenshot(_TextFormat(24620, $vararg_buffer20) | 0);
-  HEAP32[38764] = (HEAP32[38764] | 0) + 1;
+  HEAP32[$vararg_buffer20 >> 2] = HEAP32[38765];
+  _TakeScreenshot(_TextFormat(24638, $vararg_buffer20) | 0);
+  HEAP32[38765] = (HEAP32[38765] | 0) + 1;
   STACKTOP = sp;
   return;
  }
- if (HEAP8[155985] & 1) {
+ if (HEAP8[155989] & 1) {
   _GifEnd() | 0;
-  HEAP8[155985] = 0;
-  HEAP32[$vararg_buffer >> 2] = (HEAP32[38764] | 0) - 1;
-  $call9 = _TextFormat(24487, $vararg_buffer) | 0;
-  HEAP32[$vararg_buffer2 >> 2] = (HEAP32[38764] | 0) - 1;
-  $call11 = _TextFormat(24487, $vararg_buffer2) | 0;
+  HEAP8[155989] = 0;
+  HEAP32[$vararg_buffer >> 2] = (HEAP32[38765] | 0) - 1;
+  $call9 = _TextFormat(24505, $vararg_buffer) | 0;
+  HEAP32[$vararg_buffer2 >> 2] = (HEAP32[38765] | 0) - 1;
+  $call11 = _TextFormat(24505, $vararg_buffer2) | 0;
   HEAP32[$vararg_buffer5 >> 2] = $call9;
   HEAP32[$vararg_buffer5 + 4 >> 2] = $call11;
-  _emscripten_run_script(_TextFormat(24505, $vararg_buffer5) | 0);
-  _TraceLog(3, 24540, sp + 536 | 0);
+  _emscripten_run_script(_TextFormat(24523, $vararg_buffer5) | 0);
+  _TraceLog(3, 24558, sp + 536 | 0);
   STACKTOP = sp;
   return;
  } else {
-  HEAP8[155985] = 1;
-  HEAP32[38765] = 0;
+  HEAP8[155989] = 1;
+  HEAP32[38766] = 0;
   _memset($path | 0, 0, 512) | 0;
-  HEAP32[$vararg_buffer11 >> 2] = HEAP32[38764];
-  _strcpy($path, _TextFormat(24567, $vararg_buffer11) | 0) | 0;
-  $10 = HEAP32[38734] | 0;
-  $11 = HEAP32[38735] | 0;
+  HEAP32[$vararg_buffer11 >> 2] = HEAP32[38765];
+  _strcpy($path, _TextFormat(24585, $vararg_buffer11) | 0) | 0;
+  $10 = HEAP32[38735] | 0;
+  $11 = HEAP32[38736] | 0;
   _GifBegin($path, $10, $11, ~~Math_fround(Math_fround(_GetFrameTime()) * Math_fround(10.0)), 8, 0) | 0;
-  HEAP32[38764] = (HEAP32[38764] | 0) + 1;
-  HEAP32[$vararg_buffer14 >> 2] = HEAP32[38764];
-  HEAP32[$vararg_buffer17 >> 2] = _TextFormat(24487, $vararg_buffer14) | 0;
-  _TraceLog(3, 24587, $vararg_buffer17);
+  HEAP32[38765] = (HEAP32[38765] | 0) + 1;
+  HEAP32[$vararg_buffer14 >> 2] = HEAP32[38765];
+  HEAP32[$vararg_buffer17 >> 2] = _TextFormat(24505, $vararg_buffer14) | 0;
+  _TraceLog(3, 24605, $vararg_buffer17);
   STACKTOP = sp;
   return;
  }
@@ -45413,11 +45475,11 @@ function _InitAudioStream($agg$result, $sampleRate, $sampleSize, $channels) {
  if (HEAP32[$stream + 12 >> 2] | 0) {
   HEAP8[(HEAP32[$stream + 12 >> 2] | 0) + 46538 >> 0] = 1;
   $17 = HEAP32[$stream + 4 >> 2] | 0;
-  $cond19 = (HEAP32[$stream + 8 >> 2] | 0) == 1 ? 38501 : 38506;
+  $cond19 = (HEAP32[$stream + 8 >> 2] | 0) == 1 ? 38519 : 38524;
   HEAP32[$vararg_buffer >> 2] = HEAP32[$stream >> 2];
   HEAP32[$vararg_buffer + 4 >> 2] = $17;
   HEAP32[$vararg_buffer + 8 >> 2] = $cond19;
-  _TraceLog(3, 38689, $vararg_buffer);
+  _TraceLog(3, 38707, $vararg_buffer);
   HEAP32[$agg$result >> 2] = HEAP32[$stream >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$stream + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$stream + 8 >> 2];
@@ -45425,7 +45487,7 @@ function _InitAudioStream($agg$result, $sampleRate, $sampleSize, $channels) {
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(5, 38742, sp_a + 16 | 0);
+  _TraceLog(5, 38760, sp_a + 16 | 0);
   HEAP32[$agg$result >> 2] = HEAP32[$stream >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$stream + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$stream + 8 >> 2];
@@ -45456,7 +45518,7 @@ function _ma_context_get_device_info__webaudio($pContext, $deviceType, $pDeviceI
  HEAP32[sp_a + 8 >> 2] = $pDeviceID;
  HEAP32[$shareMode$addr >> 2] = $shareMode;
  HEAP32[$pDeviceInfo$addr >> 2] = $pDeviceInfo;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 24951, 26300);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 24951, 26318);
  if ((HEAP32[$shareMode$addr >> 2] | 0) == 1) {
   HEAP32[$retval >> 2] = -102;
   $19 = HEAP32[$retval >> 2] | 0;
@@ -45479,7 +45541,7 @@ function _ma_context_get_device_info__webaudio($pContext, $deviceType, $pDeviceI
  HEAP32[$3 + 24 >> 2] = 0;
  HEAP32[$3 + 28 >> 2] = 0;
  $name = (HEAP32[$pDeviceInfo$addr >> 2] | 0) + 32 | 0;
- if ((HEAP32[$deviceType$addr >> 2] | 0) == 1) _ma_strncpy_s($name, 256, 26253, -1) | 0; else _ma_strncpy_s($name, 256, 26277, -1) | 0;
+ if ((HEAP32[$deviceType$addr >> 2] | 0) == 1) _ma_strncpy_s($name, 256, 26271, -1) | 0; else _ma_strncpy_s($name, 256, 26295, -1) | 0;
  HEAP32[(HEAP32[$pDeviceInfo$addr >> 2] | 0) + 316 >> 2] = 1;
  HEAP32[(HEAP32[$pDeviceInfo$addr >> 2] | 0) + 320 >> 2] = 32;
  if ((HEAP32[(HEAP32[$pDeviceInfo$addr >> 2] | 0) + 320 >> 2] | 0) >>> 0 > 32) HEAP32[(HEAP32[$pDeviceInfo$addr >> 2] | 0) + 320 >> 2] = 32;
@@ -45514,15 +45576,15 @@ function _EndDrawing() {
  $$compoundliteral7 = sp + 12 | 0;
  $waitTime = sp;
  _rlglDraw();
- if (HEAP8[155985] & 1) {
-  HEAP32[38765] = (HEAP32[38765] | 0) + 1;
-  if (!((HEAP32[38765] | 0) % 10 | 0)) {
-   HEAP32[$screenData >> 2] = _rlReadScreenPixels(HEAP32[38734] | 0, HEAP32[38735] | 0) | 0;
-   _GifWriteFrame(HEAP32[$screenData >> 2] | 0, HEAP32[38734] | 0, HEAP32[38735] | 0, 10, 8, 0) | 0;
+ if (HEAP8[155989] & 1) {
+  HEAP32[38766] = (HEAP32[38766] | 0) + 1;
+  if (!((HEAP32[38766] | 0) % 10 | 0)) {
+   HEAP32[$screenData >> 2] = _rlReadScreenPixels(HEAP32[38735] | 0, HEAP32[38736] | 0) | 0;
+   _GifWriteFrame(HEAP32[$screenData >> 2] | 0, HEAP32[38735] | 0, HEAP32[38736] | 0, 10, 8, 0) | 0;
    _free(HEAP32[$screenData >> 2] | 0);
   }
-  if ((((HEAP32[38765] | 0) / 15 | 0 | 0) % 2 | 0 | 0) == 1) {
-   $sub = (HEAP32[38735] | 0) - 20 | 0;
+  if ((((HEAP32[38766] | 0) / 15 | 0 | 0) % 2 | 0 | 0) == 1) {
+   $sub = (HEAP32[38736] | 0) - 20 | 0;
    HEAP8[$$compoundliteral >> 0] = -26;
    HEAP8[$$compoundliteral + 1 >> 0] = 41;
    HEAP8[$$compoundliteral + 2 >> 0] = 55;
@@ -45532,7 +45594,7 @@ function _EndDrawing() {
    HEAP8[$$compoundliteral7$byval_copy + 2 >> 0] = HEAP8[$$compoundliteral + 2 >> 0] | 0;
    HEAP8[$$compoundliteral7$byval_copy + 3 >> 0] = HEAP8[$$compoundliteral + 3 >> 0] | 0;
    _DrawCircle(30, $sub, Math_fround(10.0), $$compoundliteral7$byval_copy);
-   $sub6 = (HEAP32[38735] | 0) - 25 | 0;
+   $sub6 = (HEAP32[38736] | 0) - 25 | 0;
    HEAP8[$$compoundliteral7 >> 0] = -66;
    HEAP8[$$compoundliteral7 + 1 >> 0] = 33;
    HEAP8[$$compoundliteral7 + 2 >> 0] = 55;
@@ -45541,7 +45603,7 @@ function _EndDrawing() {
    HEAP8[$$compoundliteral7$byval_copy + 1 >> 0] = HEAP8[$$compoundliteral7 + 1 >> 0] | 0;
    HEAP8[$$compoundliteral7$byval_copy + 2 >> 0] = HEAP8[$$compoundliteral7 + 2 >> 0] | 0;
    HEAP8[$$compoundliteral7$byval_copy + 3 >> 0] = HEAP8[$$compoundliteral7 + 3 >> 0] | 0;
-   _DrawText(24937, 50, $sub6, 10, $$compoundliteral7$byval_copy);
+   _DrawText(24955, 50, $sub6, 10, $$compoundliteral7$byval_copy);
   }
   _rlglDraw();
  }
@@ -45595,9 +45657,9 @@ function _SetStereoView($eye, $matProjection, $matModelView) {
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- $div = (Math_imul(HEAP32[$eye$addr >> 2] | 0, HEAP32[38629] | 0) | 0) / 2 | 0;
- _rlViewport($div, 0, (HEAP32[38629] | 0) / 2 | 0, HEAP32[38630] | 0);
- $arrayidx = 154660 + (HEAP32[$eye$addr >> 2] << 6) | 0;
+ $div = (Math_imul(HEAP32[$eye$addr >> 2] | 0, HEAP32[38630] | 0) | 0) / 2 | 0;
+ _rlViewport($div, 0, (HEAP32[38630] | 0) / 2 | 0, HEAP32[38631] | 0);
+ $arrayidx = 154664 + (HEAP32[$eye$addr >> 2] << 6) | 0;
  dest = $matModelView$byval_copy;
  src = $matModelView;
  stop = dest + 64 | 0;
@@ -45624,7 +45686,7 @@ function _SetStereoView($eye, $matProjection, $matModelView) {
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
  dest = $eyeProjection;
- src = 154532 + (HEAP32[$eye$addr >> 2] << 6) | 0;
+ src = 154536 + (HEAP32[$eye$addr >> 2] << 6) | 0;
  stop = dest + 64 | 0;
  do {
   HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -45807,18 +45869,18 @@ function _LoadShaderProgram($vShaderId, $fShaderId) {
  HEAP32[$program >> 2] = _glCreateProgram() | 0;
  _glAttachShader(HEAP32[$program >> 2] | 0, HEAP32[$vShaderId$addr >> 2] | 0);
  _glAttachShader(HEAP32[$program >> 2] | 0, HEAP32[$fShaderId$addr >> 2] | 0);
- _glBindAttribLocation(HEAP32[$program >> 2] | 0, 0, 23173);
- _glBindAttribLocation(HEAP32[$program >> 2] | 0, 1, 23188);
- _glBindAttribLocation(HEAP32[$program >> 2] | 0, 2, 23287);
- _glBindAttribLocation(HEAP32[$program >> 2] | 0, 3, 23203);
- _glBindAttribLocation(HEAP32[$program >> 2] | 0, 4, 23300);
- _glBindAttribLocation(HEAP32[$program >> 2] | 0, 5, 23314);
+ _glBindAttribLocation(HEAP32[$program >> 2] | 0, 0, 23191);
+ _glBindAttribLocation(HEAP32[$program >> 2] | 0, 1, 23206);
+ _glBindAttribLocation(HEAP32[$program >> 2] | 0, 2, 23305);
+ _glBindAttribLocation(HEAP32[$program >> 2] | 0, 3, 23221);
+ _glBindAttribLocation(HEAP32[$program >> 2] | 0, 4, 23318);
+ _glBindAttribLocation(HEAP32[$program >> 2] | 0, 5, 23332);
  _glLinkProgram(HEAP32[$program >> 2] | 0);
  _glGetProgramiv(HEAP32[$program >> 2] | 0, 35714, $success | 0);
  $13 = HEAP32[$program >> 2] | 0;
  if (!(HEAP32[$success >> 2] | 0)) {
   HEAP32[$vararg_buffer >> 2] = $13;
-  _TraceLog(4, 23330, $vararg_buffer);
+  _TraceLog(4, 23348, $vararg_buffer);
   HEAP32[$maxLength >> 2] = 0;
   _glGetProgramiv(HEAP32[$program >> 2] | 0, 35716, $maxLength | 0);
   $15 = HEAP32[$maxLength >> 2] | 0;
@@ -45829,7 +45891,7 @@ function _LoadShaderProgram($vShaderId, $fShaderId) {
   if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow((1 * $vla$alloca_mul | 0) + 15 & -16 | 0);
   _glGetProgramInfoLog(HEAP32[$program >> 2] | 0, HEAP32[$maxLength >> 2] | 0, $length | 0, $vla | 0);
   HEAP32[$vararg_buffer1 >> 2] = $vla;
-  _TraceLog(3, 23376, $vararg_buffer1);
+  _TraceLog(3, 23394, $vararg_buffer1);
   _glDeleteProgram(HEAP32[$program >> 2] | 0);
   HEAP32[$program >> 2] = 0;
   _llvm_stackrestore(HEAP32[$saved_stack >> 2] | 0);
@@ -45838,7 +45900,7 @@ function _LoadShaderProgram($vShaderId, $fShaderId) {
   return $21 | 0;
  } else {
   HEAP32[$vararg_buffer4 >> 2] = $13;
-  _TraceLog(3, 23379, $vararg_buffer4);
+  _TraceLog(3, 23397, $vararg_buffer4);
   $21 = HEAP32[$program >> 2] | 0;
   STACKTOP = sp;
   return $21 | 0;
@@ -45922,12 +45984,12 @@ function _rlVertex3f($x, $y, $z) {
  HEAPF32[$vec >> 2] = Math_fround(HEAPF32[$x$addr >> 2]);
  HEAPF32[$vec + 4 >> 2] = Math_fround(HEAPF32[$y$addr >> 2]);
  HEAPF32[$vec + 8 >> 2] = Math_fround(HEAPF32[$z$addr >> 2]);
- if (HEAP8[155964] & 1) {
+ if (HEAP8[155968] & 1) {
   HEAP32[$vec$byval_copy >> 2] = HEAP32[$vec >> 2];
   HEAP32[$vec$byval_copy + 4 >> 2] = HEAP32[$vec + 4 >> 2];
   HEAP32[$vec$byval_copy + 8 >> 2] = HEAP32[$vec + 8 >> 2];
   dest = $transformMatrix$byval_copy;
-  src = 154424;
+  src = 154428;
   stop = dest + 64 | 0;
   do {
    HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -45939,24 +46001,24 @@ function _rlVertex3f($x, $y, $z) {
   HEAP32[$vec + 4 >> 2] = HEAP32[$tmp + 4 >> 2];
   HEAP32[$vec + 8 >> 2] = HEAP32[$tmp + 8 >> 2];
  }
- if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) < 8192) {
+ if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) < 8192) {
   $6 = Math_fround(HEAPF32[$vec >> 2]);
-  CSE$0 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+  CSE$0 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
   HEAPF32[(HEAP32[CSE$0 + 12 >> 2] | 0) + ((HEAP32[CSE$0 >> 2] | 0) * 3 << 2) >> 2] = $6;
   $11 = Math_fround(HEAPF32[$vec + 4 >> 2]);
-  CSE$1 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+  CSE$1 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
   HEAPF32[(HEAP32[CSE$1 + 12 >> 2] | 0) + (((HEAP32[CSE$1 >> 2] | 0) * 3 | 0) + 1 << 2) >> 2] = $11;
   $16 = Math_fround(HEAPF32[$vec + 8 >> 2]);
-  CSE$2 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+  CSE$2 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
   HEAPF32[(HEAP32[CSE$2 + 12 >> 2] | 0) + (((HEAP32[CSE$2 >> 2] | 0) * 3 | 0) + 2 << 2) >> 2] = $16;
-  $arrayidx25 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+  $arrayidx25 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
   HEAP32[$arrayidx25 >> 2] = (HEAP32[$arrayidx25 >> 2] | 0) + 1;
-  $vertexCount = (HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 | 0;
+  $vertexCount = (HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 | 0;
   HEAP32[$vertexCount >> 2] = (HEAP32[$vertexCount >> 2] | 0) + 1;
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(5, 20668, $vararg_buffer);
+  _TraceLog(5, 20686, $vararg_buffer);
   STACKTOP = sp;
   return;
  }
@@ -45985,10 +46047,10 @@ function _ExportImage($image, $fileName) {
  HEAP32[$image$byval_copy3 + 12 >> 2] = HEAP32[$image + 12 >> 2];
  HEAP32[$image$byval_copy3 + 16 >> 2] = HEAP32[$image + 16 >> 2];
  HEAP32[$imgData >> 2] = _GetImageData($image$byval_copy3) | 0;
- $call1 = _IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43167) | 0;
+ $call1 = _IsFileExtension(HEAP32[$fileName$addr >> 2] | 0, 43185) | 0;
  $1 = HEAP32[$fileName$addr >> 2] | 0;
  do if ($call1) HEAP32[$success >> 2] = _stbi_write_png($1, HEAP32[$image + 4 >> 2] | 0, HEAP32[$image + 8 >> 2] | 0, 4, HEAP32[$imgData >> 2] | 0, HEAP32[$image + 4 >> 2] << 2) | 0; else {
-  $call4 = _IsFileExtension($1, 43218) | 0;
+  $call4 = _IsFileExtension($1, 43236) | 0;
   $6 = HEAP32[$fileName$addr >> 2] | 0;
   if ($call4) {
    HEAP32[$image$byval_copy3 >> 2] = HEAP32[$image >> 2];
@@ -45999,8 +46061,8 @@ function _ExportImage($image, $fileName) {
    HEAP32[$success >> 2] = _SaveKTX($image$byval_copy3, $6) | 0;
    break;
   }
-  if (_IsFileExtension($6, 44169) | 0) {
-   HEAP32[$rawFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 40449) | 0;
+  if (_IsFileExtension($6, 44187) | 0) {
+   HEAP32[$rawFile >> 2] = _fopen(HEAP32[$fileName$addr >> 2] | 0, 40467) | 0;
    $8 = HEAP32[$image >> 2] | 0;
    $call13 = _GetPixelDataSize(HEAP32[$image + 4 >> 2] | 0, HEAP32[$image + 8 >> 2] | 0, HEAP32[$image + 16 >> 2] | 0) | 0;
    HEAP32[$success >> 2] = _fwrite($8, $call13, 1, HEAP32[$rawFile >> 2] | 0) | 0;
@@ -46010,11 +46072,11 @@ function _ExportImage($image, $fileName) {
  _free(HEAP32[$imgData >> 2] | 0);
  if (HEAP32[$success >> 2] | 0) {
   HEAP32[$vararg_buffer >> 2] = HEAP32[$fileName$addr >> 2];
-  _TraceLog(3, 44174, $vararg_buffer);
+  _TraceLog(3, 44192, $vararg_buffer);
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(4, 44206, $vararg_buffer1);
+  _TraceLog(4, 44224, $vararg_buffer1);
   STACKTOP = sp;
   return;
  }
@@ -46192,42 +46254,42 @@ function _rlBegin($mode) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $mode$addr = sp;
  HEAP32[$mode$addr >> 2] = $mode;
- if ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) >> 2] | 0) == (HEAP32[$mode$addr >> 2] | 0)) {
+ if ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) >> 2] | 0) == (HEAP32[$mode$addr >> 2] | 0)) {
   STACKTOP = sp;
   return;
  }
- do if ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] | 0) > 0) {
-  $arrayidx12 = (HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) | 0;
-  do if ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) >> 2] | 0) == 1) {
-   $15 = HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] | 0;
-   HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] = (HEAP32[$arrayidx12 + 4 >> 2] | 0) < 4 ? $15 : ($15 | 0) % 4 | 0;
+ do if ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] | 0) > 0) {
+  $arrayidx12 = (HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) | 0;
+  do if ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) >> 2] | 0) == 1) {
+   $15 = HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] | 0;
+   HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] = (HEAP32[$arrayidx12 + 4 >> 2] | 0) < 4 ? $15 : ($15 | 0) % 4 | 0;
   } else {
-   $arrayidx29 = (HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) | 0;
+   $arrayidx29 = (HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) | 0;
    if ((HEAP32[$arrayidx12 >> 2] | 0) != 4) {
     HEAP32[$arrayidx29 + 8 >> 2] = 0;
     break;
    }
-   if ((HEAP32[$arrayidx29 + 4 >> 2] | 0) < 4) $cond40 = 1; else $cond40 = 4 - ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] | 0) % 4 | 0) | 0;
-   HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] = $cond40;
+   if ((HEAP32[$arrayidx29 + 4 >> 2] | 0) < 4) $cond40 = 1; else $cond40 = 4 - ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] | 0) % 4 | 0) | 0;
+   HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] = $cond40;
   } while (0);
-  if (_rlCheckBufferLimit(HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0) | 0) {
+  if (_rlCheckBufferLimit(HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0) | 0) {
    _rlglDraw();
    break;
   } else {
-   $arrayidx57 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
-   HEAP32[$arrayidx57 >> 2] = (HEAP32[$arrayidx57 >> 2] | 0) + (HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0);
-   $cCounter = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 | 0;
-   HEAP32[$cCounter >> 2] = (HEAP32[$cCounter >> 2] | 0) + (HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0);
-   $tcCounter = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 4 | 0;
-   HEAP32[$tcCounter >> 2] = (HEAP32[$tcCounter >> 2] | 0) + (HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0);
-   HEAP32[38623] = (HEAP32[38623] | 0) + 1;
+   $arrayidx57 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
+   HEAP32[$arrayidx57 >> 2] = (HEAP32[$arrayidx57 >> 2] | 0) + (HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0);
+   $cCounter = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 | 0;
+   HEAP32[$cCounter >> 2] = (HEAP32[$cCounter >> 2] | 0) + (HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0);
+   $tcCounter = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 4 | 0;
+   HEAP32[$tcCounter >> 2] = (HEAP32[$tcCounter >> 2] | 0) + (HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0);
+   HEAP32[38624] = (HEAP32[38624] | 0) + 1;
    break;
   }
  } while (0);
- if ((HEAP32[38623] | 0) >= 256) _rlglDraw();
- HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) >> 2] = HEAP32[$mode$addr >> 2];
- HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] = 0;
- HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 12 >> 2] = HEAP32[38625];
+ if ((HEAP32[38624] | 0) >= 256) _rlglDraw();
+ HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) >> 2] = HEAP32[$mode$addr >> 2];
+ HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] = 0;
+ HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 12 >> 2] = HEAP32[38626];
  STACKTOP = sp;
  return;
 }
@@ -46345,7 +46407,7 @@ function _rlRotatef($angleDeg, $x, $y, $z) {
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- CSE$0 = HEAP32[38588] | 0;
+ CSE$0 = HEAP32[38589] | 0;
  $4 = CSE$0 | 0;
  $5 = CSE$0 | 0;
  dest = $matRotation$byval_copy;
@@ -46405,7 +46467,7 @@ function _rlMultMatrixf($matf) {
  HEAPF32[$mat + 52 >> 2] = Math_fround(HEAPF32[(HEAP32[$matf$addr >> 2] | 0) + 28 >> 2]);
  HEAPF32[$mat + 56 >> 2] = Math_fround(HEAPF32[(HEAP32[$matf$addr >> 2] | 0) + 44 >> 2]);
  HEAPF32[$mat + 60 >> 2] = Math_fround(HEAPF32[(HEAP32[$matf$addr >> 2] | 0) + 60 >> 2]);
- CSE$0 = HEAP32[38588] | 0;
+ CSE$0 = HEAP32[38589] | 0;
  $32 = CSE$0 | 0;
  dest = $$byval_copy;
  src = CSE$0 | 0;
@@ -46575,8 +46637,8 @@ function _PollInputEvents() {
  $j60 = sp + 1452 | 0;
  $axis = sp + 1448 | 0;
  _UpdateGestures();
- HEAP32[38763] = 0;
- _glfwGetCursorPos(HEAP32[38731] | 0, sp + 1440 | 0, sp + 1432 | 0);
+ HEAP32[38764] = 0;
+ _glfwGetCursorPos(HEAP32[38732] | 0, sp + 1440 | 0, sp + 1432 | 0);
  HEAP32[$i >> 2] = 0;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) >= 512) break;
@@ -46586,10 +46648,10 @@ function _PollInputEvents() {
  while (1) {
   if ((HEAP32[$i4 >> 2] | 0) >= 3) break;
   CSE$0 = HEAP32[$i4 >> 2] | 0;
-  HEAP8[155982 + CSE$0 >> 0] = HEAP8[155979 + CSE$0 >> 0] | 0;
+  HEAP8[155986 + CSE$0 >> 0] = HEAP8[155983 + CSE$0 >> 0] | 0;
   HEAP32[$i4 >> 2] = (HEAP32[$i4 >> 2] | 0) + 1;
  }
- HEAP32[38762] = 0;
+ HEAP32[38763] = 0;
  HEAP32[$numGamepads >> 2] = 0;
  if (!(_emscripten_sample_gamepad_data() | 0)) HEAP32[$numGamepads >> 2] = _emscripten_get_num_gamepads() | 0;
  HEAP32[$i17 >> 2] = 0;
@@ -46694,26 +46756,26 @@ function _LoadShaderDefault($agg$result) {
   HEAP32[(HEAP32[$shader + 4 >> 2] | 0) + (HEAP32[$i >> 2] << 2) >> 2] = -1;
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- HEAP32[$defaultVShaderStr >> 2] = 22201;
- HEAP32[$defaultFShaderStr >> 2] = 22684;
- HEAP32[38710] = _CompileShader(HEAP32[$defaultVShaderStr >> 2] | 0, 35633) | 0;
- HEAP32[38711] = _CompileShader(HEAP32[$defaultFShaderStr >> 2] | 0, 35632) | 0;
- HEAP32[$shader >> 2] = _LoadShaderProgram(HEAP32[38710] | 0, HEAP32[38711] | 0) | 0;
+ HEAP32[$defaultVShaderStr >> 2] = 22219;
+ HEAP32[$defaultFShaderStr >> 2] = 22702;
+ HEAP32[38711] = _CompileShader(HEAP32[$defaultVShaderStr >> 2] | 0, 35633) | 0;
+ HEAP32[38712] = _CompileShader(HEAP32[$defaultFShaderStr >> 2] | 0, 35632) | 0;
+ HEAP32[$shader >> 2] = _LoadShaderProgram(HEAP32[38711] | 0, HEAP32[38712] | 0) | 0;
  $9 = HEAP32[$shader >> 2] | 0;
  if ((HEAP32[$shader >> 2] | 0) >>> 0 > 0) {
   HEAP32[$vararg_buffer >> 2] = $9;
-  _TraceLog(3, 23125, $vararg_buffer);
-  $call9 = _glGetAttribLocation(HEAP32[$shader >> 2] | 0, 23173) | 0;
+  _TraceLog(3, 23143, $vararg_buffer);
+  $call9 = _glGetAttribLocation(HEAP32[$shader >> 2] | 0, 23191) | 0;
   HEAP32[HEAP32[$shader + 4 >> 2] >> 2] = $call9;
-  $call13 = _glGetAttribLocation(HEAP32[$shader >> 2] | 0, 23188) | 0;
+  $call13 = _glGetAttribLocation(HEAP32[$shader >> 2] | 0, 23206) | 0;
   HEAP32[(HEAP32[$shader + 4 >> 2] | 0) + 4 >> 2] = $call13;
-  $call17 = _glGetAttribLocation(HEAP32[$shader >> 2] | 0, 23203) | 0;
+  $call17 = _glGetAttribLocation(HEAP32[$shader >> 2] | 0, 23221) | 0;
   HEAP32[(HEAP32[$shader + 4 >> 2] | 0) + 20 >> 2] = $call17;
-  $call21 = _glGetUniformLocation(HEAP32[$shader >> 2] | 0, 23215) | 0;
+  $call21 = _glGetUniformLocation(HEAP32[$shader >> 2] | 0, 23233) | 0;
   HEAP32[(HEAP32[$shader + 4 >> 2] | 0) + 24 >> 2] = $call21;
-  $call25 = _glGetUniformLocation(HEAP32[$shader >> 2] | 0, 23219) | 0;
+  $call25 = _glGetUniformLocation(HEAP32[$shader >> 2] | 0, 23237) | 0;
   HEAP32[(HEAP32[$shader + 4 >> 2] | 0) + 44 >> 2] = $call25;
-  $call29 = _glGetUniformLocation(HEAP32[$shader >> 2] | 0, 23230) | 0;
+  $call29 = _glGetUniformLocation(HEAP32[$shader >> 2] | 0, 23248) | 0;
   HEAP32[(HEAP32[$shader + 4 >> 2] | 0) + 56 >> 2] = $call29;
   HEAP32[$agg$result >> 2] = HEAP32[$shader >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$shader + 4 >> 2];
@@ -46721,7 +46783,7 @@ function _LoadShaderDefault($agg$result) {
   return;
  } else {
   HEAP32[$vararg_buffer1 >> 2] = $9;
-  _TraceLog(4, 23239, $vararg_buffer1);
+  _TraceLog(4, 23257, $vararg_buffer1);
   HEAP32[$agg$result >> 2] = HEAP32[$shader >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$shader + 4 >> 2];
   STACKTOP = sp;
@@ -46891,41 +46953,41 @@ function _rlEnableTexture($id) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $id$addr = sp;
  HEAP32[$id$addr >> 2] = $id;
- if ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 12 >> 2] | 0) == (HEAP32[$id$addr >> 2] | 0)) {
+ if ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 12 >> 2] | 0) == (HEAP32[$id$addr >> 2] | 0)) {
   STACKTOP = sp;
   return;
  }
- do if ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] | 0) > 0) {
-  $arrayidx10 = (HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) | 0;
-  do if ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) >> 2] | 0) == 1) {
-   $15 = HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] | 0;
-   HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] = (HEAP32[$arrayidx10 + 4 >> 2] | 0) < 4 ? $15 : ($15 | 0) % 4 | 0;
+ do if ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] | 0) > 0) {
+  $arrayidx10 = (HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) | 0;
+  do if ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) >> 2] | 0) == 1) {
+   $15 = HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] | 0;
+   HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] = (HEAP32[$arrayidx10 + 4 >> 2] | 0) < 4 ? $15 : ($15 | 0) % 4 | 0;
   } else {
-   $arrayidx27 = (HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) | 0;
+   $arrayidx27 = (HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) | 0;
    if ((HEAP32[$arrayidx10 >> 2] | 0) != 4) {
     HEAP32[$arrayidx27 + 8 >> 2] = 0;
     break;
    }
-   if ((HEAP32[$arrayidx27 + 4 >> 2] | 0) < 4) $cond38 = 1; else $cond38 = 4 - ((HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] | 0) % 4 | 0) | 0;
-   HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] = $cond38;
+   if ((HEAP32[$arrayidx27 + 4 >> 2] | 0) < 4) $cond38 = 1; else $cond38 = 4 - ((HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] | 0) % 4 | 0) | 0;
+   HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] = $cond38;
   } while (0);
-  if (_rlCheckBufferLimit(HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0) | 0) {
+  if (_rlCheckBufferLimit(HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0) | 0) {
    _rlglDraw();
    break;
   } else {
-   $arrayidx55 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
-   HEAP32[$arrayidx55 >> 2] = (HEAP32[$arrayidx55 >> 2] | 0) + (HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0);
-   $cCounter = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 | 0;
-   HEAP32[$cCounter >> 2] = (HEAP32[$cCounter >> 2] | 0) + (HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0);
-   $tcCounter = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 4 | 0;
-   HEAP32[$tcCounter >> 2] = (HEAP32[$tcCounter >> 2] | 0) + (HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 8 >> 2] | 0);
-   HEAP32[38623] = (HEAP32[38623] | 0) + 1;
+   $arrayidx55 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
+   HEAP32[$arrayidx55 >> 2] = (HEAP32[$arrayidx55 >> 2] | 0) + (HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0);
+   $cCounter = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 | 0;
+   HEAP32[$cCounter >> 2] = (HEAP32[$cCounter >> 2] | 0) + (HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0);
+   $tcCounter = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 4 | 0;
+   HEAP32[$tcCounter >> 2] = (HEAP32[$tcCounter >> 2] | 0) + (HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 8 >> 2] | 0);
+   HEAP32[38624] = (HEAP32[38624] | 0) + 1;
    break;
   }
  } while (0);
- if ((HEAP32[38623] | 0) >= 256) _rlglDraw();
- HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 12 >> 2] = HEAP32[$id$addr >> 2];
- HEAP32[(HEAP32[38622] | 0) + ((HEAP32[38623] | 0) - 1 << 4) + 4 >> 2] = 0;
+ if ((HEAP32[38624] | 0) >= 256) _rlglDraw();
+ HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 12 >> 2] = HEAP32[$id$addr >> 2];
+ HEAP32[(HEAP32[38623] | 0) + ((HEAP32[38624] | 0) - 1 << 4) + 4 >> 2] = 0;
  STACKTOP = sp;
  return;
 }
@@ -47042,7 +47104,7 @@ function _LoadTexture($agg$result, $fileName) {
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(4, 43938, sp_a);
+  _TraceLog(4, 43956, sp_a);
   HEAP32[$agg$result >> 2] = HEAP32[$texture >> 2];
   HEAP32[$agg$result + 4 >> 2] = HEAP32[$texture + 4 >> 2];
   HEAP32[$agg$result + 8 >> 2] = HEAP32[$texture + 8 >> 2];
@@ -47253,59 +47315,6 @@ function _drmp3_src_read_frames_ex($pSRC, $0, $1, $pFramesOut, $flush) {
  setTempRet0(HEAP32[$62 + 4 >> 2] | 0);
  STACKTOP = sp;
  return $64 | 0;
-}
-
-function _main() {
- var $agg$tmp1 = 0, $call = 0, $music$byval_copy1 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(48);
- $music$byval_copy1 = sp + 16 | 0;
- $agg$tmp1 = sp;
- _InitWindow(800, 450, 20548);
- _InitAudioDevice();
- _LoadMusicStream($music$byval_copy1, 20579);
- HEAP32[38562] = HEAP32[$music$byval_copy1 >> 2];
- HEAP32[38563] = HEAP32[$music$byval_copy1 + 4 >> 2];
- HEAP32[38564] = HEAP32[$music$byval_copy1 + 8 >> 2];
- HEAP32[38565] = HEAP32[$music$byval_copy1 + 12 >> 2];
- HEAP32[38566] = HEAP32[$music$byval_copy1 + 16 >> 2];
- HEAP32[38567] = HEAP32[$music$byval_copy1 + 20 >> 2];
- HEAP32[38568] = HEAP32[$music$byval_copy1 + 24 >> 2];
- HEAP32[38569] = HEAP32[$music$byval_copy1 + 28 >> 2];
- HEAP32[$music$byval_copy1 >> 2] = HEAP32[38562];
- HEAP32[$music$byval_copy1 + 4 >> 2] = HEAP32[38563];
- HEAP32[$music$byval_copy1 + 8 >> 2] = HEAP32[38564];
- HEAP32[$music$byval_copy1 + 12 >> 2] = HEAP32[38565];
- HEAP32[$music$byval_copy1 + 16 >> 2] = HEAP32[38566];
- HEAP32[$music$byval_copy1 + 20 >> 2] = HEAP32[38567];
- HEAP32[$music$byval_copy1 + 24 >> 2] = HEAP32[38568];
- HEAP32[$music$byval_copy1 + 28 >> 2] = HEAP32[38569];
- _PlayMusicStream($music$byval_copy1);
- $call = __Znwm(28) | 0;
- HEAP32[$agg$tmp1 >> 2] = 0;
- HEAP32[$agg$tmp1 + 4 >> 2] = 0;
- HEAP32[$agg$tmp1 + 8 >> 2] = 0;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp1, 20620, __ZNSt3__211char_traitsIcE6lengthEPKc(20620) | 0);
- HEAPF32[$music$byval_copy1 >> 2] = Math_fround(400.0);
- HEAPF32[$music$byval_copy1 + 4 >> 2] = Math_fround(225.0);
- __ZN4NaveC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERK7Vector2($call, $agg$tmp1, $music$byval_copy1);
- HEAP32[38570] = $call;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp1);
- _emscripten_set_main_loop(1, 0, 1);
- HEAP32[$music$byval_copy1 >> 2] = HEAP32[38562];
- HEAP32[$music$byval_copy1 + 4 >> 2] = HEAP32[38563];
- HEAP32[$music$byval_copy1 + 8 >> 2] = HEAP32[38564];
- HEAP32[$music$byval_copy1 + 12 >> 2] = HEAP32[38565];
- HEAP32[$music$byval_copy1 + 16 >> 2] = HEAP32[38566];
- HEAP32[$music$byval_copy1 + 20 >> 2] = HEAP32[38567];
- HEAP32[$music$byval_copy1 + 24 >> 2] = HEAP32[38568];
- HEAP32[$music$byval_copy1 + 28 >> 2] = HEAP32[38569];
- _UnloadMusicStream($music$byval_copy1);
- _CloseAudioDevice();
- _CloseWindow();
- STACKTOP = sp;
- return 0;
 }
 
 function _stbi__parse_zlib($a, $parse_header) {
@@ -47741,8 +47750,8 @@ function _drmp3_init_internal($pMP3, $onRead, $onSeek, $pUserData, $pConfig) {
  HEAP32[$onSeek$addr >> 2] = $onSeek;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pConfig$addr >> 2] = $pConfig;
- if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37097, 36861, 2844, 37116);
- if (!(HEAP32[$onRead$addr >> 2] | 0)) ___assert_fail(37136, 36861, 2845, 37116);
+ if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37115, 36879, 2844, 37134);
+ if (!(HEAP32[$onRead$addr >> 2] | 0)) ___assert_fail(37154, 36879, 2845, 37134);
  _drmp3dec_init(HEAP32[$pMP3$addr >> 2] | 0);
  if (HEAP32[$pConfig$addr >> 2] | 0) {
   $4 = HEAP32[$pConfig$addr >> 2] | 0;
@@ -48105,7 +48114,7 @@ function _stbi__load_main($s, $x, $y, $comp, $req_comp, $ri, $bpc) {
   return $28 | 0;
  }
  if (!(_stbi__hdr_test($5) | 0)) {
-  $tobool10 = (_stbi__err(39225) | 0) != 0;
+  $tobool10 = (_stbi__err(39243) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool10 ? 0 : 0;
   $28 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -48855,7 +48864,7 @@ function _stbir__edge_wrap_slow($edge, $n, $max) {
    break;
   }
  default:
-  ___assert_fail(42e3, 40603, 994, 42027);
+  ___assert_fail(42018, 40621, 994, 42045);
  } while (0);
  STACKTOP = sp;
  return HEAP32[$retval >> 2] | 0;
@@ -48998,39 +49007,39 @@ function _GifBegin($filename, $width, $height, $delay, $bitDepth, $dither) {
  HEAP32[$delay$addr >> 2] = $delay;
  HEAP32[sp >> 2] = $bitDepth;
  HEAP8[sp + 20 >> 0] = $dither & 1;
- HEAP32[38732] = _fopen(HEAP32[$filename$addr >> 2] | 0, 40449) | 0;
- if (!(HEAP32[38732] | 0)) {
+ HEAP32[38733] = _fopen(HEAP32[$filename$addr >> 2] | 0, 40467) | 0;
+ if (!(HEAP32[38733] | 0)) {
   HEAP8[$retval >> 0] = 0;
   $$pre_trunc = HEAP8[$retval >> 0] | 0;
   $32 = $$pre_trunc & 1;
   STACKTOP = sp;
   return $32 | 0;
  }
- HEAP32[38571] = _malloc((Math_imul(HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0) | 0) << 2) | 0;
- _fputs(24044, HEAP32[38732] | 0) | 0;
- _fputc(HEAP32[$width$addr >> 2] & 255, HEAP32[38732] | 0) | 0;
- _fputc((HEAP32[$width$addr >> 2] | 0) >>> 8 & 255, HEAP32[38732] | 0) | 0;
- _fputc(HEAP32[$height$addr >> 2] & 255, HEAP32[38732] | 0) | 0;
- _fputc((HEAP32[$height$addr >> 2] | 0) >>> 8 & 255, HEAP32[38732] | 0) | 0;
- _fputc(240, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
- _fputc(0, HEAP32[38732] | 0) | 0;
+ HEAP32[38572] = _malloc((Math_imul(HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0) | 0) << 2) | 0;
+ _fputs(24062, HEAP32[38733] | 0) | 0;
+ _fputc(HEAP32[$width$addr >> 2] & 255, HEAP32[38733] | 0) | 0;
+ _fputc((HEAP32[$width$addr >> 2] | 0) >>> 8 & 255, HEAP32[38733] | 0) | 0;
+ _fputc(HEAP32[$height$addr >> 2] & 255, HEAP32[38733] | 0) | 0;
+ _fputc((HEAP32[$height$addr >> 2] | 0) >>> 8 & 255, HEAP32[38733] | 0) | 0;
+ _fputc(240, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
+ _fputc(0, HEAP32[38733] | 0) | 0;
  if (HEAP32[$delay$addr >> 2] | 0) {
-  _fputc(33, HEAP32[38732] | 0) | 0;
-  _fputc(255, HEAP32[38732] | 0) | 0;
-  _fputc(11, HEAP32[38732] | 0) | 0;
-  _fputs(24051, HEAP32[38732] | 0) | 0;
-  _fputc(3, HEAP32[38732] | 0) | 0;
-  _fputc(1, HEAP32[38732] | 0) | 0;
-  _fputc(0, HEAP32[38732] | 0) | 0;
-  _fputc(0, HEAP32[38732] | 0) | 0;
-  _fputc(0, HEAP32[38732] | 0) | 0;
+  _fputc(33, HEAP32[38733] | 0) | 0;
+  _fputc(255, HEAP32[38733] | 0) | 0;
+  _fputc(11, HEAP32[38733] | 0) | 0;
+  _fputs(24069, HEAP32[38733] | 0) | 0;
+  _fputc(3, HEAP32[38733] | 0) | 0;
+  _fputc(1, HEAP32[38733] | 0) | 0;
+  _fputc(0, HEAP32[38733] | 0) | 0;
+  _fputc(0, HEAP32[38733] | 0) | 0;
+  _fputc(0, HEAP32[38733] | 0) | 0;
  }
  HEAP8[$retval >> 0] = 1;
  $$pre_trunc = HEAP8[$retval >> 0] | 0;
@@ -49164,9 +49173,9 @@ function _ma_pcm_converter__post_format_converter_on_read_deinterleaved($pConver
  HEAP32[$ppSamplesOut$addr >> 2] = $ppSamplesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pData >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25878, 24969, 32144, 33599);
+ if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25896, 24987, 32144, 33617);
  HEAP32[$pDSP >> 2] = HEAP32[HEAP32[$pData >> 2] >> 2];
- if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32738, 24969, 32147, 33599);
+ if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32756, 24987, 32147, 33617);
  $6 = HEAP32[$pDSP >> 2] | 0;
  if (!((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 5 & 1)) {
   $10 = _ma_channel_router_read_deinterleaved($6 + 120 | 0, HEAP32[$frameCount$addr >> 2] | 0, 0, HEAP32[$ppSamplesOut$addr >> 2] | 0, HEAP32[$pUserData$addr >> 2] | 0) | 0;
@@ -49333,9 +49342,9 @@ function _ma_pcm_converter__channel_router_on_read_deinterleaved($pRouter, $fram
  HEAP32[$ppSamplesOut$addr >> 2] = $ppSamplesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pData >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25878, 24969, 32189, 32683);
+ if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25896, 24987, 32189, 32701);
  HEAP32[$pDSP >> 2] = HEAP32[HEAP32[$pData >> 2] >> 2];
- if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32738, 24969, 32192, 32683);
+ if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32756, 24987, 32192, 32701);
  $6 = HEAP32[$pDSP >> 2] | 0;
  if ((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 5 & 1 | 0) {
   $10 = _ma_format_converter_read_deinterleaved($6 + 8 | 0, HEAP32[$frameCount$addr >> 2] | 0, 0, HEAP32[$ppSamplesOut$addr >> 2] | 0, HEAP32[$pUserData$addr >> 2] | 0) | 0;
@@ -49386,11 +49395,11 @@ function _drmp3_L12_subband_alloc_table($hdr, $sci) {
  if ((HEAP32[$mode >> 2] | 0) == 3) $cond11 = 0; else if ((HEAP32[$mode >> 2] | 0) == 1) $cond11 = ((HEAPU8[(HEAP32[$hdr$addr >> 2] | 0) + 3 >> 0] >> 4 & 3) << 2) + 4 | 0; else $cond11 = 32;
  HEAP32[$stereo_bands >> 2] = $cond11;
  do if ((HEAPU8[(HEAP32[$hdr$addr >> 2] | 0) + 1 >> 0] & 6 | 0) == 6) {
-  HEAP32[$alloc >> 2] = 36821;
+  HEAP32[$alloc >> 2] = 36839;
   HEAP32[$nbands >> 2] = 32;
  } else {
   if (!(HEAPU8[(HEAP32[$hdr$addr >> 2] | 0) + 1 >> 0] & 8)) {
-   HEAP32[$alloc >> 2] = 36824;
+   HEAP32[$alloc >> 2] = 36842;
    HEAP32[$nbands >> 2] = 30;
    break;
   }
@@ -49399,10 +49408,10 @@ function _drmp3_L12_subband_alloc_table($hdr, $sci) {
   $shr28 = $call >>> ((HEAP32[$mode >> 2] | 0) != 3 & 1);
   HEAP32[$kbps >> 2] = $shr28;
   HEAP32[$kbps >> 2] = HEAP32[$kbps >> 2] | 0 ? $shr28 : 192;
-  HEAP32[$alloc >> 2] = 36833;
+  HEAP32[$alloc >> 2] = 36851;
   HEAP32[$nbands >> 2] = 27;
   if ((HEAP32[$kbps >> 2] | 0) >>> 0 < 56) {
-   HEAP32[$alloc >> 2] = 36845;
+   HEAP32[$alloc >> 2] = 36863;
    HEAP32[$nbands >> 2] = (HEAP32[$sample_rate_idx >> 2] | 0) == 2 ? 12 : 8;
    break;
   }
@@ -49539,7 +49548,7 @@ function _stbv_codebook_decode_start($f, $c) {
     HEAP32[$z >> 2] = -1;
    }
   } else HEAP32[$z >> 2] = _stbv_codebook_decode_scalar_raw(HEAP32[$f$addr >> 2] | 0, HEAP32[$c$addr >> 2] | 0) | 0;
-  do if (HEAP8[(HEAP32[$c$addr >> 2] | 0) + 23 >> 0] | 0) if ((HEAP32[$z >> 2] | 0) < (HEAP32[(HEAP32[$c$addr >> 2] | 0) + 2092 >> 2] | 0)) break; else ___assert_fail(35938, 35641, 1740, 35960); while (0);
+  do if (HEAP8[(HEAP32[$c$addr >> 2] | 0) + 23 >> 0] | 0) if ((HEAP32[$z >> 2] | 0) < (HEAP32[(HEAP32[$c$addr >> 2] | 0) + 2092 >> 2] | 0)) break; else ___assert_fail(35956, 35659, 1740, 35978); while (0);
   if ((HEAP32[$z >> 2] | 0) < 0) {
    if (!(HEAP8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] | 0)) if (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1384 >> 2] | 0) {
     HEAP32[$retval >> 2] = HEAP32[$z >> 2];
@@ -49609,6 +49618,53 @@ function _stbv_codebook_decode_step($f, $c, $output, $len, $step) {
  return $28 | 0;
 }
 
+function __ZL15UpdateDrawFramev() {
+ var $agg$tmp10 = 0, $agg$tmp11 = 0, $agg$tmp11$byval_copy = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(48);
+ $agg$tmp11$byval_copy = sp;
+ $agg$tmp10 = sp + 36 | 0;
+ $agg$tmp11 = sp + 32 | 0;
+ HEAP32[$agg$tmp11$byval_copy >> 2] = HEAP32[38562];
+ HEAP32[$agg$tmp11$byval_copy + 4 >> 2] = HEAP32[38563];
+ HEAP32[$agg$tmp11$byval_copy + 8 >> 2] = HEAP32[38564];
+ HEAP32[$agg$tmp11$byval_copy + 12 >> 2] = HEAP32[38565];
+ HEAP32[$agg$tmp11$byval_copy + 16 >> 2] = HEAP32[38566];
+ HEAP32[$agg$tmp11$byval_copy + 20 >> 2] = HEAP32[38567];
+ HEAP32[$agg$tmp11$byval_copy + 24 >> 2] = HEAP32[38568];
+ HEAP32[$agg$tmp11$byval_copy + 28 >> 2] = HEAP32[38569];
+ _UpdateMusicStream($agg$tmp11$byval_copy);
+ if (_IsKeyDown(262) | 0) __ZN4Nave6move_xEf(HEAP32[38570] | 0, Math_fround(2.0));
+ if (_IsKeyDown(263) | 0) __ZN4Nave6move_xEf(HEAP32[38570] | 0, Math_fround(-2.0));
+ if (_IsKeyDown(265) | 0) __ZN4Nave6move_yEf(HEAP32[38570] | 0, Math_fround(-2.0));
+ if (_IsKeyDown(264) | 0) __ZN4Nave6move_yEf(HEAP32[38570] | 0, Math_fround(2.0));
+ _BeginDrawing();
+ HEAP8[$agg$tmp10 >> 0] = -11;
+ HEAP8[$agg$tmp10 + 1 >> 0] = -11;
+ HEAP8[$agg$tmp10 + 2 >> 0] = -11;
+ HEAP8[$agg$tmp10 + 3 >> 0] = -1;
+ HEAP8[$agg$tmp11$byval_copy >> 0] = HEAP8[$agg$tmp10 >> 0] | 0;
+ HEAP8[$agg$tmp11$byval_copy + 1 >> 0] = HEAP8[$agg$tmp10 + 1 >> 0] | 0;
+ HEAP8[$agg$tmp11$byval_copy + 2 >> 0] = HEAP8[$agg$tmp10 + 2 >> 0] | 0;
+ HEAP8[$agg$tmp11$byval_copy + 3 >> 0] = HEAP8[$agg$tmp10 + 3 >> 0] | 0;
+ _ClearBackground($agg$tmp11$byval_copy);
+ __ZN10Background4drawEv(HEAP32[38571] | 0);
+ __ZN4Nave4drawEv(HEAP32[38570] | 0);
+ HEAP8[$agg$tmp11 >> 0] = -56;
+ HEAP8[$agg$tmp11 + 1 >> 0] = -56;
+ HEAP8[$agg$tmp11 + 2 >> 0] = -56;
+ HEAP8[$agg$tmp11 + 3 >> 0] = -1;
+ HEAP8[$agg$tmp11$byval_copy >> 0] = HEAP8[$agg$tmp11 >> 0] | 0;
+ HEAP8[$agg$tmp11$byval_copy + 1 >> 0] = HEAP8[$agg$tmp11 + 1 >> 0] | 0;
+ HEAP8[$agg$tmp11$byval_copy + 2 >> 0] = HEAP8[$agg$tmp11 + 2 >> 0] | 0;
+ HEAP8[$agg$tmp11$byval_copy + 3 >> 0] = HEAP8[$agg$tmp11 + 3 >> 0] | 0;
+ _DrawText(20657, 20, 20, 40, $agg$tmp11$byval_copy);
+ _EndDrawing();
+ STACKTOP = sp;
+ return;
+}
+
 function _drmp3_seek_to_pcm_frame__brute_force($pMP3, $0, $1) {
  $pMP3 = $pMP3 | 0;
  $0 = $0 | 0;
@@ -49625,7 +49681,7 @@ function _drmp3_seek_to_pcm_frame__brute_force($pMP3, $0, $1) {
  $2 = $frameIndex$addr;
  HEAP32[$2 >> 2] = $0;
  HEAP32[$2 + 4 >> 2] = $1;
- if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37097, 36861, 3192, 37386);
+ if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37115, 36879, 3192, 37404);
  $7 = $frameIndex$addr;
  $14 = (HEAP32[$pMP3$addr >> 2] | 0) + 15944 | 0;
  if ((HEAP32[$7 >> 2] | 0) == (HEAP32[$14 >> 2] | 0) ? (HEAP32[$7 + 4 >> 2] | 0) == (HEAP32[$14 + 4 >> 2] | 0) : 0) {
@@ -49648,7 +49704,7 @@ function _drmp3_seek_to_pcm_frame__brute_force($pMP3, $0, $1) {
  $47 = HEAP32[$42 + 4 >> 2] | 0;
  $49 = (HEAP32[$pMP3$addr >> 2] | 0) + 15944 | 0;
  $54 = HEAP32[$49 + 4 >> 2] | 0;
- if (!($47 >>> 0 > $54 >>> 0 ? 1 : ($47 | 0) == ($54 | 0) ? (HEAP32[$42 >> 2] | 0) >>> 0 >= (HEAP32[$49 >> 2] | 0) >>> 0 : 0)) ___assert_fail(37423, 36861, 3209, 37386);
+ if (!($47 >>> 0 > $54 >>> 0 ? 1 : ($47 | 0) == ($54 | 0) ? (HEAP32[$42 >> 2] | 0) >>> 0 >= (HEAP32[$49 >> 2] | 0) >>> 0 : 0)) ___assert_fail(37441, 36879, 3209, 37404);
  CSE$0 = HEAP32[$pMP3$addr >> 2] | 0;
  $60 = CSE$0 | 0;
  $61 = $frameIndex$addr;
@@ -49738,7 +49794,7 @@ function _stbi__loadf_main($s, $x, $y, $comp, $req_comp) {
  }
  HEAP32[$data >> 2] = _stbi__load_and_postprocess_8bit($1, $2, $3, $4, $5) | 0;
  if (!(HEAP32[$data >> 2] | 0)) {
-  $tobool12 = (_stbi__err(39225) | 0) != 0;
+  $tobool12 = (_stbi__err(39243) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool12 ? 0 : 0;
   $25 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -49762,22 +49818,22 @@ function _GetShapesTexture($agg$result) {
  $rec = sp_a + 56 | 0;
  $tmp1 = sp_a + 16 | 0;
  $$compoundliteral = sp_a;
- if (HEAP32[38831] | 0) {
-  HEAP32[$agg$result >> 2] = HEAP32[38831];
-  HEAP32[$agg$result + 4 >> 2] = HEAP32[38832];
-  HEAP32[$agg$result + 8 >> 2] = HEAP32[38833];
-  HEAP32[$agg$result + 12 >> 2] = HEAP32[38834];
-  HEAP32[$agg$result + 16 >> 2] = HEAP32[38835];
+ if (HEAP32[38832] | 0) {
+  HEAP32[$agg$result >> 2] = HEAP32[38832];
+  HEAP32[$agg$result + 4 >> 2] = HEAP32[38833];
+  HEAP32[$agg$result + 8 >> 2] = HEAP32[38834];
+  HEAP32[$agg$result + 12 >> 2] = HEAP32[38835];
+  HEAP32[$agg$result + 16 >> 2] = HEAP32[38836];
   STACKTOP = sp;
   return;
  }
  _GetFontDefault($tmp);
  $texture = $tmp + 8 | 0;
- HEAP32[38831] = HEAP32[$texture >> 2];
- HEAP32[38832] = HEAP32[$texture + 4 >> 2];
- HEAP32[38833] = HEAP32[$texture + 8 >> 2];
- HEAP32[38834] = HEAP32[$texture + 12 >> 2];
- HEAP32[38835] = HEAP32[$texture + 16 >> 2];
+ HEAP32[38832] = HEAP32[$texture >> 2];
+ HEAP32[38833] = HEAP32[$texture + 4 >> 2];
+ HEAP32[38834] = HEAP32[$texture + 8 >> 2];
+ HEAP32[38835] = HEAP32[$texture + 12 >> 2];
+ HEAP32[38836] = HEAP32[$texture + 16 >> 2];
  _GetFontDefault($tmp1);
  $arrayidx = (HEAP32[$tmp1 + 28 >> 2] | 0) + 1520 | 0;
  HEAP32[$rec >> 2] = HEAP32[$arrayidx >> 2];
@@ -49788,61 +49844,15 @@ function _GetShapesTexture($agg$result) {
  HEAPF32[$$compoundliteral + 4 >> 2] = Math_fround(Math_fround(HEAPF32[$rec + 4 >> 2]) + Math_fround(1.0));
  HEAPF32[$$compoundliteral + 8 >> 2] = Math_fround(Math_fround(HEAPF32[$rec + 8 >> 2]) - Math_fround(2.0));
  HEAPF32[$$compoundliteral + 12 >> 2] = Math_fround(Math_fround(HEAPF32[$rec + 12 >> 2]) - Math_fround(2.0));
- HEAP32[38827] = HEAP32[$$compoundliteral >> 2];
- HEAP32[38828] = HEAP32[$$compoundliteral + 4 >> 2];
- HEAP32[38829] = HEAP32[$$compoundliteral + 8 >> 2];
- HEAP32[38830] = HEAP32[$$compoundliteral + 12 >> 2];
- HEAP32[$agg$result >> 2] = HEAP32[38831];
- HEAP32[$agg$result + 4 >> 2] = HEAP32[38832];
- HEAP32[$agg$result + 8 >> 2] = HEAP32[38833];
- HEAP32[$agg$result + 12 >> 2] = HEAP32[38834];
- HEAP32[$agg$result + 16 >> 2] = HEAP32[38835];
- STACKTOP = sp;
- return;
-}
-
-function __ZL15UpdateDrawFramev() {
- var $agg$tmp10 = 0, $agg$tmp11 = 0, $agg$tmp11$byval_copy = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(48);
- $agg$tmp11$byval_copy = sp;
- $agg$tmp10 = sp + 36 | 0;
- $agg$tmp11 = sp + 32 | 0;
- HEAP32[$agg$tmp11$byval_copy >> 2] = HEAP32[38562];
- HEAP32[$agg$tmp11$byval_copy + 4 >> 2] = HEAP32[38563];
- HEAP32[$agg$tmp11$byval_copy + 8 >> 2] = HEAP32[38564];
- HEAP32[$agg$tmp11$byval_copy + 12 >> 2] = HEAP32[38565];
- HEAP32[$agg$tmp11$byval_copy + 16 >> 2] = HEAP32[38566];
- HEAP32[$agg$tmp11$byval_copy + 20 >> 2] = HEAP32[38567];
- HEAP32[$agg$tmp11$byval_copy + 24 >> 2] = HEAP32[38568];
- HEAP32[$agg$tmp11$byval_copy + 28 >> 2] = HEAP32[38569];
- _UpdateMusicStream($agg$tmp11$byval_copy);
- if (_IsKeyDown(262) | 0) __ZN4Nave6move_xEf(HEAP32[38570] | 0, Math_fround(2.0));
- if (_IsKeyDown(263) | 0) __ZN4Nave6move_xEf(HEAP32[38570] | 0, Math_fround(-2.0));
- if (_IsKeyDown(265) | 0) __ZN4Nave6move_yEf(HEAP32[38570] | 0, Math_fround(-2.0));
- if (_IsKeyDown(264) | 0) __ZN4Nave6move_yEf(HEAP32[38570] | 0, Math_fround(2.0));
- _BeginDrawing();
- HEAP8[$agg$tmp10 >> 0] = -11;
- HEAP8[$agg$tmp10 + 1 >> 0] = -11;
- HEAP8[$agg$tmp10 + 2 >> 0] = -11;
- HEAP8[$agg$tmp10 + 3 >> 0] = -1;
- HEAP8[$agg$tmp11$byval_copy >> 0] = HEAP8[$agg$tmp10 >> 0] | 0;
- HEAP8[$agg$tmp11$byval_copy + 1 >> 0] = HEAP8[$agg$tmp10 + 1 >> 0] | 0;
- HEAP8[$agg$tmp11$byval_copy + 2 >> 0] = HEAP8[$agg$tmp10 + 2 >> 0] | 0;
- HEAP8[$agg$tmp11$byval_copy + 3 >> 0] = HEAP8[$agg$tmp10 + 3 >> 0] | 0;
- _ClearBackground($agg$tmp11$byval_copy);
- __ZN4Nave4drawEv(HEAP32[38570] | 0);
- HEAP8[$agg$tmp11 >> 0] = -56;
- HEAP8[$agg$tmp11 + 1 >> 0] = -56;
- HEAP8[$agg$tmp11 + 2 >> 0] = -56;
- HEAP8[$agg$tmp11 + 3 >> 0] = -1;
- HEAP8[$agg$tmp11$byval_copy >> 0] = HEAP8[$agg$tmp11 >> 0] | 0;
- HEAP8[$agg$tmp11$byval_copy + 1 >> 0] = HEAP8[$agg$tmp11 + 1 >> 0] | 0;
- HEAP8[$agg$tmp11$byval_copy + 2 >> 0] = HEAP8[$agg$tmp11 + 2 >> 0] | 0;
- HEAP8[$agg$tmp11$byval_copy + 3 >> 0] = HEAP8[$agg$tmp11 + 3 >> 0] | 0;
- _DrawText(20639, 20, 20, 40, $agg$tmp11$byval_copy);
- _EndDrawing();
+ HEAP32[38828] = HEAP32[$$compoundliteral >> 2];
+ HEAP32[38829] = HEAP32[$$compoundliteral + 4 >> 2];
+ HEAP32[38830] = HEAP32[$$compoundliteral + 8 >> 2];
+ HEAP32[38831] = HEAP32[$$compoundliteral + 12 >> 2];
+ HEAP32[$agg$result >> 2] = HEAP32[38832];
+ HEAP32[$agg$result + 4 >> 2] = HEAP32[38833];
+ HEAP32[$agg$result + 8 >> 2] = HEAP32[38834];
+ HEAP32[$agg$result + 12 >> 2] = HEAP32[38835];
+ HEAP32[$agg$result + 16 >> 2] = HEAP32[38836];
  STACKTOP = sp;
  return;
 }
@@ -50002,8 +50012,8 @@ function _ma_context__try_get_device_name_by_id($pContext, $deviceType, $pDevice
  HEAP32[$pDeviceID$addr >> 2] = $pDeviceID;
  HEAP32[$pName$addr >> 2] = $pName;
  HEAP32[$nameBufferSize$addr >> 2] = $nameBufferSize;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 6090, 25951);
- if (!(HEAP32[$pName$addr >> 2] | 0)) ___assert_fail(25989, 24969, 6091, 25951);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 6090, 25969);
+ if (!(HEAP32[$pName$addr >> 2] | 0)) ___assert_fail(26007, 24987, 6091, 25969);
  if (!(HEAP32[$pDeviceID$addr >> 2] | 0)) {
   HEAP32[$retval >> 2] = -104;
   $11 = HEAP32[$retval >> 2] | 0;
@@ -50069,7 +50079,7 @@ function _stbi__load_and_postprocess_8bit($s, $x, $y, $comp, $req_comp) {
   return $28 | 0;
  }
  if ((HEAP32[$ri >> 2] | 0) != 8) {
-  if ((HEAP32[$ri >> 2] | 0) != 16) ___assert_fail(39114, 39140, 1129, 39184);
+  if ((HEAP32[$ri >> 2] | 0) != 16) ___assert_fail(39132, 39158, 1129, 39202);
   if (!(HEAP32[$req_comp$addr >> 2] | 0)) $cond = HEAP32[HEAP32[$comp$addr >> 2] >> 2] | 0; else $cond = HEAP32[$req_comp$addr >> 2] | 0;
   HEAP32[$result >> 2] = _stbi__convert_16_to_8(HEAP32[$result >> 2] | 0, HEAP32[HEAP32[$x$addr >> 2] >> 2] | 0, HEAP32[HEAP32[$y$addr >> 2] >> 2] | 0, $cond) | 0;
   HEAP32[$ri >> 2] = 8;
@@ -50105,7 +50115,7 @@ function _drmp3_find_closest_seek_point($pMP3, $0, $1, $pSeekPointIndex) {
  HEAP32[$2 >> 2] = $0;
  HEAP32[$2 + 4 >> 2] = $1;
  HEAP32[$pSeekPointIndex$addr >> 2] = $pSeekPointIndex;
- if (!(HEAP32[$pSeekPointIndex$addr >> 2] | 0)) ___assert_fail(37459, 36861, 3217, 37489);
+ if (!(HEAP32[$pSeekPointIndex$addr >> 2] | 0)) ___assert_fail(37477, 36879, 3217, 37507);
  HEAP32[HEAP32[$pSeekPointIndex$addr >> 2] >> 2] = 0;
  $8 = $frameIndex$addr;
  $13 = HEAP32[$8 + 4 >> 2] | 0;
@@ -50161,7 +50171,7 @@ function _CompileShader($shaderStr, $type) {
  $5 = HEAP32[$shader >> 2] | 0;
  if ((HEAP32[$success >> 2] | 0) != 1) {
   HEAP32[$vararg_buffer >> 2] = $5;
-  _TraceLog(4, 23427, $vararg_buffer);
+  _TraceLog(4, 23445, $vararg_buffer);
   HEAP32[$maxLength >> 2] = 0;
   _glGetShaderiv(HEAP32[$shader >> 2] | 0, 35716, $maxLength | 0);
   $7 = HEAP32[$maxLength >> 2] | 0;
@@ -50172,14 +50182,14 @@ function _CompileShader($shaderStr, $type) {
   if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow((1 * $vla$alloca_mul | 0) + 15 & -16 | 0);
   _glGetShaderInfoLog(HEAP32[$shader >> 2] | 0, HEAP32[$maxLength >> 2] | 0, $length | 0, $vla | 0);
   HEAP32[$vararg_buffer1 >> 2] = $vla;
-  _TraceLog(3, 23376, $vararg_buffer1);
+  _TraceLog(3, 23394, $vararg_buffer1);
   _llvm_stackrestore(HEAP32[$saved_stack >> 2] | 0);
   $12 = HEAP32[$shader >> 2] | 0;
   STACKTOP = sp;
   return $12 | 0;
  } else {
   HEAP32[$vararg_buffer4 >> 2] = $5;
-  _TraceLog(3, 23468, $vararg_buffer4);
+  _TraceLog(3, 23486, $vararg_buffer4);
   $12 = HEAP32[$shader >> 2] | 0;
   STACKTOP = sp;
   return $12 | 0;
@@ -50199,7 +50209,7 @@ function ___fdopen($fd, $mode) {
  $vararg_buffer2 = sp_a + 8 | 0;
  $vararg_buffer = sp_a;
  $wsz = sp_a + 40 | 0;
- if (!(_strchr(44892, HEAP8[$mode >> 0] | 0) | 0)) {
+ if (!(_strchr(44910, HEAP8[$mode >> 0] | 0) | 0)) {
   HEAP32[(___errno_location() | 0) >> 2] = 28;
   $retval$0 = 0;
  } else {
@@ -50238,7 +50248,7 @@ function ___fdopen($fd, $mode) {
    HEAP32[$call2 + 36 >> 2] = 2;
    HEAP32[$call2 + 40 >> 2] = 1;
    HEAP32[$call2 + 12 >> 2] = 2;
-   if (!(HEAP32[38848] | 0)) HEAP32[$call2 + 76 >> 2] = -1;
+   if (!(HEAP32[38849] | 0)) HEAP32[$call2 + 76 >> 2] = -1;
    ___ofl_add($call2) | 0;
    $retval$0 = $call2;
   }
@@ -50273,23 +50283,23 @@ function _GifWriteFrame($image, $width, $height, $delay, $bitDepth, $dither) {
  HEAP32[$delay$addr >> 2] = $delay;
  HEAP32[$bitDepth$addr >> 2] = $bitDepth;
  HEAP8[$dither$addr >> 0] = $dither & 1;
- if (!(HEAP32[38732] | 0)) {
+ if (!(HEAP32[38733] | 0)) {
   HEAP8[$retval >> 0] = 0;
   $$pre_trunc = HEAP8[$retval >> 0] | 0;
   $20 = $$pre_trunc & 1;
   STACKTOP = sp;
   return $20 | 0;
  }
- HEAP32[$oldImage >> 2] = HEAP32[38571];
+ HEAP32[$oldImage >> 2] = HEAP32[38572];
  CSE$0 = HEAP8[$dither$addr >> 0] & 1 | 0;
  _GifMakePalette(CSE$0 | 0 ? 0 : HEAP32[$oldImage >> 2] | 0, HEAP32[$image$addr >> 2] | 0, HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0, HEAP32[$bitDepth$addr >> 2] | 0, CSE$0 | 0, $pal);
  $10 = HEAP32[$oldImage >> 2] | 0;
  $11 = HEAP32[$image$addr >> 2] | 0;
- $12 = HEAP32[38571] | 0;
+ $12 = HEAP32[38572] | 0;
  $13 = HEAP32[$width$addr >> 2] | 0;
  $14 = HEAP32[$height$addr >> 2] | 0;
  if (HEAP8[$dither$addr >> 0] & 1) _GifDitherImage($10, $11, $12, $13, $14, $pal); else _GifThresholdImage($10, $11, $12, $13, $14, $pal);
- _GifWriteLzwImage(HEAP32[38732] | 0, HEAP32[38571] | 0, 0, 0, HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0, HEAP32[$delay$addr >> 2] | 0, $pal);
+ _GifWriteLzwImage(HEAP32[38733] | 0, HEAP32[38572] | 0, 0, 0, HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0, HEAP32[$delay$addr >> 2] | 0, $pal);
  HEAP8[$retval >> 0] = 1;
  $$pre_trunc = HEAP8[$retval >> 0] | 0;
  $20 = $$pre_trunc & 1;
@@ -50345,7 +50355,7 @@ function _stbv_next_segment($f) {
   HEAP32[CSE$2 + 1388 >> 2] = (HEAP32[CSE$2 + 1380 >> 2] | 0) - 1;
  }
  if ((HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1380 >> 2] | 0) >= (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1116 >> 2] | 0)) HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1380 >> 2] = -1;
- if (HEAPU8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] | 0) ___assert_fail(35743, 35641, 1522, 35764);
+ if (HEAPU8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] | 0) ___assert_fail(35761, 35659, 1522, 35782);
  HEAP8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] = HEAP32[$len >> 2];
  HEAP32[$retval >> 2] = HEAP32[$len >> 2];
  $30 = HEAP32[$retval >> 2] | 0;
@@ -50473,7 +50483,7 @@ function _stbi__compute_transparency16($z, $tc, $out_n) {
  HEAP32[$s >> 2] = HEAP32[HEAP32[$z$addr >> 2] >> 2];
  HEAP32[$pixel_count >> 2] = Math_imul(HEAP32[HEAP32[$s >> 2] >> 2] | 0, HEAP32[(HEAP32[$s >> 2] | 0) + 4 >> 2] | 0) | 0;
  HEAP32[$p >> 2] = HEAP32[(HEAP32[$z$addr >> 2] | 0) + 12 >> 2];
- if (!((HEAP32[$out_n$addr >> 2] | 0) == 2 | (HEAP32[$out_n$addr >> 2] | 0) == 4)) ___assert_fail(39789, 39140, 4686, 39841);
+ if (!((HEAP32[$out_n$addr >> 2] | 0) == 2 | (HEAP32[$out_n$addr >> 2] | 0) == 4)) ___assert_fail(39807, 39158, 4686, 39859);
  $cmp3 = (HEAP32[$out_n$addr >> 2] | 0) == 2;
  HEAP32[$i >> 2] = 0;
  if ($cmp3) {
@@ -50518,7 +50528,7 @@ function _stbi__compute_transparency($z, $tc, $out_n) {
  HEAP32[$s >> 2] = HEAP32[HEAP32[$z$addr >> 2] >> 2];
  HEAP32[$pixel_count >> 2] = Math_imul(HEAP32[HEAP32[$s >> 2] >> 2] | 0, HEAP32[(HEAP32[$s >> 2] | 0) + 4 >> 2] | 0) | 0;
  HEAP32[$p >> 2] = HEAP32[(HEAP32[$z$addr >> 2] | 0) + 12 >> 2];
- if (!((HEAP32[$out_n$addr >> 2] | 0) == 2 | (HEAP32[$out_n$addr >> 2] | 0) == 4)) ___assert_fail(39789, 39140, 4661, 39814);
+ if (!((HEAP32[$out_n$addr >> 2] | 0) == 2 | (HEAP32[$out_n$addr >> 2] | 0) == 4)) ___assert_fail(39807, 39158, 4661, 39832);
  $cmp3 = (HEAP32[$out_n$addr >> 2] | 0) == 2;
  HEAP32[$i >> 2] = 0;
  if ($cmp3) {
@@ -50604,7 +50614,7 @@ function _stbi__zexpand($z, $zout, $n) {
  HEAP32[$n$addr >> 2] = $n;
  HEAP32[(HEAP32[$z$addr >> 2] | 0) + 16 >> 2] = HEAP32[$zout$addr >> 2];
  if (!(HEAP32[(HEAP32[$z$addr >> 2] | 0) + 28 >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _stbi__err(40051) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40069) | 0;
   $28 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $28 | 0;
@@ -50621,7 +50631,7 @@ function _stbi__zexpand($z, $zout, $n) {
  }
  HEAP32[$q >> 2] = _realloc(HEAP32[(HEAP32[$z$addr >> 2] | 0) + 20 >> 2] | 0, HEAP32[$limit >> 2] | 0) | 0;
  if (!(HEAP32[$q >> 2] | 0)) {
-  HEAP32[$retval >> 2] = _stbi__err(39216) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(39234) | 0;
   $28 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $28 | 0;
@@ -50749,7 +50759,7 @@ function _jar_mod_load_file($modctx, $filename) {
   _free(HEAP32[(HEAP32[$modctx$addr >> 2] | 0) + 5872 >> 2] | 0);
   HEAP32[(HEAP32[$modctx$addr >> 2] | 0) + 5872 >> 2] = 0;
  }
- HEAP32[$f >> 2] = _fopen(HEAP32[$filename$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$f >> 2] = _fopen(HEAP32[$filename$addr >> 2] | 0, 39129) | 0;
  if (!(HEAP32[$f >> 2] | 0)) {
   $28 = HEAP32[$fsize >> 2] | 0;
   STACKTOP = sp;
@@ -50840,8 +50850,8 @@ function _MouseButtonCallback($window, $button, $action, $mods) {
  HEAP32[$action$addr >> 2] = $action;
  HEAP32[sp + 64 >> 2] = $mods;
  CSE$0 = HEAP32[$button$addr >> 2] | 0;
- HEAP8[155982 + CSE$0 >> 0] = HEAP8[155979 + CSE$0 >> 0] | 0;
- HEAP8[155979 + (HEAP32[$button$addr >> 2] | 0) >> 0] = HEAP32[$action$addr >> 2];
+ HEAP8[155986 + CSE$0 >> 0] = HEAP8[155983 + CSE$0 >> 0] | 0;
+ HEAP8[155983 + (HEAP32[$button$addr >> 2] | 0) >> 0] = HEAP32[$action$addr >> 2];
  if (_IsMouseButtonPressed(0) | 0) HEAP32[$gestureEvent >> 2] = 1; else if (_IsMouseButtonReleased(0) | 0) HEAP32[$gestureEvent >> 2] = 0;
  HEAP32[$gestureEvent + 8 >> 2] = 0;
  HEAP32[$gestureEvent + 4 >> 2] = 1;
@@ -51140,7 +51150,7 @@ function _rlOrtho($left, $right, $bottom, $top, $znear, $zfar) {
  HEAPF64[$znear$addr >> 3] = $znear;
  HEAPF64[$zfar$addr >> 3] = $zfar;
  _MatrixOrtho($matOrtho, +HEAPF64[$left$addr >> 3], +HEAPF64[$right$addr >> 3], +HEAPF64[$bottom$addr >> 3], +HEAPF64[$top$addr >> 3], +HEAPF64[$znear$addr >> 3], +HEAPF64[$zfar$addr >> 3]);
- CSE$0 = HEAP32[38588] | 0;
+ CSE$0 = HEAP32[38589] | 0;
  $6 = CSE$0 | 0;
  dest = $$byval_copy;
  src = CSE$0 | 0;
@@ -51447,7 +51457,7 @@ function _stbi_write_png($filename, $x, $y, $comp, $data, $stride_bytes) {
   STACKTOP = sp;
   return $13 | 0;
  }
- HEAP32[$f >> 2] = _stbiw__fopen(HEAP32[$filename$addr >> 2] | 0, 40449) | 0;
+ HEAP32[$f >> 2] = _stbiw__fopen(HEAP32[$filename$addr >> 2] | 0, 40467) | 0;
  $8 = HEAP32[$png >> 2] | 0;
  if (HEAP32[$f >> 2] | 0) {
   _fwrite($8, 1, HEAP32[$len >> 2] | 0, HEAP32[$f >> 2] | 0) | 0;
@@ -51488,9 +51498,9 @@ function _ma_pcm_converter__src_on_read_deinterleaved($pSRC, $frameCount, $ppSam
  HEAP32[$ppSamplesOut$addr >> 2] = $ppSamplesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pData >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25878, 24969, 32168, 33224);
+ if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25896, 24987, 32168, 33242);
  HEAP32[$pDSP >> 2] = HEAP32[HEAP32[$pData >> 2] >> 2];
- if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32738, 24969, 32171, 33224);
+ if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32756, 24987, 32171, 33242);
  $6 = HEAP32[$pDSP >> 2] | 0;
  if ((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 5 & 1 | 0) {
   $10 = _ma_channel_router_read_deinterleaved($6 + 120 | 0, HEAP32[$frameCount$addr >> 2] | 0, 0, HEAP32[$ppSamplesOut$addr >> 2] | 0, HEAP32[$pUserData$addr >> 2] | 0) | 0;
@@ -51528,7 +51538,7 @@ function _stbir__filter_trapezoid($x, $scale) {
  HEAPF32[$scale$addr >> 2] = $scale;
  HEAPF32[$halfscale >> 2] = Math_fround(Math_fround(HEAPF32[$scale$addr >> 2]) / Math_fround(2.0));
  HEAPF32[$t >> 2] = Math_fround(Math_fround(HEAPF32[$halfscale >> 2]) + Math_fround(.5));
- if (!(Math_fround(HEAPF32[$scale$addr >> 2]) <= Math_fround(1.0))) ___assert_fail(42072, 40603, 762, 42108);
+ if (!(Math_fround(HEAPF32[$scale$addr >> 2]) <= Math_fround(1.0))) ___assert_fail(42090, 40621, 762, 42126);
  HEAPF32[$x$addr >> 2] = Math_fround(+Math_abs(+(+Math_fround(HEAPF32[$x$addr >> 2]))));
  $5 = Math_fround(HEAPF32[$x$addr >> 2]);
  if ($5 >= Math_fround(HEAPF32[$t >> 2])) {
@@ -51887,7 +51897,7 @@ function _stbi__zhuffman_decode_slowpath($a, $z) {
  CSE$0 = HEAP32[$z$addr >> 2] | 0;
  CSE$1 = HEAP32[$s >> 2] << 1 | 0;
  HEAP32[$b >> 2] = (HEAP32[$k >> 2] >> 16 - (HEAP32[$s >> 2] | 0)) - (HEAPU16[CSE$0 + 1024 + CSE$1 >> 1] | 0) + (HEAPU16[CSE$0 + 1124 + CSE$1 >> 1] | 0);
- if ((HEAPU8[(HEAP32[$z$addr >> 2] | 0) + 1156 + (HEAP32[$b >> 2] | 0) >> 0] | 0) != (HEAP32[$s >> 2] | 0)) ___assert_fail(40071, 39140, 3992, 40087);
+ if ((HEAPU8[(HEAP32[$z$addr >> 2] | 0) + 1156 + (HEAP32[$b >> 2] | 0) >> 0] | 0) != (HEAP32[$s >> 2] | 0)) ___assert_fail(40089, 39158, 3992, 40105);
  $code_buffer12 = (HEAP32[$a$addr >> 2] | 0) + 12 | 0;
  HEAP32[$code_buffer12 >> 2] = (HEAP32[$code_buffer12 >> 2] | 0) >>> (HEAP32[$s >> 2] | 0);
  $num_bits = (HEAP32[$a$addr >> 2] | 0) + 8 | 0;
@@ -51965,7 +51975,7 @@ function _stbir__add_empty_ring_buffer_entry($stbir_info, $n) {
  } else {
   CSE$1 = HEAP32[$stbir_info$addr >> 2] | 0;
   HEAP32[$ring_buffer_index >> 2] = ((HEAP32[$ring_buffer_begin_index1 >> 2] | 0) + ((HEAP32[CSE$1 + 172 >> 2] | 0) - (HEAP32[CSE$1 + 168 >> 2] | 0)) | 0) % (HEAP32[CSE$1 + 164 >> 2] | 0) | 0;
-  if ((HEAP32[$ring_buffer_index >> 2] | 0) != (HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 176 >> 2] | 0)) break; else ___assert_fail(41455, 40603, 1431, 41512);
+  if ((HEAP32[$ring_buffer_index >> 2] | 0) != (HEAP32[(HEAP32[$stbir_info$addr >> 2] | 0) + 176 >> 2] | 0)) break; else ___assert_fail(41473, 40621, 1431, 41530);
  } while (0);
  CSE$0 = HEAP32[$stbir_info$addr >> 2] | 0;
  HEAP32[$ring_buffer >> 2] = _stbir__get_ring_buffer_entry(HEAP32[CSE$0 + 180 >> 2] | 0, HEAP32[$ring_buffer_index >> 2] | 0, ((HEAP32[CSE$0 + 160 >> 2] | 0) >>> 0) / 4 | 0) | 0;
@@ -52502,7 +52512,7 @@ function _drmp3_reset($pMP3) {
   _drmp3dec_init(HEAP32[$pMP3$addr >> 2] | 0);
   STACKTOP = sp;
   return;
- } else ___assert_fail(37097, 36861, 3085, 37290);
+ } else ___assert_fail(37115, 36879, 3085, 37308);
 }
 
 function _ma_pcm_u8_to_s32__reference($dst, $src, $0, $1, $ditherMode) {
@@ -52615,11 +52625,11 @@ function _ma_context_enumerate_devices__webaudio($pContext, $callback, $pUserDat
  HEAP32[$callback$addr >> 2] = $callback;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$cbResult >> 2] = 1;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 24923, 26191);
- if (!(HEAP32[$callback$addr >> 2] | 0)) ___assert_fail(26230, 24969, 24924, 26191);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 24923, 26209);
+ if (!(HEAP32[$callback$addr >> 2] | 0)) ___assert_fail(26248, 24987, 24924, 26209);
  if (HEAP32[$cbResult >> 2] | 0) {
   _memset($deviceInfo | 0, 0, 332) | 0;
-  _ma_strncpy_s($deviceInfo + 32 | 0, 256, 26253, -1) | 0;
+  _ma_strncpy_s($deviceInfo + 32 | 0, 256, 26271, -1) | 0;
   HEAP32[$cbResult >> 2] = FUNCTION_TABLE_iiiii[HEAP32[$callback$addr >> 2] & 15](HEAP32[$pContext$addr >> 2] | 0, 1, $deviceInfo, HEAP32[$pUserData$addr >> 2] | 0) | 0;
  }
  if (!(HEAP32[$cbResult >> 2] | 0)) {
@@ -52631,7 +52641,7 @@ function _ma_context_enumerate_devices__webaudio($pContext, $callback, $pUserDat
   return 0;
  }
  _memset($deviceInfo11 | 0, 0, 332) | 0;
- _ma_strncpy_s($deviceInfo11 + 32 | 0, 256, 26277, -1) | 0;
+ _ma_strncpy_s($deviceInfo11 + 32 | 0, 256, 26295, -1) | 0;
  HEAP32[$cbResult >> 2] = FUNCTION_TABLE_iiiii[HEAP32[$callback$addr >> 2] & 15](HEAP32[$pContext$addr >> 2] | 0, 2, $deviceInfo11, HEAP32[$pUserData$addr >> 2] | 0) | 0;
  STACKTOP = sp;
  return 0;
@@ -52718,7 +52728,7 @@ function _ma_pcm_rb_commit_write($pRB, $sizeInFrames, $pBufferOut) {
  $1 = HEAP32[$pRB$addr >> 2] | 0;
  $2 = HEAP32[$sizeInFrames$addr >> 2] | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $8 = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i >> 2] = $8;
@@ -52884,16 +52894,16 @@ function _ma_pcm_converter__post_format_converter_on_read($pConverter, $frameCou
  HEAP32[$pFramesOut$addr >> 2] = $pFramesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pData >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25878, 24969, 32123, 33449);
+ if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25896, 24987, 32123, 33467);
  HEAP32[$pDSP >> 2] = HEAP32[HEAP32[$pData >> 2] >> 2];
- if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32738, 24969, 32126, 33449);
- if ((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 1 & 1 | 0) ___assert_fail(33497, 24969, 32129, 33449);
- if ((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 3 & 1 | 0) ___assert_fail(33538, 24969, 32130, 33449);
+ if (!(HEAP32[$pDSP >> 2] | 0)) ___assert_fail(32756, 24987, 32126, 33467);
+ if ((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 1 & 1 | 0) ___assert_fail(33515, 24987, 32129, 33467);
+ if ((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 3 & 1 | 0) ___assert_fail(33556, 24987, 32130, 33467);
  if (!((HEAPU8[(HEAP32[$pDSP >> 2] | 0) + 46464 >> 0] | 0) >>> 4 & 1)) {
   $call = FUNCTION_TABLE_iiiii[HEAP32[HEAP32[$pDSP >> 2] >> 2] & 15](HEAP32[$pDSP >> 2] | 0, HEAP32[$pFramesOut$addr >> 2] | 0, HEAP32[$frameCount$addr >> 2] | 0, HEAP32[(HEAP32[$pData >> 2] | 0) + 4 >> 2] | 0) | 0;
   STACKTOP = sp;
   return $call | 0;
- } else ___assert_fail(33574, 24969, 32131, 33449);
+ } else ___assert_fail(33592, 24987, 32131, 33467);
  return 0;
 }
 
@@ -53010,7 +53020,7 @@ function _stbiw__sbgrowf($arr, $increment, $itemsize) {
  HEAP32[$m >> 2] = $cond;
  if (HEAP32[HEAP32[$arr$addr >> 2] >> 2] | 0) $cond7 = (HEAP32[HEAP32[$arr$addr >> 2] >> 2] | 0) + -8 | 0; else $cond7 = 0;
  HEAP32[$p >> 2] = _realloc($cond7, (Math_imul(HEAP32[$itemsize$addr >> 2] | 0, HEAP32[$m >> 2] | 0) | 0) + 8 | 0) | 0;
- if (!(HEAP32[$p >> 2] | 0)) ___assert_fail(40497, 40399, 793, 40499);
+ if (!(HEAP32[$p >> 2] | 0)) ___assert_fail(40515, 40417, 793, 40517);
  if (!(HEAP32[$p >> 2] | 0)) {
   $23 = HEAP32[$arr$addr >> 2] | 0;
   $24 = HEAP32[$23 >> 2] | 0;
@@ -53346,7 +53356,7 @@ function _ma_pcm_rb_commit_read($pRB, $sizeInFrames, $pBufferOut) {
  $1 = HEAP32[$pRB$addr >> 2] | 0;
  $2 = HEAP32[$sizeInFrames$addr >> 2] | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $8 = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i >> 2] = $8;
@@ -53539,7 +53549,7 @@ function _stbi__convert_16_to_8($orig, $w, $h, $channels) {
  HEAP32[$img_len >> 2] = Math_imul($mul, HEAP32[$channels$addr >> 2] | 0) | 0;
  HEAP32[$reduced >> 2] = _stbi__malloc(HEAP32[$img_len >> 2] | 0) | 0;
  if (!(HEAP32[$reduced >> 2] | 0)) {
-  $tobool = (_stbi__err(39216) | 0) != 0;
+  $tobool = (_stbi__err(39234) | 0) != 0;
   HEAP32[$retval >> 2] = $tobool ? 0 : 0;
   $16 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
@@ -53573,10 +53583,10 @@ function _TakeScreenshot($fileName) {
  $image = sp + 524 | 0;
  $path = sp;
  HEAP32[$fileName$addr >> 2] = $fileName;
- HEAP32[$imgData >> 2] = _rlReadScreenPixels(HEAP32[38756] | 0, HEAP32[38757] | 0) | 0;
+ HEAP32[$imgData >> 2] = _rlReadScreenPixels(HEAP32[38757] | 0, HEAP32[38758] | 0) | 0;
  HEAP32[$image >> 2] = HEAP32[$imgData >> 2];
- HEAP32[$image + 4 >> 2] = HEAP32[38756];
- HEAP32[$image + 8 >> 2] = HEAP32[38757];
+ HEAP32[$image + 4 >> 2] = HEAP32[38757];
+ HEAP32[$image + 8 >> 2] = HEAP32[38758];
  HEAP32[$image + 12 >> 2] = 1;
  HEAP32[$image + 16 >> 2] = 7;
  _memset($path | 0, 0, 512) | 0;
@@ -53592,9 +53602,9 @@ function _TakeScreenshot($fileName) {
  $call6 = _GetFileName($path) | 0;
  HEAP32[$vararg_buffer >> 2] = $call4;
  HEAP32[$vararg_buffer + 4 >> 2] = $call6;
- _emscripten_run_script(_TextFormat(24505, $vararg_buffer) | 0);
+ _emscripten_run_script(_TextFormat(24523, $vararg_buffer) | 0);
  HEAP32[$vararg_buffer2 >> 2] = $path;
- _TraceLog(3, 24639, $vararg_buffer2);
+ _TraceLog(3, 24657, $vararg_buffer2);
  STACKTOP = sp;
  return;
 }
@@ -53664,7 +53674,7 @@ function _drmp3__on_seek($pMP3, $offset, $origin) {
  HEAP32[$pMP3$addr >> 2] = $pMP3;
  HEAP32[$offset$addr >> 2] = $offset;
  HEAP32[$origin$addr >> 2] = $origin;
- if ((HEAP32[$offset$addr >> 2] | 0) < 0) ___assert_fail(37359, 36861, 2552, 37371);
+ if ((HEAP32[$offset$addr >> 2] | 0) < 0) ___assert_fail(37377, 36879, 2552, 37389);
  if (!(FUNCTION_TABLE_iiii[HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 6700 >> 2] & 15](HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 6704 >> 2] | 0, HEAP32[$offset$addr >> 2] | 0, HEAP32[$origin$addr >> 2] | 0) | 0)) {
   HEAP32[$retval >> 2] = 0;
   $28 = HEAP32[$retval >> 2] | 0;
@@ -54054,7 +54064,7 @@ function _ma_context_init__webaudio($pConfig, $pContext) {
  $resultFromJS = sp_a;
  HEAP32[sp_a + 8 >> 2] = $pConfig;
  HEAP32[$pContext$addr >> 2] = $pContext;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 25388, 31473);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 25388, 31491);
  HEAP32[$resultFromJS >> 2] = _emscripten_asm_const_ii(7, 0) | 0;
  if ((HEAP32[$resultFromJS >> 2] | 0) != 1) {
   HEAP32[$retval >> 2] = -302;
@@ -54101,7 +54111,7 @@ function _rlTranslatef($x, $y, $z) {
  $0 = Math_fround(HEAPF32[$x$addr >> 2]);
  $1 = Math_fround(HEAPF32[$y$addr >> 2]);
  _MatrixTranslate($matTranslation, $0, $1, Math_fround(HEAPF32[$z$addr >> 2]));
- CSE$0 = HEAP32[38588] | 0;
+ CSE$0 = HEAP32[38589] | 0;
  $3 = CSE$0 | 0;
  $4 = CSE$0 | 0;
  dest = $matTranslation$byval_copy;
@@ -54191,7 +54201,7 @@ function _ma_context__try_get_device_name_by_id__enum_callback($pContext, $devic
  HEAP32[$pDeviceInfo$addr >> 2] = $pDeviceInfo;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pData >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25878, 24969, 6068, 25898);
+ if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25896, 24987, 6068, 25916);
  if ((HEAP32[HEAP32[$pData >> 2] >> 2] | 0) == (HEAP32[$deviceType$addr >> 2] | 0)) if (FUNCTION_TABLE_iiii[HEAP32[(HEAP32[$pContext$addr >> 2] | 0) + 104 >> 2] & 15](HEAP32[$pContext$addr >> 2] | 0, HEAP32[(HEAP32[$pData >> 2] | 0) + 4 >> 2] | 0, HEAP32[$pDeviceInfo$addr >> 2] | 0) | 0) {
   CSE$0 = HEAP32[$pData >> 2] | 0;
   _ma_strncpy_s(HEAP32[CSE$0 + 8 >> 2] | 0, HEAP32[CSE$0 + 12 >> 2] | 0, (HEAP32[$pDeviceInfo$addr >> 2] | 0) + 32 | 0, -1) | 0;
@@ -54389,7 +54399,7 @@ function _ma_channel_router__is_spatial_channel_position($pRouter, $channelPosit
  $i = sp_a;
  HEAP32[$pRouter$addr >> 2] = $pRouter;
  HEAP8[$channelPosition$addr >> 0] = $channelPosition;
- if (!(HEAP32[$pRouter$addr >> 2] | 0)) ___assert_fail(32557, 24969, 30429, 32636);
+ if (!(HEAP32[$pRouter$addr >> 2] | 0)) ___assert_fail(32575, 24987, 30429, 32654);
  if (HEAPU8[$channelPosition$addr >> 0] | 0 | 0) if ((HEAPU8[$channelPosition$addr >> 0] | 0 | 0) != 1) if ((HEAPU8[$channelPosition$addr >> 0] | 0 | 0) != 5) {
   HEAP32[$i >> 2] = 0;
   while (1) {
@@ -54595,6 +54605,35 @@ function _stbv_vorbis_decode_packet($f, $len, $p_left, $p_right) {
  return 0;
 }
 
+function _stbv_lookup1_values($entries, $dim) {
+ $entries = $entries | 0;
+ $dim = $dim | 0;
+ var $13 = 0.0, $conv13 = 0.0, $conv19 = 0.0, $conv2 = f0, $conv21 = 0, $conv7 = 0.0, $conv9 = 0, $dim$addr = 0, $entries$addr = 0, $r = 0, sp = 0, sp_a = 0;
+ sp = STACKTOP;
+ sp_a = STACKTOP = STACKTOP + 63 & -64;
+ STACKTOP = STACKTOP + 16 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
+ $entries$addr = sp_a + 8 | 0;
+ $dim$addr = sp_a + 4 | 0;
+ $r = sp_a;
+ HEAP32[$entries$addr >> 2] = $entries;
+ HEAP32[$dim$addr >> 2] = $dim;
+ $conv2 = Math_fround(+Math_log(+(+Math_fround(HEAP32[$entries$addr >> 2] | 0))));
+ HEAP32[$r >> 2] = ~~+Math_floor(+(+Math_exp(+(+Math_fround($conv2 / Math_fround(HEAP32[$dim$addr >> 2] | 0))))));
+ $conv7 = +Math_fround(Math_fround(HEAP32[$r >> 2] | 0) + Math_fround(1.0));
+ $conv9 = ~~+Math_floor(+(+Math_pow(+$conv7, +(+(HEAP32[$dim$addr >> 2] | 0)))));
+ if (($conv9 | 0) <= (HEAP32[$entries$addr >> 2] | 0)) HEAP32[$r >> 2] = (HEAP32[$r >> 2] | 0) + 1;
+ $conv13 = +Math_fround(Math_fround(HEAP32[$r >> 2] | 0) + Math_fround(1.0));
+ $13 = +Math_pow(+$conv13, +(+(HEAP32[$dim$addr >> 2] | 0)));
+ if (!($13 > +(HEAP32[$entries$addr >> 2] | 0))) ___assert_fail(36231, 35659, 1215, 36263);
+ $conv19 = +Math_fround(HEAP32[$r >> 2] | 0);
+ $conv21 = ~~+Math_floor(+(+Math_pow(+$conv19, +(+(HEAP32[$dim$addr >> 2] | 0)))));
+ if (($conv21 | 0) <= (HEAP32[$entries$addr >> 2] | 0)) {
+  STACKTOP = sp;
+  return HEAP32[$r >> 2] | 0;
+ } else ___assert_fail(36283, 35659, 1216, 36263);
+ return 0;
+}
 function _stbi__paeth($a, $b, $c) {
  $a = $a | 0;
  $b = $b | 0;
@@ -54639,35 +54678,6 @@ function _stbi__paeth($a, $b, $c) {
  return 0;
 }
 
-function _stbv_lookup1_values($entries, $dim) {
- $entries = $entries | 0;
- $dim = $dim | 0;
- var $13 = 0.0, $conv13 = 0.0, $conv19 = 0.0, $conv2 = f0, $conv21 = 0, $conv7 = 0.0, $conv9 = 0, $dim$addr = 0, $entries$addr = 0, $r = 0, sp = 0, sp_a = 0;
- sp = STACKTOP;
- sp_a = STACKTOP = STACKTOP + 63 & -64;
- STACKTOP = STACKTOP + 16 | 0;
- if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
- $entries$addr = sp_a + 8 | 0;
- $dim$addr = sp_a + 4 | 0;
- $r = sp_a;
- HEAP32[$entries$addr >> 2] = $entries;
- HEAP32[$dim$addr >> 2] = $dim;
- $conv2 = Math_fround(+Math_log(+(+Math_fround(HEAP32[$entries$addr >> 2] | 0))));
- HEAP32[$r >> 2] = ~~+Math_floor(+(+Math_exp(+(+Math_fround($conv2 / Math_fround(HEAP32[$dim$addr >> 2] | 0))))));
- $conv7 = +Math_fround(Math_fround(HEAP32[$r >> 2] | 0) + Math_fround(1.0));
- $conv9 = ~~+Math_floor(+(+Math_pow(+$conv7, +(+(HEAP32[$dim$addr >> 2] | 0)))));
- if (($conv9 | 0) <= (HEAP32[$entries$addr >> 2] | 0)) HEAP32[$r >> 2] = (HEAP32[$r >> 2] | 0) + 1;
- $conv13 = +Math_fround(Math_fround(HEAP32[$r >> 2] | 0) + Math_fround(1.0));
- $13 = +Math_pow(+$conv13, +(+(HEAP32[$dim$addr >> 2] | 0)));
- if (!($13 > +(HEAP32[$entries$addr >> 2] | 0))) ___assert_fail(36213, 35641, 1215, 36245);
- $conv19 = +Math_fround(HEAP32[$r >> 2] | 0);
- $conv21 = ~~+Math_floor(+(+Math_pow(+$conv19, +(+(HEAP32[$dim$addr >> 2] | 0)))));
- if (($conv21 | 0) <= (HEAP32[$entries$addr >> 2] | 0)) {
-  STACKTOP = sp;
-  return HEAP32[$r >> 2] | 0;
- } else ___assert_fail(36265, 35641, 1216, 36245);
- return 0;
-}
 function _DrawCircle($centerX, $centerY, $radius, $color) {
  $centerX = $centerX | 0;
  $centerY = $centerY | 0;
@@ -54800,23 +54810,23 @@ function _InitWindow($width, $height, $title) {
  HEAP32[$width$addr >> 2] = $width;
  HEAP32[$height$addr >> 2] = $height;
  HEAP32[$title$addr >> 2] = $title;
- HEAP32[$vararg_buffer >> 2] = 24086;
- _TraceLog(3, 24063, $vararg_buffer);
- HEAP32[38733] = HEAP32[$title$addr >> 2];
- HEAP8[155978] = (_InitGraphicsDevice(HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0) | 0) & 1;
- if (!(HEAP8[155978] & 1)) {
+ HEAP32[$vararg_buffer >> 2] = 24104;
+ _TraceLog(3, 24081, $vararg_buffer);
+ HEAP32[38734] = HEAP32[$title$addr >> 2];
+ HEAP8[155982] = (_InitGraphicsDevice(HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0) | 0) & 1;
+ if (!(HEAP8[155982] & 1)) {
   STACKTOP = sp;
   return;
  }
  _InitTimer();
  _LoadFontDefault();
  _emscripten_set_fullscreenchange_callback_on_thread(0, 0, 1, 5, 2) | 0;
- _emscripten_set_keypress_callback_on_thread(24094, 0, 1, 6, 2) | 0;
- _emscripten_set_click_callback_on_thread(24094, 0, 1, 7, 2) | 0;
- _emscripten_set_touchstart_callback_on_thread(24094, 0, 1, 8, 2) | 0;
- _emscripten_set_touchend_callback_on_thread(24094, 0, 1, 8, 2) | 0;
- _emscripten_set_touchmove_callback_on_thread(24094, 0, 1, 8, 2) | 0;
- _emscripten_set_touchcancel_callback_on_thread(24094, 0, 1, 8, 2) | 0;
+ _emscripten_set_keypress_callback_on_thread(24112, 0, 1, 6, 2) | 0;
+ _emscripten_set_click_callback_on_thread(24112, 0, 1, 7, 2) | 0;
+ _emscripten_set_touchstart_callback_on_thread(24112, 0, 1, 8, 2) | 0;
+ _emscripten_set_touchend_callback_on_thread(24112, 0, 1, 8, 2) | 0;
+ _emscripten_set_touchmove_callback_on_thread(24112, 0, 1, 8, 2) | 0;
+ _emscripten_set_touchcancel_callback_on_thread(24112, 0, 1, 8, 2) | 0;
  _emscripten_set_gamepadconnected_callback_on_thread(0, 1, 9, 2) | 0;
  _emscripten_set_gamepaddisconnected_callback_on_thread(0, 1, 9, 2) | 0;
  STACKTOP = sp;
@@ -55034,7 +55044,7 @@ function _LoadTextureFromImage($agg$result, $image) {
  HEAP32[$texture + 12 >> 2] = 0;
  HEAP32[$texture + 16 >> 2] = 0;
  if (HEAP32[$image >> 2] | 0) if (HEAP32[$image + 4 >> 2] | 0) if (HEAP32[$image + 8 >> 2] | 0) HEAP32[$texture >> 2] = _rlLoadTexture(HEAP32[$image >> 2] | 0, HEAP32[$image + 4 >> 2] | 0, HEAP32[$image + 8 >> 2] | 0, HEAP32[$image + 16 >> 2] | 0, HEAP32[$image + 12 >> 2] | 0) | 0; else label = 5; else label = 5; else label = 5;
- if ((label | 0) == 5) _TraceLog(4, 43967, $vararg_buffer);
+ if ((label | 0) == 5) _TraceLog(4, 43985, $vararg_buffer);
  HEAP32[$texture + 4 >> 2] = HEAP32[$image + 4 >> 2];
  HEAP32[$texture + 8 >> 2] = HEAP32[$image + 8 >> 2];
  HEAP32[$texture + 12 >> 2] = HEAP32[$image + 12 >> 2];
@@ -55285,8 +55295,8 @@ function _stbir__get_filter_pixel_width($filter, $scale) {
  $scale$addr = sp_a;
  HEAP32[$filter$addr >> 2] = $filter;
  HEAPF32[$scale$addr >> 2] = $scale;
- if (!(HEAP32[$filter$addr >> 2] | 0)) ___assert_fail(42961, 40603, 884, 42973);
- if ((HEAP32[$filter$addr >> 2] | 0) >>> 0 >= 6) ___assert_fail(43003, 40603, 885, 42973);
+ if (!(HEAP32[$filter$addr >> 2] | 0)) ___assert_fail(42979, 40621, 884, 42991);
+ if ((HEAP32[$filter$addr >> 2] | 0) >>> 0 >= 6) ___assert_fail(43021, 40621, 885, 42991);
  $tobool = (_stbir__use_upsampling(Math_fround(HEAPF32[$scale$addr >> 2])) | 0) != 0;
  $4 = HEAP32[17360 + (HEAP32[$filter$addr >> 2] << 3) + 4 >> 2] | 0;
  $5 = Math_fround(HEAPF32[$scale$addr >> 2]);
@@ -55495,10 +55505,10 @@ function _drmp3_src_read_frames_passthrough($pSRC, $0, $1, $pFramesOut, $flush) 
  HEAP32[$2 + 4 >> 2] = $1;
  HEAP32[$pFramesOut$addr >> 2] = $pFramesOut;
  HEAP32[sp_a + 8 >> 2] = $flush;
- if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32757, 36861, 2448, 37063);
+ if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32775, 36879, 2448, 37081);
  $7 = $frameCount$addr;
  $12 = HEAP32[$7 + 4 >> 2] | 0;
- if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25056, 36861, 2449, 37063);
+ if (!($12 >>> 0 > 0 | ($12 | 0) == 0 & (HEAP32[$7 >> 2] | 0) >>> 0 > 0)) ___assert_fail(25074, 36879, 2449, 37081);
  if (HEAP32[$pFramesOut$addr >> 2] | 0) {
   $22 = $frameCount$addr;
   CSE$0 = HEAP32[$pSRC$addr >> 2] | 0;
@@ -55506,7 +55516,7 @@ function _drmp3_src_read_frames_passthrough($pSRC, $0, $1, $pFramesOut, $flush) 
   setTempRet0(getTempRet0() | 0);
   STACKTOP = sp;
   return $31 | 0;
- } else ___assert_fail(25162, 36861, 2450, 37063);
+ } else ___assert_fail(25180, 36879, 2450, 37081);
  return 0;
 }
 
@@ -55587,39 +55597,39 @@ function _TraceLog($logType, $text, $varargs) {
  switch (HEAP32[$logType$addr >> 2] | 0) {
  case 1:
   {
-   _strcpy($buffer, 44778) | 0;
+   _strcpy($buffer, 44796) | 0;
    break;
   }
  case 2:
   {
-   _strcpy($buffer, 44786) | 0;
+   _strcpy($buffer, 44804) | 0;
    break;
   }
  case 3:
   {
-   _strcpy($buffer, 44794) | 0;
+   _strcpy($buffer, 44812) | 0;
    break;
   }
  case 4:
   {
-   _strcpy($buffer, 44801) | 0;
+   _strcpy($buffer, 44819) | 0;
    break;
   }
  case 5:
   {
-   _strcpy($buffer, 44811) | 0;
+   _strcpy($buffer, 44829) | 0;
    break;
   }
  case 6:
   {
-   _strcpy($buffer, 44819) | 0;
+   _strcpy($buffer, 44837) | 0;
    break;
   }
  default:
   {}
  }
  _strcat($buffer, HEAP32[$text$addr >> 2] | 0) | 0;
- _strcat($buffer, 44827) | 0;
+ _strcat($buffer, 44845) | 0;
  _vprintf($buffer, $args) | 0;
  if ((HEAP32[$logType$addr >> 2] | 0) >= 5) _exit(1); else {
   STACKTOP = sp;
@@ -55755,8 +55765,8 @@ function _EmscriptenFullscreenChangeCallback($eventType, $e, $userData) {
   HEAP32[$vararg_buffer + 4 >> 2] = $5;
   HEAP32[$vararg_buffer + 8 >> 2] = $7;
   HEAP32[$vararg_buffer + 12 >> 2] = $9;
-  _TraceLog(3, 24109, $vararg_buffer);
-  _TraceLog(3, 24245, $vararg_buffer10);
+  _TraceLog(3, 24127, $vararg_buffer);
+  _TraceLog(3, 24263, $vararg_buffer10);
   STACKTOP = sp;
   return 0;
  } else {
@@ -55764,8 +55774,8 @@ function _EmscriptenFullscreenChangeCallback($eventType, $e, $userData) {
   HEAP32[$vararg_buffer4 + 4 >> 2] = $5;
   HEAP32[$vararg_buffer4 + 8 >> 2] = $7;
   HEAP32[$vararg_buffer4 + 12 >> 2] = $9;
-  _TraceLog(3, 24178, $vararg_buffer4);
-  _TraceLog(3, 24245, $vararg_buffer10);
+  _TraceLog(3, 24196, $vararg_buffer4);
+  _TraceLog(3, 24263, $vararg_buffer10);
   STACKTOP = sp;
   return 0;
  }
@@ -55977,13 +55987,13 @@ function _ma_pcm_converter__pre_format_converter_on_read($pConverter, $frameCoun
  HEAP32[$pFramesOut$addr >> 2] = $pFramesOut;
  HEAP32[$pUserData$addr >> 2] = $pUserData;
  HEAP32[$pData >> 2] = HEAP32[$pUserData$addr >> 2];
- if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25878, 24969, 32107, 33730);
+ if (!(HEAP32[$pData >> 2] | 0)) ___assert_fail(25896, 24987, 32107, 33748);
  HEAP32[$pDSP >> 2] = HEAP32[HEAP32[$pData >> 2] >> 2];
  if (HEAP32[$pDSP >> 2] | 0) {
   $call = FUNCTION_TABLE_iiiii[HEAP32[HEAP32[$pDSP >> 2] >> 2] & 15](HEAP32[$pDSP >> 2] | 0, HEAP32[$pFramesOut$addr >> 2] | 0, HEAP32[$frameCount$addr >> 2] | 0, HEAP32[(HEAP32[$pData >> 2] | 0) + 4 >> 2] | 0) | 0;
   STACKTOP = sp;
   return $call | 0;
- } else ___assert_fail(32738, 24969, 32110, 33730);
+ } else ___assert_fail(32756, 24987, 32110, 33748);
  return 0;
 }
 
@@ -56000,76 +56010,76 @@ function _ma_get_backend_name($backend) {
  do switch (HEAP32[$backend$addr >> 2] | 0) {
  case 0:
   {
-   HEAP32[$retval >> 2] = 25599;
+   HEAP32[$retval >> 2] = 25617;
    break;
   }
  case 1:
   {
-   HEAP32[$retval >> 2] = 25606;
+   HEAP32[$retval >> 2] = 25624;
    break;
   }
  case 2:
   {
-   HEAP32[$retval >> 2] = 25618;
+   HEAP32[$retval >> 2] = 25636;
    break;
   }
  case 3:
   {
-   HEAP32[$retval >> 2] = 25624;
+   HEAP32[$retval >> 2] = 25642;
    break;
   }
  case 4:
   {
-   HEAP32[$retval >> 2] = 25635;
+   HEAP32[$retval >> 2] = 25653;
    break;
   }
  case 5:
   {
-   HEAP32[$retval >> 2] = 25641;
+   HEAP32[$retval >> 2] = 25659;
    break;
   }
  case 6:
   {
-   HEAP32[$retval >> 2] = 25650;
+   HEAP32[$retval >> 2] = 25668;
    break;
   }
  case 7:
   {
-   HEAP32[$retval >> 2] = 25654;
+   HEAP32[$retval >> 2] = 25672;
    break;
   }
  case 8:
   {
-   HEAP32[$retval >> 2] = 25665;
+   HEAP32[$retval >> 2] = 25683;
    break;
   }
  case 9:
   {
-   HEAP32[$retval >> 2] = 25670;
+   HEAP32[$retval >> 2] = 25688;
    break;
   }
  case 10:
   {
-   HEAP32[$retval >> 2] = 25675;
+   HEAP32[$retval >> 2] = 25693;
    break;
   }
  case 11:
   {
-   HEAP32[$retval >> 2] = 25682;
+   HEAP32[$retval >> 2] = 25700;
    break;
   }
  case 12:
   {
-   HEAP32[$retval >> 2] = 25692;
+   HEAP32[$retval >> 2] = 25710;
    break;
   }
  case 13:
   {
-   HEAP32[$retval >> 2] = 25702;
+   HEAP32[$retval >> 2] = 25720;
    break;
   }
  default:
-  HEAP32[$retval >> 2] = 25707;
+  HEAP32[$retval >> 2] = 25725;
  } while (0);
  STACKTOP = sp;
  return HEAP32[$retval >> 2] | 0;
@@ -56320,7 +56330,7 @@ function _ma_pcm_rb_get_subbuffer_size($pRB) {
  }
  $call = _ma_rb_get_subbuffer_size(HEAP32[$pRB$addr >> 2] | 0) | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $7 = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i >> 2] = $7;
@@ -56490,15 +56500,15 @@ function _rlColor4ub($x, $y, $z, $w) {
  HEAP8[$y$addr >> 0] = $y;
  HEAP8[$z$addr >> 0] = $z;
  HEAP8[$w$addr >> 0] = $w;
- CSE$0 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ CSE$0 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  HEAP8[(HEAP32[CSE$0 + 20 >> 2] | 0) + (HEAP32[CSE$0 + 8 >> 2] << 2) >> 0] = HEAP8[$x$addr >> 0] | 0;
- CSE$1 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ CSE$1 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  HEAP8[(HEAP32[CSE$1 + 20 >> 2] | 0) + ((HEAP32[CSE$1 + 8 >> 2] << 2) + 1) >> 0] = HEAP8[$y$addr >> 0] | 0;
- CSE$2 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ CSE$2 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  HEAP8[(HEAP32[CSE$2 + 20 >> 2] | 0) + ((HEAP32[CSE$2 + 8 >> 2] << 2) + 2) >> 0] = HEAP8[$z$addr >> 0] | 0;
- CSE$3 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ CSE$3 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  HEAP8[(HEAP32[CSE$3 + 20 >> 2] | 0) + ((HEAP32[CSE$3 + 8 >> 2] << 2) + 3) >> 0] = HEAP8[$w$addr >> 0] | 0;
- $cCounter24 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 8 | 0;
+ $cCounter24 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 8 | 0;
  HEAP32[$cCounter24 >> 2] = (HEAP32[$cCounter24 >> 2] | 0) + 1;
  STACKTOP = sp;
  return;
@@ -56614,7 +56624,7 @@ function _UnloadBuffersDefault() {
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $i = sp;
- if (HEAP8[155965] & 1) FUNCTION_TABLE_vi[HEAP32[38628] & 31](0);
+ if (HEAP8[155969] & 1) FUNCTION_TABLE_vi[HEAP32[38629] & 31](0);
  _glDisableVertexAttribArray(0);
  _glDisableVertexAttribArray(1);
  _glDisableVertexAttribArray(2);
@@ -56628,7 +56638,7 @@ function _UnloadBuffersDefault() {
   _glDeleteBuffers(1, 144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 32 + 4 | 0);
   _glDeleteBuffers(1, 144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 32 + 8 | 0);
   _glDeleteBuffers(1, 144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 32 + 12 | 0);
-  if (HEAP8[155965] & 1) FUNCTION_TABLE_vii[HEAP32[38706] & 63](1, 144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 28 | 0);
+  if (HEAP8[155969] & 1) FUNCTION_TABLE_vii[HEAP32[38707] & 63](1, 144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 28 | 0);
   _free(HEAP32[144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 12 >> 2] | 0);
   _free(HEAP32[144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 16 >> 2] | 0);
   _free(HEAP32[144640 + ((HEAP32[$i >> 2] | 0) * 48 | 0) + 20 >> 2] | 0);
@@ -56778,7 +56788,7 @@ function _ma_device_uninit__webaudio($pDevice) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $pDevice$addr = sp_a;
  HEAP32[$pDevice$addr >> 2] = $pDevice;
- if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24947, 24969, 25043, 27170);
+ if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24965, 24987, 25043, 27188);
  if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 2) label = 5; else if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 3) label = 5;
  if ((label | 0) == 5) {
   CSE$0 = HEAP32[$pDevice$addr >> 2] | 0;
@@ -57030,7 +57040,7 @@ function _ma_device_stop__webaudio($pDevice) {
  $pDevice$addr = sp_a + 4 | 0;
  $onStop = sp_a;
  HEAP32[$pDevice$addr >> 2] = $pDevice;
- if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24947, 24969, 25351, 31321);
+ if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24965, 24987, 25351, 31339);
  if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 2) label = 5; else if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 3) label = 5;
  if ((label | 0) == 5) _emscripten_asm_const_ii(6, HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 94336 + 4 >> 2] | 0) | 0;
  if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 1) label = 8; else if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 3) label = 8;
@@ -57069,7 +57079,7 @@ function _stbv_get8_packet_raw($f) {
    return $12 | 0;
   }
  }
- if ((HEAPU8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] | 0) <= 0) ___assert_fail(35702, 35641, 1536, 35722);
+ if ((HEAPU8[(HEAP32[$f$addr >> 2] | 0) + 1376 >> 0] | 0) <= 0) ___assert_fail(35720, 35659, 1536, 35740);
  $bytes_in_seg9 = (HEAP32[$f$addr >> 2] | 0) + 1376 | 0;
  HEAP8[$bytes_in_seg9 >> 0] = (HEAP8[$bytes_in_seg9 >> 0] | 0) + -1 << 24 >> 24;
  $packet_bytes = (HEAP32[$f$addr >> 2] | 0) + 1400 | 0;
@@ -57100,7 +57110,7 @@ function _ma_pcm_rb_pointer_disance($pRB) {
  }
  $call = _ma_rb_pointer_distance(HEAP32[$pRB$addr >> 2] | 0) | 0;
  HEAP32[$pRB$addr$i >> 2] = HEAP32[$pRB$addr >> 2];
- if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25109, 24969, 33164, 25251);
+ if (!(HEAP32[$pRB$addr$i >> 2] | 0)) ___assert_fail(25127, 24987, 33164, 25269);
  $7 = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 32 >> 2] | 0;
  HEAP32[$format$addr$i$i >> 2] = HEAP32[(HEAP32[$pRB$addr$i >> 2] | 0) + 28 >> 2];
  HEAP32[$channels$addr$i$i >> 2] = $7;
@@ -57563,19 +57573,19 @@ function _stbi__parse_zlib_header($a) {
  HEAP32[$cm >> 2] = HEAP32[$cmf >> 2] & 15;
  HEAP32[$flg >> 2] = (_stbi__zget8(HEAP32[$a$addr >> 2] | 0) | 0) & 255;
  if (((HEAP32[$cmf >> 2] << 8) + (HEAP32[$flg >> 2] | 0) | 0) % 31 | 0 | 0) {
-  HEAP32[$retval >> 2] = _stbi__err(40340) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40358) | 0;
   $7 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $7 | 0;
  }
  if (HEAP32[$flg >> 2] & 32 | 0) {
-  HEAP32[$retval >> 2] = _stbi__err(40356) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40374) | 0;
   $7 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $7 | 0;
  }
  if ((HEAP32[$cm >> 2] | 0) != 8) {
-  HEAP32[$retval >> 2] = _stbi__err(40371) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40389) | 0;
   $7 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $7 | 0;
@@ -57728,8 +57738,8 @@ function _ma_context_post_error($pContext, $pDevice, $logLevel, $message, $resul
 function __webgl1_match_ext_proc_address_without_suffix($name) {
  $name = $name | 0;
  var $retval$0 = 0, $tobool70 = 0;
- if (!(_strcmp($name, 45107) | 0)) $retval$0 = 35; else if (!(_strcmp($name, 45120) | 0)) $retval$0 = 36; else if (!(_strcmp($name, 45136) | 0)) $retval$0 = 25; else if (!(_strcmp($name, 45146) | 0)) $retval$0 = 37; else if (!(_strcmp($name, 45159) | 0)) $retval$0 = 27; else if (!(_strcmp($name, 45170) | 0)) $retval$0 = 38; else if (!(_strcmp($name, 45185) | 0)) $retval$0 = 30; else if (!(_strcmp($name, 45198) | 0)) $retval$0 = 31; else if (!(_strcmp($name, 45217) | 0)) $retval$0 = 32; else if (!(_strcmp($name, 45237) | 0)) $retval$0 = 33; else if (!(_strcmp($name, 45258) | 0)) $retval$0 = 34; else if (!(_strcmp($name, 45280) | 0)) $retval$0 = 28; else if (!(_strcmp($name, 45298) | 0)) $retval$0 = 39; else if (!(_strcmp($name, 45319) | 0)) $retval$0 = 40; else if (!(_strcmp($name, 45337) | 0)) $retval$0 = 26; else if (!(_strcmp($name, 45353) | 0)) $retval$0 = 41; else if (!(_strcmp($name, 45367) | 0)) $retval$0 = 28; else if (!(_strcmp($name, 45389) | 0)) $retval$0 = 42; else {
-  $tobool70 = (_strcmp($name, 45413) | 0) == 0;
+ if (!(_strcmp($name, 45125) | 0)) $retval$0 = 35; else if (!(_strcmp($name, 45138) | 0)) $retval$0 = 36; else if (!(_strcmp($name, 45154) | 0)) $retval$0 = 25; else if (!(_strcmp($name, 45164) | 0)) $retval$0 = 37; else if (!(_strcmp($name, 45177) | 0)) $retval$0 = 27; else if (!(_strcmp($name, 45188) | 0)) $retval$0 = 38; else if (!(_strcmp($name, 45203) | 0)) $retval$0 = 30; else if (!(_strcmp($name, 45216) | 0)) $retval$0 = 31; else if (!(_strcmp($name, 45235) | 0)) $retval$0 = 32; else if (!(_strcmp($name, 45255) | 0)) $retval$0 = 33; else if (!(_strcmp($name, 45276) | 0)) $retval$0 = 34; else if (!(_strcmp($name, 45298) | 0)) $retval$0 = 28; else if (!(_strcmp($name, 45316) | 0)) $retval$0 = 39; else if (!(_strcmp($name, 45337) | 0)) $retval$0 = 40; else if (!(_strcmp($name, 45355) | 0)) $retval$0 = 26; else if (!(_strcmp($name, 45371) | 0)) $retval$0 = 41; else if (!(_strcmp($name, 45385) | 0)) $retval$0 = 28; else if (!(_strcmp($name, 45407) | 0)) $retval$0 = 42; else {
+  $tobool70 = (_strcmp($name, 45431) | 0) == 0;
   return ($tobool70 ? 7 : 0) | 0;
  }
  return $retval$0 | 0;
@@ -58223,8 +58233,8 @@ function _UnloadFontDefault() {
  $i = sp_a;
  HEAP32[$i >> 2] = 0;
  while (1) {
-  if ((HEAP32[$i >> 2] | 0) >= (HEAP32[38837] | 0)) break;
-  $image = (HEAP32[38844] | 0) + ((HEAP32[$i >> 2] | 0) * 36 | 0) + 16 | 0;
+  if ((HEAP32[$i >> 2] | 0) >= (HEAP32[38838] | 0)) break;
+  $image = (HEAP32[38845] | 0) + ((HEAP32[$i >> 2] | 0) * 36 | 0) + 16 | 0;
   HEAP32[$$byval_copy >> 2] = HEAP32[$image >> 2];
   HEAP32[$$byval_copy + 4 >> 2] = HEAP32[$image + 4 >> 2];
   HEAP32[$$byval_copy + 8 >> 2] = HEAP32[$image + 8 >> 2];
@@ -58233,14 +58243,14 @@ function _UnloadFontDefault() {
   _UnloadImage($$byval_copy);
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- HEAP32[$$byval_copy >> 2] = HEAP32[38838];
- HEAP32[$$byval_copy + 4 >> 2] = HEAP32[38839];
- HEAP32[$$byval_copy + 8 >> 2] = HEAP32[38840];
- HEAP32[$$byval_copy + 12 >> 2] = HEAP32[38841];
- HEAP32[$$byval_copy + 16 >> 2] = HEAP32[38842];
+ HEAP32[$$byval_copy >> 2] = HEAP32[38839];
+ HEAP32[$$byval_copy + 4 >> 2] = HEAP32[38840];
+ HEAP32[$$byval_copy + 8 >> 2] = HEAP32[38841];
+ HEAP32[$$byval_copy + 12 >> 2] = HEAP32[38842];
+ HEAP32[$$byval_copy + 16 >> 2] = HEAP32[38843];
  _UnloadTexture($$byval_copy);
+ _free(HEAP32[38845] | 0);
  _free(HEAP32[38844] | 0);
- _free(HEAP32[38843] | 0);
  STACKTOP = sp;
  return;
 }
@@ -58859,7 +58869,7 @@ function _PlayMusicStream($music) {
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(5, 38819, sp_a);
+  _TraceLog(5, 38837, sp_a);
   STACKTOP = sp;
   return;
  }
@@ -58879,7 +58889,7 @@ function _jar_xm_check_sanity_preload($module, $module_length) {
  HEAP32[$module$addr >> 2] = $module;
  HEAP32[$module_length$addr >> 2] = $module_length;
  do if ((HEAP32[$module_length$addr >> 2] | 0) >>> 0 < 60) HEAP32[$retval >> 2] = 4; else {
-  if (_memcmp(36592, HEAP32[$module$addr >> 2] | 0, 17) | 0) {
+  if (_memcmp(36610, HEAP32[$module$addr >> 2] | 0, 17) | 0) {
    HEAP32[$retval >> 2] = 1;
    break;
   }
@@ -58952,7 +58962,7 @@ function _stb_vorbis_open_filename($filename, $error, $alloc) {
  HEAP32[$filename$addr >> 2] = $filename;
  HEAP32[$error$addr >> 2] = $error;
  HEAP32[$alloc$addr >> 2] = $alloc;
- HEAP32[$f >> 2] = _fopen(HEAP32[$filename$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$f >> 2] = _fopen(HEAP32[$filename$addr >> 2] | 0, 39129) | 0;
  if (HEAP32[$f >> 2] | 0) {
   HEAP32[$retval >> 2] = _stb_vorbis_open_file(HEAP32[$f >> 2] | 0, 1, HEAP32[$error$addr >> 2] | 0, HEAP32[$alloc$addr >> 2] | 0) | 0;
   $7 = HEAP32[$retval >> 2] | 0;
@@ -59124,7 +59134,7 @@ function _ma_channel_router__calculate_input_channel_planar_weight($pRouter, $ch
   $call = Math_fround(_ma_calculate_channel_position_planar_weight(HEAP8[$channelPositionIn$addr >> 0] | 0, HEAP8[$channelPositionOut$addr >> 0] | 0));
   STACKTOP = sp;
   return Math_fround($call);
- } else ___assert_fail(32557, 24969, 30419, 32579);
+ } else ___assert_fail(32575, 24987, 30419, 32597);
  return Math_fround(0.0);
 }
 
@@ -59184,7 +59194,7 @@ function _stbi__fill_bits($z) {
    break;
   }
  }
- if ((label | 0) == 3) ___assert_fail(40147, 39140, 3964, 40184); else if ((label | 0) == 5) {
+ if ((label | 0) == 3) ___assert_fail(40165, 39158, 3964, 40202); else if ((label | 0) == 5) {
   STACKTOP = sp;
   return;
  }
@@ -59246,7 +59256,7 @@ function _drmp3_init_file($pMP3, $filePath, $pConfig) {
  HEAP32[$pMP3$addr >> 2] = $pMP3;
  HEAP32[$filePath$addr >> 2] = $filePath;
  HEAP32[$pConfig$addr >> 2] = $pConfig;
- HEAP32[$pFile >> 2] = _fopen(HEAP32[$filePath$addr >> 2] | 0, 39111) | 0;
+ HEAP32[$pFile >> 2] = _fopen(HEAP32[$filePath$addr >> 2] | 0, 39129) | 0;
  if (!(HEAP32[$pFile >> 2] | 0)) {
   HEAP32[$retval >> 2] = 0;
   $5 = HEAP32[$retval >> 2] | 0;
@@ -59396,19 +59406,19 @@ function _jar_xm_tremolo($ctx, $ch, $param, $pos) {
 
 function _UpdateBuffersDefault() {
  var CSE$0 = 0, CSE$1 = 0, CSE$2 = 0;
- if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) <= 0) return;
- if (HEAP8[155965] & 1) FUNCTION_TABLE_vi[HEAP32[38628] & 31](HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 28 >> 2] | 0);
- _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 >> 2] | 0);
- CSE$0 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) <= 0) return;
+ if (HEAP8[155969] & 1) FUNCTION_TABLE_vi[HEAP32[38629] & 31](HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 28 >> 2] | 0);
+ _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 >> 2] | 0);
+ CSE$0 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  _glBufferSubData(34962, 0, (HEAP32[CSE$0 >> 2] | 0) * 12 | 0, HEAP32[CSE$0 + 12 >> 2] | 0);
- _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 + 4 >> 2] | 0);
- CSE$1 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 + 4 >> 2] | 0);
+ CSE$1 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  _glBufferSubData(34962, 0, HEAP32[CSE$1 >> 2] << 3 | 0, HEAP32[CSE$1 + 16 >> 2] | 0);
- _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) + 32 + 8 >> 2] | 0);
- CSE$2 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ _glBindBuffer(34962, HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) + 32 + 8 >> 2] | 0);
+ CSE$2 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  _glBufferSubData(34962, 0, HEAP32[CSE$2 >> 2] << 2 | 0, HEAP32[CSE$2 + 20 >> 2] | 0);
- if (!(HEAP8[155965] & 1)) return;
- FUNCTION_TABLE_vi[HEAP32[38628] & 31](0);
+ if (!(HEAP8[155969] & 1)) return;
+ FUNCTION_TABLE_vi[HEAP32[38629] & 31](0);
  return;
 }
 
@@ -59438,6 +59448,30 @@ function _stbv_skip($z, $n) {
   return;
  }
  HEAP32[(HEAP32[$z$addr >> 2] | 0) + 96 >> 2] = 1;
+ STACKTOP = sp;
+ return;
+}
+
+function __ZN10Background4drawEv($this) {
+ $this = $this | 0;
+ var $agg$tmp2 = 0, $tmpcast$byval_copy = 0, $tmpcast1$byval_copy = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 32 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(32);
+ $tmpcast1$byval_copy = sp + 24 | 0;
+ $tmpcast$byval_copy = sp + 4 | 0;
+ $agg$tmp2 = sp;
+ HEAP32[$agg$tmp2 >> 2] = -1;
+ HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$this >> 2];
+ HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$this + 4 >> 2];
+ HEAP32[$tmpcast$byval_copy + 8 >> 2] = HEAP32[$this + 8 >> 2];
+ HEAP32[$tmpcast$byval_copy + 12 >> 2] = HEAP32[$this + 12 >> 2];
+ HEAP32[$tmpcast$byval_copy + 16 >> 2] = HEAP32[$this + 16 >> 2];
+ HEAP8[$tmpcast1$byval_copy >> 0] = HEAP8[$agg$tmp2 >> 0] | 0;
+ HEAP8[$tmpcast1$byval_copy + 1 >> 0] = HEAP8[$agg$tmp2 + 1 >> 0] | 0;
+ HEAP8[$tmpcast1$byval_copy + 2 >> 0] = HEAP8[$agg$tmp2 + 2 >> 0] | 0;
+ HEAP8[$tmpcast1$byval_copy + 3 >> 0] = HEAP8[$agg$tmp2 + 3 >> 0] | 0;
+ _DrawTexture($tmpcast$byval_copy, 0, 0, $tmpcast1$byval_copy);
  STACKTOP = sp;
  return;
 }
@@ -59548,17 +59582,17 @@ function _WindowDropCallback($window, $count, $paths) {
  HEAP32[$count$addr >> 2] = $count;
  HEAP32[$paths$addr >> 2] = $paths;
  _ClearDroppedFiles();
- HEAP32[38760] = _malloc(HEAP32[$count$addr >> 2] << 2) | 0;
+ HEAP32[38761] = _malloc(HEAP32[$count$addr >> 2] << 2) | 0;
  HEAP32[$i >> 2] = 0;
  while (1) {
   if ((HEAP32[$i >> 2] | 0) >= (HEAP32[$count$addr >> 2] | 0)) break;
   $call1 = _malloc(512) | 0;
-  HEAP32[(HEAP32[38760] | 0) + (HEAP32[$i >> 2] << 2) >> 2] = $call1;
+  HEAP32[(HEAP32[38761] | 0) + (HEAP32[$i >> 2] << 2) >> 2] = $call1;
   CSE$0 = HEAP32[$i >> 2] << 2 | 0;
-  _strcpy(HEAP32[(HEAP32[38760] | 0) + CSE$0 >> 2] | 0, HEAP32[(HEAP32[$paths$addr >> 2] | 0) + CSE$0 >> 2] | 0) | 0;
+  _strcpy(HEAP32[(HEAP32[38761] | 0) + CSE$0 >> 2] | 0, HEAP32[(HEAP32[$paths$addr >> 2] | 0) + CSE$0 >> 2] | 0) | 0;
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
- HEAP32[38761] = HEAP32[$count$addr >> 2];
+ HEAP32[38762] = HEAP32[$count$addr >> 2];
  STACKTOP = sp;
  return;
 }
@@ -59792,14 +59826,14 @@ function _UntrackAudioBuffer($buffer) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $buffer$addr = sp_a;
  HEAP32[$buffer$addr >> 2] = $buffer;
- _ma_mutex_lock(155268);
+ _ma_mutex_lock(155272);
  $3 = HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46564 >> 2] | 0;
- if (!(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] | 0)) HEAP32[38825] = $3; else HEAP32[(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] | 0) + 46564 >> 2] = $3;
+ if (!(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] | 0)) HEAP32[38826] = $3; else HEAP32[(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] | 0) + 46564 >> 2] = $3;
  $9 = HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] | 0;
- if (!(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46564 >> 2] | 0)) HEAP32[38826] = $9; else HEAP32[(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46564 >> 2] | 0) + 46568 >> 2] = $9;
+ if (!(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46564 >> 2] | 0)) HEAP32[38827] = $9; else HEAP32[(HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46564 >> 2] | 0) + 46568 >> 2] = $9;
  HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] = 0;
  HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46564 >> 2] = 0;
- _ma_mutex_unlock(155268);
+ _ma_mutex_unlock(155272);
  STACKTOP = sp;
  return;
 }
@@ -59814,7 +59848,7 @@ function _ma_device_start__webaudio($pDevice) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $pDevice$addr = sp_a;
  HEAP32[$pDevice$addr >> 2] = $pDevice;
- if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24947, 24969, 25332, 31238);
+ if (!(HEAP32[$pDevice$addr >> 2] | 0)) ___assert_fail(24965, 24987, 25332, 31256);
  if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 2) label = 5; else if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) == 3) label = 5;
  if ((label | 0) == 5) _emscripten_asm_const_ii(5, HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 94336 + 4 >> 2] | 0) | 0;
  if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) != 1) if ((HEAP32[(HEAP32[$pDevice$addr >> 2] | 0) + 4 >> 2] | 0) != 3) {
@@ -59966,7 +60000,7 @@ function _stbv_get_window($f, $len) {
   STACKTOP = sp;
   return $11 | 0;
  }
- if ((HEAP32[$len$addr >> 2] | 0) != (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 116 >> 2] | 0)) ___assert_fail(39481, 35641, 3061, 35686);
+ if ((HEAP32[$len$addr >> 2] | 0) != (HEAP32[(HEAP32[$f$addr >> 2] | 0) + 116 >> 2] | 0)) ___assert_fail(39499, 35659, 3061, 35704);
  HEAP32[$retval >> 2] = HEAP32[(HEAP32[$f$addr >> 2] | 0) + 1092 + 4 >> 2];
  $11 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
@@ -59992,14 +60026,14 @@ function _stbi__check_png_header($s) {
    break;
   }
   $conv = (_stbi__get8(HEAP32[$s$addr >> 2] | 0) | 0) & 255;
-  if (($conv | 0) != (HEAPU8[40514 + (HEAP32[$i >> 2] | 0) >> 0] | 0 | 0)) {
+  if (($conv | 0) != (HEAPU8[40532 + (HEAP32[$i >> 2] | 0) >> 0] | 0 | 0)) {
    label = 4;
    break;
   }
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
  if ((label | 0) == 4) {
-  HEAP32[$retval >> 2] = _stbi__err(40387) | 0;
+  HEAP32[$retval >> 2] = _stbi__err(40405) | 0;
   $5 = HEAP32[$retval >> 2] | 0;
   STACKTOP = sp;
   return $5 | 0;
@@ -60138,13 +60172,13 @@ function _ma_context_is_device_id_equal__webaudio($pContext, $pID0, $pID1) {
  HEAP32[$pContext$addr >> 2] = $pContext;
  HEAP32[$pID0$addr >> 2] = $pID0;
  HEAP32[$pID1$addr >> 2] = $pID1;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 24911, 26113);
- if (!(HEAP32[$pID0$addr >> 2] | 0)) ___assert_fail(26153, 24969, 24912, 26113);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 24911, 26131);
+ if (!(HEAP32[$pID0$addr >> 2] | 0)) ___assert_fail(26171, 24987, 24912, 26131);
  if (HEAP32[$pID1$addr >> 2] | 0) {
   $conv = (_ma_strcmp(HEAP32[$pID0$addr >> 2] | 0, HEAP32[$pID1$addr >> 2] | 0) | 0) == 0 & 1;
   STACKTOP = sp;
   return $conv | 0;
- } else ___assert_fail(26172, 24969, 24913, 26113);
+ } else ___assert_fail(26190, 24987, 24913, 26131);
  return 0;
 }
 
@@ -60159,7 +60193,7 @@ function _ma_src__build_sinc_table__sinc($pSRC) {
  $i = sp_a + 8 | 0;
  $x = sp_a;
  HEAP32[$pSRC$addr >> 2] = $pSRC;
- if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32757, 24969, 31010, 33193);
+ if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32775, 24987, 31010, 33211);
  HEAPF32[(HEAP32[$pSRC$addr >> 2] | 0) + 40972 >> 2] = Math_fround(1.0);
  HEAP32[$i >> 2] = 1;
  while (1) {
@@ -60262,7 +60296,7 @@ function _fopen($filename, $mode) {
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $vararg_buffer = sp_a;
- if (!(_strchr(44892, HEAP8[$mode >> 0] | 0) | 0)) {
+ if (!(_strchr(44910, HEAP8[$mode >> 0] | 0) | 0)) {
   HEAP32[(___errno_location() | 0) >> 2] = 28;
   $retval$0 = 0;
  } else {
@@ -61546,7 +61580,7 @@ function _GetTouchPosition($agg$result, $index) {
   HEAP32[$position + 4 >> 2] = HEAP32[$arrayidx + 4 >> 2];
  } else {
   HEAP32[$vararg_buffer >> 2] = 10;
-  _TraceLog(4, 23987, $vararg_buffer);
+  _TraceLog(4, 24005, $vararg_buffer);
  };
  HEAP32[$agg$result >> 2] = HEAP32[$position >> 2];
  HEAP32[$agg$result + 4 >> 2] = HEAP32[$position + 4 >> 2];
@@ -62288,7 +62322,7 @@ function _stbv_include_in_sort($c, $len) {
  do if (HEAP8[(HEAP32[$c$addr >> 2] | 0) + 23 >> 0] | 0) if (($conv | 0) != 255) {
   HEAP32[$retval >> 2] = 1;
   break;
- } else ___assert_fail(36391, 35641, 1140, 36406); else {
+ } else ___assert_fail(36409, 35659, 1140, 36424); else {
   if (($conv | 0) == 255) {
    HEAP32[$retval >> 2] = 0;
    break;
@@ -62317,12 +62351,12 @@ function _rlTexCoord2f($x, $y) {
  HEAPF32[$x$addr >> 2] = $x;
  HEAPF32[$y$addr >> 2] = $y;
  $0 = Math_fround(HEAPF32[$x$addr >> 2]);
- CSE$0 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ CSE$0 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  HEAPF32[(HEAP32[CSE$0 + 16 >> 2] | 0) + (HEAP32[CSE$0 + 4 >> 2] << 1 << 2) >> 2] = $0;
  $5 = Math_fround(HEAPF32[$y$addr >> 2]);
- CSE$1 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) | 0;
+ CSE$1 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) | 0;
  HEAPF32[(HEAP32[CSE$1 + 16 >> 2] | 0) + ((HEAP32[CSE$1 + 4 >> 2] << 1) + 1 << 2) >> 2] = $5;
- $tcCounter10 = 144640 + ((HEAP32[38624] | 0) * 48 | 0) + 4 | 0;
+ $tcCounter10 = 144640 + ((HEAP32[38625] | 0) * 48 | 0) + 4 | 0;
  HEAP32[$tcCounter10 >> 2] = (HEAP32[$tcCounter10 >> 2] | 0) + 1;
  STACKTOP = sp;
  return;
@@ -62650,7 +62684,7 @@ function _StopAudioBuffer($buffer) {
  $buffer$addr = sp_a + 4 | 0;
  HEAP32[$buffer$addr >> 2] = $buffer;
  if (!(HEAP32[$buffer$addr >> 2] | 0)) {
-  _TraceLog(5, 38199, sp_a);
+  _TraceLog(5, 38217, sp_a);
   STACKTOP = sp;
   return;
  }
@@ -62859,8 +62893,8 @@ function _IsMouseButtonPressed($button) {
  $pressed = sp + 4 | 0;
  HEAP32[$button$addr >> 2] = $button;
  HEAP8[$pressed >> 0] = 0;
- if ((HEAP8[155979 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0) != (HEAP8[155982 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0)) {
-  if ((HEAP8[155979 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0) != 1) label = 3;
+ if ((HEAP8[155983 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0) != (HEAP8[155986 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0)) {
+  if ((HEAP8[155983 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0) != 1) label = 3;
  } else label = 3;
  if ((label | 0) == 3) if (!(_IsGestureDetected(1) | 0)) {
   $6 = HEAP8[$pressed >> 0] | 0;
@@ -62908,8 +62942,8 @@ function _drmp3_seek_to_start_of_stream($pMP3) {
  $retval = sp_a + 4 | 0;
  $pMP3$addr = sp_a;
  HEAP32[$pMP3$addr >> 2] = $pMP3;
- if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37097, 36861, 3106, 37302);
- if (!(HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 6700 >> 2] | 0)) ___assert_fail(37332, 36861, 3107, 37302);
+ if (!(HEAP32[$pMP3$addr >> 2] | 0)) ___assert_fail(37115, 36879, 3106, 37320);
+ if (!(HEAP32[(HEAP32[$pMP3$addr >> 2] | 0) + 6700 >> 2] | 0)) ___assert_fail(37350, 36879, 3107, 37320);
  if (_drmp3__on_seek(HEAP32[$pMP3$addr >> 2] | 0, 0, 0) | 0) {
   _drmp3_reset(HEAP32[$pMP3$addr >> 2] | 0);
   HEAP32[$retval >> 2] = 1;
@@ -62944,7 +62978,7 @@ function _ma_device_uninit_by_index__webaudio($pDevice, $deviceType, $deviceInde
   _emscripten_asm_const_iii(2, HEAP32[$deviceIndex$addr >> 2] | 0, HEAP32[$deviceType$addr >> 2] | 0) | 0;
   STACKTOP = sp;
   return;
- } else ___assert_fail(24947, 24969, 25005, 26508);
+ } else ___assert_fail(24965, 24987, 25005, 26526);
 }
 
 function _rlPopMatrix() {
@@ -62953,16 +62987,16 @@ function _rlPopMatrix() {
  STACKTOP = STACKTOP + 64 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(64);
  $mat = sp;
- if ((HEAP32[38605] | 0) > 0) {
+ if ((HEAP32[38606] | 0) > 0) {
   dest = $mat;
-  src = 142592 + ((HEAP32[38605] | 0) - 1 << 6) | 0;
+  src = 142592 + ((HEAP32[38606] | 0) - 1 << 6) | 0;
   stop = dest + 64 | 0;
   do {
    HEAP32[dest >> 2] = HEAP32[src >> 2];
    dest = dest + 4 | 0;
    src = src + 4 | 0;
   } while ((dest | 0) < (stop | 0));
-  dest = HEAP32[38588] | 0;
+  dest = HEAP32[38589] | 0;
   src = $mat;
   stop = dest + 64 | 0;
   do {
@@ -62970,14 +63004,14 @@ function _rlPopMatrix() {
    dest = dest + 4 | 0;
    src = src + 4 | 0;
   } while ((dest | 0) < (stop | 0));
-  HEAP32[38605] = (HEAP32[38605] | 0) + -1;
+  HEAP32[38606] = (HEAP32[38606] | 0) + -1;
  }
- if (!((HEAP32[38605] | 0) == 0 & (HEAP32[5038] | 0) == 5888)) {
+ if (!((HEAP32[38606] | 0) == 0 & (HEAP32[5038] | 0) == 5888)) {
   STACKTOP = sp;
   return;
  }
- HEAP32[38588] = 154356;
- HEAP8[155964] = 0;
+ HEAP32[38589] = 154360;
+ HEAP8[155968] = 0;
  STACKTOP = sp;
  return;
 }
@@ -62987,15 +63021,15 @@ function _emscripten_GetProcAddress($name_) {
  var $call1 = 0, $call12 = 0, $call16 = 0, $call20 = 0, $call3 = 0, $call4 = 0, $call8 = 0, $ptr$0 = 0;
  $call1 = _malloc((_strlen($name_) | 0) + 1 | 0) | 0;
  _strcpy($call1, $name_) | 0;
- $call3 = _strstr($call1, 45083) | 0;
+ $call3 = _strstr($call1, 45101) | 0;
  if ($call3 | 0) HEAP8[$call3 >> 0] = 0;
- $call4 = _strstr($call1, 45087) | 0;
+ $call4 = _strstr($call1, 45105) | 0;
  if ($call4 | 0) HEAP8[$call4 >> 0] = 0;
- $call8 = _strstr($call1, 45091) | 0;
+ $call8 = _strstr($call1, 45109) | 0;
  if ($call8 | 0) HEAP8[$call8 >> 0] = 0;
- $call12 = _strstr($call1, 45095) | 0;
+ $call12 = _strstr($call1, 45113) | 0;
  if ($call12 | 0) HEAP8[$call12 >> 0] = 0;
- $call16 = _strstr($call1, 45101) | 0;
+ $call16 = _strstr($call1, 45119) | 0;
  if ($call16 | 0) HEAP8[$call16 >> 0] = 0;
  $call20 = _emscripten_webgl1_get_proc_address($call1) | 0;
  if (!$call20) $ptr$0 = __webgl1_match_ext_proc_address_without_suffix($call1) | 0; else $ptr$0 = $call20;
@@ -63040,7 +63074,7 @@ function _GetFileName($filePath) {
  $fileName = sp;
  HEAP32[$filePath$addr >> 2] = $filePath;
  HEAP32[$fileName >> 2] = 0;
- if (HEAP32[$filePath$addr >> 2] | 0) HEAP32[$fileName >> 2] = _strprbrk(HEAP32[$filePath$addr >> 2] | 0, 24660) | 0;
+ if (HEAP32[$filePath$addr >> 2] | 0) HEAP32[$fileName >> 2] = _strprbrk(HEAP32[$filePath$addr >> 2] | 0, 24678) | 0;
  if (HEAP32[$fileName >> 2] | 0) if ((HEAP32[$fileName >> 2] | 0) != (HEAP32[$filePath$addr >> 2] | 0)) {
   HEAP32[$retval >> 2] = (HEAP32[$fileName >> 2] | 0) + 1;
   $7 = HEAP32[$retval >> 2] | 0;
@@ -63091,36 +63125,36 @@ function _ma_get_format_name($format) {
  switch (HEAP32[$format$addr >> 2] | 0) {
  case 0:
   {
-   HEAP32[$retval >> 2] = 25707;
+   HEAP32[$retval >> 2] = 25725;
    break;
   }
  case 1:
   {
-   HEAP32[$retval >> 2] = 35500;
+   HEAP32[$retval >> 2] = 35518;
    break;
   }
  case 2:
   {
-   HEAP32[$retval >> 2] = 35523;
+   HEAP32[$retval >> 2] = 35541;
    break;
   }
  case 3:
   {
-   HEAP32[$retval >> 2] = 35545;
+   HEAP32[$retval >> 2] = 35563;
    break;
   }
  case 4:
   {
-   HEAP32[$retval >> 2] = 35584;
+   HEAP32[$retval >> 2] = 35602;
    break;
   }
  case 5:
   {
-   HEAP32[$retval >> 2] = 35606;
+   HEAP32[$retval >> 2] = 35624;
    break;
   }
  default:
-  HEAP32[$retval >> 2] = 35633;
+  HEAP32[$retval >> 2] = 35651;
  }
  STACKTOP = sp;
  return HEAP32[$retval >> 2] | 0;
@@ -63138,7 +63172,7 @@ function _IsAudioBufferPlaying($buffer) {
  HEAP32[$buffer$addr >> 2] = $buffer;
  HEAP8[$result >> 0] = 0;
  if (!(HEAP32[$buffer$addr >> 2] | 0)) {
-  _TraceLog(4, 38235, sp_a);
+  _TraceLog(4, 38253, sp_a);
   $6 = HEAP8[$result >> 0] | 0;
   $tobool2 = $6 & 1;
   STACKTOP = sp;
@@ -63242,14 +63276,14 @@ function _SetupViewport($width, $height) {
  $height$addr = sp;
  HEAP32[$width$addr >> 2] = $width;
  HEAP32[$height$addr >> 2] = $height;
- HEAP32[38756] = HEAP32[$width$addr >> 2];
- HEAP32[38757] = HEAP32[$height$addr >> 2];
- CSE$0 = HEAP32[38758] | 0;
- CSE$1 = HEAP32[38759] | 0;
- _rlViewport((CSE$0 | 0) / 2 | 0, (CSE$1 | 0) / 2 | 0, (HEAP32[38756] | 0) - CSE$0 | 0, (HEAP32[38757] | 0) - CSE$1 | 0);
+ HEAP32[38757] = HEAP32[$width$addr >> 2];
+ HEAP32[38758] = HEAP32[$height$addr >> 2];
+ CSE$0 = HEAP32[38759] | 0;
+ CSE$1 = HEAP32[38760] | 0;
+ _rlViewport((CSE$0 | 0) / 2 | 0, (CSE$1 | 0) / 2 | 0, (HEAP32[38757] | 0) - CSE$0 | 0, (HEAP32[38758] | 0) - CSE$1 | 0);
  _rlMatrixMode(5889);
  _rlLoadIdentity();
- _rlOrtho(0.0, +(HEAP32[38756] | 0), +(HEAP32[38757] | 0), 0.0, 0.0, 1.0);
+ _rlOrtho(0.0, +(HEAP32[38757] | 0), +(HEAP32[38758] | 0), 0.0, 0.0, 1.0);
  _rlMatrixMode(5888);
  _rlLoadIdentity();
  STACKTOP = sp;
@@ -63530,14 +63564,14 @@ function _drmp3_src_cache_init($pSRC, $pCache) {
  $pCache$addr = sp_a;
  HEAP32[$pSRC$addr >> 2] = $pSRC;
  HEAP32[$pCache$addr >> 2] = $pCache;
- if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32757, 36861, 2291, 36902);
+ if (!(HEAP32[$pSRC$addr >> 2] | 0)) ___assert_fail(32775, 36879, 2291, 36920);
  if (HEAP32[$pCache$addr >> 2] | 0) {
   HEAP32[HEAP32[$pCache$addr >> 2] >> 2] = HEAP32[$pSRC$addr >> 2];
   HEAP32[(HEAP32[$pCache$addr >> 2] | 0) + 4100 >> 2] = 0;
   HEAP32[(HEAP32[$pCache$addr >> 2] | 0) + 4104 >> 2] = 0;
   STACKTOP = sp;
   return;
- } else ___assert_fail(36923, 36861, 2292, 36902);
+ } else ___assert_fail(36941, 36879, 2292, 36920);
 }
 
 function _stbiw__zlib_bitrev($code, $codebits) {
@@ -63774,12 +63808,12 @@ function _TextFormat($text, $varargs) {
  $currentBuffer = sp_a + 16 | 0;
  $args = sp_a;
  HEAP32[$text$addr >> 2] = $text;
- HEAP32[$currentBuffer >> 2] = 146496 + (HEAP32[38845] << 10);
+ HEAP32[$currentBuffer >> 2] = 146496 + (HEAP32[38846] << 10);
  HEAP32[$args >> 2] = $varargs;
  _vsprintf(HEAP32[$currentBuffer >> 2] | 0, HEAP32[$text$addr >> 2] | 0, $args) | 0;
- $add = (HEAP32[38845] | 0) + 1 | 0;
- HEAP32[38845] = $add;
- HEAP32[38845] = (HEAP32[38845] | 0) >= 4 ? 0 : $add;
+ $add = (HEAP32[38846] | 0) + 1 | 0;
+ HEAP32[38846] = $add;
+ HEAP32[38846] = (HEAP32[38846] | 0) >= 4 ? 0 : $add;
  STACKTOP = sp;
  return HEAP32[$currentBuffer >> 2] | 0;
 }
@@ -63793,7 +63827,7 @@ function _IsAudioStreamProcessed($stream) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $retval = sp_a + 4 | 0;
  if (!(HEAP32[$stream + 12 >> 2] | 0)) {
-  _TraceLog(5, 39023, sp_a);
+  _TraceLog(5, 39041, sp_a);
   HEAP8[$retval >> 0] = 0;
   $$pre_trunc = HEAP8[$retval >> 0] | 0;
   $6 = $$pre_trunc & 1;
@@ -64030,13 +64064,32 @@ function _EmscriptenKeyboardCallback($eventType, $keyEvent, $userData) {
   STACKTOP = sp;
   return 0;
  }
- if (_strcmp((HEAP32[$keyEvent$addr >> 2] | 0) + 32 | 0, 24102) | 0) {
+ if (_strcmp((HEAP32[$keyEvent$addr >> 2] | 0) + 32 | 0, 24120) | 0) {
   STACKTOP = sp;
   return 0;
  }
  _emscripten_exit_pointerlock() | 0;
  STACKTOP = sp;
  return 0;
+}
+
+function __ZN10BackgroundC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE($this, $text) {
+ $this = $this | 0;
+ $text = $text | 0;
+ var $cond$i$i$i = 0, $ref$tmp = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 32 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(32);
+ $ref$tmp = sp;
+ if ((HEAP8[$text + 11 >> 0] | 0) < 0) $cond$i$i$i = HEAP32[$text >> 2] | 0; else $cond$i$i$i = $text;
+ _LoadTexture($ref$tmp, $cond$i$i$i);
+ HEAP32[$this >> 2] = HEAP32[$ref$tmp >> 2];
+ HEAP32[$this + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
+ HEAP32[$this + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
+ HEAP32[$this + 12 >> 2] = HEAP32[$ref$tmp + 12 >> 2];
+ HEAP32[$this + 16 >> 2] = HEAP32[$ref$tmp + 16 >> 2];
+ STACKTOP = sp;
+ return;
 }
 
 function _stbi__addsizes_valid($a, $b) {
@@ -64251,7 +64304,7 @@ function _BeginDrawing() {
  HEAPF64[19276] = +HEAPF64[19278];
  _rlLoadIdentity();
  dest = $screenScaling$byval_copy;
- src = 154944;
+ src = 154948;
  stop = dest + 64 | 0;
  do {
   HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -64317,14 +64370,14 @@ function _stbi__hdr_test($s) {
  $s$addr = sp_a + 4 | 0;
  $r = sp_a;
  HEAP32[$s$addr >> 2] = $s;
- HEAP32[$r >> 2] = _stbi__hdr_test_core(HEAP32[$s$addr >> 2] | 0, 39394) | 0;
+ HEAP32[$r >> 2] = _stbi__hdr_test_core(HEAP32[$s$addr >> 2] | 0, 39412) | 0;
  _stbi__rewind(HEAP32[$s$addr >> 2] | 0);
  if (HEAP32[$r >> 2] | 0) {
   $5 = HEAP32[$r >> 2] | 0;
   STACKTOP = sp;
   return $5 | 0;
  }
- HEAP32[$r >> 2] = _stbi__hdr_test_core(HEAP32[$s$addr >> 2] | 0, 39406) | 0;
+ HEAP32[$r >> 2] = _stbi__hdr_test_core(HEAP32[$s$addr >> 2] | 0, 39424) | 0;
  _stbi__rewind(HEAP32[$s$addr >> 2] | 0);
  $5 = HEAP32[$r >> 2] | 0;
  STACKTOP = sp;
@@ -64586,7 +64639,7 @@ function _ErrorCallback($error, $description) {
  $1 = HEAP32[$description$addr >> 2] | 0;
  HEAP32[$vararg_buffer >> 2] = HEAP32[$error$addr >> 2];
  HEAP32[$vararg_buffer + 4 >> 2] = $1;
- _TraceLog(4, 24872, $vararg_buffer);
+ _TraceLog(4, 24890, $vararg_buffer);
  STACKTOP = sp;
  return;
 }
@@ -64622,14 +64675,14 @@ function _TrackAudioBuffer($buffer) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $buffer$addr = sp_a;
  HEAP32[$buffer$addr >> 2] = $buffer;
- _ma_mutex_lock(155268);
+ _ma_mutex_lock(155272);
  $1 = HEAP32[$buffer$addr >> 2] | 0;
- if (!(HEAP32[38825] | 0)) HEAP32[38825] = $1; else {
-  HEAP32[(HEAP32[38826] | 0) + 46564 >> 2] = $1;
-  HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] = HEAP32[38826];
+ if (!(HEAP32[38826] | 0)) HEAP32[38826] = $1; else {
+  HEAP32[(HEAP32[38827] | 0) + 46564 >> 2] = $1;
+  HEAP32[(HEAP32[$buffer$addr >> 2] | 0) + 46568 >> 2] = HEAP32[38827];
  }
- HEAP32[38826] = HEAP32[$buffer$addr >> 2];
- _ma_mutex_unlock(155268);
+ HEAP32[38827] = HEAP32[$buffer$addr >> 2];
+ _ma_mutex_unlock(155272);
  STACKTOP = sp;
  return;
 }
@@ -64729,12 +64782,12 @@ function _GifEnd() {
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $retval = sp;
- if (HEAP32[38732] | 0) {
-  _fputc(59, HEAP32[38732] | 0) | 0;
-  _fclose(HEAP32[38732] | 0) | 0;
-  _free(HEAP32[38571] | 0);
-  HEAP32[38732] = 0;
-  HEAP32[38571] = 0;
+ if (HEAP32[38733] | 0) {
+  _fputc(59, HEAP32[38733] | 0) | 0;
+  _fclose(HEAP32[38733] | 0) | 0;
+  _free(HEAP32[38572] | 0);
+  HEAP32[38733] = 0;
+  HEAP32[38572] = 0;
   HEAP8[$retval >> 0] = 1;
   $$pre_trunc = HEAP8[$retval >> 0] | 0;
   $4 = $$pre_trunc & 1;
@@ -64766,7 +64819,7 @@ function _stbi__bit_reverse($v, $bits) {
   $call = _stbi__bitreverse16(HEAP32[$v$addr >> 2] | 0) | 0;
   STACKTOP = sp;
   return $call >> 16 - (HEAP32[$bits$addr >> 2] | 0) | 0;
- } else ___assert_fail(40118, 39140, 3882, 40129);
+ } else ___assert_fail(40136, 39158, 3882, 40147);
  return 0;
 }
 
@@ -64783,7 +64836,7 @@ function _stbir__support_trapezoid($scale) {
   $add = Math_fround(Math_fround(Math_fround(HEAPF32[$scale$addr >> 2]) / Math_fround(2.0)) + Math_fround(.5));
   STACKTOP = sp;
   return Math_fround($add);
- } else ___assert_fail(42072, 40603, 780, 42083);
+ } else ___assert_fail(42090, 40621, 780, 42101);
  return Math_fround(0.0);
 }
 
@@ -64803,7 +64856,7 @@ function _PlayAudioBuffer($buffer) {
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(5, 38455, sp_a);
+  _TraceLog(5, 38473, sp_a);
   STACKTOP = sp;
   return;
  }
@@ -64838,8 +64891,8 @@ function _WindowSizeCallback($window, $width, $height) {
  HEAP32[$width$addr >> 2] = $width;
  HEAP32[$height$addr >> 2] = $height;
  _SetupViewport(HEAP32[$width$addr >> 2] | 0, HEAP32[$height$addr >> 2] | 0);
- HEAP32[38734] = HEAP32[$width$addr >> 2];
- HEAP32[38735] = HEAP32[$height$addr >> 2];
+ HEAP32[38735] = HEAP32[$width$addr >> 2];
+ HEAP32[38736] = HEAP32[$height$addr >> 2];
  STACKTOP = sp;
  return;
 }
@@ -64935,7 +64988,7 @@ function _CloseAudioBuffer($buffer) {
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(5, 38418, sp_a);
+  _TraceLog(5, 38436, sp_a);
   STACKTOP = sp;
   return;
  }
@@ -65038,7 +65091,7 @@ function _IsMouseButtonReleased($button) {
  $released = sp + 4 | 0;
  HEAP32[$button$addr >> 2] = $button;
  HEAP8[$released >> 0] = 0;
- if ((HEAP8[155979 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0) != (HEAP8[155982 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0)) if (!(HEAP8[155979 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0)) HEAP8[$released >> 0] = 1;
+ if ((HEAP8[155983 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0) != (HEAP8[155986 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0)) if (!(HEAP8[155983 + (HEAP32[$button$addr >> 2] | 0) >> 0] | 0)) HEAP8[$released >> 0] = 1;
  STACKTOP = sp;
  return HEAP8[$released >> 0] & 1 | 0;
 }
@@ -65075,20 +65128,20 @@ function _rlPushMatrix() {
  sp = STACKTOP;
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
- if ((HEAP32[38605] | 0) >= 32) _TraceLog(5, 20646, sp);
+ if ((HEAP32[38606] | 0) >= 32) _TraceLog(5, 20664, sp);
  if ((HEAP32[5038] | 0) == 5888) {
-  HEAP8[155964] = 1;
-  HEAP32[38588] = 154424;
+  HEAP8[155968] = 1;
+  HEAP32[38589] = 154428;
  }
- dest = 142592 + (HEAP32[38605] << 6) | 0;
- src = HEAP32[38588] | 0;
+ dest = 142592 + (HEAP32[38606] << 6) | 0;
+ src = HEAP32[38589] | 0;
  stop = dest + 64 | 0;
  do {
   HEAP32[dest >> 2] = HEAP32[src >> 2];
   dest = dest + 4 | 0;
   src = src + 4 | 0;
  } while ((dest | 0) < (stop | 0));
- HEAP32[38605] = (HEAP32[38605] | 0) + 1;
+ HEAP32[38606] = (HEAP32[38606] | 0) + 1;
  STACKTOP = sp;
  return;
 }
@@ -65278,7 +65331,7 @@ function _drmp3_decode_next_frame($pMP3) {
   $call = _drmp3_decode_next_frame_ex(CSE$0 | 0, CSE$0 + 6724 | 0, 0) | 0;
   STACKTOP = sp;
   return $call | 0;
- } else ___assert_fail(37097, 36861, 2815, 37157);
+ } else ___assert_fail(37115, 36879, 2815, 37175);
  return 0;
 }
 
@@ -65302,11 +65355,11 @@ function _ma_context_uninit__webaudio($pContext) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $pContext$addr = sp_a;
  HEAP32[$pContext$addr >> 2] = $pContext;
- if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25855, 24969, 25375, 31404);
+ if (!(HEAP32[$pContext$addr >> 2] | 0)) ___assert_fail(25873, 24987, 25375, 31422);
  if ((HEAP32[HEAP32[$pContext$addr >> 2] >> 2] | 0) == 12) {
   STACKTOP = sp;
   return 0;
- } else ___assert_fail(31432, 24969, 25376, 31404);
+ } else ___assert_fail(31450, 24987, 25376, 31422);
  return 0;
 }
 
@@ -65582,18 +65635,18 @@ function _stbi__get16be($s) {
 
 function _UpdateGestures() {
  var $call3 = 0.0;
- if (((HEAP32[38712] | 0) == 1 | (HEAP32[38712] | 0) == 2) & (HEAP32[38713] | 0) < 2) {
-  HEAP32[38712] = 4;
+ if (((HEAP32[38713] | 0) == 1 | (HEAP32[38713] | 0) == 2) & (HEAP32[38714] | 0) < 2) {
+  HEAP32[38713] = 4;
   +_GetCurrentTime();
  }
  $call3 = +_GetCurrentTime();
- if ($call3 - +HEAPF64[19274] > 300.0 & (HEAP32[38712] | 0) == 8 & (HEAP32[38713] | 0) < 2) {
-  HEAP32[38712] = 4;
+ if ($call3 - +HEAPF64[19274] > 300.0 & (HEAP32[38713] | 0) == 8 & (HEAP32[38714] | 0) < 2) {
+  HEAP32[38713] = 4;
   +_GetCurrentTime();
-  HEAP8[155977] = 1;
+  HEAP8[155981] = 1;
  }
- if (!((HEAP32[38712] | 0) == 16 | (HEAP32[38712] | 0) == 64 | (HEAP32[38712] | 0) == 32 | (HEAP32[38712] | 0) == 128)) return;
- HEAP32[38712] = 0;
+ if (!((HEAP32[38713] | 0) == 16 | (HEAP32[38713] | 0) == 64 | (HEAP32[38713] | 0) == 32 | (HEAP32[38713] | 0) == 128)) return;
+ HEAP32[38713] = 0;
  return;
 }
 
@@ -65622,7 +65675,7 @@ function _rlCheckBufferLimit($vCount) {
  $overflow = sp + 4 | 0;
  HEAP32[$vCount$addr >> 2] = $vCount;
  HEAP8[$overflow >> 0] = 0;
- HEAP8[$overflow >> 0] = ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) + (HEAP32[$vCount$addr >> 2] | 0) | 0) >= 8192 ? 1 : 0;
+ HEAP8[$overflow >> 0] = ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) + (HEAP32[$vCount$addr >> 2] | 0) | 0) >= 8192 ? 1 : 0;
  STACKTOP = sp;
  return HEAP8[$overflow >> 0] & 1 | 0;
 }
@@ -65633,19 +65686,19 @@ function _ClearDroppedFiles() {
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $i = sp;
- if ((HEAP32[38761] | 0) <= 0) {
+ if ((HEAP32[38762] | 0) <= 0) {
   STACKTOP = sp;
   return;
  }
  HEAP32[$i >> 2] = 0;
  while (1) {
-  $3 = HEAP32[38760] | 0;
-  if ((HEAP32[$i >> 2] | 0) >= (HEAP32[38761] | 0)) break;
+  $3 = HEAP32[38761] | 0;
+  if ((HEAP32[$i >> 2] | 0) >= (HEAP32[38762] | 0)) break;
   _free(HEAP32[$3 + (HEAP32[$i >> 2] << 2) >> 2] | 0);
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
  _free($3);
- HEAP32[38761] = 0;
+ HEAP32[38762] = 0;
  STACKTOP = sp;
  return;
 }
@@ -65729,7 +65782,7 @@ function _UnloadTexture($texture) {
  }
  _rlDeleteTextures(HEAP32[$texture >> 2] | 0);
  HEAP32[$vararg_buffer >> 2] = HEAP32[$texture >> 2];
- _TraceLog(3, 44006, $vararg_buffer);
+ _TraceLog(3, 44024, $vararg_buffer);
  STACKTOP = sp;
  return;
 }
@@ -65998,7 +66051,7 @@ function _IsGestureDetected($gesture) {
  $retval = sp + 4 | 0;
  $gesture$addr = sp;
  HEAP32[$gesture$addr >> 2] = $gesture;
- if ((1023 & HEAP32[38712] | 0) == (HEAP32[$gesture$addr >> 2] | 0)) HEAP8[$retval >> 0] = 1; else HEAP8[$retval >> 0] = 0;
+ if ((1023 & HEAP32[38713] | 0) == (HEAP32[$gesture$addr >> 2] | 0)) HEAP8[$retval >> 0] = 1; else HEAP8[$retval >> 0] = 0;
  STACKTOP = sp;
  return HEAP8[$retval >> 0] & 1 | 0;
 }
@@ -66009,16 +66062,16 @@ function _CloseAudioDevice() {
  sp_a = STACKTOP = STACKTOP + 63 & -64;
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
- if (HEAP8[155986] & 1) {
-  _ma_mutex_uninit(155268);
+ if (HEAP8[155990] & 1) {
+  _ma_mutex_uninit(155272);
   _ma_device_uninit(48192);
-  _ma_context_uninit(155064) | 0;
+  _ma_context_uninit(155068) | 0;
   _CloseAudioBufferPool();
-  _TraceLog(3, 38316, sp_a);
+  _TraceLog(3, 38334, sp_a);
   STACKTOP = sp;
   return;
  } else {
-  _TraceLog(4, 38349, sp_a + 8 | 0);
+  _TraceLog(4, 38367, sp_a + 8 | 0);
   STACKTOP = sp;
   return;
  }
@@ -66169,7 +66222,7 @@ function _ScrollCallback($window, $xoffset, $yoffset) {
  HEAP32[sp + 16 >> 2] = $window;
  HEAPF64[sp + 8 >> 3] = $xoffset;
  HEAPF64[$yoffset$addr >> 3] = $yoffset;
- HEAP32[38762] = ~~+HEAPF64[$yoffset$addr >> 3];
+ HEAP32[38763] = ~~+HEAPF64[$yoffset$addr >> 3];
  STACKTOP = sp;
  return;
 }
@@ -66233,7 +66286,7 @@ function _rlLoadIdentity() {
  STACKTOP = STACKTOP + 64 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(64);
  $tmp = sp;
- $0 = HEAP32[38588] | 0;
+ $0 = HEAP32[38589] | 0;
  _MatrixIdentity($tmp);
  dest = $0;
  src = $tmp;
@@ -66290,7 +66343,7 @@ function _rlMatrixMode($mode) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $mode$addr = sp;
  HEAP32[$mode$addr >> 2] = $mode;
- if ((HEAP32[$mode$addr >> 2] | 0) == 5889) HEAP32[38588] = 154288; else if ((HEAP32[$mode$addr >> 2] | 0) == 5888) HEAP32[38588] = 154356;
+ if ((HEAP32[$mode$addr >> 2] | 0) == 5889) HEAP32[38589] = 154292; else if ((HEAP32[$mode$addr >> 2] | 0) == 5888) HEAP32[38589] = 154360;
  HEAP32[5038] = HEAP32[$mode$addr >> 2];
  STACKTOP = sp;
  return;
@@ -66500,7 +66553,7 @@ function _stbv_vorbis_validate($data) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $data$addr = sp_a;
  HEAP32[$data$addr >> 2] = $data;
- $conv = (_memcmp(HEAP32[$data$addr >> 2] | 0, 36535, 6) | 0) == 0 & 1;
+ $conv = (_memcmp(HEAP32[$data$addr >> 2] | 0, 36553, 6) | 0) == 0 & 1;
  STACKTOP = sp;
  return $conv | 0;
 }
@@ -66543,10 +66596,10 @@ function _rlglClose() {
  $vararg_buffer = sp;
  _UnloadShaderDefault();
  _UnloadBuffersDefault();
- _glDeleteTextures(1, 154500);
- HEAP32[$vararg_buffer >> 2] = HEAP32[38625];
- _TraceLog(3, 23922, $vararg_buffer);
- _free(HEAP32[38622] | 0);
+ _glDeleteTextures(1, 154504);
+ HEAP32[$vararg_buffer >> 2] = HEAP32[38626];
+ _TraceLog(3, 23940, $vararg_buffer);
+ _free(HEAP32[38623] | 0);
  STACKTOP = sp;
  return;
 }
@@ -66606,11 +66659,11 @@ function _CharCallback($window, $key) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  HEAP32[sp + 4 >> 2] = $window;
  HEAP32[sp >> 2] = $key;
- if ((HEAP32[38763] | 0) >= 16) {
+ if ((HEAP32[38764] | 0) >= 16) {
   STACKTOP = sp;
   return;
  }
- HEAP32[38763] = (HEAP32[38763] | 0) + 1;
+ HEAP32[38764] = (HEAP32[38764] | 0) + 1;
  STACKTOP = sp;
  return;
 }
@@ -66733,7 +66786,7 @@ function _GetKeyStatus($key) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $key$addr = sp;
  HEAP32[$key$addr >> 2] = $key;
- $tobool = (_glfwGetKey(HEAP32[38731] | 0, HEAP32[$key$addr >> 2] | 0) | 0) != 0;
+ $tobool = (_glfwGetKey(HEAP32[38732] | 0, HEAP32[$key$addr >> 2] | 0) | 0) != 0;
  STACKTOP = sp;
  return $tobool | 0;
 }
@@ -66754,15 +66807,15 @@ function _CloseWindow() {
  sp = STACKTOP;
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
- if (HEAP8[155985] & 1) {
+ if (HEAP8[155989] & 1) {
   _GifEnd() | 0;
-  HEAP8[155985] = 0;
+  HEAP8[155989] = 0;
  }
  _UnloadFontDefault();
  _rlglClose();
- _glfwDestroyWindow(HEAP32[38731] | 0);
+ _glfwDestroyWindow(HEAP32[38732] | 0);
  _glfwTerminate();
- _TraceLog(3, 24910, sp);
+ _TraceLog(3, 24928, sp);
  STACKTOP = sp;
  return;
 }
@@ -66805,7 +66858,7 @@ function _stbi__err($str) {
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  $str$addr = sp_a;
  HEAP32[$str$addr >> 2] = $str;
- HEAP32[38846] = HEAP32[$str$addr >> 2];
+ HEAP32[38847] = HEAP32[$str$addr >> 2];
  STACKTOP = sp;
  return 0;
 }
@@ -66818,7 +66871,7 @@ function _CloseAudioStream($stream) {
  STACKTOP = STACKTOP + 16 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(16);
  _CloseAudioBuffer(HEAP32[$stream + 12 >> 2] | 0);
- _TraceLog(3, 38792, sp_a);
+ _TraceLog(3, 38810, sp_a);
  STACKTOP = sp;
  return;
 }
@@ -66993,7 +67046,7 @@ function _GetFontDefault($agg$result) {
  $agg$result = $agg$result | 0;
  var dest = 0, src = 0, stop = 0;
  dest = $agg$result;
- src = 155344;
+ src = 155348;
  stop = dest + 36 | 0;
  do {
   HEAP32[dest >> 2] = HEAP32[src >> 2];
@@ -67027,11 +67080,11 @@ function dynCall_viffff(index, a1, a2, a3, a4, a5) {
 
 function _UnloadShaderDefault() {
  _glUseProgram(0);
- _glDetachShader(HEAP32[38708] | 0, HEAP32[38710] | 0);
- _glDetachShader(HEAP32[38708] | 0, HEAP32[38711] | 0);
- _glDeleteShader(HEAP32[38710] | 0);
+ _glDetachShader(HEAP32[38709] | 0, HEAP32[38711] | 0);
+ _glDetachShader(HEAP32[38709] | 0, HEAP32[38712] | 0);
  _glDeleteShader(HEAP32[38711] | 0);
- _glDeleteProgram(HEAP32[38708] | 0);
+ _glDeleteShader(HEAP32[38712] | 0);
+ _glDeleteProgram(HEAP32[38709] | 0);
  return;
 }
 
@@ -67049,7 +67102,7 @@ function _pntz($p) {
 function _SetMatrixProjection($proj) {
  $proj = $proj | 0;
  var dest = 0, src = 0, stop = 0;
- dest = 154288;
+ dest = 154292;
  src = $proj;
  stop = dest + 64 | 0;
  do {
@@ -67069,7 +67122,7 @@ function __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($t
 function _SetMatrixModelview($view) {
  $view = $view | 0;
  var dest = 0, src = 0, stop = 0;
- dest = 154356;
+ dest = 154360;
  src = $view;
  stop = dest + 64 | 0;
  do {
@@ -67535,7 +67588,7 @@ function b19(p0, p1, p2, p3, p4) {
 }
 
 function _rlglDraw() {
- if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) <= 0) return;
+ if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) <= 0) return;
  _UpdateBuffersDefault();
  _DrawBuffersDefault();
  return;
@@ -67718,7 +67771,7 @@ function _vsprintf($s, $fmt, $ap) {
 }
 
 function _rlDisableTexture() {
- if ((HEAP32[144640 + ((HEAP32[38624] | 0) * 48 | 0) >> 2] | 0) < 8192) return;
+ if ((HEAP32[144640 + ((HEAP32[38625] | 0) * 48 | 0) >> 2] | 0) < 8192) return;
  _rlglDraw();
  return;
 }
@@ -68055,7 +68108,7 @@ function _pthread_mutex_unlock($mutex) {
 }
 
 function _SwapBuffers() {
- _glfwSwapBuffers(HEAP32[38731] | 0);
+ _glfwSwapBuffers(HEAP32[38732] | 0);
  return;
 }
 
@@ -68144,8 +68197,8 @@ function _dummy_560($fd) {
 }
 
 function ___ofl_lock() {
- ___lock(155456);
- return 155464;
+ ___lock(155460);
+ return 155468;
 }
 
 function setAsyncState(x) {
@@ -68154,16 +68207,16 @@ function setAsyncState(x) {
 }
 
 function _GetScreenHeight() {
- return HEAP32[38735] | 0;
+ return HEAP32[38736] | 0;
 }
 
 function ___ofl_unlock() {
- ___unlock(155456);
+ ___unlock(155460);
  return;
 }
 
 function _GetScreenWidth() {
- return HEAP32[38734] | 0;
+ return HEAP32[38735] | 0;
 }
 
 function getEmtStackMax() {
@@ -68215,7 +68268,7 @@ function __ZSt15get_new_handlerv() {
 }
 
 function ___errno_location() {
- return 155452;
+ return 155456;
 }
 
 function stackSave() {
