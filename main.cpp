@@ -1,16 +1,18 @@
 #include <raylib.h>
 
-#include "clases/Nave.h"
+#include "clases/Personaje/Nave.h"
+#include "clases/Fondo/Background.h"
 
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
-const int screenWidth = 800;
-const int screenHeight = 450;
+const int screenWidth = 864;
+const int screenHeight = 576;
 
 // Variables Globales
 Music music;
 Nave *player;
+Background *Mapa;
 
 static void UpdateDrawFrame(void);          // Función dedicada a operar cada frame
 
@@ -24,6 +26,7 @@ int main() {
 
     PlayMusicStream(music);
     player = new Nave("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
+    Mapa = new Background("resources/map.png");
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
@@ -67,7 +70,9 @@ static void UpdateDrawFrame(void) {
 
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
+
     // Dibujo todos los elementos del juego.
+    Mapa->draw();
     player->draw();
     DrawText("Inicio", 20, 20, 40, LIGHTGRAY);
 
