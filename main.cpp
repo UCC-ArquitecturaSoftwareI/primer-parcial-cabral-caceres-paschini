@@ -1,18 +1,21 @@
 #include <raylib.h>
 
-#include "clases/Personaje/Nave.h"
-#include "clases/Fondo/Background.h"
+#include "clases/Personaje/Player.h"
+#include "clases/Map/Map.h"
+#include "clases/Renderer/Renderer.h"
+#include "clases/Music Renderer/Sound_Render.h"
 
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
-const int screenWidth = 864;
-const int screenHeight = 576;
+const int screenWidth = 1536;
+const int screenHeight = 864;
 
 // Variables Globales
-Music music;
-Nave *player;
-Background *Mapa;
+Map map("Map.json");
+Player *player;
+Renderer renderer(map,player);
+Sound_Render Srend("../resources/Song.mp3")
 
 static void UpdateDrawFrame(void);          // Función dedicada a operar cada frame
 
@@ -22,11 +25,10 @@ int main() {
     InitAudioDevice();              // Initialize audio device
 
     /// Ejemplo de utilización de audio.
-    music = LoadMusicStream("resources/Cyberpunk Moonlight Sonata.mp3");
 
-    PlayMusicStream(music);
-    player = new Nave("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
-    Mapa = new Background("resources/map.png");
+    PlayMusicStream(Srend.getMusic());
+
+    player = new Player("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
@@ -42,7 +44,7 @@ int main() {
 
     // Descargar todos los resources cargados
 
-    UnloadMusicStream(music);   // Descargo la musica de RAM
+    UnloadMusicStream(Srend.getMusic());   // Descargo la musica de RAM
     CloseAudioDevice();         // Cierro el dispositivo de Audio
     CloseWindow();              // Cierro la ventana
     return 0;
@@ -72,7 +74,6 @@ static void UpdateDrawFrame(void) {
 
 
     // Dibujo todos los elementos del juego.
-    Mapa->draw();
     player->draw();
     DrawText("Inicio", 20, 20, 40, LIGHTGRAY);
 
