@@ -11,15 +11,19 @@
 const int screenWidth = 1536;
 const int screenHeight = 864;
 
+
 // Variables Globales
 Map map("Map.json");
-Player *player;
-Renderer renderer(map,player);
-Sound_Render Srend("../resources/Song.mp3")
+Player player("../resources/player/Fall_(32x32).png", Vector2{screenWidth / 2, screenHeight / 2});
+Renderer Rend(&map, &player);
+Sound_Render Srend("../resources/Song.mp3");
 
 static void UpdateDrawFrame(void);          // Función dedicada a operar cada frame
 
 int main() {
+
+
+
     // Inicialización de la ventana
     InitWindow(screenWidth, screenHeight, "raylib template - advance game");
     InitAudioDevice();              // Initialize audio device
@@ -27,8 +31,6 @@ int main() {
     /// Ejemplo de utilización de audio.
 
     PlayMusicStream(Srend.getMusic());
-
-    player = new Player("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
@@ -55,28 +57,3 @@ int main() {
  *  Función dedicada a dibujar cada frame. Acá adentro se debe poner la logica necesaria para representar un nuevo frame
  *  del juego.
  */
-static void UpdateDrawFrame(void) {
-
-    // siempre hay que reproducir la musica que esta actualmente
-    UpdateMusicStream(music);
-
-    // Verifico Entradas de eventos.
-    if (IsKeyDown(KEY_RIGHT)) player->move_x(2.0f);
-    if (IsKeyDown(KEY_LEFT)) player->move_x(-2.0f);
-    if (IsKeyDown(KEY_UP)) player->move_y(-2.0f);
-    if (IsKeyDown(KEY_DOWN)) player->move_y(2.0f);
-
-
-    // Comienzo a dibujar
-    BeginDrawing();
-
-    ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
-
-
-    // Dibujo todos los elementos del juego.
-    player->draw();
-    DrawText("Inicio", 20, 20, 40, LIGHTGRAY);
-
-    // Finalizo el dibujado
-    EndDrawing();
-}

@@ -10,10 +10,10 @@
 
 class Renderer {
 private:
-    Map Level;
+    Map *Level;
     Player *Character;
 public:
-    Renderer(Map &level , Player *&Character);
+    Renderer(Map *Mp , Player *Ch);
 
     void draw_Map();
 

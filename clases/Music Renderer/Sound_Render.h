@@ -8,16 +8,15 @@
 #include <string>
 
 class Sound_Render {
-public:
-    Sound_Render(const Music &music);
 
 private:
 Music music;
 public:
-    Sound_Render(std::string text);
+    explicit Sound_Render(std::string text);
 
-    const Music &getMusic() const;
+     Music &getMusic() ;
 
+    void UpdateMusic();
 
 };
 

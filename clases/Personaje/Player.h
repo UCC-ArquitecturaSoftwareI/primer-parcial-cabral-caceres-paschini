@@ -9,18 +9,17 @@
 
 
 class Player {
-    Texture2D player;
+private:
+    Texture2D player_text;
     Vector2 player_pos;
 public:
-    Player(std::string text, const Vector2 &play_pos);
+    Player(std::string file, const Vector2 &playpos);
 
     void move_x(float d);
 
-    void move_y(float d);
+    void jump_y();
 
-    const Vector2 &getPlayerPos() const;
-
-    const Texture2D &getPlayer() const;
+    Texture2D &getPlayerText();
 };
 
 

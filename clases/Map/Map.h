@@ -16,11 +16,15 @@ class Map {
 public:
     Map(std::string file);
 
-    const tson::Map getMap() const;
+    tson::Map getMap();
 
     const Texture2D &getMapText() const;
 
     tson::Tileset *getMapTileset() const;
+
+    Vector2 ReturnCharPos();
+
+
 };
 
 

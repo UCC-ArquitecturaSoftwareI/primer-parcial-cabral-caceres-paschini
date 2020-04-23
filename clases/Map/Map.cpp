@@ -7,16 +7,16 @@
 
 Map::Map(std::string file) {
     tson::Tileson parser;
-    map = parser.parse(fs::path(file));
+    map = parser.parse(file.c_str());
 
     if (map.getStatus() == tson::ParseStatus::OK)
+
         for (auto &tileset :map.getTilesets()) {
+            map_text = LoadTexture(("../resources/level/" + tileset.getImage().string()).c_str());
             map_tileset = &tileset;
-            map_text = LoadTexture(fs::path("../resources/level/" + tileset.getImage().string()).c_str());
         }
 }
-
-const tson::Map Map::getMap() const {
+tson::Map Map::getMap() {
     return map;
 }
 
@@ -26,4 +26,14 @@ const Texture2D &Map::getMapText() const {
 
 tson::Tileset *Map::getMapTileset() const {
     return map_tileset;
+}
+
+Vector2 Map::ReturnCharPos() {
+    tson::Layer *layer = map.getLayer("Player");
+    tson::Object *player = layer->firstObj("Play");
+
+    Vector2 Playerpos;
+    Playerpos.x = player->getPosition().x;
+    Playerpos.y = player->getPosition().y;
+    return Playerpos;
 }
