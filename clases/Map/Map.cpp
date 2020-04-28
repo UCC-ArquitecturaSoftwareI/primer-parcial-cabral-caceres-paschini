@@ -7,15 +7,16 @@
 
 Map::Map(std::string file) {
     tson::Tileson parser;
-    map = parser.parse(file.c_str());
+    map = parser.parse(fs::path(file.c_str()));
 
     if (map.getStatus() == tson::ParseStatus::OK)
-
         for (auto &tileset :map.getTilesets()) {
-            map_text = LoadTexture(("../resources/level/" + tileset.getImage().string()).c_str());
+            std::cout << (fs::path("resources/level/" + tileset.getImage().string()).string()).c_str() << std::endl;
+            map_text = LoadTexture((fs::path("resources/level/" + tileset.getImage().string()).string()).c_str());
             map_tileset = &tileset;
         }
 }
+
 tson::Map Map::getMap() {
     return map;
 }

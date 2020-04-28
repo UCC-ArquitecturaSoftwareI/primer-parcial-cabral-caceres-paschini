@@ -13,24 +13,26 @@ const int screenHeight = 864;
 
 
 // Variables Globales
-Map map("Map.json");
-Player player("../resources/player/Fall_(32x32).png", Vector2{screenWidth / 2, screenHeight / 2});
-Renderer Rend(&map, &player);
-Sound_Render Srend("../resources/Song.mp3");
+Map *map;
+Player *player;
+//Sound_Render *Srend;
 
-static void UpdateDrawFrame(void);          // Función dedicada a operar cada frame
 
 int main() {
 
+    map = new Map("resources/Level/Map.json");
+    player = new Player("resources/Player/spritesheet.png", map->ReturnCharPos());
 
+    Renderer Rend(map, player);
+    // Srend = new Sound_Render("resources/Music/Song.mp3");
 
     // Inicialización de la ventana
-    InitWindow(screenWidth, screenHeight, "raylib template - advance game");
+    InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
     InitAudioDevice();              // Initialize audio device
 
     /// Ejemplo de utilización de audio.
 
-    PlayMusicStream(Srend.getMusic());
+    //Srend->PlayMusic();
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
@@ -39,14 +41,15 @@ int main() {
     SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
     // Main loop
     while (!WindowShouldClose()) {
-        UpdateDrawFrame();
+        Rend.UpdateDrawFrame();
+        //Srend->UpdateMusic();
     }
 #endif
 
 
     // Descargar todos los resources cargados
 
-    UnloadMusicStream(Srend.getMusic());   // Descargo la musica de RAM
+    //UnloadMusicStream(Srend.getMusic());   // Descargo la musica de RAM
     CloseAudioDevice();         // Cierro el dispositivo de Audio
     CloseWindow();              // Cierro la ventana
     return 0;

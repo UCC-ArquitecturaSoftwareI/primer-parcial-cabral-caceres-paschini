@@ -12,12 +12,15 @@ class Renderer {
 private:
     Map *Level;
     Player *Character;
+    Animation* Playani;
 public:
     Renderer(Map *Mp , Player *Ch);
 
     void draw_Map();
 
     void draw_Character();
+
+    void UpdateDrawFrame();
 
 };
 

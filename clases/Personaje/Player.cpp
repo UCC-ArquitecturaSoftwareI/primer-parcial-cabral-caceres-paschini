@@ -9,8 +9,10 @@
  * This func creates the the payer entity into the program
  * @param navePos: Is the position of the player
  */
-Player::Player(std::string file, const Vector2 &playpos) : player_pos(playpos) {
-    player_text = LoadTexture(file.c_str());
+Player::Player(std::string file, Vector2 playpos) {
+    player_pos = playpos;
+    filePathText = file;
+    maxCol[6, 1, 7, 11, 12, 5];
 }
 
 /**
@@ -22,11 +24,20 @@ void Player::move_x(float d) {
 }
 
 void Player::jump_y() {
-    player_pos.y +=5;
+    player_pos.y += 5;
 }
 
-Texture2D &Player::getPlayerText() {
-    return player_text;
+Vector2 &Player::getPlayerPos() {
+    return player_pos;
 }
+
+const std::string &Player::getFilePathText() const {
+    return filePathText;
+}
+
+const std::vector<int> &Player::getMaxCol() const {
+    return maxCol;
+}
+
 
 

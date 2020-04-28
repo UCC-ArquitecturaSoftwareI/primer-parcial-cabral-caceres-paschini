@@ -8,10 +8,10 @@ Sound_Render::Sound_Render(std::string text) {
     music = LoadMusicStream(text.c_str());
 }
 
-Music &Sound_Render::getMusic() {
-    return music;
-}
-
 void Sound_Render::UpdateMusic() {
     UpdateMusicStream(music);
+}
+
+void Sound_Render::PlayMusic() {
+PlayMusicStream(music);
 }

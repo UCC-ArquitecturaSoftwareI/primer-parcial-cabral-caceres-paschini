@@ -8,6 +8,7 @@
 Renderer::Renderer(Map *Mp, Player *Ch) {
     Level = Mp;
     Character = Ch;
+    Playani = new Animation(Character->getFilePathText(), Character->getMaxCol());
 }
 
 void Renderer::draw_Map() {
@@ -50,28 +51,32 @@ void Renderer::draw_Map() {
 }
 
 void Renderer::draw_Character() {
-
+    Playani->Animate(Character->getPlayerPos());
 }
 
-static void UpdateDrawFrame() {
-
-    // siempre hay que reproducir la musica que esta actualmente
+void Renderer::UpdateDrawFrame() {
 
     // Verifico Entradas de eventos.
-    if (IsKeyDown(KEY_RIGHT)) player.move_x(2.0f);
-    if (IsKeyDown(KEY_LEFT)) player.move_x(-2.0f);
-    if (IsKeyDown(KEY_UP)) player.jump_y();
+
+    if (IsKeyDown(KEY_RIGHT)) {
+        Character->move_x(2.0f);
+        Playani->setCurrentRow(0);
+    }
+    if (IsKeyDown(KEY_LEFT)) {
+        Character->move_x(-2.0f);
+        Playani->setCurrentRow(1);
+    }
+    if (IsKeyDown(KEY_UP)) Character->jump_y();
+    if (IsKeyReleased(KEY_DOWN))
 
 
-
-    // Comienzo a dibujar
-    BeginDrawing();
+        // Comienzo a dibujar
+        BeginDrawing();
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
-
 
     // Dibujo todos los elementos del juego.
     draw_Character();
-    draw_Map();
+    //draw_Map();
     DrawText("Start", 20, 20, 40, LIGHTGRAY);
 
     // Finalizo el dibujado

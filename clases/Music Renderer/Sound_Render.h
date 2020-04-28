@@ -14,9 +14,9 @@ Music music;
 public:
     explicit Sound_Render(std::string text);
 
-     Music &getMusic() ;
-
     void UpdateMusic();
+
+    void PlayMusic();
 
 };
 

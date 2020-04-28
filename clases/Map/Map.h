@@ -7,7 +7,7 @@
 
 #include <string>
 #include <raylib.h>
-#include "../../LIbs/tileson.hpp"
+#include "../../Libs/tileson.hpp"
 
 class Map {
     tson::Map map;
@@ -23,7 +23,6 @@ public:
     tson::Tileset *getMapTileset() const;
 
     Vector2 ReturnCharPos();
-
 
 };
 
