@@ -9,6 +9,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+
 class padre{
 protected:
     std::string FilePath;
@@ -17,9 +18,9 @@ protected:
     Rectangle Frame;
 public:
 
-    virtual void Move_x (float d) = 0;
+    virtual void Move_x (float d) = 0; // clase virtual abstracta para ser implementada en cada personaje
 
-    virtual Vector2 &GetPos () = 0;
+    virtual Vector2 &GetPos () = 0; // clase virtual abstracta para ser implementada en cada personaje
 
     const std::string &getFilePath() const {
         return FilePath;
