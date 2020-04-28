@@ -14,7 +14,7 @@ include("cmake/raylib_web.cmake")
 include("cmake/raylib.cmake")
 
 
-add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Nave.cpp clases/Personaje/Nave.h clases/Fondo/Background.cpp clases/Fondo/Background.h)
+add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Nave.cpp clases/Personaje/Nave.h clases/Fondo/Background.cpp clases/Fondo/Background.h clases/Padre/padre.h )
 add_dependencies(${PROJECT_NAME} raylib)
 target_link_libraries(${PROJECT_NAME} ${raylib_LDFLAGS})
 target_include_directories(${PROJECT_NAME} PRIVATE ${raylib_INCLUDE_DIRS})
