@@ -12,9 +12,7 @@
 
 class padre{
 protected:
-    std::string FilePath;
     Vector2 Pos;
-    std:: vector<int> MaxColumn;
     Rectangle Frame;
 public:
 
