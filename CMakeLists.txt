@@ -3,6 +3,8 @@ project(raylibTemplate)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set (GRAPHIC_API GRAPHICS_API_OPENGL_21 )
+
 # Get the source toegher
 file(GLOB sources *.cpp)
 
@@ -14,7 +16,7 @@ include("cmake/raylib_web.cmake")
 include("cmake/raylib.cmake")
 
 
-add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Player.cpp clases/Personaje/Player.h clases/Map/Map.cpp clases/Map/Map.h clases/Renderer/Renderer.cpp clases/Renderer/Renderer.h "clases/Music Renderer/Sound_Render.cpp" "clases/Music Renderer/Sound_Render.h" clases/Animator/Animation.cpp clases/Animator/Animation.h clases/Entity/entity.cpp clases/Entity/entity.h)
+add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Player.cpp clases/Personaje/Player.h clases/Map/Map.cpp clases/Map/Map.h clases/Renderer/Renderer.cpp clases/Renderer/Renderer.h "clases/Music Renderer/Sound_Render.cpp" "clases/Music Renderer/Sound_Render.h" clases/Animator/Animation.cpp clases/Animator/Animation.h  )
 add_dependencies(${PROJECT_NAME} raylib)
 target_link_libraries(${PROJECT_NAME} ${raylib_LDFLAGS})
 target_include_directories(${PROJECT_NAME} PRIVATE ${raylib_INCLUDE_DIRS})

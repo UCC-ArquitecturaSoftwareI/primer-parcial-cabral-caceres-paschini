@@ -15,6 +15,7 @@ private:
     std::string filePathText;
     Vector2 player_pos{};
     std::vector<int> maxCol;
+    Rectangle Area;
 public:
     Player(std::string file, Vector2 playpos);
 
