@@ -18,6 +18,8 @@ public:
 
     void PlayMusic();
 
+    const Music &getMusic() const;
+
 };
 
 

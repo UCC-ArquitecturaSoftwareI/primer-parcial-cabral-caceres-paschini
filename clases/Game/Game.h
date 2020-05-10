@@ -10,6 +10,7 @@
 #include "../Renderer/Renderer.h"
 #include "../Music Renderer/Sound_Render.h"
 #include "../Input/Input_Handler.h"
+#include "../Colision/Collision.h"
 
 
 class Game {
@@ -19,6 +20,8 @@ private:
     Sound_Render *Srend;
     Renderer *Rend;
     Input_Handler *Input;
+    Collision *Col;
+
 public:
     Game();
 
@@ -27,6 +30,8 @@ public:
     void UpdateFrame();
 
     void UpdateMusic();
+
+    void EndGame();
 };
 
 

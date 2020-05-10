@@ -16,6 +16,18 @@ Map::Map(std::string file) {
             map_text = LoadTexture(pepe.c_str());
             map_tileset = &tileset;
         }
+
+
+    tson::Layer *layer = map.getLayer("Floor_&_Wall");
+    for (auto &obj : layer->getObjects()) {
+        Rectangle Rec;
+        Rec.x = obj.getPosition().x;
+        Rec.y = obj.getPosition().y;
+        Rec.width = obj.getSize().x;
+        Rec.height = obj.getSize().y;
+
+        Colilision.push_front(Rec);
+    }
 }
 
 
@@ -40,3 +52,8 @@ Vector2 Map::ReturnCharPos() {
 const tson::Map &Map::getMap() const {
     return map;
 }
+
+std::list<Rectangle> *Map::ReturnList() {
+    return &Colilision;
+}
+

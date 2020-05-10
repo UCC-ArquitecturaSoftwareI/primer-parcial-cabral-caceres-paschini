@@ -9,8 +9,7 @@ Renderer::Renderer(Map *Mp, Player *Ch) {
     Level = Mp;
     Character = Ch;
     Playani = new Animation(Character->getFilePathText(), Character->getMaxCol());
-    camZoom.zoom = 1.2f;
-    camZoom.rotation = 0.0f;
+    camZoom.zoom = 1.5f;
 
 }
 
@@ -60,7 +59,7 @@ void Renderer::UpdateDrawFrame(int State) {
 
     // Comienzo a dibujar
     BeginDrawing();
-    BeginMode2D(camZoom);
+    //BeginMode2D(camZoom);
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
     //draw_Map();

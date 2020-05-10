@@ -16,7 +16,7 @@ include("cmake/raylib_web.cmake")
 include("cmake/raylib.cmake")
 
 
-add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Player.cpp clases/Personaje/Player.h clases/Map/Map.cpp clases/Map/Map.h clases/Renderer/Renderer.cpp clases/Renderer/Renderer.h "clases/Music Renderer/Sound_Render.cpp" "clases/Music Renderer/Sound_Render.h" clases/Animator/Animation.cpp clases/Animator/Animation.h clases/Input/Input_Handler.cpp clases/Input/Input_Handler.h clases/Game/Game.cpp clases/Game/Game.h )
+add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Player.cpp clases/Personaje/Player.h clases/Map/Map.cpp clases/Map/Map.h clases/Renderer/Renderer.cpp clases/Renderer/Renderer.h "clases/Music Renderer/Sound_Render.cpp" "clases/Music Renderer/Sound_Render.h" clases/Animator/Animation.cpp clases/Animator/Animation.h clases/Input/Input_Handler.cpp clases/Input/Input_Handler.h clases/Game/Game.cpp clases/Game/Game.h clases/Colision/Collision.cpp clases/Colision/Collision.h)
 add_dependencies(${PROJECT_NAME} raylib)
 target_link_libraries(${PROJECT_NAME} ${raylib_LDFLAGS})
 target_include_directories(${PROJECT_NAME} PRIVATE ${raylib_INCLUDE_DIRS})

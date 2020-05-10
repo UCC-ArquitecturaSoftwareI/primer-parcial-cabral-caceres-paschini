@@ -41,33 +41,33 @@
          "name":"Floor_&_Wall",
          "objects":[
                 {
-                 "height":31.2727,
+                 "height":32,
                  "id":1,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"box",
                  "visible":true,
-                 "width":143.394,
-                 "x":16.6667,
+                 "width":144,
+                 "x":16,
                  "y":80
                 }, 
                 {
-                 "height":31.0417,
+                 "height":32,
                  "id":2,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"box",
                  "visible":true,
-                 "width":30.6667,
-                 "x":96.6667,
-                 "y":176.458
+                 "width":31,
+                 "x":96,
+                 "y":176
                 }, 
                 {
                  "height":62.75,
                  "id":3,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"box",
                  "visible":true,
                  "width":16,
                  "x":127.333,
@@ -217,15 +217,15 @@
                  "y":-1.33333
                 }, 
                 {
-                 "height":464.667,
+                 "height":464,
                  "id":17,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":625.333,
-                 "y":15.3333
+                 "x":625,
+                 "y":15
                 }, 
                 {
                  "height":14.6667,
@@ -235,11 +235,11 @@
                  "type":"",
                  "visible":true,
                  "width":610.667,
-                 "x":13.3333,
+                 "x":13,
                  "y":464
                 }, 
                 {
-                 "height":30.6666,
+                 "height":30,
                  "id":19,
                  "name":"",
                  "rotation":0,
@@ -247,51 +247,51 @@
                  "visible":true,
                  "width":610,
                  "x":16,
-                 "y":432.667
+                 "y":432
                 }, 
                 {
-                 "height":31.3333,
+                 "height":32,
                  "id":20,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":47.3333,
+                 "width":48,
                  "x":176,
-                 "y":400.667
+                 "y":400
                 }, 
                 {
-                 "height":177.333,
+                 "height":177,
                  "id":22,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":110.94,
-                 "x":320.667,
-                 "y":255.333
+                 "width":111,
+                 "x":320,
+                 "y":255
                 }, 
                 {
-                 "height":112.666,
+                 "height":112,
                  "id":23,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":194.182,
-                 "x":431.334,
-                 "y":319.333
+                 "width":194,
+                 "x":431,
+                 "y":319
                 }, 
                 {
-                 "height":14.606,
+                 "height":14,
                  "id":24,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":96,
-                 "x":528.667,
-                 "y":304.667
+                 "x":528,
+                 "y":304
                 }, 
                 {
                  "height":16,
@@ -300,9 +300,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16.5455,
-                 "x":608.122,
-                 "y":288.424
+                 "width":16,
+                 "x":608,
+                 "y":288
                 }, 
                 {
                  "height":47.9889680533211,
@@ -312,23 +312,23 @@
                  "type":"",
                  "visible":true,
                  "width":80.5332107561479,
-                 "x":543.874971270972,
-                 "y":63.4336934038152
+                 "x":543,
+                 "y":63
                 }, 
                 {
-                 "height":18.2027120202252,
+                 "height":17,
                  "id":30,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":79.4300160882556,
-                 "x":544.426568604918,
-                 "y":14.3415306826017
+                 "width":81,
+                 "x":544,
+                 "y":15
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -338,16 +338,15 @@
          "name":"Player",
          "objects":[
                 {
-                 "height":0,
-                 "id":26,
+                 "height":32,
+                 "id":34,
                  "name":"Play",
-                 "point":true,
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":0,
-                 "x":66.6667,
-                 "y":412
+                 "width":32,
+                 "x":61,
+                 "y":376
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -356,7 +355,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":34,
+ "nextobjectid":36,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.4",

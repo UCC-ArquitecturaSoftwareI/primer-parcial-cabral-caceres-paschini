@@ -10,22 +10,14 @@
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
-const int screenWidth = 640*1.2;
-const int screenHeight = 480*1.2;
-
 
 
 
 int main() {
-
-    //Inicialización de la ventana
-    InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
-    InitAudioDevice();
-
     Game *game;
     game = new Game();
 
-
+    //Starts Music
     game->PlayMusic();
 
 
@@ -36,16 +28,13 @@ int main() {
     // Main loop
     while (!WindowShouldClose()) {
         game->UpdateFrame();
-        game->UpdateMusic();
+        //game->UpdateMusic();
     }
 #endif
 
 
     // Descargar todos los resources cargados
-
-    //UnloadMusicStream(Srend.getMusic());   // Descargo la musica de RAM
-    CloseAudioDevice();         // Cierro el dispositivo de Audio
-    CloseWindow();              // Cierro la ventana
+    game->EndGame();
     return 0;
 }
 

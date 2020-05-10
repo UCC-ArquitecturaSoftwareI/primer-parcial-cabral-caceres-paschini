@@ -19,9 +19,11 @@ public:
 
     void setKeyPress();
 
-    Vector2 &getKeyPress() ;
+    Vector2 &getKeyPress();
 
     int GetCharStatus();
+
+    int GetLastKey();
 
 };
 

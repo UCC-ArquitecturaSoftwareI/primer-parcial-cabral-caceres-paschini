@@ -15,3 +15,7 @@ void Sound_Render::UpdateMusic() {
 void Sound_Render::PlayMusic() {
 PlayMusicStream(music);
 }
+
+const Music &Sound_Render::getMusic() const {
+    return music;
+}

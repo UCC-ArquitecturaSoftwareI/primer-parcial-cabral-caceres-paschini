@@ -8,12 +8,14 @@
 #include <string>
 #include <raylib.h>
 #include "../../Libs/tileson.hpp"
+#include <list>
 
 class Map {
     tson::Map map;
     Texture2D map_text;
     tson::Tileset *map_tileset;
     std::string path;
+    std::list<Rectangle> Colilision;
 public:
     Map(std::string file);
 
@@ -25,6 +27,7 @@ public:
 
     Vector2 ReturnCharPos();
 
+    std::list<Rectangle> *ReturnList();
 
 
 };
