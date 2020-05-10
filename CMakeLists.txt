@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 project(raylibTemplate)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 # Get the source toegher
 file(GLOB sources *.cpp)
@@ -14,7 +14,7 @@ include("cmake/raylib_web.cmake")
 include("cmake/raylib.cmake")
 
 
-add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Nave.cpp clases/Personaje/Nave.h clases/Fondo/Background.cpp clases/Fondo/Background.h clases/Padre/padre.h )
+add_executable(${PROJECT_NAME} ${sources} ${sources_clases} clases/Personaje/Nave.cpp clases/Personaje/Nave.h clases/Fondo/Background.cpp clases/Fondo/Background.h clases/Padre/padre.h clases/Personaje/Fruta.cpp clases/Personaje/Fruta.h)
 add_dependencies(${PROJECT_NAME} raylib)
 target_link_libraries(${PROJECT_NAME} ${raylib_LDFLAGS})
 target_include_directories(${PROJECT_NAME} PRIVATE ${raylib_INCLUDE_DIRS})

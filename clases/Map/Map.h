@@ -9,12 +9,16 @@
 #include "../../libs/tileson.hpp"
 
 class Mapa {
-tson::Map map;
-Texture2D map_tex;
-tson::Tileset *map_tileset;
+private:
+    tson::Map map;
+    Texture2D map_tex;
+    tson::Tileset *map_tileset;
+
 public:
-   Vector2 player_init_pos;
-   Mapa(std::string file);
+    Vector2 player_init_pos;
+
+    Mapa(std::string file);
+
 
     void draw();
 };

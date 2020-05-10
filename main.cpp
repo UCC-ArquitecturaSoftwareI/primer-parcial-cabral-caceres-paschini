@@ -1,7 +1,7 @@
 #include <raylib.h>
-
-#include "clases/Personaje/Nave.h"
-#include "clases/Fondo/Background.h"
+#include <physac.h>
+#include "clases/Personaje/Enemigo.h"
+#include "clases/Map/Map.h"
 
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
@@ -11,12 +11,16 @@ const int screenHeight = 576;
 
 // Variables Globales
 Music music;
-Nave *player;
-Background *Mapa;
-
+Enemigo *player;
+Mapa *mapa;
+Camera2D camera={0};
 static void UpdateDrawFrame(void);          // Función dedicada a operar cada frame
 
 int main() {
+
+    player = new Enemigo("resources/Enemigo/enemigo.png", mapa->player_init_pos);
+
+    mapa = new   Mapa ("resources/level/aNivel3.json");
     // Inicialización de la ventana
     InitWindow(screenWidth, screenHeight, "raylib template - advance game");
     InitAudioDevice();              // Initialize audio device
@@ -25,9 +29,15 @@ int main() {
     music = LoadMusicStream("resources/Cyberpunk Moonlight Sonata.mp3");
 
     PlayMusicStream(music);
-    player = new Nave("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
-    Mapa = new Background("resources/map.png");
 
+   InitPhysics();
+   PhysicsBody floor= CreatePhysicsBodyRectangle((Vector2){screenWidth/2,screenHeight},500, 100,10);
+   floor->enabled=false;
+   // PhysicsBody playerBody= CreatePhysicsBodyRectangle(player->getEnemigoPos(),45,30,10);//VERRRRRRRRR
+   //Configuracion de la Camara
+   camera.target={player->getEnemigoPos().x, player->getEnemigoPos().y -110}; //Numero magico
+   camera.offset=(Vector2){screenWidth/2,screenHeight/2};
+   camera.zoom=1.0f;
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
@@ -59,22 +69,33 @@ static void UpdateDrawFrame(void) {
     UpdateMusicStream(music);
 
     // Verifico Entradas de eventos.
-    if (IsKeyDown(KEY_RIGHT)) player->move_x(2.0f);
-    if (IsKeyDown(KEY_LEFT)) player->move_x(-2.0f);
+    if (IsKeyDown(KEY_RIGHT)) {
+        player->move_x(4);
+        if (player->getEnemigoPos().x > camera.target.x + 200)
+            camera.target.x = player->getEnemigoPos().x - 200;
+    }
+    if (IsKeyDown(KEY_LEFT)) {
+        player->move_x(4);
+        if (player->getEnemigoPos().x < camera.target.x - 200)
+            camera.target.x = player->getEnemigoPos().x + 200;
+    }
     if (IsKeyDown(KEY_UP)) player->move_y(-2.0f);
     if (IsKeyDown(KEY_DOWN)) player->move_y(2.0f);
 
 
     // Comienzo a dibujar
     BeginDrawing();
-
+BeginMode2D(camera);
+    {
+        mapa->draw();
+        player->draw();
+    }
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
 
     // Dibujo todos los elementos del juego.
-    Mapa->draw();
-    player->draw();
-    DrawText("Inicio", 20, 20, 40, LIGHTGRAY);
+
+    DrawText("Inicio", 10, 20, 30, LIGHTGRAY);
 
     // Finalizo el dibujado
     EndDrawing();

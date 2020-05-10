@@ -6,17 +6,16 @@
 #define PRIMER_PARCIAL_CABRAL_CACERES_PASCHINI_CAMI_ENEMIGO_H
 #include <raylib.h>
 #include <string>
-
+#include <vector>
 class Enemigo {
 private:
-    Texture2D enemigo_text;
+    Texture2D enemigo;
     Vector2 enemigo_pos;
 public:
-    Enemigo(std::string file, const Vector2 &enempos);
+    Enemigo(std::string file, const Vector2 &enemPos);
     void move_x(float d);
     void move_y(float d);
     void draw();
-
-    Texture2D &getEnemigoText();
+    Vector2 &getEnemigoPos() ;
 };
 #endif //PRIMER_PARCIAL_CABRAL_CACERES_PASCHINI_CAMI_ENEMIGO_H

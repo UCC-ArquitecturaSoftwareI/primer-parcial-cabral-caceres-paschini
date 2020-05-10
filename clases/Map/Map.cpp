@@ -5,12 +5,12 @@
 #include "Map.h"
 #include <cmath>
 Mapa::Mapa(std::string file) {
-    tson::Tileson parser;
+    tson::Tileson parser; //lee archivo
     map=parser.parse(fs::path(file));
-    if(map.getStatus()==tson::ParseStatus::OK)
+    if(map.getStatus()==tson::ParseStatus::OK) //si esta bien, y lee el mapa
     {
         for(auto &tileset : map.getTilesets()){
-            map_tex=LoadTexture(fs::path("resources/Nivel3/" + tileset.getImagen().string()).c_str());
+            map_tex=LoadTexture(fs::path("resources/level/" + tileset.getImagen().string()).c_str());
             map_tileset=&tileset;
         }
         auto objs=map.getLayer("Object");
@@ -18,7 +18,7 @@ Mapa::Mapa(std::string file) {
         player_init_pos.x=player->getPosition().x;
         player_init_pos.y=player->getPosition().y;
 //Cuando personalizamos nuestro tiled podemos pedir que no de la infromacion de nuestro player ejemplo la velocidad.
-      // std::cout<< "Velocidad: "<<player->get<int>("Velocidad")<<std::endl;
+      std::cout<< "Vida: "<<player->get<int>("Vida")<<std::endl;//La info que puse en Tiled
         //Agrega mas objetos
         for(auto &obj : objs->getObjects()){
             std::cout<<"Nombre"<<obj.getName()<<std::endl;
@@ -30,7 +30,27 @@ Mapa::Mapa(std::string file) {
 void Mapa::draw() {
     DrawTexture(Map,0,0,YELLOW);
 }*/
+tson::Map Map::getMap() {
+    return map;
+}
 
+const Texture2D &Map::getMapText() const {
+    return map_text;
+}
+
+tson::Tileset *Map::getMapTileset() const {
+    return map_tileset;
+}
+
+Vector2 Map::ReturnCharPos() {
+    tson::Layer *layer = map.getLayer("Player");
+    tson::Object *player = layer->firstObj("Play");
+
+    Vector2 Playerpos;
+    Playerpos.x = player->getPosition().x;
+    Playerpos.y = player->getPosition().y;
+    return Playerpos;
+}
 void Mapa::draw() { //esto es para el Tileset
     Rectangle tile_rec;
     tile_rec.x=0.0f; //va cortando cada figurita :D
@@ -52,7 +72,7 @@ void Mapa::draw() { //esto es para el Tileset
 
     ClearBackground({c.r,c.g,c.b,c.a});//limpiar la plantalla en blanco
 //LEE EL FONDO DEL NIVEL 3
-    for(auto nombre:{"fondo","Terreno"}){
+    for(auto nombre:{"Fondo","Plano"}){
         //ACORDATE QUE EN TILED PONER EN COLISION QUE ES CADA COSA !!
         auto  *layer=Mapa.getLayer(nombre);
         for(auto &[pos, tile] : layer->getTileData()){
