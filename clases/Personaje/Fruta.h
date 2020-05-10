@@ -17,13 +17,7 @@ private:
     int tipo;
 public:
     Fruta(const Vector2 &frutaPosition, int tipo);
-
-    Fruta(){
-            frutas=LoadTexture("resources/FRUTAS.png");
-            rect={0,0,444,32};
-    }
-
-    void desaparecer();
+    //void desaparecer();
     void draw();
 
 };
