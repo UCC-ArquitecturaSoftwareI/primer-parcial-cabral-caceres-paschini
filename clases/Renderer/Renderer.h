@@ -7,20 +7,20 @@
 
 #include "../Map/Map.h"
 #include "../Personaje/Player.h"
+#include <thread>
 
 class Renderer {
 private:
     Map *Level;
     Player *Character;
-    Animation* Playani;
+    Animation *Playani;
+    Camera2D camZoom;
 public:
-    Renderer(Map *Mp , Player *Ch);
+    Renderer(Map *Mp, Player *Ch);
 
     void draw_Map();
 
-    void draw_Character();
-
-    void UpdateDrawFrame();
+    void UpdateDrawFrame(int State);
 
 };
 

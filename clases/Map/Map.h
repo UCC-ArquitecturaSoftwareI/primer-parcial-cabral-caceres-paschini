@@ -13,16 +13,19 @@ class Map {
     tson::Map map;
     Texture2D map_text;
     tson::Tileset *map_tileset;
+    std::string path;
 public:
     Map(std::string file);
 
-    tson::Map getMap();
+    const tson::Map &getMap() const;
 
     const Texture2D &getMapText() const;
 
     tson::Tileset *getMapTileset() const;
 
     Vector2 ReturnCharPos();
+
+
 
 };
 

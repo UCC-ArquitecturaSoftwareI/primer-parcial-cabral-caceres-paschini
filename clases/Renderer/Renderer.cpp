@@ -9,9 +9,13 @@ Renderer::Renderer(Map *Mp, Player *Ch) {
     Level = Mp;
     Character = Ch;
     Playani = new Animation(Character->getFilePathText(), Character->getMaxCol());
+    camZoom.zoom = 1.2f;
+    camZoom.rotation = 0.0f;
+
 }
 
 void Renderer::draw_Map() {
+
     tson::Map test = Level->getMap();
     Rectangle rec;
     rec.x = 0.0f;
@@ -27,7 +31,7 @@ void Renderer::draw_Map() {
     auto &c = Level->getMap().getBackgroundColor();
     ClearBackground({c.r, c.g, c.b, c.a});
 
-    for (auto nombre: {"Background", "Floor"}) {
+    for (auto nombre: {"Back", "Front"}) {
         tson::Layer *layer = test.getLayer(nombre);
         for (auto&[pos, tile] : layer->getTileData()) {
 
@@ -50,35 +54,24 @@ void Renderer::draw_Map() {
     }
 }
 
-void Renderer::draw_Character() {
-    Playani->Animate(Character->getPlayerPos());
-}
 
-void Renderer::UpdateDrawFrame() {
-
-    // Verifico Entradas de eventos.
-
-    if (IsKeyDown(KEY_RIGHT)) {
-        Character->move_x(2.0f);
-        Playani->setCurrentRow(0);
-    }
-    if (IsKeyDown(KEY_LEFT)) {
-        Character->move_x(-2.0f);
-        Playani->setCurrentRow(1);
-    }
-    if (IsKeyDown(KEY_UP)) Character->jump_y();
-    if (IsKeyReleased(KEY_DOWN))
+void Renderer::UpdateDrawFrame(int State) {
 
 
-        // Comienzo a dibujar
-        BeginDrawing();
+    // Comienzo a dibujar
+    BeginDrawing();
+    BeginMode2D(camZoom);
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
-    // Dibujo todos los elementos del juego.
-    draw_Character();
     //draw_Map();
-    DrawText("Start", 20, 20, 40, LIGHTGRAY);
+    draw_Map();
+    DrawText("Beta ", 20, 20, 40, WHITE);
+
+    //DrawCharacter
+    Playani->setCurrentRow(State);
+    Playani->Animate(Character->getPlayerPos());
 
     // Finalizo el dibujado
     EndDrawing();
 }
+

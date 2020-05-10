@@ -18,9 +18,6 @@ Map::Map(std::string file) {
         }
 }
 
-tson::Map Map::getMap() {
-    return map;
-}
 
 const Texture2D &Map::getMapText() const {
     return map_text;
@@ -38,4 +35,8 @@ Vector2 Map::ReturnCharPos() {
     Playerpos.x = player->getPosition().x;
     Playerpos.y = player->getPosition().y;
     return Playerpos;
+}
+
+const tson::Map &Map::getMap() const {
+    return map;
 }

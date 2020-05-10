@@ -12,7 +12,7 @@
 Player::Player(std::string file, Vector2 playpos) {
     player_pos = playpos;
     filePathText = file;
-    maxCol[6, 1, 7, 11, 12, 5];
+    maxCol={6, 5, 5, 1, 1, 10,10,11,11,4,4};
 }
 
 /**
@@ -24,7 +24,7 @@ void Player::move_x(float d) {
 }
 
 void Player::jump_y() {
-    player_pos.y += 5;
+    player_pos.y -= 2;
 }
 
 Vector2 &Player::getPlayerPos() {

@@ -9,6 +9,9 @@
 #include "raylib.h"
 #include <vector>
 #include <fstream>
+#include <unistd.h>
+#include <iostream>
+#include <thread>
 
 class Animation {
 private:
