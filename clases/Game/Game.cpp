@@ -1,0 +1,58 @@
+//
+// Created by martin on 10/5/20.
+//
+
+#include "Game.h"
+
+Game::Game() {
+    const int screenWidth = 640 * 1.5;
+    const int screenHeight = 480 * 1.5;
+
+    //Inicialización de la ventana
+    InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
+    InitAudioDevice();
+
+    map = new Map("resources/level/Map.json");
+    player = new Player();
+    player->setClass("resources/Player/spritesheet.png", map->ReturnCharPos());
+    Rend = new Renderer(map, player);
+    Srend = new Sound_Render("resources/Music/Song.mp3");
+    Input = new Input_Handler(player);
+    Col = new Collision(map->ReturnList(), player);
+    world = new World(player);
+}
+
+void Game::PlayMusic() {
+    Srend->PlayMusic();
+}
+
+void Game::UpdateFrame() {
+    //Check key inputs
+    Input->setKeyPress();
+
+    //Move player x cordinates
+    player->Move_x();
+    world->Friction();
+    Col->IsColliding_X();
+
+    //Move player y cordinates
+    player->Move_y();
+    world->Gravity();
+    Col->IsColliding_y();
+
+    //Draw the result
+    Rend->UpdateDrawFrame(Input->GetCharStatus());
+
+}
+
+void Game::UpdateMusic() {
+    Srend->UpdateMusic();
+}
+
+void Game::EndGame() {
+    UnloadMusicStream(Srend->getMusic());   // Descargo la musica de RAM
+    CloseAudioDevice();         // Cierro el dispositivo de Audio
+    CloseWindow();              // Cierro la ventana
+}
+
+
