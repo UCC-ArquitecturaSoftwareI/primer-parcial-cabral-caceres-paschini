@@ -18,7 +18,11 @@ Game::Game() {
     Rend = new Renderer(map, player);
     Srend = new Sound_Render("resources/Music/Song.mp3");
     Input = new Input_Handler(player);
-    Col = new Collision(map->ReturnList(), player);
+
+    Col = new Collision(player);
+    Col->LoadList(map->ReturnList(0));
+    Col->LoadList(map->ReturnList(1));
+
     world = new World(player);
 }
 
@@ -37,9 +41,13 @@ void Game::UpdateFrame() {
 
     //Move player y cordinates
     player->Move_y();
-    world->Gravity();
-    Col->IsColliding_y();
 
+    if (Col->IsFlying())
+        world->Gravity();
+
+    Col->IsColliding_y();
+    Col->IsCollidingPlataform();
+    Input->GetCanJump(player->GetSpeed().y == 0);
     //Draw the result
     Rend->UpdateDrawFrame(Input->GetCharStatus());
 

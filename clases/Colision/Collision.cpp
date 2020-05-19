@@ -4,62 +4,100 @@
 
 #include "Collision.h"
 
-Collision::Collision(std::list<Rectangle> *list1, Player *player1) {
+Collision::Collision(Player *player1) {
     player = player1;
-    List = list1;
     player_area.x = player->getPlayerPos().x;
     player_area.y = player->getPlayerPos().y;
     player_area.width = 32;
     player_area.height = 32;
+
 }
 
-void Collision::IsColliding_X() {
+void Collision::LoadList(std::list<Rectangle> *list) {
+    List.push_back(list);
+}
 
+bool Collision::IsColliding_X() {
+
+    player_area.height = 32;
     player_area.x = player->getPlayerPos().x;
     player_area.y = player->getPlayerPos().y;
 
-    for (auto &i: *List) {
+    for (auto &i: *List.front()) {
         if (CheckCollisionRecs(player_area, i)) {
 
             if (player->GetSpeed().x > 0) {
                 player->Set_x(i.x - player_area.width - 1);
                 player->Setspeed_x(0);
-                std::cout << "Spd_x: " << player->GetSpeed().x << std::endl;
-                std::cout << "Spd_y: " << player->GetSpeed().y << std::endl;
-                return;
+                return true;
             }
 
             if (player->GetSpeed().x < 0) {
                 player->Set_x(i.x + i.width);
                 player->Setspeed_x(0);
-                std::cout << "Spd_x: " << player->GetSpeed().x << std::endl;
-                std::cout << "Spd_y: " << player->GetSpeed().y << std::endl;
-                return;
+                return true;
             }
 
         }
     }
-    std::cout << "Spd_x: " << player->GetSpeed().x << std::endl;
-    std::cout << "Spd_y: " << player->GetSpeed().y << std::endl;
+    return false;
 }
 
-void Collision::IsColliding_y() {
+bool Collision::IsColliding_y() {
 
+    player_area.height = 32;
     player_area.x = player->getPlayerPos().x;
     player_area.y = player->getPlayerPos().y;
 
-    for (auto &i: *List) {
+
+    for (auto &i: *List.front()) {
         if (CheckCollisionRecs(player_area, i))
 
             if (player->GetSpeed().y > 0) {
                 player->Set_y(i.y - player_area.height - 1);
                 player->Setspeed_y(0);
-                return;
+                return true;
             } else {
                 player->Set_y(i.y + i.height + 1);
-                player->Setspeed_y(0);
-                return;
+                player->Setspeed_y(0.2);
+                return true;
             }
     }
+    return false;
 }
+
+bool Collision::IsCollidingPlataform() {
+
+    player_area.height = 32;
+    player_area.x = player->getPlayerPos().x;
+    player_area.y = player->getPlayerPos().y;
+
+    for (auto &i: *List.back()) {
+        if (CheckCollisionRecs(player_area, i))
+            if (player_area.y + player_area.height > i.y && player->GetSpeed().y > 0) {
+                player->Set_y(i.y - player_area.height - 1);
+                player->Setspeed_y(0);
+                return true;
+            }
+    }
+    return false;
+}
+
+bool Collision::IsFlying() {
+
+    player_area.height = 34;
+
+    for (auto &i: *List.front()) {
+        if (CheckCollisionRecs(player_area, i))
+            return false;
+    }
+
+    for (auto &i: *List.back()) {
+        if (CheckCollisionRecs(player_area, i))
+            return false;
+    }
+    return true;
+}
+
+
 

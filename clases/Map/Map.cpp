@@ -25,11 +25,19 @@ Map::Map(std::string file) {
         Rec.y = obj.getPosition().y;
         Rec.width = obj.getSize().x;
         Rec.height = obj.getSize().y;
-
         Colilision.push_front(Rec);
     }
-}
 
+    tson::Layer *layer2 = map.getLayer("Plataforms");
+    for (auto &obj : layer2->getObjects()) {
+        Rectangle Rec;
+        Rec.x = obj.getPosition().x;
+        Rec.y = obj.getPosition().y;
+        Rec.width = obj.getSize().x;
+        Rec.height = obj.getSize().y;
+        ColPlataform.push_front(Rec);
+    }
+}
 
 const Texture2D &Map::getMapText() const {
     return map_text;
@@ -53,7 +61,10 @@ const tson::Map &Map::getMap() const {
     return map;
 }
 
-std::list<Rectangle> *Map::ReturnList() {
-    return &Colilision;
+std::list<Rectangle> *Map::ReturnList(int i) {
+    if (i == 0)
+        return &Colilision;
+    else
+        return &ColPlataform;
 }
 

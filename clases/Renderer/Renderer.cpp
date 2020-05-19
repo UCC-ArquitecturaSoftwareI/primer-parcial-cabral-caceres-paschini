@@ -64,13 +64,14 @@ void Renderer::UpdateDrawFrame(int State) {
 
     //draw_Map();
     draw_Map();
-    DrawText("Beta ", 20, 20, 40, WHITE);
+    DrawText("Stable 1.4 ", 20, 20, 40, WHITE);
 
     //DrawCharacter
     Playani->setCurrentRow(State);
     Playani->Animate(Character->getPlayerPos());
 
     // Finalizo el dibujado
+    EndMode2D();
     EndDrawing();
 }
 

@@ -12,6 +12,7 @@ class Input_Handler {
 private:
     Vector2 KeyPress;
     Player *Play;
+    bool CanJump;
 
 public:
 
@@ -20,6 +21,8 @@ public:
     void setKeyPress();
 
     int GetCharStatus();
+
+    void GetCanJump(bool can);
 
 };
 

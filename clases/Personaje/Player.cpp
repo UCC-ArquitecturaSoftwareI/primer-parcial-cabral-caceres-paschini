@@ -12,7 +12,7 @@
 Player::Player() {
     maxCol = {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4};
     player_Spd.x = 0;
-    player_Spd.y = 0;
+    player_Spd.y = 0.1;
 }
 
 /**
@@ -27,7 +27,6 @@ void Player::Acelerate_x(float d) {
 void Player::Deacelerate_x(float d) {
     player_Spd.x += d;
 }
-
 
 void Player::Jump_y(float d) {
     player_Spd.y -= d;

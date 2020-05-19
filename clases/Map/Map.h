@@ -16,6 +16,7 @@ class Map {
     tson::Tileset *map_tileset;
     std::string path;
     std::list<Rectangle> Colilision;
+    std::list<Rectangle> ColPlataform;
 public:
     Map(std::string file);
 
@@ -27,8 +28,7 @@ public:
 
     Vector2 ReturnCharPos();
 
-    std::list<Rectangle> *ReturnList();
-
+    std::list<Rectangle> *ReturnList(int i);
 
 };
 

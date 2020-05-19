@@ -8,19 +8,27 @@
 #include <raylib.h>
 #include <list>
 #include "../Personaje/Player.h"
+#include <vector>
 
 
 class Collision {
 private:
-    std::list<Rectangle> *List;
+    std::vector<std::list<Rectangle> *> List;
     Player *player;
     Rectangle player_area;
+
 public:
-    Collision(std::list<Rectangle> *list1, Player *player);
+    Collision(Player *player);
 
-    void IsColliding_X();
+    void LoadList(std::list<Rectangle> *list1);
 
-    void IsColliding_y();
+    bool IsColliding_X();
+
+    bool IsColliding_y();
+
+    bool IsCollidingPlataform();
+
+    bool IsFlying();
 
 
 };

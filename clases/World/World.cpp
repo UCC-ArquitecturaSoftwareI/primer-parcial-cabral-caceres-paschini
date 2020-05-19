@@ -22,7 +22,7 @@ void World::Friction() {
 }
 
 void World::Gravity() {
-    player->Jump_y(-Grav);
+        player->Jump_y(-Grav);
 }
 
 

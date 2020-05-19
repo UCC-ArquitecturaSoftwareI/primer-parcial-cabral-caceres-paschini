@@ -49,8 +49,6 @@ public:
 
     Vector2 GetSpeed();
 
-
-
 };
 
 
