@@ -5,10 +5,10 @@
 #include "Renderer.h"
 
 
-Renderer::Renderer(Map *Mp, Player *Ch) {
+Renderer::Renderer(Map *Mp, Character *Ch) {
     Level = Mp;
-    Character = Ch;
-    Playani = new Animation(Character->getFilePathText(), Character->getMaxCol());
+    Chara = Ch;
+    Playani = new Animation(Ch->getFilePathText(), Ch->getMaxCol());
     camZoom.zoom = 1.5f;
 
 }
@@ -56,7 +56,6 @@ void Renderer::draw_Map() {
 
 void Renderer::UpdateDrawFrame(int State) {
 
-
     // Comienzo a dibujar
     BeginDrawing();
     //BeginMode2D(camZoom);
@@ -64,11 +63,11 @@ void Renderer::UpdateDrawFrame(int State) {
 
     //draw_Map();
     draw_Map();
-    DrawText("Stable 1.4 ", 20, 20, 40, WHITE);
+    DrawText("Stable 1.4 ", 20, 20, 20, WHITE);
 
     //DrawCharacter
     Playani->setCurrentRow(State);
-    Playani->Animate(Character->getPlayerPos());
+    Playani->Animate(Chara->get_Entity_Pos());
 
     // Finalizo el dibujado
     EndMode2D();

@@ -7,18 +7,18 @@
 
 #include <raylib.h>
 #include <list>
-#include "../Personaje/Player.h"
+#include "../Character/Character.h"
 #include <vector>
 
 
 class Collision {
 private:
     std::vector<std::list<Rectangle> *> List;
-    Player *player;
+    Character *player;
     Rectangle player_area;
 
 public:
-    Collision(Player *player);
+    Collision(Character *player);
 
     void LoadList(std::list<Rectangle> *list1);
 

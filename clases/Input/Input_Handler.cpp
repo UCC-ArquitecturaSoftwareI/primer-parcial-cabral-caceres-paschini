@@ -5,7 +5,7 @@
 #include "Input_Handler.h"
 
 
-Input_Handler::Input_Handler(Player *Ch) {
+Input_Handler::Input_Handler(Character *Ch) {
     Play = Ch;
     KeyPress.x = 0;
     KeyPress.y = 0;

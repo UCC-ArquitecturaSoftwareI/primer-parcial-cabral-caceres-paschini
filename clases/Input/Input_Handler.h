@@ -6,17 +6,17 @@
 #define RAYLIBTEMPLATE_INPUT_HANDLER_H
 
 #include "raylib.h"
-#include "../Personaje/Player.h"
+#include "../Character/Character.h"
 
 class Input_Handler {
 private:
     Vector2 KeyPress;
-    Player *Play;
+    Character *Play;
     bool CanJump;
 
 public:
 
-    Input_Handler(Player *Ch);
+    Input_Handler(Character *Ch);
 
     void setKeyPress();
 

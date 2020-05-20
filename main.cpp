@@ -1,15 +1,17 @@
 #include <raylib.h>
 
-#include "clases/Personaje/Player.h"
+#include "clases/Character/Character.h"
 #include "clases/Map/Map.h"
 #include "clases/Renderer/Renderer.h"
 #include "clases/Music Renderer/Sound_Render.h"
 #include "clases/Game/Game.h"
+#include <thread>
 
 
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
+
 
 
 
@@ -26,16 +28,11 @@ int main() {
 #else
     SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
     // Main loop
-    while (!WindowShouldClose()) {
-        game->UpdateFrame();
-        //game->UpdateMusic();
-    }
+
+    game->Update_Game();
+
 #endif
     // Descargar todos los resources cargados
     game->EndGame();
     return 0;
 }
-/**
- *  Función dedicada a dibujar cada frame. Acá adentro se debe poner la logica necesaria para representar un nuevo frame
- *  del juego.
- */

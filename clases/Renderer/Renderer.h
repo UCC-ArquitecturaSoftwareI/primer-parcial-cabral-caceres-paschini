@@ -6,21 +6,22 @@
 #define RAYLIBTEMPLATE_RENDERER_H
 
 #include "../Map/Map.h"
-#include "../Personaje/Player.h"
-#include <thread>
+#include "../Character/Character.h"
+#include "../Animator/Animation.h"
 
 class Renderer {
 private:
     Map *Level;
-    Player *Character;
+    Character *Chara;
     Animation *Playani;
     Camera2D camZoom;
 public:
-    Renderer(Map *Mp, Player *Ch);
+    Renderer(Map *Mp, Character *Ch);
 
     void draw_Map();
 
     void UpdateDrawFrame(int State);
+
 
 };
 

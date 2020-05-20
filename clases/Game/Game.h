@@ -5,7 +5,7 @@
 #ifndef RAYLIBTEMPLATE_GAME_H
 #define RAYLIBTEMPLATE_GAME_H
 
-#include "../Personaje/Player.h"
+#include "../Character/Character.h"
 #include "../Map/Map.h"
 #include "../Renderer/Renderer.h"
 #include "../Music Renderer/Sound_Render.h"
@@ -17,7 +17,7 @@
 class Game {
 private:
     Map *map;
-    Player *player;
+    Character *player;
     Sound_Render *Srend;
     Renderer *Rend;
     Input_Handler *Input;
@@ -32,6 +32,8 @@ public:
     void UpdateFrame();
 
     void UpdateMusic();
+
+    void Update_Game();
 
     void EndGame();
 };

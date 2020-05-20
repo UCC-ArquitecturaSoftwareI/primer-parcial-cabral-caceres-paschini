@@ -13,7 +13,8 @@ void Sound_Render::UpdateMusic() {
 }
 
 void Sound_Render::PlayMusic() {
-PlayMusicStream(music);
+    SetMusicVolume(music, 0.05);
+    PlayMusicStream(music);
 }
 
 const Music &Sound_Render::getMusic() const {

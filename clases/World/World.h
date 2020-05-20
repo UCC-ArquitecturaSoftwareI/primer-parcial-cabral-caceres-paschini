@@ -5,16 +5,16 @@
 #ifndef RAYLIBTEMPLATE_WORLD_H
 #define RAYLIBTEMPLATE_WORLD_H
 
-#include "../Personaje/Player.h"
+#include "../Character/Character.h"
 
 
 class World {
 private:
     float Grav;
     float Fric;
-    Player *player;
+    Character *player;
 public:
-    World(Player *player1);
+    World(Character *player1);
 
     void Friction();
 

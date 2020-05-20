@@ -4,10 +4,10 @@
 
 #include "Collision.h"
 
-Collision::Collision(Player *player1) {
+Collision::Collision(Character *player1) {
     player = player1;
-    player_area.x = player->getPlayerPos().x;
-    player_area.y = player->getPlayerPos().y;
+    player_area.x = player->get_Entity_Pos().x;
+    player_area.y = player->get_Entity_Pos().y;
     player_area.width = 32;
     player_area.height = 32;
 
@@ -20,12 +20,12 @@ void Collision::LoadList(std::list<Rectangle> *list) {
 bool Collision::IsColliding_X() {
 
     player_area.height = 32;
-    player_area.x = player->getPlayerPos().x;
-    player_area.y = player->getPlayerPos().y;
+    player_area.x = player->get_Entity_Pos().x;
+    player_area.y = player->get_Entity_Pos().y;
 
     for (auto &i: *List.front()) {
         if (CheckCollisionRecs(player_area, i)) {
-
+            
             if (player->GetSpeed().x > 0) {
                 player->Set_x(i.x - player_area.width - 1);
                 player->Setspeed_x(0);
@@ -46,12 +46,13 @@ bool Collision::IsColliding_X() {
 bool Collision::IsColliding_y() {
 
     player_area.height = 32;
-    player_area.x = player->getPlayerPos().x;
-    player_area.y = player->getPlayerPos().y;
+    player_area.x = player->get_Entity_Pos().x;
+    player_area.y = player->get_Entity_Pos().y;
 
 
     for (auto &i: *List.front()) {
-        if (CheckCollisionRecs(player_area, i))
+        if (CheckCollisionRecs(player_area, i)) {
+
 
             if (player->GetSpeed().y > 0) {
                 player->Set_y(i.y - player_area.height - 1);
@@ -62,6 +63,7 @@ bool Collision::IsColliding_y() {
                 player->Setspeed_y(0.2);
                 return true;
             }
+        }
     }
     return false;
 }
@@ -69,8 +71,8 @@ bool Collision::IsColliding_y() {
 bool Collision::IsCollidingPlataform() {
 
     player_area.height = 32;
-    player_area.x = player->getPlayerPos().x;
-    player_area.y = player->getPlayerPos().y;
+    player_area.x = player->get_Entity_Pos().x;
+    player_area.y = player->get_Entity_Pos().y;
 
     for (auto &i: *List.back()) {
         if (CheckCollisionRecs(player_area, i))

@@ -6,22 +6,24 @@
 
 #include <raylib.h>
 #include <string>
-#include "../Animator/Animation.h"
+#include <utility>
 #include <vector>
+#include "../Entity/Entity.h"
 
 
-class Player {
+class Character : public Entity {
 private:
-    std::string filePathText;
-    Vector2 player_pos{};
     Vector2 player_Spd{};
-    std::vector<int> maxCol;
-
+    float points;
+    int life;
 public:
 
-    Player();
-
-    void setClass(std::string file, Vector2 playpos);
+    Character(std::string file, Vector2 playpos, std::vector<int> Max_Col) : Entity(std::move(file), playpos,
+                                                                                    std::move(Max_Col)) {
+        player_Spd = {0, 0.1};
+        points = 0;
+        life = 3;
+    }
 
     void Acelerate_x(float d);
 
@@ -33,21 +35,21 @@ public:
 
     void Move_y();
 
-    Vector2 &getPlayerPos() ;
-
     const std::string &getFilePathText() const;
 
     const std::vector<int> &getMaxCol() const;
-
-    void Set_x(float d);
-
-    void Set_y(float d);
 
     void Setspeed_x(float d);
 
     void Setspeed_y(float d);
 
     Vector2 GetSpeed();
+
+    void Change_life(int d);
+
+    void Gain_poitns(float d);
+
+    int Get_life();
 
 };
 

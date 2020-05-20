@@ -4,7 +4,7 @@
 
 #include "World.h"
 
-World::World(Player *player1) {
+World::World(Character *player1) {
     player = player1;
     Fric = 0.1;
     Grav = 0.2;
