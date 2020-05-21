@@ -6,8 +6,8 @@
 
 Collision::Collision(Character *player1) {
     player = player1;
-    player_area.x = player->get_Entity_Pos().x;
-    player_area.y = player->get_Entity_Pos().y;
+    player_area.x = player->Get_Entity_Pos().x;
+    player_area.y = player->Get_Entity_Pos().y;
     player_area.width = 32;
     player_area.height = 32;
 
@@ -20,8 +20,8 @@ void Collision::LoadList(std::list<Rectangle> *list) {
 bool Collision::IsColliding_X() {
 
     player_area.height = 32;
-    player_area.x = player->get_Entity_Pos().x;
-    player_area.y = player->get_Entity_Pos().y;
+    player_area.x = player->Get_Entity_Pos().x;
+    player_area.y = player->Get_Entity_Pos().y;
 
     for (auto &i: *List.front()) {
         if (CheckCollisionRecs(player_area, i)) {
@@ -46,8 +46,8 @@ bool Collision::IsColliding_X() {
 bool Collision::IsColliding_y() {
 
     player_area.height = 32;
-    player_area.x = player->get_Entity_Pos().x;
-    player_area.y = player->get_Entity_Pos().y;
+    player_area.x = player->Get_Entity_Pos().x;
+    player_area.y = player->Get_Entity_Pos().y;
 
 
     for (auto &i: *List.front()) {
@@ -71,8 +71,8 @@ bool Collision::IsColliding_y() {
 bool Collision::IsCollidingPlataform() {
 
     player_area.height = 32;
-    player_area.x = player->get_Entity_Pos().x;
-    player_area.y = player->get_Entity_Pos().y;
+    player_area.x = player->Get_Entity_Pos().x;
+    player_area.y = player->Get_Entity_Pos().y;
 
     for (auto &i: *List.back()) {
         if (CheckCollisionRecs(player_area, i))

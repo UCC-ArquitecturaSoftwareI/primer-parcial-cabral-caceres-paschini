@@ -36,15 +36,6 @@ void Character::Move_y() {
     Entity_pos.y += player_Spd.y;
 }
 
-const std::string &Character::getFilePathText() const {
-    return filePathText;
-}
-
-const std::vector<int> &Character::getMaxCol() const {
-    return maxCol;
-}
-
-
 void Character::Setspeed_x(float d) {
     player_Spd.x = d;
 }

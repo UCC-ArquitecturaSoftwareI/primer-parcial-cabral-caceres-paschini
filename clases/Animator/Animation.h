@@ -11,17 +11,16 @@
 #include <fstream>
 #include <unistd.h>
 #include <iostream>
-#include <thread>
+#include "Image_Holder.h"
 
 class Animation {
 private:
     int currentRow;
     int currentColumn;
-    std::vector<int> maxColumn;
-    Texture2D Picture{};
+    Image_Holder *image;
     Rectangle frameRec{};
 public:
-    Animation(std::string file, std::vector<int> vec);
+    Animation(Image_Holder *img);
 
     void Animate(Vector2 pos);
 

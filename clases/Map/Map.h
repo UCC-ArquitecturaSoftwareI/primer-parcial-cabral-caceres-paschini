@@ -9,11 +9,12 @@
 #include <raylib.h>
 #include "../../Libs/tileson.hpp"
 #include <list>
+#include <vector>
 
 class Map {
     tson::Map map;
-    Texture2D map_text;
-    tson::Tileset *map_tileset;
+    std::vector<Texture2D> map_text;
+    std::vector<tson::Tileset *> map_tileset;
     std::string path;
     std::list<Rectangle> Colilision;
     std::list<Rectangle> ColPlataform;
@@ -22,9 +23,9 @@ public:
 
     const tson::Map &getMap() const;
 
-    const Texture2D &getMapText() const;
+    const std::vector<Texture2D> &getMapText() const;
 
-    tson::Tileset *getMapTileset() const;
+    const std::vector<tson::Tileset *> &getMapTileset() const;
 
     Vector2 ReturnCharPos();
 

@@ -35,10 +35,6 @@ public:
 
     void Move_y();
 
-    const std::string &getFilePathText() const;
-
-    const std::vector<int> &getMaxCol() const;
-
     void Setspeed_x(float d);
 
     void Setspeed_y(float d);

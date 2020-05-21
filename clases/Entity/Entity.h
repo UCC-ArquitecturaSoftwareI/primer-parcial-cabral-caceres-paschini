@@ -9,11 +9,13 @@
 #include <raylib.h>
 #include <string>
 #include <vector>
+#include "../Animator/Animation.h"
 class Entity {
 protected:
     std::string filePathText;
     Vector2 Entity_pos{};
     std::vector<int> maxCol;
+    Animation *Ani;
 public:
     Entity();
 
@@ -23,7 +25,15 @@ public:
 
     void Set_y(float d);
 
-    Vector2 &get_Entity_Pos() ;
+    Vector2 &Get_Entity_Pos() ;
+
+    const std::string &GetFilePathText() const;
+
+    const std::vector<int> &GetMaxCol() const;
+
+    void Assign_Animator(Animation *Animator);
+
+    Animation *GetAni() const;
 
     ~Entity();
 };

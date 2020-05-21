@@ -13,8 +13,7 @@ Game::Game() {
     InitAudioDevice();
 
     map = new Map("resources/level/Map.json");
-    player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),
-                           {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
+    player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),  {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
     Rend = new Renderer(map, player);
     Srend = new Sound_Render("resources/Music/Song.mp3");
     Input = new Input_Handler(player);

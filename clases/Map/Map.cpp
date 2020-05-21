@@ -13,8 +13,8 @@ Map::Map(std::string file) {
         for (auto &tileset :map.getTilesets()) {
             std::cout << (fs::path("resources/level/" + tileset.getImage().string()).string()).c_str() << std::endl;
             std::string pepe = (fs::path("resources/level/" + tileset.getImage().string()).string());
-            map_text = LoadTexture(pepe.c_str());
-            map_tileset = &tileset;
+            map_text.push_back(LoadTexture(pepe.c_str()));
+            map_tileset.push_back(&tileset);
         }
 
 
@@ -39,13 +39,6 @@ Map::Map(std::string file) {
     }
 }
 
-const Texture2D &Map::getMapText() const {
-    return map_text;
-}
-
-tson::Tileset *Map::getMapTileset() const {
-    return map_tileset;
-}
 
 Vector2 Map::ReturnCharPos() {
     tson::Layer *layer = map.getLayer("Player");
@@ -66,5 +59,13 @@ std::list<Rectangle> *Map::ReturnList(int i) {
         return &Colilision;
     else
         return &ColPlataform;
+}
+
+const std::vector<Texture2D> &Map::getMapText() const {
+    return map_text;
+}
+
+const std::vector<tson::Tileset *> &Map::getMapTileset() const {
+    return map_tileset;
 }
 

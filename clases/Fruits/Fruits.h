@@ -10,6 +10,9 @@
 #include <string>
 #include <vector>
 #include "../Entity/Entity.h"
+#include <random>
+#include <zconf.h>
+
 
 class Fruits : public Entity {
 private:
@@ -17,11 +20,20 @@ private:
     int points;
 public:
 
+
     Fruits(std::string file, Vector2 playpos, std::vector<int> Max_Col) : Entity(std::move(file), playpos,
                                                                                  std::move(Max_Col)) {
+        srand(getpid());
         picked_up = false;
-        points = 1;
+        points = 100 * rand() %5 +1 ;
     }
+
+    bool Is_picked();
+
+    int Get_points();
+
+    ~Fruits();
+
 };
 
 
