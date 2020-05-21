@@ -14,9 +14,17 @@ Game::Game() {
 
     map = new Map("resources/level/Map.json");
     player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),  {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
-    Rend = new Renderer(map, player);
+    Vec = new Fruit_Vector(map->Get_Fruits());
+
+    Entities = new All_entity();
+    Entities->Add_entity(player);
+    Entities->Add_entity(Vec->Get_Vec_pointer());
+
+    Rend = new Renderer(map,player,Vec);
     Srend = new Sound_Render("resources/Music/Song.mp3");
     Input = new Input_Handler(player);
+
+
 
     Col = new Collision(player);
     Col->LoadList(map->ReturnList(0));

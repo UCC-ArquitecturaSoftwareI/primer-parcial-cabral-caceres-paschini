@@ -12,6 +12,8 @@
 #include "../Input/Input_Handler.h"
 #include "../Colision/Collision.h"
 #include "../World/World.h"
+#include "../Fruits/Fruit_Vector.h"
+#include "../Entity/All_entity.h"
 
 
 class Game {
@@ -23,6 +25,8 @@ private:
     Input_Handler *Input;
     Collision *Col;
     World *world;
+    Fruit_Vector *Vec;
+    All_entity *Entities;
 
 public:
     Game();

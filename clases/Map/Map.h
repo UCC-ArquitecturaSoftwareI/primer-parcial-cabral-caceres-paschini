@@ -31,6 +31,8 @@ public:
 
     std::list<Rectangle> *ReturnList(int i);
 
+    std::vector<Vector2> Get_Fruits();
+
 };
 
 

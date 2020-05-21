@@ -23,9 +23,9 @@ public:
 
     Fruits(std::string file, Vector2 playpos, std::vector<int> Max_Col) : Entity(std::move(file), playpos,
                                                                                  std::move(Max_Col)) {
-        srand(getpid());
+        int val = GetRandomValue(0, 7);
         picked_up = false;
-        points = 100 * rand() %5 +1 ;
+        points = 100 * val ;
     }
 
     bool Is_picked();

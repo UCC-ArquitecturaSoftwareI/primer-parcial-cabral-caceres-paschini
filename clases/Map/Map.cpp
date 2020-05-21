@@ -69,3 +69,16 @@ const std::vector<tson::Tileset *> &Map::getMapTileset() const {
     return map_tileset;
 }
 
+std::vector<Vector2> Map::Get_Fruits() {
+    std::vector<Vector2> Vec;
+
+    tson::Layer *layer = map.getLayer("Fruits");
+    for (auto &obj : layer->getObjects()) {
+        Vector2 pos;
+        pos.x = obj.getPosition().x;
+        pos.y = obj.getPosition().y;
+        Vec.push_back(pos);
+    }
+    return Vec;
+}
+

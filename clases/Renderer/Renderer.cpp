@@ -6,13 +6,15 @@
 #include <vector>
 
 
-
-Renderer::Renderer(Map *Mp, Character *Ch) {
+Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec) {
     Level = Mp;
     Chara = Ch;
+    Vector = Vec;
+    Ani_Creator.Create(Chara);
+    Ani_Creator.Create(Vec->Get_Vec_pointer());
     camZoom.zoom = 1.5f;
-    Ani_Creator.Create(Ch);
 
+    Vec->Set_fruit_type();
 }
 
 void Renderer::draw_Map() {
@@ -53,7 +55,7 @@ void Renderer::draw_Map() {
             }
         }
     }
-    auto nombre {"Spikes"};
+    auto nombre{"Spikes"};
     tson::Layer *layer = test.getLayer(nombre);
     for (auto&[pos, tile] : layer->getTileData()) {
 
@@ -90,6 +92,8 @@ void Renderer::UpdateDrawFrame(int State) {
     //DrawCharacter
     Chara->GetAni()->setCurrentRow(State);
     Chara->GetAni()->Animate(Chara->Get_Entity_Pos());
+
+    Vector->Call_Animator();
 
     // Finalizo el dibujado
     EndMode2D();

@@ -6,14 +6,16 @@
 #define RAYLIBTEMPLATE_ANIMATION_CREATOR_H
 
 #include <vector>
-#include "../Entity/Entity.h"
+#include "../Fruits/Fruits.h"
 #include "Image_Holder.h"
 
 class Animation_Creator {
 public:
-    void Create(std::vector<Entity*> list_file);
+    void Create(std::vector<Entity *> *Vector_file);
 
-    void Create(Entity* Ent);
+    void Create(std::vector<Fruits *> *Vector_file);
+
+    void Create(Entity *Ent);
 
 };
 
