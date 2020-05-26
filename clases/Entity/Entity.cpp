@@ -11,11 +11,12 @@ Entity::Entity() {
     Ani = nullptr;
 }
 
-Entity::Entity(std::string file, Vector2 pos, std::vector<int> Max_Col) {
+Entity::Entity(std::string file, Vector2 pos, std::vector<int> Max_Col, Vector2 Prop) {
     filePathText = file;
     Entity_pos = pos;
     maxCol = Max_Col;
     Ani = nullptr;
+    Proportion = Prop;
 }
 
 void Entity::Set_x(float d) {
@@ -47,4 +48,8 @@ void Entity::Assign_Animator(Animation *Animator) {
 
 Animation *Entity::GetAni() const {
     return Ani;
+}
+
+const Vector2 &Entity::GetProportion() const {
+    return Proportion;
 }

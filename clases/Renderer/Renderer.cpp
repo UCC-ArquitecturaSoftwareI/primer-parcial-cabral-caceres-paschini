@@ -82,12 +82,13 @@ void Renderer::UpdateDrawFrame(int State) {
 
     // Comienzo a dibujar
     BeginDrawing();
-    //BeginMode2D(camZoom);
+    BeginMode2D(camZoom);
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
     //draw_Map();
     draw_Map();
-    DrawText("Stable 1.4 ", 20, 20, 20, WHITE);
+    DrawText("Points: ", 20, 20, 20, WHITE);
+    DrawText(Chara->GetPoints(),89, 20, 20, WHITE);
 
     //DrawCharacter
     Chara->GetAni()->setCurrentRow(State);

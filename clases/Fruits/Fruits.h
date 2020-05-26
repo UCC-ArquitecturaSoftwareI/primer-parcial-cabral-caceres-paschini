@@ -22,10 +22,10 @@ public:
 
 
     Fruits(std::string file, Vector2 playpos, std::vector<int> Max_Col) : Entity(std::move(file), playpos,
-                                                                                 std::move(Max_Col)) {
+                                                                                 std::move(Max_Col), Vector2{32, 32}) {
         int val = GetRandomValue(0, 7);
         picked_up = false;
-        points = 100 * val ;
+        points = 100 * val;
     }
 
     bool Is_picked();

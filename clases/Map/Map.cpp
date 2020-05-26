@@ -57,7 +57,7 @@ const tson::Map &Map::getMap() const {
 std::list<Rectangle> *Map::ReturnList(int i) {
     if (i == 0)
         return &Colilision;
-    else
+    if (i == 1)
         return &ColPlataform;
 }
 
@@ -80,5 +80,18 @@ std::vector<Vector2> Map::Get_Fruits() {
         Vec.push_back(pos);
     }
     return Vec;
+}
+
+std::list<Rectangle> *Map::ReturnTraps() {
+    tson::Layer *layer = map.getLayer("Traps");
+    for (auto &obj : layer->getObjects()) {
+        Rectangle rec;
+        rec.x = obj.getPosition().x;
+        rec.y = obj.getPosition().y;
+        rec.width = obj.getSize().x;
+        rec.height = obj.getSize().y;
+        Trap.push_back(rec);
+    }
+    return &Trap;
 }
 

@@ -16,10 +16,11 @@ protected:
     Vector2 Entity_pos{};
     std::vector<int> maxCol;
     Animation *Ani;
+    Vector2 Proportion;
 public:
     Entity();
 
-    Entity(std::string file, Vector2 pos, std::vector<int> Max_Col);
+    Entity(std::string file, Vector2 pos, std::vector<int> Max_Col,Vector2 Prop);
 
     void Set_x(float d);
 
@@ -34,6 +35,8 @@ public:
     void Assign_Animator(Animation *Animator);
 
     Animation *GetAni() const;
+
+    const Vector2 &GetProportion() const;
 
     ~Entity();
 };

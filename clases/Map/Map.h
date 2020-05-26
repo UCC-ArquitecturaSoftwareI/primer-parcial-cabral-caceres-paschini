@@ -18,6 +18,7 @@ class Map {
     std::string path;
     std::list<Rectangle> Colilision;
     std::list<Rectangle> ColPlataform;
+    std::list<Rectangle> Trap;
 public:
     Map(std::string file);
 
@@ -32,6 +33,8 @@ public:
     std::list<Rectangle> *ReturnList(int i);
 
     std::vector<Vector2> Get_Fruits();
+
+    std::list<Rectangle> *ReturnTraps();
 
 };
 

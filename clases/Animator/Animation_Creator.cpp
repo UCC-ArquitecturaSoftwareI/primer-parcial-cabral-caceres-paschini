@@ -8,11 +8,11 @@ void Animation_Creator::Create(std::vector<Entity *> *Vector_file) {
     Image_Holder *Img;
     std::string temp;
     temp = Vector_file->front()->GetFilePathText();
-    Img = new Image_Holder(Vector_file->front()->GetMaxCol(),Vector_file->front()->GetFilePathText());
+    Img = new Image_Holder(Vector_file->front()->GetMaxCol(),Vector_file->front()->GetFilePathText(),Vector_file->front()->GetProportion());
 
     for (auto i: *Vector_file) {
         if (i->GetFilePathText() == temp) {
-            Img = new Image_Holder(i->GetMaxCol(), i->GetFilePathText());
+            Img = new Image_Holder(i->GetMaxCol(), i->GetFilePathText(),i->GetProportion());
             temp =i->GetFilePathText();
         }
         Animation *Ani;
@@ -24,7 +24,7 @@ void Animation_Creator::Create(std::vector<Entity *> *Vector_file) {
 
 void Animation_Creator::Create(Entity *Ent) {
     Image_Holder *Img;
-    Img = new Image_Holder(Ent->GetMaxCol(), Ent->GetFilePathText());
+    Img = new Image_Holder(Ent->GetMaxCol(), Ent->GetFilePathText(),Ent->GetProportion());
 
     Animation *Ani;
     Ani = new Animation(Img);
@@ -35,11 +35,11 @@ void Animation_Creator::Create(std::vector<Fruits *> *Vector_file) {
     Image_Holder *Img;
     std::string temp;
     temp = Vector_file->front()->GetFilePathText();
-    Img = new Image_Holder(Vector_file->front()->GetMaxCol(),Vector_file->front()->GetFilePathText());
+    Img = new Image_Holder(Vector_file->front()->GetMaxCol(),Vector_file->front()->GetFilePathText(),Vector_file->front()->GetProportion());
 
     for (auto i: *Vector_file) {
         if (i->GetFilePathText() == temp) {
-            Img = new Image_Holder(i->GetMaxCol(), i->GetFilePathText());
+            Img = new Image_Holder(i->GetMaxCol(), i->GetFilePathText(),i->GetProportion());
             temp =i->GetFilePathText();
         }
         Animation *Ani;

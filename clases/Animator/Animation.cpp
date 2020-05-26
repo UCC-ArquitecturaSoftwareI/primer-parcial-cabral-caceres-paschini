@@ -8,14 +8,15 @@
 Animation::Animation(Image_Holder *img) {
     currentColumn = 0;
     currentRow = 0;
-    frameRec = {0.0f, 0.0f, 32, 32};
     image = img;
+    frameRec = {0.0f, 0.0f, image->getProportion().x, image->getProportion().y};
+
 }
 
 
 void Animation::Animate(Vector2 pos) {
 
-    frameRec = {static_cast<float>(currentColumn * 32.0), static_cast<float>(currentRow * 32.0), 32, 32};
+    frameRec = {static_cast<float>(currentColumn * image->getProportion().x), static_cast<float>(currentRow * image->getProportion().y), image->getProportion().x, image->getProportion().y};
     DrawTextureRec(image->getPicture(), frameRec, pos, WHITE);
     currentColumn = ++currentColumn % image->getMaxColumn()[currentRow];
 }

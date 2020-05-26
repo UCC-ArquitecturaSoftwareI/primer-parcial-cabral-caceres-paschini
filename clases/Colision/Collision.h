@@ -8,6 +8,7 @@
 #include <raylib.h>
 #include <list>
 #include "../Character/Character.h"
+#include "../Fruits/Fruits.h"
 #include <vector>
 
 
@@ -16,11 +17,15 @@ private:
     std::vector<std::list<Rectangle> *> List;
     Character *player;
     Rectangle player_area;
+    Rectangle Fruit_area;
+    std::vector<Fruits *> *Fruits_Vec;
 
 public:
     Collision(Character *player);
 
     void LoadList(std::list<Rectangle> *list1);
+
+    void LoadVector(std::vector<Fruits *> *Fruits);
 
     bool IsColliding_X();
 
@@ -30,7 +35,9 @@ public:
 
     bool IsFlying();
 
+    bool IsCollecting();
 
+    bool Is_getting_damage();
 };
 
 

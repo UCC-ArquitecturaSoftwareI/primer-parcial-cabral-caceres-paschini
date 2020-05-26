@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <sstream>
 #include "Character.h"
 
 /**
@@ -58,6 +59,14 @@ void Character::Gain_poitns(float d) {
 
 int Character::Get_life() {
     return life;
+}
+
+const char *Character::GetPoints() {
+    std::string temp;
+    temp = std::to_string(points);
+    const char *c = nullptr;
+    c = temp.c_str();
+    return c;
 }
 
 

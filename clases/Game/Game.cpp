@@ -29,6 +29,8 @@ Game::Game() {
     Col = new Collision(player);
     Col->LoadList(map->ReturnList(0));
     Col->LoadList(map->ReturnList(1));
+    Col->LoadList(map->ReturnTraps());
+    Col->LoadVector(Vec->Get_Vec_pointer());
 
     world = new World(player);
 }
@@ -57,6 +59,13 @@ void Game::UpdateFrame() {
     Col->IsCollidingPlataform();
     Input->GetCanJump(player->GetSpeed().y == 0);
     //Draw the result
+
+    //Fruits
+    Col->IsCollecting();
+
+    //Damage
+    Col->Is_getting_damage();
+
     Rend->UpdateDrawFrame(Input->GetCharStatus());
     if (player->Get_life() == 0)
         CloseWindow();
@@ -64,7 +73,7 @@ void Game::UpdateFrame() {
 }
 
 void Game::UpdateMusic() {
-    Srend->UpdateMusic();
+   // Srend->UpdateMusic();
 }
 
 void Game::EndGame() {
