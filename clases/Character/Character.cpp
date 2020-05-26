@@ -61,7 +61,7 @@ int Character::Get_life() {
     return life;
 }
 
-const char *Character::GetPoints() {
+std::string Character::GetPoints() {
     std::string temp;
     temp = std::to_string(points);
     const char *c = nullptr;

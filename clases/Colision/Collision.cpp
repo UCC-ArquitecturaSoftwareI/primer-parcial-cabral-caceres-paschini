@@ -117,7 +117,6 @@ bool Collision::Is_getting_damage() {
     for (auto &i: *List.back()) {
         if (CheckCollisionRecs(player_area, i)) {
             player->Change_life(-1);
-
         }
     }
 }

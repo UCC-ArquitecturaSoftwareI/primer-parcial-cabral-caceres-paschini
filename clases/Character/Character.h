@@ -48,7 +48,7 @@ public:
 
     int Get_life();
 
-    const char *GetPoints();
+    std::string GetPoints();
 
 };
 

@@ -18,7 +18,6 @@ void Animation_Creator::Create(std::vector<Entity *> *Vector_file) {
         Animation *Ani;
         Ani = new Animation(Img);
         i->Assign_Animator(Ani);
-
     }
 }
 

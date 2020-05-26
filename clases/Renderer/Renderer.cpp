@@ -88,7 +88,7 @@ void Renderer::UpdateDrawFrame(int State) {
     //draw_Map();
     draw_Map();
     DrawText("Points: ", 20, 20, 20, WHITE);
-    DrawText(Chara->GetPoints(),89, 20, 20, WHITE);
+    DrawText(Chara->GetPoints().c_str(),89, 20, 20, WHITE);
 
     //DrawCharacter
     Chara->GetAni()->setCurrentRow(State);
