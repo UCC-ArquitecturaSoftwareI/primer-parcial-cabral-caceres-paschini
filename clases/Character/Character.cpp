@@ -6,6 +6,7 @@
 #include <sstream>
 #include "Character.h"
 #include <stdlib.h>
+#include <cstdlib>
 /**
  * This func creates the the payer entity into the program
  * @param navePos: Is the position of the player
@@ -17,7 +18,7 @@
  * @param d
  */
 void Character::Acelerate_x(float d) {
-    if ((std::&abs(player_Spd.x))<2.4)
+    if ((std::abs( player_Spd.x)) < 2.4)
         player_Spd.x += d;
 }
 

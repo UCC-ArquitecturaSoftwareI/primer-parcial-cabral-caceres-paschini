@@ -19,7 +19,7 @@ private:
 public:
 
     Character(std::string file, Vector2 playpos, std::vector<int> Max_Col) : Entity(std::move(file), playpos,
-                                                                                    std::move(Max_Col),
+                                                                                     std::move(Max_Col),
                                                                                     Vector2{32, 32}) {
         player_Spd = {0, 0.1};
         points = 0;
