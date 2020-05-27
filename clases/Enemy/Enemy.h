@@ -1,9 +1,9 @@
 //
-// Created by Camila Cabral on 25/04/2020.
+// Created by Camila Cabral on 27/05/2020.
 //
 
-#ifndef PRIMER_PARCIAL_CABRAL_CACERES_PASCHINI_CAMI_ENEMIGO_H
-#define PRIMER_PARCIAL_CABRAL_CACERES_PASCHINI_CAMI_ENEMIGO_H
+#ifndef RAYLIBTEMPLATE_ENEMY_H
+#define RAYLIBTEMPLATE_ENEMY_H
 #include <raylib.h>
 #include <string>
 #include <vector>
@@ -18,4 +18,4 @@ public:
     void draw();
     Vector2 &getEnemigoPos() ;
 };
-#endif //PRIMER_PARCIAL_CABRAL_CACERES_PASCHINI_CAMI_ENEMIGO_H
+#endif //RAYLIBTEMPLATE_ENEMY_H

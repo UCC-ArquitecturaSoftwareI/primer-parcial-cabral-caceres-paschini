@@ -1,7 +1,6 @@
 //
-// Created by Camila Cabral on 25/04/2020.
+// Created by Camila Cabral on 27/05/2020.
 //
-
 #include <string>
 #include "Enemigo.h"
 
