@@ -4,6 +4,7 @@
 
 #include "Renderer.h"
 #include <vector>
+#include libs/tileson.hpp
 
 
 Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec) {

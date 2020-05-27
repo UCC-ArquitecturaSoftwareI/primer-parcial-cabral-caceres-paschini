@@ -17,7 +17,7 @@
  * @param d
  */
 void Character::Acelerate_x(float d) {
-    if ((std::abs(player_Spd.x))<2.4)
+    if ((std::&abs(player_Spd.x))<2.4)
         player_Spd.x += d;
 }
 
