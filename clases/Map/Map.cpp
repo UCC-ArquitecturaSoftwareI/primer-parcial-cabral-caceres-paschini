@@ -94,4 +94,3 @@ std::list<Rectangle> *Map::ReturnTraps() {
     }
     return &Trap;
 }
-

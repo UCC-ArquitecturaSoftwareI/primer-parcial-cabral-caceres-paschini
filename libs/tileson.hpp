@@ -25187,7 +25187,7 @@ namespace tson
 			std::vector<tson::Terrain>    m_terrains;         /*! 'terrains': Array of Terrains (optional) */
 			tson::Vector2i                m_tileOffset;       /*! 'x' and 'y': See <tileoffset> (optional) */
 			tson::Grid                    m_grid;             /*! 'grid': This element is only used in case of isometric orientation, and determines
-																   how tile overlays for terrain and collision information are rendered. */
+																   how tile overlays for terrain and Collision information are rendered. */
 	};
 
 	/*!
@@ -25405,7 +25405,7 @@ const tson::Vector2i &tson::Tileset::getTileOffset() const
 
 /*!
  * 'grid': This element is only used in case of isometric orientation, and determines
- * how tile overlays for terrain and collision information are rendered.
+ * how tile overlays for terrain and Collision information are rendered.
  * @return
  */
 const tson::Grid &tson::Tileset::getGrid() const

@@ -1,17 +1,13 @@
 #include <raylib.h>
-
 #include "clases/Character/Character.h"
-#include "clases/Map/Map.h"
 #include "clases/Renderer/Renderer.h"
 #include "clases/Music Renderer/Sound_Render.h"
 #include "clases/Game/Game.h"
 #include <thread>
 
-
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
-
 
 
 
@@ -36,3 +32,5 @@ int main() {
     game->EndGame();
     return 0;
 }
+
+

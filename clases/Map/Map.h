@@ -1,3 +1,4 @@
+
 //
 // Created by Martin on 18/04/2020.
 //
@@ -7,7 +8,7 @@
 
 #include <string>
 #include <raylib.h>
-#include "../../Libs/tileson.hpp"
+#include "../../libs/tileson.hpp"
 #include <list>
 #include <vector>
 
@@ -40,3 +41,4 @@ public:
 
 
 #endif //RAYLIBTEMPLATE_MAP_H
+
