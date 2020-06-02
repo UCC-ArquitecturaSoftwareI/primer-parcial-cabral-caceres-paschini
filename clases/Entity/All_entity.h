@@ -8,11 +8,11 @@
 
 #include "Entity.h"
 #include "../Fruits/Fruits.h"
-#include <vector>
+#include <unordered_map>
 
 class All_entity {
 private:
-    std::vector<Entity *> All_ent;
+    //std::unordered_map<std::string,>
 public:
     All_entity();
 

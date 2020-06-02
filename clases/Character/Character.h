@@ -46,9 +46,13 @@ public:
 
     void Gain_poitns(float d);
 
-    int Get_life();
+    std::string Get_life();
+
+    int Get_life_Num();
 
     std::string GetPoints();
+
+    bool Is_alive();
 
 };
 

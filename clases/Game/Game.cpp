@@ -5,20 +5,16 @@
 #include "Game.h"
 
 Game::Game() {
-    const int screenWidth = 640 * 1.5;
-    const int screenHeight = 480 * 1.5;
+    const int screenWidth = 1104 ;
+    const int screenHeight = 688 ;
 
     //Inicialización de la ventana
     InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
     InitAudioDevice();
 
-    map = new Map("resources/level/Map.json");
+    map = new Map("resources/level/Map1.json");
     player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),  {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
     Vec = new Fruit_Vector(map->Get_Fruits());
-
-    Entities = new All_entity();
-    Entities->Add_entity(player);
-    Entities->Add_entity(Vec->Get_Vec_pointer());
 
     Rend = new Renderer(map,player,Vec);
     Srend = new Sound_Render("resources/Music/Song.mp3");
@@ -36,7 +32,6 @@ Game::Game() {
 }
 
 void Game::PlayMusic() {
-
     Srend->PlayMusic();
 }
 
@@ -67,7 +62,7 @@ void Game::UpdateFrame() {
     Col->Is_getting_damage();
 
     Rend->UpdateDrawFrame(Input->GetCharStatus());
-    if (player->Get_life() == 0)
+    if (player->Is_alive())
         CloseWindow();
 
 }

@@ -53,3 +53,7 @@ Animation *Entity::GetAni() const {
 const Vector2 &Entity::GetProportion() const {
     return Proportion;
 }
+
+void Entity::Animate() {
+    Ani->Animate(Entity_pos);
+}

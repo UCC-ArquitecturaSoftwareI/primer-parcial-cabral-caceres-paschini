@@ -18,6 +18,7 @@ private:
     Fruit_Vector *Vector;
     Animation_Creator Ani_Creator;
     Camera2D camZoom;
+    Entity *Life;
 public:
     Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec);
 

@@ -1,9 +1,4 @@
 #include <raylib.h>
-
-#include "clases/Character/Character.h"
-#include "clases/Map/Map.h"
-#include "clases/Renderer/Renderer.h"
-#include "clases/Music Renderer/Sound_Render.h"
 #include "clases/Game/Game.h"
 #include <thread>
 
@@ -13,14 +8,9 @@
 #endif
 
 
-
-
 int main() {
-    Game *game;
-    game = new Game();
 
-    //Starts Music
-    game->PlayMusic();
+    Game &game = Game::Get_Game();
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
@@ -29,10 +19,10 @@ int main() {
     SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
     // Main loop
 
-    game->Update_Game();
+    game.Update_Game();
 
 #endif
     // Descargar todos los resources cargados
-    game->EndGame();
+    game.EndGame();
     return 0;
 }

@@ -18,6 +18,8 @@
 
 class Game {
 private:
+    Game();
+
     Map *map;
     Character *player;
     Sound_Render *Srend;
@@ -29,7 +31,10 @@ private:
     All_entity *Entities;
 
 public:
-    Game();
+    static Game &Get_Game(){
+        static Game The_game;
+        return The_game;
+    }
 
     void PlayMusic();
 

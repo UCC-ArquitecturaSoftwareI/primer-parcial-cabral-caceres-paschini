@@ -7,18 +7,13 @@
 #include "Character.h"
 
 /**
- * This func creates the the payer entity into the program
- * @param navePos: Is the position of the player
- */
-
-
-/**
  * this func moves the player in the x coordinates
  * @param d
  */
 void Character::Acelerate_x(float d) {
-    if (std::abs(player_Spd.x) < 2.4)
+    if (std::abs(player_Spd.x) < 2.6)
         player_Spd.x += d;
+
 }
 
 void Character::Deacelerate_x(float d) {
@@ -51,14 +46,20 @@ Vector2 Character::GetSpeed() {
 
 void Character::Change_life(int d) {
     life += d;
+    Set_x(32);
+    Set_y(592);
 }
 
 void Character::Gain_poitns(float d) {
     points += d;
 }
 
-int Character::Get_life() {
-    return life;
+std::string Character::Get_life() {
+    std::string temp;
+    temp = std::to_string(life);
+    const char *c = nullptr;
+    c = temp.c_str();
+    return c;
 }
 
 std::string Character::GetPoints() {
@@ -67,6 +68,14 @@ std::string Character::GetPoints() {
     const char *c = nullptr;
     c = temp.c_str();
     return c;
+}
+
+bool Character::Is_alive() {
+    return life == 0;
+}
+
+int Character::Get_life_Num() {
+    return life;
 }
 
 

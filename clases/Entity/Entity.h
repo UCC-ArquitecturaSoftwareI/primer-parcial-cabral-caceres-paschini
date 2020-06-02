@@ -1,7 +1,6 @@
 //
 // Created by martin on 20/5/20.
 //
-
 #ifndef RAYLIBTEMPLATE_ENTITY_H
 #define RAYLIBTEMPLATE_ENTITY_H
 
@@ -37,6 +36,8 @@ public:
     Animation *GetAni() const;
 
     const Vector2 &GetProportion() const;
+
+    void Animate();
 
     ~Entity();
 };

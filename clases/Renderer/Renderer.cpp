@@ -10,11 +10,12 @@ Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec) {
     Level = Mp;
     Chara = Ch;
     Vector = Vec;
+    Life = new Entity("../resources/level/spritesheet_Heart.png", {60, 40}, {1, 1, 1}, {20, 20});
     Ani_Creator.Create(Chara);
     Ani_Creator.Create(Vec->Get_Vec_pointer());
-    camZoom.zoom = 1.5f;
-
+    Ani_Creator.Create(Life);
     Vec->Set_fruit_type();
+
 }
 
 void Renderer::draw_Map() {
@@ -82,18 +83,24 @@ void Renderer::UpdateDrawFrame(int State) {
 
     // Comienzo a dibujar
     BeginDrawing();
-    BeginMode2D(camZoom);
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
     //draw_Map();
     draw_Map();
-    DrawText("Points: ", 20, 20, 20, WHITE);
-    DrawText(Chara->GetPoints().c_str(),89, 20, 20, WHITE);
+    DrawText("Points: ", 20, 20, 20, BLACK);
+    DrawText(Chara->GetPoints().c_str(), 89, 20, 20, BLACK);
+    DrawText("life: ", 20, 40, 20, BLACK);
+
+    //draws Life Amount
+    Life->GetAni()->setCurrentRow(3 - Chara->Get_life_Num());
+    Life->Animate();
+
 
     //DrawCharacter
     Chara->GetAni()->setCurrentRow(State);
-    Chara->GetAni()->Animate(Chara->Get_Entity_Pos());
+    Chara->Animate();
 
+    //Draws Fruits
     Vector->Call_Animator();
 
     // Finalizo el dibujado
