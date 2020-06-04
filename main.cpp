@@ -1,7 +1,7 @@
 #include <raylib.h>
 #include "clases/Game/Game.h"
 #include <thread>
-
+#include "clases/Menu/Menu.h"
 
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
