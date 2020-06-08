@@ -15,9 +15,9 @@ Menu::Menu() {
 
 void Menu::Draw() {
 
-
-
+    InitWindow(640,552,"hola");
+    BeginDrawing();
     DrawTexture(Background,0,0, WHITE);
     DrawTexture(Button,552,344,WHITE);
-
+    EndDrawing();
 }

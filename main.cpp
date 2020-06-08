@@ -10,6 +10,8 @@
 
 int main() {
 
+    Menu *menu = new Menu();
+    menu->Draw();
     Game &game = Game::Get_Game();
 
 
