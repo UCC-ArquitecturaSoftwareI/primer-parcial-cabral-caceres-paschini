@@ -5,16 +5,22 @@
 #include "Renderer.h"
 #include <vector>
 
-
-Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec) {
+Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Entity *> *Ene) {
     Level = Mp;
     Chara = Ch;
-    Vector = Vec;
+    Fruits = Vec;
+    Enemies = Ene;
     Life = new Entity("../resources/level/spritesheet_Heart.png", {60, 40}, {1, 1, 1}, {20, 20});
-    Ani_Creator.Create(Chara);
-    Ani_Creator.Create(Vec->Get_Vec_pointer());
-    Ani_Creator.Create(Life);
+
+
+    Entities = new All_entity();
+    Entities->Add_entity(Life);
+    Entities->Add_entity(Vec->Get_Vec_pointer());
+    Entities->Add_entity(Chara);
+    Entities->Add_entity(Enemies);
+    Ani_Creator.Create(Entities->Get_Entities());
     Vec->Set_fruit_type();
+
 
 }
 
@@ -81,30 +87,38 @@ void Renderer::draw_Map() {
 
 void Renderer::UpdateDrawFrame(int State) {
 
-    // Comienzo a dibujar
-    BeginDrawing();
-    ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
-
-    //draw_Map();
-    draw_Map();
-    DrawText("Points: ", 20, 20, 20, BLACK);
-    DrawText(Chara->GetPoints().c_str(), 89, 20, 20, BLACK);
-    DrawText("life: ", 20, 40, 20, BLACK);
+    //Set character state
+    Chara->Set_Animation(State);
 
     //draws Life Amount
-    Life->GetAni()->setCurrentRow(3 - Chara->Get_life_Num());
-    Life->Animate();
+    Life->Set_Animation(3 - Chara->Get_life_Num());
+    frameCounter ++;
+    if (frameCounter >= 1) {
+        frameCounter = 0;
+        // Comienzo a dibujar
+        BeginDrawing();
+        ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
+        //draw_Map();
+        draw_Map();
 
-    //DrawCharacter
-    Chara->GetAni()->setCurrentRow(State);
-    Chara->Animate();
+        //DrawText
+        DrawText("Points: ", 20, 20, 20, BLACK);
+        DrawText(Chara->GetPoints().c_str(), 89, 20, 20, BLACK);
+        DrawText("life: ", 20, 40, 20, BLACK);
 
-    //Draws Fruits
-    Vector->Call_Animator();
+        //Draws all entities
+        Fruits->Call_Animator();
+        Chara->Animate();
+        Life->Animate();
 
-    // Finalizo el dibujado
-    EndMode2D();
-    EndDrawing();
+        for (auto i: *Enemies) {
+            i->Animate();
+        }
+
+        // Finalizo el dibujado
+        EndMode2D();
+        EndDrawing();
+    }
 }
 

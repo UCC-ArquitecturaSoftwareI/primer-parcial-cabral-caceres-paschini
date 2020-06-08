@@ -16,27 +16,6 @@ Map::Map(std::string file) {
             map_text.push_back(LoadTexture(pepe.c_str()));
             map_tileset.push_back(&tileset);
         }
-
-
-    tson::Layer *layer = map.getLayer("Floor_&_Wall");
-    for (auto &obj : layer->getObjects()) {
-        Rectangle Rec;
-        Rec.x = obj.getPosition().x;
-        Rec.y = obj.getPosition().y;
-        Rec.width = obj.getSize().x;
-        Rec.height = obj.getSize().y;
-        Colilision.push_front(Rec);
-    }
-
-    tson::Layer *layer2 = map.getLayer("Plataforms");
-    for (auto &obj : layer2->getObjects()) {
-        Rectangle Rec;
-        Rec.x = obj.getPosition().x;
-        Rec.y = obj.getPosition().y;
-        Rec.width = obj.getSize().x;
-        Rec.height = obj.getSize().y;
-        ColPlataform.push_front(Rec);
-    }
 }
 
 
@@ -54,12 +33,6 @@ const tson::Map &Map::getMap() const {
     return map;
 }
 
-std::list<Rectangle> *Map::ReturnList(int i) {
-    if (i == 0)
-        return &Colilision;
-    if (i == 1)
-        return &ColPlataform;
-}
 
 const std::vector<Texture2D> &Map::getMapText() const {
     return map_text;
@@ -69,20 +42,18 @@ const std::vector<tson::Tileset *> &Map::getMapTileset() const {
     return map_tileset;
 }
 
-std::vector<Vector2> Map::Get_Fruits() {
-    std::vector<Vector2> Vec;
-
+std::vector<Vector2> *Map::Get_Fruits() {
     tson::Layer *layer = map.getLayer("Fruits");
     for (auto &obj : layer->getObjects()) {
         Vector2 pos;
         pos.x = obj.getPosition().x;
         pos.y = obj.getPosition().y;
-        Vec.push_back(pos);
+        Vec_fru.push_back(pos);
     }
-    return Vec;
+    return &Vec_fru;
 }
 
-std::list<Rectangle> *Map::ReturnTraps() {
+std::vector<Rectangle> *Map::ReturnTraps() {
     tson::Layer *layer = map.getLayer("Traps");
     for (auto &obj : layer->getObjects()) {
         Rectangle rec;
@@ -93,5 +64,52 @@ std::list<Rectangle> *Map::ReturnTraps() {
         Trap.push_back(rec);
     }
     return &Trap;
+}
+
+std::multimap<std::string, Rectangle> *Map::Get_enemies() {
+    tson::Layer *layer = map.getLayer("Enemies");
+    for (auto &obj : layer->getObjects()) {
+        Rectangle rec;
+        rec.x = obj.getPosition().x;
+        rec.y = obj.getPosition().y;
+        rec.width = obj.getSize().x;
+        rec.height = obj.getSize().y;
+
+        std::string temp = obj.getName();
+
+        Enemies.emplace(temp, rec);
+    }
+    return &Enemies;
+}
+
+
+
+std::vector<Rectangle> *Map::Return_Plataform() {
+
+    tson::Layer *layer2 = map.getLayer("Plataforms");
+    for (auto &obj : layer2->getObjects()) {
+        Rectangle Rec;
+        Rec.x = obj.getPosition().x;
+        Rec.y = obj.getPosition().y;
+        Rec.width = obj.getSize().x;
+        Rec.height = obj.getSize().y;
+        ColPlataform.push_back(Rec);
+    }
+
+    return &ColPlataform;
+}
+
+std::vector<Rectangle> *Map::Return_Floor() {
+    tson::Layer *layer = map.getLayer("Floor_&_Wall");
+    for (auto &obj : layer->getObjects()) {
+        Rectangle Rec;
+        Rec.x = obj.getPosition().x;
+        Rec.y = obj.getPosition().y;
+        Rec.width = obj.getSize().x;
+        Rec.height = obj.getSize().y;
+        Colilision.push_back(Rec);
+    }
+
+    return &Colilision;
 }
 

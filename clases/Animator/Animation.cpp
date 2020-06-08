@@ -16,7 +16,7 @@ Animation::Animation(Image_Holder *img) {
 
 void Animation::Animate(Vector2 pos) {
 
-    frameRec = {static_cast<float>(currentColumn * image->getProportion().x), static_cast<float>(currentRow * image->getProportion().y), image->getProportion().x, image->getProportion().y};
+    frameRec = {static_cast<float>(currentColumn * image->getProportion().x),static_cast<float>(currentRow * image->getProportion().y), image->getProportion().x,image->getProportion().y};
     DrawTextureRec(image->getPicture(), frameRec, pos, WHITE);
     currentColumn = ++currentColumn % image->getMaxColumn()[currentRow];
 }

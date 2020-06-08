@@ -12,7 +12,6 @@ int main() {
 
     Game &game = Game::Get_Game();
 
-
 #if defined(PLATFORM_WEB)  // Para versión Web.
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
 #else

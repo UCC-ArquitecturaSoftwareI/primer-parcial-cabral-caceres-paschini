@@ -9,18 +9,22 @@
 #include "../Character/Character.h"
 #include "../Fruits/Fruit_Vector.h"
 #include "../Animator/Animation_Creator.h"
+#include "../Entity/All_entity.h"
 
 
 class Renderer {
 private:
     Map *Level;
     Character *Chara;
-    Fruit_Vector *Vector;
+    Fruit_Vector *Fruits;
     Animation_Creator Ani_Creator;
     Camera2D camZoom;
     Entity *Life;
+    All_entity *Entities;
+    int frameCounter = 0;
+    std::vector<Entity *> *Enemies;
 public:
-    Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec);
+    Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Entity *> *Ene);
 
     void draw_Map();
 

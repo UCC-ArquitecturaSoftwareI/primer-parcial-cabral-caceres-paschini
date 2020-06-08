@@ -17,14 +17,16 @@ std::vector<Fruits *> *Fruit_Vector::Get_Vec_pointer() {
     return &Fruits_Vec;
 }
 
+void Fruit_Vector::Set_fruit_type() {
+    for(auto i: Fruits_Vec){
+        i->GetAni()->setCurrentRow(i->Get_points()/100);
+    }
+}
+
 void Fruit_Vector::Call_Animator() {
     for(auto i :Fruits_Vec){
         i->GetAni()->Animate(i->Get_Entity_Pos());
     }
 }
 
-void Fruit_Vector::Set_fruit_type() {
-    for(auto i :Fruits_Vec){
-        i->GetAni()->setCurrentRow(i->Get_points()/100);
-    }
-}
+

@@ -31,8 +31,6 @@ Vector2 &Entity::Get_Entity_Pos() {
     return Entity_pos;
 }
 
-Entity::~Entity() {
-}
 
 const std::string &Entity::GetFilePathText() const {
     return filePathText;
@@ -56,4 +54,8 @@ const Vector2 &Entity::GetProportion() const {
 
 void Entity::Animate() {
     Ani->Animate(Entity_pos);
+}
+
+void Entity::Set_Animation(int Temp) {
+    Ani->setCurrentRow(Temp);
 }

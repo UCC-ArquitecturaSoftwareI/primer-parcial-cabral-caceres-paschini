@@ -39,7 +39,8 @@ public:
 
     void Animate();
 
-    ~Entity();
+    void Set_Animation(int);
+
 };
 
 

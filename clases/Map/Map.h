@@ -8,17 +8,19 @@
 #include <string>
 #include <raylib.h>
 #include "../../Libs/tileson.hpp"
-#include <list>
 #include <vector>
+#include <map>
 
 class Map {
     tson::Map map;
     std::vector<Texture2D> map_text;
     std::vector<tson::Tileset *> map_tileset;
     std::string path;
-    std::list<Rectangle> Colilision;
-    std::list<Rectangle> ColPlataform;
-    std::list<Rectangle> Trap;
+    std::vector<Rectangle> Colilision;
+    std::vector<Rectangle> ColPlataform;
+    std::vector<Rectangle> Trap;
+    std::vector<Vector2> Vec_fru;
+    std::multimap<std::string, Rectangle> Enemies;
 public:
     Map(std::string file);
 
@@ -30,12 +32,15 @@ public:
 
     Vector2 ReturnCharPos();
 
-    std::list<Rectangle> *ReturnList(int i);
+    std::vector<Rectangle> *Return_Floor();
 
-    std::vector<Vector2> Get_Fruits();
+    std::vector<Rectangle> *Return_Plataform();
 
-    std::list<Rectangle> *ReturnTraps();
+    std::vector<Vector2> *Get_Fruits();
 
+    std::vector<Rectangle> *ReturnTraps();
+
+    std::multimap<std::string, Rectangle> *Get_enemies();
 };
 
 

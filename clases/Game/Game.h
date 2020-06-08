@@ -13,7 +13,10 @@
 #include "../Colision/Collision.h"
 #include "../World/World.h"
 #include "../Fruits/Fruit_Vector.h"
-#include "../Entity/All_entity.h"
+#include "../Enemies/Enemies_factory.h"
+
+
+
 
 
 class Game {
@@ -27,8 +30,9 @@ private:
     Input_Handler *Input;
     Collision *Col;
     World *world;
-    Fruit_Vector *Vec;
-    All_entity *Entities;
+    Fruit_Vector *Fruits;
+    std::vector<Entity*> Enemies;
+
 
 public:
     static Game &Get_Game(){

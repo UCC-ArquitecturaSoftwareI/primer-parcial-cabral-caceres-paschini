@@ -8,8 +8,10 @@
 #include <vector>
 #include "../Fruits/Fruits.h"
 #include "Image_Holder.h"
+#include "unordered_map"
 
 class Animation_Creator {
+    std::unordered_map<std::string , Image_Holder*>  Map;
 public:
     void Create(std::vector<Entity *> *Vector_file);
 

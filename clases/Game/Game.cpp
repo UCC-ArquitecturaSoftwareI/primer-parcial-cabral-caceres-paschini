@@ -5,31 +5,37 @@
 #include "Game.h"
 
 Game::Game() {
-    const int screenWidth = 1104 ;
-    const int screenHeight = 688 ;
+    const int screenWidth = 1104;
+    const int screenHeight = 688;
 
     //Inicialización de la ventana
     InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
     InitAudioDevice();
 
     map = new Map("resources/level/Map1.json");
-    player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),  {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
-    Vec = new Fruit_Vector(map->Get_Fruits());
+    player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),
+                           {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
 
-    Rend = new Renderer(map,player,Vec);
+    Fruits = new Fruit_Vector(*map->Get_Fruits());
+
+    Enemies_factory fac{};
+    fac.Set_Map(map->Get_enemies());
+    Enemies = fac.Make_Enemies();
+
+    Rend = new Renderer(map, player, Fruits, &Enemies);
     Srend = new Sound_Render("resources/Music/Song.mp3");
     Input = new Input_Handler(player);
 
 
-
     Col = new Collision(player);
-    Col->LoadList(map->ReturnList(0));
-    Col->LoadList(map->ReturnList(1));
-    Col->LoadList(map->ReturnTraps());
-    Col->LoadVector(Vec->Get_Vec_pointer());
+    Col->Load_Vector(map->Return_Floor(),0);
+    Col->Load_Vector(map->Return_Plataform(),1);
+    Col->Load_Vector(map->ReturnTraps(),2);
+    Col->Load_Vector(Fruits->Get_Vec_pointer());
 
     world = new World(player);
 }
+
 
 void Game::PlayMusic() {
     Srend->PlayMusic();
@@ -68,7 +74,7 @@ void Game::UpdateFrame() {
 }
 
 void Game::UpdateMusic() {
-   // Srend->UpdateMusic();
+    // Srend->UpdateMusic();
 }
 
 void Game::EndGame() {
@@ -83,5 +89,6 @@ void Game::Update_Game() {
         UpdateMusic();
     }
 }
+
 
 

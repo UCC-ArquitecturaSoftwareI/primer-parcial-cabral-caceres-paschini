@@ -14,18 +14,20 @@
 
 class Collision {
 private:
-    std::vector<std::list<Rectangle> *> List;
+    std::vector<Rectangle> *Floor_Wall;
+    std::vector<Rectangle> *Plataform;
+    std::vector<Rectangle> *Traps;
+    std::vector<Fruits *> *Fruits_Vec;
     Character *player;
     Rectangle player_area;
     Rectangle Fruit_area;
-    std::vector<Fruits *> *Fruits_Vec;
 
 public:
     Collision(Character *player);
 
-    void LoadList(std::list<Rectangle> *list1);
+    void Load_Vector(std::vector<Fruits*> *vec);
 
-    void LoadVector(std::vector<Fruits *> *Fruits);
+    void Load_Vector(std::vector<Rectangle> *vec, int Dat);
 
     bool IsColliding_X();
 
