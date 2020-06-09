@@ -21,7 +21,7 @@ public:
 
     void Set_Map( std::multimap<std::string, Rectangle> *M);
 
-    std::vector<Entity*> Make_Enemies();
+    std::vector<Enemies*> Make_Enemies();
 };
 
 

@@ -15,10 +15,6 @@
 #include "../Fruits/Fruit_Vector.h"
 #include "../Enemies/Enemies_factory.h"
 
-
-
-
-
 class Game {
 private:
     Game();
@@ -31,7 +27,7 @@ private:
     Collision *Col;
     World *world;
     Fruit_Vector *Fruits;
-    std::vector<Entity*> Enemies;
+    std::vector<Enemies*> Bad_Guys;
 
 
 public:

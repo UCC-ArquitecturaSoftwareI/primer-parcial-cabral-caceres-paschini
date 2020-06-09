@@ -5,23 +5,27 @@
 #include "Renderer.h"
 #include <vector>
 
-Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Entity *> *Ene) {
+Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemies *> *Ene) {
     Level = Mp;
     Chara = Ch;
     Fruits = Vec;
-    Enemies = Ene;
+    Bad_Guys = Ene;
     Life = new Entity("../resources/level/spritesheet_Heart.png", {60, 40}, {1, 1, 1}, {20, 20});
-
 
     Entities = new All_entity();
     Entities->Add_entity(Life);
-    Entities->Add_entity(Vec->Get_Vec_pointer());
+    Entities->Add_entity(Fruits->Get_Vec_pointer());
     Entities->Add_entity(Chara);
-    Entities->Add_entity(Enemies);
+    Entities->Add_entity(Bad_Guys);
+
     Ani_Creator.Create(Entities->Get_Entities());
     Vec->Set_fruit_type();
 
 
+    camZoom.target = (Vector2) {Chara->Get_Entity_Pos().x, Chara->Get_Entity_Pos().y};
+    camZoom.offset = (Vector2) {1104 / 2, 688 / 2};
+    camZoom.rotation = 0.0f;
+    camZoom.zoom = 1.5f;
 }
 
 void Renderer::draw_Map() {
@@ -88,37 +92,47 @@ void Renderer::draw_Map() {
 void Renderer::UpdateDrawFrame(int State) {
 
     //Set character state
-    Chara->Set_Animation(State);
+    if (State == 0)
+        Char_DMG = 80;
+
+    Chara->Set_Animation(0);
+
+    if (Char_DMG == -1)
+        Chara->Set_Animation(State);
+    else
+        Char_DMG--;
+
+
+    Life->Set_Animation(3 - Chara->Get_life_Num());
 
     //draws Life Amount
-    Life->Set_Animation(3 - Chara->Get_life_Num());
-    frameCounter ++;
-    if (frameCounter >= 1) {
+    BeginDrawing();
+
+    if (frameCounter != 2) {
+
         frameCounter = 0;
         // Comienzo a dibujar
-        BeginDrawing();
+
         ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
-        //draw_Map();
+        BeginMode2D(camZoom);
+        camZoom.target = {Chara->Get_Entity_Pos().x, Chara->Get_Entity_Pos().y};
         draw_Map();
-
-        //DrawText
-        DrawText("Points: ", 20, 20, 20, BLACK);
-        DrawText(Chara->GetPoints().c_str(), 89, 20, 20, BLACK);
-        DrawText("life: ", 20, 40, 20, BLACK);
 
         //Draws all entities
         Fruits->Call_Animator();
         Chara->Animate();
-        Life->Animate();
-
-        for (auto i: *Enemies) {
+        for (auto i: *Bad_Guys) {
             i->Animate();
         }
+        EndMode2D();
+
+        Life->Animate();
 
         // Finalizo el dibujado
-        EndMode2D();
-        EndDrawing();
-    }
+    } else frameCounter++;
+    Interface.DrawGui(Fruits->Get_Amount());
+    Life->Animate();
+    EndDrawing();
 }
 

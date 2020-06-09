@@ -59,3 +59,7 @@ void Entity::Animate() {
 void Entity::Set_Animation(int Temp) {
     Ani->setCurrentRow(Temp);
 }
+
+void Entity::Set_AnimationF(int Temp) {
+    Ani->setCurrentRow(Temp);
+}

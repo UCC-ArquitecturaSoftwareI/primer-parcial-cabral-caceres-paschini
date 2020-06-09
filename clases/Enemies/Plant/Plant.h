@@ -7,10 +7,21 @@
 
 #include "../../Entity/Entity.h"
 
-class Plant : public Entity {
-    private:
-    public:
-        Plant(std::string file, Vector2 playpos) : Entity(std::move(file), playpos,{7,7,10,10},Vector2{44, 42}) {}
+#include "../Enemies.h"
+
+class Plant : public Enemies {
+private:
+
+public:
+    Plant(std::string file, Vector2 playpos) : Enemies(std::move(file), playpos) {
+        Proportion = {44, 42};
+        maxCol = {7, 7, 10, 10};
+
+    }
+
+    void move_x();
+
+    void move_y();
 
 };
 

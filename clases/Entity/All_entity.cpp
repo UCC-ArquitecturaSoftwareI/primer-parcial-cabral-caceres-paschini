@@ -10,7 +10,7 @@ void All_entity::Add_entity(Entity *Ent) {
     All_Ent.push_back(Ent);
 }
 
-void All_entity::Add_entity(std::vector<Entity *> *Vec) {
+void All_entity::Add_entity(std::vector<Enemies *> *Vec) {
     for (auto i: *Vec) {
         All_Ent.push_back(i);
     }

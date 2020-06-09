@@ -1,6 +1,7 @@
 #include <raylib.h>
 #include "clases/Game/Game.h"
-#include <thread>
+#include "clases/Menu/Menu.h"
+
 
 
 #if defined(PLATFORM_WEB) // Para crear HTML5
@@ -18,10 +19,12 @@ int main() {
     SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
     // Main loop
 
+    //Menu Men;
     game.Update_Game();
 
 #endif
     // Descargar todos los resources cargados
     game.EndGame();
+    //Men.Draw();
     return 0;
 }

@@ -7,10 +7,22 @@
 
 #include "../../Entity/Entity.h"
 
-class Turtle :public Entity {
-    private:
-    public:
-        Turtle(std::string file, Vector2 playpos) : Entity(std::move(file), playpos,{7,7,7,7,13,13,13,13},Vector2{44, 26}) {}
+#include "../Enemies.h"
+
+class Turtle : public Enemies {
+private:
+
+public:
+    Turtle(std::string file, Vector2 playpos) : Enemies(std::move(file), playpos) {
+        Proportion = {44, 26};
+        maxCol = {7, 7, 7, 7, 13, 13, 13, 13};
+        State_x =1;
+
+    }
+
+    void move_x();
+
+    void move_y();
 
 };
 

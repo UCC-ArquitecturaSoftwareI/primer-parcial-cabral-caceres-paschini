@@ -6,8 +6,8 @@
 #define RAYLIBTEMPLATE_COLLISION_H
 
 #include <raylib.h>
-#include <list>
 #include "../Character/Character.h"
+#include "../Enemies/Enemies.h"
 #include "../Fruits/Fruits.h"
 #include <vector>
 
@@ -18,28 +18,34 @@ private:
     std::vector<Rectangle> *Plataform;
     std::vector<Rectangle> *Traps;
     std::vector<Fruits *> *Fruits_Vec;
-    Character *player;
-    Rectangle player_area;
+    Rectangle Ent_Rec;
+    Rectangle Enemie_Rec;
     Rectangle Fruit_area;
 
 public:
-    Collision(Character *player);
+    Collision();
 
     void Load_Vector(std::vector<Fruits*> *vec);
 
     void Load_Vector(std::vector<Rectangle> *vec, int Dat);
 
-    bool IsColliding_X();
+    bool IsColliding_X(Enemies *Ent);
 
-    bool IsColliding_y();
+    bool IsColliding_X(Character *Ent);
 
-    bool IsCollidingPlataform();
+    bool IsColliding_y(Enemies *Ent);
 
-    bool IsFlying();
+    bool IsColliding_y(Character *Ent);
 
-    bool IsCollecting();
+    bool IsCollidingPlataform(Character *Ent);
 
-    bool Is_getting_damage();
+    bool IsFlying(Character *Ent);
+
+    bool IsCollecting(Character *Ent);
+
+    bool Dmg(Character *Ent);
+
+    bool Dmg(Character *Ent,Enemies *Ene);
 };
 
 

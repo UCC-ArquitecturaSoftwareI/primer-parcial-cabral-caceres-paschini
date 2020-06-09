@@ -8,6 +8,7 @@
 
 #include "Entity.h"
 #include "../Fruits/Fruits.h"
+#include "../Enemies/Enemies.h"
 
 class All_entity {
 private:
@@ -17,7 +18,7 @@ public:
 
     void Add_entity(Entity * Ent);
 
-    void Add_entity(std::vector<Entity *> *Vec);
+    void Add_entity(std::vector<Enemies*> *Vec);
 
     void Add_entity(std::vector<Fruits *> *Vec);
 

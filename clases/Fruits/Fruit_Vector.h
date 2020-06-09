@@ -11,6 +11,7 @@
 class Fruit_Vector {
 private:
     std::vector<Fruits *> Fruits_Vec;
+    int Amount = 0;
 public:
     Fruit_Vector(std::vector<Vector2> Pos_fruits);
 
@@ -19,6 +20,10 @@ public:
     void Set_fruit_type();
 
     void Call_Animator();
+
+    void Delete_fruit();
+
+    int Get_Amount();
 
 };
 

@@ -9,7 +9,9 @@
 #include "../Character/Character.h"
 #include "../Fruits/Fruit_Vector.h"
 #include "../Animator/Animation_Creator.h"
+#include "../Enemies/Enemies.h"
 #include "../Entity/All_entity.h"
+#include "../GUI/GUI.h"
 
 
 class Renderer {
@@ -22,9 +24,13 @@ private:
     Entity *Life;
     All_entity *Entities;
     int frameCounter = 0;
-    std::vector<Entity *> *Enemies;
+    std::vector<Enemies *> *Bad_Guys;
+    int Char_DMG = 0;
+
+    class GUI Interface;
+
 public:
-    Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Entity *> *Ene);
+    Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemies *> *Ene);
 
     void draw_Map();
 
