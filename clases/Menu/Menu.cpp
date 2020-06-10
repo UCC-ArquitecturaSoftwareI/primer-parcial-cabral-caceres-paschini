@@ -2,18 +2,26 @@
 // Created by Catalina on 27/05/2020.
 //
 
+#include <string>
 #include "Menu.h"
 
-Menu::Menu( std::string BackgroundFile, std::string ButtonFile) {
+Menu::Menu( ) {
 
     InitWindow( 1104, 688, "raylib - Plataformer");
-    BackgroundMenu= LoadTexture(BackgroundFile.c_str());
-    ButtonMenu = LoadTexture(ButtonFile.c_str());
+    Background= LoadTexture("../resources/Menu/back_menu.png");
+    Rec_Menu = {480, 500, 180, 70};
 }
 
-void Menu::DrawMenu() {
+void Menu::Draw() {
+    scrollingBack -= 0.2f;
+    if (scrollingBack <= -Background.width * 2) scrollingBack = 0;
 
-        DrawTexture(BackgroundMenu, 0, 0, BLACK);
-        DrawTexture(ButtonMenu,640, 480, WHITE);
-
+    BeginDrawing();
+    DrawTextureEx(Background, (Vector2) {scrollingBack, 0}, 0.0f, 2.0f, WHITE);
+    DrawTextureEx(Background, (Vector2) {Background.width * 2 + scrollingBack, 0}, 0.0f, 2.0f, WHITE);
+    DrawRectangleRoundedLines(Rec_Menu, 30, 2, 3, BLACK);
+    DrawRectangleRounded(Rec_Menu, 30, 2, BEIGE);
+    DrawText("PLAY", 520, 520, 40, BLACK);
+    DrawText("¡WELCOME!", 300, 300, 100, BLACK);
+    EndDrawing();
 }

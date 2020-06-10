@@ -8,13 +8,13 @@
 #include <raylib.h>
 
 
-
 class Menu {
 private:
     Texture2D Background;
-    Texture2D Button;
+    Rectangle Rec_Menu{};
+    float scrollingBack = 0.0f;
 public:
-    Menu ();
+    Menu();
 
     void Draw();
 };
