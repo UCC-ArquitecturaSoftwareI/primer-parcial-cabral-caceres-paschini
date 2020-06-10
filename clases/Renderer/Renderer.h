@@ -20,13 +20,14 @@ private:
     Character *Chara;
     Fruit_Vector *Fruits;
     Animation_Creator Ani_Creator;
+    Texture2D Background;
     Camera2D camZoom;
     Entity *Life;
     All_entity *Entities;
     int frameCounter = 0;
     std::vector<Enemies *> *Bad_Guys;
     int Char_DMG = 0;
-
+    float scrollingBack = 0.0f;
     class GUI Interface;
 
 public:

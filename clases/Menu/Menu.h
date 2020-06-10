@@ -14,6 +14,8 @@ class Menu {
 private:
     Texture2D Background;
     Texture2D Button;
+
+    float scrollingBack = 0.0f;
 public:
     Menu ();
 

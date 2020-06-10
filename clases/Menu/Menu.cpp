@@ -16,9 +16,13 @@ Menu::Menu() {
 void Menu::Draw() {
 
     while (!WindowShouldClose()) {
+
+        scrollingBack -= 0.5f;
+        if (scrollingBack <= -Background.width * 2) scrollingBack = 0;
+
         BeginDrawing();
-        DrawTexture(Background, 0, 0, WHITE);
-        DrawTexture(Button, 50, 50, WHITE);
+        DrawTextureEx(Background, (Vector2) {scrollingBack, 0}, 0.0f, 2.0f, WHITE);
+        DrawTextureEx(Background, (Vector2) {Background.width * 2 + scrollingBack, 0}, 0.0f, 2.0f, WHITE);
         EndDrawing();
     }
 }

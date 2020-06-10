@@ -8,6 +8,8 @@ Game::Game() {
     const int screenWidth = 1104;
     const int screenHeight = 688;
 
+    Game_State = 0;
+
     //Inicialización de la ventana
     InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
     InitAudioDevice();
@@ -23,7 +25,7 @@ Game::Game() {
     Bad_Guys = fac.Make_Enemies();
 
     Rend = new Renderer(map, player, Fruits, &Bad_Guys);
-    Srend = new Sound_Render("resources/Music/Song.mp3");
+    Srend = new Sound_Render("resources/Music/Bad_song.mp3");
     Input = new Input_Handler(player);
 
 
@@ -64,17 +66,23 @@ void Game::UpdateFrame() {
 
     int State = Input->GetCharStatus();
     //Fruits
-    if (Col->IsCollecting(player))
+    if (Col->IsCollecting(player)) {
         Fruits->Delete_fruit();
+        Srend->PlaySoundfx("resources/Music/Pick_FX.mp3");
+    }
 
     //Damage Spikes
-    if (Col->Dmg(player))
+    if (Col->Dmg(player)){
         State = 0;
+        Srend->PlaySoundfx("resources/Music/DMG.mp3");
+    }
 
     for (auto i:Bad_Guys) {
         //Dmg Enemies
-        if (Col->Dmg(player, i))
+        if (Col->Dmg(player, i)){
             State = 0;
+            Srend->PlaySoundfx("resources/Music/DMG.mp3");
+        }
         i->move_x();
         Col->IsColliding_X(i);
         i->move_y();
@@ -82,11 +90,12 @@ void Game::UpdateFrame() {
     }
 
     //Draw the result
-
     Rend->UpdateDrawFrame(State);
     if (player->Is_alive())
-        CloseWindow();
+        Game_State = 2;
 
+    if (player->Is_alive())
+        Game_State = 1;
 }
 
 void Game::UpdateMusic() {
@@ -104,6 +113,10 @@ void Game::Update_Game() {
         UpdateFrame();
         UpdateMusic();
     }
+}
+
+int Game::ReturnGameState() {
+    return Game_State;
 }
 
 

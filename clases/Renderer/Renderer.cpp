@@ -12,6 +12,8 @@ Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemie
     Bad_Guys = Ene;
     Life = new Entity("../resources/level/spritesheet_Heart.png", {60, 40}, {1, 1, 1}, {20, 20});
 
+    Background = LoadTexture("../resources/level/Back_Game.png");
+
     Entities = new All_entity();
     Entities->Add_entity(Life);
     Entities->Add_entity(Fruits->Get_Vec_pointer());
@@ -30,6 +32,12 @@ Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemie
 
 void Renderer::draw_Map() {
 
+    scrollingBack -= 0.5f;
+    if (scrollingBack <= -Background.width * 2) scrollingBack = 0;
+
+    DrawTextureEx(Background, (Vector2) {-400 + scrollingBack, -300}, 0.0f, 2.0f, WHITE);
+    DrawTextureEx(Background, (Vector2) {-400 + Background.width * 2 + scrollingBack, -300}, 0.0f, 2.0f, WHITE);
+
     tson::Map test = Level->getMap();
     Rectangle rec;
     rec.x = 0.0f;
@@ -45,7 +53,7 @@ void Renderer::draw_Map() {
     auto &c = Level->getMap().getBackgroundColor();
     ClearBackground({c.r, c.g, c.b, c.a});
 
-    for (auto nombre: {"Back", "Front"}) {
+    for (auto nombre: {"Front"}) {
         tson::Layer *layer = test.getLayer(nombre);
         for (auto&[pos, tile] : layer->getTileData()) {
 
@@ -108,18 +116,20 @@ void Renderer::UpdateDrawFrame(int State) {
     //draws Life Amount
     BeginDrawing();
 
+
     if (frameCounter != 2) {
 
         frameCounter = 0;
         // Comienzo a dibujar
 
         ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
-
         BeginMode2D(camZoom);
+
         camZoom.target = {Chara->Get_Entity_Pos().x, Chara->Get_Entity_Pos().y};
-        draw_Map();
+
 
         //Draws all entities
+        draw_Map();
         Fruits->Call_Animator();
         Chara->Animate();
         for (auto i: *Bad_Guys) {
@@ -127,7 +137,6 @@ void Renderer::UpdateDrawFrame(int State) {
         }
         EndMode2D();
 
-        Life->Animate();
 
         // Finalizo el dibujado
     } else frameCounter++;

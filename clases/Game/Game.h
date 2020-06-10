@@ -28,7 +28,7 @@ private:
     World *world;
     Fruit_Vector *Fruits;
     std::vector<Enemies*> Bad_Guys;
-
+    int Game_State;
 
 public:
     static Game &Get_Game(){
@@ -45,6 +45,8 @@ public:
     void Update_Game();
 
     void EndGame();
+
+    int ReturnGameState();
 };
 
 

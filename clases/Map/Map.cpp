@@ -18,7 +18,6 @@ Map::Map(std::string file) {
         }
 }
 
-
 Vector2 Map::ReturnCharPos() {
     tson::Layer *layer = map.getLayer("Player");
     tson::Object *player = layer->firstObj("Play");
