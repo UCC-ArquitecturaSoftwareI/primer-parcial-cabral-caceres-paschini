@@ -1,4 +1,9 @@
 #include <raylib.h>
+
+#include "clases/Character/Character.h"
+#include "clases/Map/Map.h"
+#include "clases/Renderer/Renderer.h"
+#include "clases/Music Renderer/Sound_Render.h"
 #include "clases/Game/Game.h"
 #include <thread>
 #include "clases/Menu/Menu.h"
@@ -8,23 +13,31 @@
 #endif
 
 
-int main() {
 
-    Menu *menu = new Menu();
+
+int main() {
+    Menu *menu;
+    menu = new Menu();
+ while (!WindowShouldClose())
     menu->Draw();
-    Game &game = Game::Get_Game();
+
+ // Game *game;
+    //game = new Game();
+
+    //Starts Music
+  // game->PlayMusic();
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
 #else
     SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
-    // Main loop
+    //Main loop
 
-    game.Update_Game();
+    //game->Update_Game();
 
 #endif
     // Descargar todos los resources cargados
-    game.EndGame();
+    //game->EndGame();
     return 0;
 }

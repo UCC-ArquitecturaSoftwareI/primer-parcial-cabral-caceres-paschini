@@ -4,20 +4,16 @@
 
 #include "Menu.h"
 
+Menu::Menu( std::string BackgroundFile, std::string ButtonFile) {
 
-
-Menu::Menu() {
-
-    Background=LoadTexture(R"(../resources/Menu/Gray.png)");
-    Button=LoadTexture(R"(../resources/Menu/Play.png)");
-
+    InitWindow( 1104, 688, "raylib - Plataformer");
+    BackgroundMenu= LoadTexture(BackgroundFile.c_str());
+    ButtonMenu = LoadTexture(ButtonFile.c_str());
 }
 
-void Menu::Draw() {
+void Menu::DrawMenu() {
 
-    InitWindow(640,552,"hola");
-    BeginDrawing();
-    DrawTexture(Background,0,0, WHITE);
-    DrawTexture(Button,552,344,WHITE);
-    EndDrawing();
+        DrawTexture(BackgroundMenu, 0, 0, BLACK);
+        DrawTexture(ButtonMenu,640, 480, WHITE);
+
 }
