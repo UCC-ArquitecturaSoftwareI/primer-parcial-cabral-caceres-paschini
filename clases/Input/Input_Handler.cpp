@@ -5,8 +5,9 @@
 #include "Input_Handler.h"
 
 
-Input_Handler::Input_Handler(Character *Ch) {
+Input_Handler::Input_Handler(Character *Ch, Sound_Render *MU) {
     Play = Ch;
+    MUS = MU;
     KeyPress.x = 0;
     KeyPress.y = 0;
     CanJump = true;
@@ -23,6 +24,7 @@ void Input_Handler::setKeyPress() {
     float Acc_y = 5;
     KeyPress.x = 5;
 
+
     if (IsKeyDown(KEY_RIGHT)) {
         KeyPress.x = 7;
         KeyPress.y = 0;
@@ -36,6 +38,12 @@ void Input_Handler::setKeyPress() {
     if (IsKeyDown(KEY_UP) && CanJump) {
         KeyPress.x = 3;
         Play->Jump_y(Acc_y);
+    }
+    if(IsKeyDown(KEY_U)){
+        MUS->ChangeVolume(0.01);
+    }
+    if(IsKeyDown(KEY_D)){
+        MUS->ChangeVolume(-0.01);
     }
 }
 

@@ -11,8 +11,7 @@ Game::Game() {
     Game_State = 0;
 
     //Inicialización de la ventana
-    InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
-    InitAudioDevice();
+    //InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
 
     map = new Map("resources/level/Map1.json");
     player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),
@@ -26,7 +25,7 @@ Game::Game() {
 
     Rend = new Renderer(map, player, Fruits, &Bad_Guys);
     Srend = new Sound_Render("resources/Music/Bad_song.mp3");
-    Input = new Input_Handler(player);
+    Input = new Input_Handler(player, Srend);
 
 
     Col = new Collision();
@@ -72,15 +71,19 @@ void Game::UpdateFrame() {
     }
 
     //Damage Spikes
-    if (Col->Dmg(player)){
+    if (Col->Dmg(player) && player->GetInvulnerable() == 0) {
         State = 0;
+        player->Change_life(-1);
+        player->SetInvulnerable(80);
         Srend->PlaySoundfx("resources/Music/DMG.mp3");
     }
 
     for (auto i:Bad_Guys) {
         //Dmg Enemies
-        if (Col->Dmg(player, i)){
+        if (Col->Dmg(player, i) && player->GetInvulnerable() == 0) {
             State = 0;
+            player->Change_life(-1);
+            player->SetInvulnerable(80);
             Srend->PlaySoundfx("resources/Music/DMG.mp3");
         }
         i->move_x();
@@ -89,13 +92,18 @@ void Game::UpdateFrame() {
         Col->IsColliding_y(i);
     }
 
+    if (player->GetInvulnerable() != 0) {
+        player->LessInv();
+    }
     //Draw the result
     Rend->UpdateDrawFrame(State);
     if (player->Is_alive())
         Game_State = 2;
-
-    if (player->Is_alive())
+    else
         Game_State = 1;
+    if (player->Get_Fruits_left() == 0) {
+        Game_State = 3;
+    }
 }
 
 void Game::UpdateMusic() {
@@ -104,8 +112,6 @@ void Game::UpdateMusic() {
 
 void Game::EndGame() {
     UnloadMusicStream(Srend->getMusic());   // Descargo la musica de RAM
-    CloseAudioDevice();         // Cierro el dispositivo de Audio
-    CloseWindow();              // Cierro la ventana
 }
 
 void Game::Update_Game() {

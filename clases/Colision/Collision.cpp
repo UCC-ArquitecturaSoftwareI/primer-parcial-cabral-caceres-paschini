@@ -164,7 +164,7 @@ bool Collision::IsCollecting(Character *Ent) {
         Fruit_area.x = i->Get_Entity_Pos().x;
         Fruit_area.y = i->Get_Entity_Pos().y;
         if (CheckCollisionRecs(Ent_Rec, Fruit_area)) {
-            Ent->Gain_poitns(i->Get_points());
+            Ent->Collect();
             Fruits_Vec->erase(Fruits_Vec->begin() + count - 1);
             delete i;
             return true;
@@ -177,7 +177,6 @@ bool Collision::Dmg(Character *Ent) {
     Ent_Rec = {Ent->Get_Entity_Pos().x + 7, Ent->Get_Entity_Pos().y, 32, 32};
     for (auto &i: *Traps) {
         if (CheckCollisionRecs(Ent_Rec, i)) {
-            Ent->Change_life(-1);
             return true;
         }
     }
@@ -187,11 +186,7 @@ bool Collision::Dmg(Character *Ent) {
 bool Collision::Dmg(Character *Ent, Enemies *Ene) {
     Ent_Rec = {Ent->Get_Entity_Pos().x + 7, Ent->Get_Entity_Pos().y, 32, 32};
     Enemie_Rec = {Ene->Get_Entity_Pos().x, Ene->Get_Entity_Pos().y, Ene->GetProportion().x, Ene->GetProportion().y};
-    if (CheckCollisionRecs(Ent_Rec, Enemie_Rec)) {
-        Ent->Change_life(-1);
-        return true;
-    }
-    return false;
+    return CheckCollisionRecs(Ent_Rec, Enemie_Rec);
 }
 
 

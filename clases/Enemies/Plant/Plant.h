@@ -16,7 +16,7 @@ public:
     Plant(std::string file, Vector2 playpos) : Enemies(std::move(file), playpos) {
         Proportion = {44, 42};
         maxCol = {7, 7, 10, 10};
-
+        State_x = 1;
     }
 
     void move_x();

@@ -28,6 +28,7 @@ Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemie
     camZoom.offset = (Vector2) {1104 / 2, 688 / 2};
     camZoom.rotation = 0.0f;
     camZoom.zoom = 1.5f;
+    Interface.LoadPlayer(Chara);
 }
 
 void Renderer::draw_Map() {
@@ -100,18 +101,15 @@ void Renderer::draw_Map() {
 void Renderer::UpdateDrawFrame(int State) {
 
     //Set character state
-    if (State == 0)
-        Char_DMG = 80;
 
-    Chara->Set_Animation(0);
-
-    if (Char_DMG == -1)
-        Chara->Set_Animation(State);
+    if (Chara->GetInvulnerable() != 0)
+        Chara->Set_Animation(0);
     else
-        Char_DMG--;
+        Chara->Set_Animation(State);
 
 
-    Life->Set_Animation(3 - Chara->Get_life_Num());
+    if (Chara->Get_life_Num() > 0)
+        Life->Set_Animation(3 - Chara->Get_life_Num());
 
     //draws Life Amount
     BeginDrawing();
@@ -122,7 +120,7 @@ void Renderer::UpdateDrawFrame(int State) {
         frameCounter = 0;
         // Comienzo a dibujar
 
-        ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
+        ClearBackground(WHITE); // Limpio la pantalla con blanco
         BeginMode2D(camZoom);
 
         camZoom.target = {Chara->Get_Entity_Pos().x, Chara->Get_Entity_Pos().y};

@@ -41,8 +41,6 @@ public:
 
     void Set_Animation(int);
 
-    void Set_AnimationF(int);
-
 };
 
 

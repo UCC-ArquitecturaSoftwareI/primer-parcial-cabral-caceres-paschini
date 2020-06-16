@@ -7,19 +7,27 @@
 #define RAYLIBTEMPLATE_MENU_H
 
 #include <raylib.h>
+#include "../Music Renderer/Sound_Render.h"
 
 
 
 class Menu {
 private:
     Texture2D Background;
-    Texture2D Button;
-
+    Rectangle Back_;
+    Rectangle Button;
+    Rectangle Mouse;
     float scrollingBack = 0.0f;
+    Sound_Render *Srend;
+
 public:
     Menu ();
 
+    void Update_Menu();
+
     void Draw();
+
+    bool Detect_Input();
 };
 
 

@@ -45,29 +45,14 @@ Vector2 Character::GetSpeed() {
 }
 
 void Character::Change_life(int d) {
-    life += d;
-    Set_x(32);
-    Set_y(592);
+    if (Invulnerable == 0)
+        life += d;
+    else
+        Invulnerable--;
 }
 
-void Character::Gain_poitns(float d) {
-    points += d;
-}
-
-std::string Character::Get_life() {
-    std::string temp;
-    temp = std::to_string(life);
-    const char *c = nullptr;
-    c = temp.c_str();
-    return c;
-}
-
-std::string Character::GetPoints() {
-    std::string temp;
-    temp = std::to_string(points);
-    const char *c = nullptr;
-    c = temp.c_str();
-    return c;
+void Character::Collect() {
+    Fruits_Left -= 1;
 }
 
 bool Character::Is_alive() {
@@ -76,6 +61,34 @@ bool Character::Is_alive() {
 
 int Character::Get_life_Num() {
     return life;
+}
+
+int Character::Get_Fruits_left() {
+    return Fruits_Left;
+}
+
+void Character::SetMin(int F) {
+    Time.x = F;
+}
+
+void Character::SetSec(int F) {
+    Time.y = F;
+}
+
+const Vector2 &Character::getTime() const {
+    return Time;
+}
+
+void Character::SetInvulnerable(int invulnerable) {
+    Invulnerable = invulnerable;
+}
+
+void Character::LessInv() {
+    Invulnerable--;
+}
+
+int Character::GetInvulnerable()  {
+    return Invulnerable;
 }
 
 

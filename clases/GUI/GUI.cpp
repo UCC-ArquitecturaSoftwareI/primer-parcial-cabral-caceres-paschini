@@ -24,6 +24,8 @@ void GUI::DrawGui(int Amount) {
     DrawRectangleRounded(Rec_1, 30, 2, BEIGE);
     DrawRectangleRoundedLines(Rec_2, 30, 2, 3, BLACK);
     DrawRectangleRounded(Rec_2, 30, 2, BEIGE);
+    DrawRectangleRoundedLines(Rec_3, 30, 2, 3, BLACK);
+    DrawRectangleRounded(Rec_3, 30, 2, BEIGE);
 
     DrawText("Time: ", 20, 20, 20, BLACK);
     DrawText(M, 70, 20, 20, BLACK);
@@ -34,14 +36,20 @@ void GUI::DrawGui(int Amount) {
     DrawText("Fruits: ", 920, 20, 20, BLACK);
     DrawText(c, 1000, 20, 20, BLACK);
     DrawText("/35", 1030, 20, 20, BLACK);
+    DrawText("'U' for volume up \n'D' for volume down", 20, 623, 20, BLACK);
 
-    if (Amount != 0)
+    if (Amount != 0) {
         Take_Time();
+    } else {
+        Player->SetMin(Minutes);
+        Player->SetSec(Seconds);
+    }
 }
 
 GUI::GUI() {
     Rec_1 = {5, 15, 180, 50};
-    Rec_2 = {910, 15, 180, 50};
+    Rec_2 = {910, 15, 180, 30};
+    Rec_3 = {5, 620, 250, 55};
     Seconds = Minutes = timer = 0;
 }
 
@@ -51,11 +59,14 @@ void GUI::Take_Time() {
         timer = 0;
     } else
         timer++;
-
     if (Seconds == 60) {
         Seconds = 0;
         Minutes++;
     }
+}
+
+void GUI::LoadPlayer(Character *Play) {
+    Player = Play;
 }
 
 

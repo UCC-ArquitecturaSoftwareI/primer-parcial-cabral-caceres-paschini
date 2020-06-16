@@ -7,16 +7,18 @@
 
 #include "raylib.h"
 #include "../Character/Character.h"
+#include "../Music Renderer/Sound_Render.h"
 
 class Input_Handler {
 private:
     Vector2 KeyPress;
     Character *Play;
+    Sound_Render *MUS;
     bool CanJump;
 
 public:
 
-    Input_Handler(Character *Ch);
+    Input_Handler(Character *Ch, Sound_Render *MU);
 
     void setKeyPress();
 

@@ -14,16 +14,19 @@
 class Character : public Entity {
 private:
     Vector2 player_Spd{};
-    int points;
+    int Fruits_Left;
     int life;
+    int Invulnerable = 0;
+    Vector2 Time;
 public:
 
     Character(std::string file, Vector2 playpos, std::vector<int> Max_Col) : Entity(std::move(file), playpos,
                                                                                     std::move(Max_Col),
                                                                                     Vector2{32, 32}) {
         player_Spd = {0, 0.1};
-        points = 0;
+        Fruits_Left = 35;
         life = 3;
+        Time = {0, 0};
     }
 
     void Acelerate_x(float d);
@@ -44,16 +47,25 @@ public:
 
     void Change_life(int d);
 
-    void Gain_poitns(float d);
-
-    std::string Get_life();
+    void Collect();
 
     int Get_life_Num();
 
-    std::string GetPoints();
-
     bool Is_alive();
 
+    int Get_Fruits_left();
+
+    void SetMin(int F);
+
+    void SetSec(int F);
+
+    const Vector2 &getTime() const;
+
+    void SetInvulnerable(int invulnerable);
+
+    void LessInv();
+
+    int GetInvulnerable() ;
 };
 
 

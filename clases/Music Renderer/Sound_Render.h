@@ -14,6 +14,7 @@ private:
     Music music;
     Sound Temp;
     int timer = 0;
+    float volume =0.4;
 public:
     explicit Sound_Render(std::string text);
 
@@ -22,6 +23,8 @@ public:
     void PlayMusic();
 
     void PlaySoundfx(std::string text);
+
+    void ChangeVolume(float d);
 
     const Music &getMusic() const;
 
