@@ -11,7 +11,6 @@
 #include <vector>
 #include "../Entity/Entity.h"
 #include <random>
-#include <zconf.h>
 
 
 class Fruits : public Entity {
