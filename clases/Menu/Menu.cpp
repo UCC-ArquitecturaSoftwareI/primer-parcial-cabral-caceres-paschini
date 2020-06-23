@@ -8,35 +8,35 @@
 
 Menu::Menu() {
 
-    InitWindow(1104, 688, "hola");
-    InitAudioDevice();
+
     Background = LoadTexture("../resources/Menu/Back_menu.png");
     Back_ = {250, 100, 600, 400};
-    Button = {450, 450, 200, 40};
+    Button = {450, 560, 200, 40};
     Mouse = {GetMousePosition().x, GetMousePosition().y, 20, 20};
     Srend = new Sound_Render("resources/Music/Menu.mp3");
+    Goto = 0;
 
 }
 
 void Menu::Update_Menu() {
     Srend->PlayMusic();
-    bool END = false;
-    while (!END) {
+    while (Goto == 0) {
         Draw();
         Srend->UpdateMusic();
-        END = Detect_Input();
+        Goto = Detect_Input();
     }
 }
 
-bool Menu::Detect_Input() {
+int Menu::Detect_Input() {
     Mouse = {GetMousePosition().x, GetMousePosition().y, 20, 20};
-    if(IsKeyDown(KEY_U)){
+    if (IsKeyDown(KEY_U)) {
         Srend->ChangeVolume(0.01);
     }
-    if(IsKeyDown(KEY_D)){
+    if (IsKeyDown(KEY_D)) {
         Srend->ChangeVolume(-0.01);
     }
-    return IsMouseButtonDown(MOUSE_LEFT_BUTTON) && CheckCollisionRecs(Button, Mouse);
+    if (IsMouseButtonDown(MOUSE_LEFT_BUTTON) && CheckCollisionRecs(Button, Mouse))
+        return 2;
 }
 
 void Menu::Draw() {
@@ -57,7 +57,21 @@ void Menu::Draw() {
     DrawText("Haz Click para jugar", 385, 180, 30, WHITE);
     DrawLineEx({385, 215}, {700, 215}, 3, WHITE);
     DrawText(" \tCreado por: \n-Caceres Martin\n-Cabral Camila\n-Paschini Catalina", 385, 250, 30, WHITE);
-    DrawText("PLAY", 510, 454, 30, BLACK);
+    DrawText("PLAY", 510, 568, 30, BLACK);
     DrawText("'U' for volume up \n'D' for volume down", 20, 623, 20, BLACK);
     EndDrawing();
 }
+
+void Menu::On() {
+    Update_Menu();
+
+}
+
+int Menu::Off() {
+    return Goto;
+}
+
+Menu::~Menu() {
+    delete Srend;
+}
+

@@ -11,31 +11,32 @@ Ending::Ending() {
     Button1 = {340, 430, 150, 40};
     Button2 = {580, 430, 150, 40};
     Mouse = {GetMousePosition().x, GetMousePosition().y, 20, 20};
-    Result = true;
-    if(Result){
-        Srend = new Sound_Render("../resources/Music/loser.mp3");
-    } else{
-        //Srend = new Sound_Render()
-    }
+    Result = false;
     Sec = "55";
     Min = "15";
     GoTo = 0;
 }
 
 void Ending::Update_End() {
-    while (!WindowShouldClose()) {
-
+    if (Result) {
+        Srend = new Sound_Render("../resources/Music/Winner.mp3");
+    } else {
+        Srend = new Sound_Render("../resources/Music/loser.mp3");
+    }
+    Srend->PlayMusic();
+    while (GoTo == 0) {
         Draw();
         Detect_Input();
+        Srend->UpdateMusic();
     }
 }
 
 void Ending::Detect_Input() {
     Mouse = {GetMousePosition().x, GetMousePosition().y, 20, 20};
-    if(IsKeyDown(KEY_U)){
+    if (IsKeyDown(KEY_U)) {
         Srend->ChangeVolume(0.01);
     }
-    if(IsKeyDown(KEY_D)){
+    if (IsKeyDown(KEY_D)) {
         Srend->ChangeVolume(-0.01);
     }
     if (IsMouseButtonDown(MOUSE_LEFT_BUTTON) && CheckCollisionRecs(Button1, Mouse))
@@ -85,4 +86,21 @@ void Ending::Draw() {
         DrawText(S, 585, 250, 30, RED);
     }
     EndDrawing();
+}
+
+void Ending::On() {
+    Update_End();
+
+}
+
+int Ending::Off() {
+    return GoTo;
+}
+
+void Ending::LoadState(bool w, Vector2 vec) {
+    Result = w;
+    int s =vec.y;
+    int m =vec.x;
+    Min = std::to_string(m);
+    Sec = std::to_string(s);
 }

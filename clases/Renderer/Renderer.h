@@ -7,6 +7,7 @@
 
 #include "../Map/Map.h"
 #include "../Character/Character.h"
+#include "../Decorator/Player_Decorator.h"
 #include "../Fruits/Fruit_Vector.h"
 #include "../Animator/Animation_Creator.h"
 #include "../Enemies/Enemies.h"
@@ -19,6 +20,7 @@ private:
     Map *Level;
     Character *Chara;
     Fruit_Vector *Fruits;
+    Player_Decorator *Dec;
     Animation_Creator Ani_Creator;
     Texture2D Background;
     Camera2D camZoom;
@@ -31,11 +33,13 @@ private:
     class GUI Interface;
 
 public:
-    Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemies *> *Ene);
+    Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemies *> *Ene, Player_Decorator *Pla);
 
     void draw_Map();
 
     void UpdateDrawFrame(int State);
+
+    void Update_Fx(Player_Decorator *Pl);
 
 
 };

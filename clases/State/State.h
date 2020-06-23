@@ -5,18 +5,13 @@
 #ifndef RAYLIBTEMPLATE_STATE_H
 #define RAYLIBTEMPLATE_STATE_H
 
-#include "../Game/Game.h"
 
 class State {
 private:
 public:
-    State();
+    virtual void On() = 0;
 
-    void Menu_state();
-
-    void Gm_state();
-
-    void End_state();
+    virtual int Off() = 0;
 };
 
 

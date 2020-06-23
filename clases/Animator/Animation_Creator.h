@@ -14,11 +14,6 @@ class Animation_Creator {
     std::unordered_map<std::string , Image_Holder*>  Map;
 public:
     void Create(std::vector<Entity *> *Vector_file);
-
-    void Create(std::vector<Fruits *> *Vector_file);
-
-    void Create(Entity *Ent);
-
 };
 
 

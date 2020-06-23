@@ -4,38 +4,7 @@
 
 #include "Game.h"
 
-Game::Game() {
-    const int screenWidth = 1104;
-    const int screenHeight = 688;
-
-    Game_State = 0;
-
-    //Inicialización de la ventana
-    //InitWindow(screenWidth, screenHeight, "raylib - Plataformer");
-
-    map = new Map("resources/level/Map1.json");
-    player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),
-                           {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
-
-    Fruits = new Fruit_Vector(*map->Get_Fruits());
-
-    Enemies_factory fac{};
-    fac.Set_Map(map->Get_enemies());
-    Bad_Guys = fac.Make_Enemies();
-
-    Rend = new Renderer(map, player, Fruits, &Bad_Guys);
-    Srend = new Sound_Render("resources/Music/Bad_song.mp3");
-    Input = new Input_Handler(player, Srend);
-
-
-    Col = new Collision();
-    Col->Load_Vector(map->Return_Floor(), 0);
-    Col->Load_Vector(map->Return_Plataform(), 1);
-    Col->Load_Vector(map->ReturnTraps(), 2);
-    Col->Load_Vector(Fruits->Get_Vec_pointer());
-
-    world = new World(player);
-}
+Game::Game() {}
 
 
 void Game::PlayMusic() {
@@ -68,6 +37,17 @@ void Game::UpdateFrame() {
     if (Col->IsCollecting(player)) {
         Fruits->Delete_fruit();
         Srend->PlaySoundfx("resources/Music/Pick_FX.mp3");
+        Pla = new Player_Decorator(player);
+        Rend->Update_Fx(Pla);
+    }
+
+    if (Pla != nullptr) {
+        Pla->Reduce_Timer();
+        if (Pla->Get_Timer()) {
+            delete Pla;
+            Pla = nullptr;
+            Rend->Update_Fx(Pla);
+        }
     }
 
     //Damage Spikes
@@ -98,11 +78,14 @@ void Game::UpdateFrame() {
     //Draw the result
     Rend->UpdateDrawFrame(State);
     if (player->Is_alive())
-        Game_State = 2;
-    else
-        Game_State = 1;
+        GoTo = 0;
+    else {
+        GoTo = 3;
+        Won = false;
+    }
     if (player->Get_Fruits_left() == 0) {
-        Game_State = 3;
+        GoTo = 3;
+        Won = true;
     }
 }
 
@@ -110,20 +93,74 @@ void Game::UpdateMusic() {
     Srend->UpdateMusic();
 }
 
-void Game::EndGame() {
-    UnloadMusicStream(Srend->getMusic());   // Descargo la musica de RAM
-}
-
 void Game::Update_Game() {
-    while (!WindowShouldClose()) {
+    while (GoTo == 0) {
         UpdateFrame();
         UpdateMusic();
     }
 }
 
-int Game::ReturnGameState() {
-    return Game_State;
+void Game::On() {
+    Reset_Game();
+    PlayMusic();
+    Update_Game();
+
 }
+
+int Game::Off() {
+    Del();
+    return GoTo;
+}
+
+void Game::Del() {
+    delete map;
+    delete player;
+    delete Srend;
+    delete Input;
+    delete Col;
+    delete world;
+    delete Fruits;
+    delete fac;
+    for (auto i:Bad_Guys) {
+        delete i;
+    }
+
+
+}
+
+bool Game::GetWon() {
+    return Won;
+}
+
+Vector2 Game::GetTime() {
+    return player->getTime();
+}
+
+void Game::Reset_Game() {
+    GoTo = 0;
+    map = new Map("resources/level/Map1.json");
+    player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),
+                           {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});
+    Fruits = new Fruit_Vector(*map->Get_Fruits());
+
+    fac = new Enemies_factory();
+    fac->Set_Map(map->Get_enemies());
+    Bad_Guys = fac->Make_Enemies();
+
+    Rend = new Renderer(map, player, Fruits, &Bad_Guys, Pla);
+    Srend = new Sound_Render("resources/Music/Bad_song.mp3");
+    Input = new Input_Handler(player, Srend);
+
+
+    Col = new Collision();
+    Col->Load_Vector(map->Return_Floor(), 0);
+    Col->Load_Vector(map->Return_Plataform(), 1);
+    Col->Load_Vector(map->ReturnTraps(), 2);
+    Col->Load_Vector(Fruits->Get_Vec_pointer());
+
+    world = new World(player);
+}
+
 
 
 

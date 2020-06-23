@@ -2,8 +2,14 @@
 // Created by martin on 20/5/20.
 //
 
+
 #include "Animation_Creator.h"
 
+
+/**This Function is the base for the flyweight pattern .It receives a pointer of a vector of pointers of entities and
+ * decides if it should create an image for it or use one that was already in use
+ * @param Vector_file Has the entities
+ * **/
 void Animation_Creator::Create(std::vector<Entity *> *Vector_file) {
     for (auto i: *Vector_file) {
         {
@@ -21,30 +27,6 @@ void Animation_Creator::Create(std::vector<Entity *> *Vector_file) {
                 i->Assign_Animator(Ani);
             }
         }
-
-    }
-}
-
-void Animation_Creator::Create(Entity *Ent) {
-    Image_Holder *Img;
-    Img = new Image_Holder(Ent->GetMaxCol(), Ent->GetFilePathText(), Ent->GetProportion());
-
-    Animation *Ani;
-    Ani = new Animation(Img);
-    Ent->Assign_Animator(Ani);
-}
-
-void Animation_Creator::Create(std::vector<Fruits *> *Vector_file) {
-    Image_Holder *Img;
-    std::string temp;
-    temp = Vector_file->front()->GetFilePathText();
-    Img = new Image_Holder(Vector_file->front()->GetMaxCol(), Vector_file->front()->GetFilePathText(),
-                           Vector_file->front()->GetProportion());
-
-    for (auto i: *Vector_file) {
-        Animation *Ani;
-        Ani = new Animation(Img);
-        i->Assign_Animator(Ani);
 
     }
 }

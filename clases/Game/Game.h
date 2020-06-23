@@ -14,8 +14,10 @@
 #include "../World/World.h"
 #include "../Fruits/Fruit_Vector.h"
 #include "../Enemies/Enemies_factory.h"
+#include "../State/State.h"
+#include "../Decorator/Player_Decorator.h"
 
-class Game {
+class Game : public State {
 private:
     Game();
 
@@ -27,11 +29,14 @@ private:
     Collision *Col;
     World *world;
     Fruit_Vector *Fruits;
-    std::vector<Enemies*> Bad_Guys;
-    int Game_State;
+    std::vector<Enemies *> Bad_Guys;
+    Enemies_factory *fac;
+    Player_Decorator *Pla;
+    bool Won;
+    int GoTo;
 
 public:
-    static Game &Get_Game(){
+    static Game &Get_Game() {
         static Game The_game;
         return The_game;
     }
@@ -46,7 +51,17 @@ public:
 
     void EndGame();
 
-    int ReturnGameState();
+    void On() override;
+
+    int Off() override;
+
+    void Del();
+
+    Vector2 GetTime();
+
+    bool GetWon();
+
+    void Reset_Game();
 };
 
 

@@ -1,7 +1,9 @@
 //40
 // Created by martin on 20/5/20.
 //
-
+/**
+ * This class Holds Images
+ * **/
 #include "Image_Holder.h"
 
 Image_Holder::Image_Holder(std::vector<int> max_Column, std::string file, Vector2 prop) {

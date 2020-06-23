@@ -8,10 +8,10 @@
 
 #include <raylib.h>
 #include "../Music Renderer/Sound_Render.h"
+#include "../State/State.h"
 
 
-
-class Menu {
+class Menu : public State {
 private:
     Texture2D Background;
     Rectangle Back_;
@@ -19,15 +19,22 @@ private:
     Rectangle Mouse;
     float scrollingBack = 0.0f;
     Sound_Render *Srend;
-
+    int Goto;
 public:
-    Menu ();
+    Menu();
 
     void Update_Menu();
 
     void Draw();
 
-    bool Detect_Input();
+    int Detect_Input();
+
+    void On() override;
+
+    int Off() override;
+
+    ~Menu();
+
 };
 
 

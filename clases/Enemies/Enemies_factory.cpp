@@ -11,7 +11,7 @@ void Enemies_factory::Set_Map(std::multimap<std::string, Rectangle> *M) {
 std::vector<Enemies *> Enemies_factory::Make_Enemies() {
     Rectangle rec{0, 0, 0, 0};
     Vector2 ve{0, 0};
-    static std::vector<Enemies *> Vec_Enemies;
+    std::vector<Enemies *> Vec_Enemies;
     int Counter;
 
     auto Finder = Map->find("0");

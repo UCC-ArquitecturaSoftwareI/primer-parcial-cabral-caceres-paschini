@@ -40,10 +40,10 @@ void GUI::DrawGui(int Amount) {
 
     if (Amount != 0) {
         Take_Time();
-    } else {
-        Player->SetMin(Minutes);
-        Player->SetSec(Seconds);
     }
+    Player->SetMin(Minutes);
+    Player->SetSec(Seconds);
+
 }
 
 GUI::GUI() {

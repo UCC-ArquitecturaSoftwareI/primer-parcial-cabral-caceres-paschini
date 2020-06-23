@@ -5,11 +5,13 @@
 #include "Renderer.h"
 #include <vector>
 
-Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemies *> *Ene) {
+Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemies *> *Ene, Player_Decorator *Pla) {
     Level = Mp;
     Chara = Ch;
     Fruits = Vec;
     Bad_Guys = Ene;
+    Dec = Pla;
+
     Life = new Entity("../resources/level/spritesheet_Heart.png", {60, 40}, {1, 1, 1}, {20, 20});
 
     Background = LoadTexture("../resources/level/Back_Game.png");
@@ -130,6 +132,8 @@ void Renderer::UpdateDrawFrame(int State) {
         draw_Map();
         Fruits->Call_Animator();
         Chara->Animate();
+        if (Dec != nullptr)
+            Dec->DrawFx();
         for (auto i: *Bad_Guys) {
             i->Animate();
         }
@@ -141,5 +145,9 @@ void Renderer::UpdateDrawFrame(int State) {
     Interface.DrawGui(Fruits->Get_Amount());
     Life->Animate();
     EndDrawing();
+}
+
+void Renderer::Update_Fx(Player_Decorator *Pl) {
+    Dec = Pl;
 }
 

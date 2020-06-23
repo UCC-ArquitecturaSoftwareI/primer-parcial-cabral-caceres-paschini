@@ -56,7 +56,7 @@ void Character::Collect() {
 }
 
 bool Character::Is_alive() {
-    return life == 0;
+    return life != 0;
 }
 
 int Character::Get_life_Num() {
@@ -87,7 +87,7 @@ void Character::LessInv() {
     Invulnerable--;
 }
 
-int Character::GetInvulnerable()  {
+int Character::GetInvulnerable() {
     return Invulnerable;
 }
 

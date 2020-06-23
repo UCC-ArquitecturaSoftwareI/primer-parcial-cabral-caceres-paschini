@@ -41,6 +41,7 @@ public:
     std::vector<Rectangle> *ReturnTraps();
 
     std::multimap<std::string, Rectangle> *Get_enemies();
+
 };
 
 
