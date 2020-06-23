@@ -4,7 +4,7 @@
 
 #include "GUI.h"
 
-void GUI::DrawGui(int Amount) {
+void GUI::DrawGui(int Amount, bool Time_stp) {
 
 
     Fruis_left = std::to_string(Amount);
@@ -38,7 +38,7 @@ void GUI::DrawGui(int Amount) {
     DrawText("/35", 1030, 20, 20, BLACK);
     DrawText("'U' for volume up \n'D' for volume down", 20, 623, 20, BLACK);
 
-    if (Amount != 0) {
+    if (Amount != 0 && !Time_stp) {
         Take_Time();
     }
     Player->SetMin(Minutes);

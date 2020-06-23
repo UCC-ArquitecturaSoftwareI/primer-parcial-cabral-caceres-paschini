@@ -21,6 +21,8 @@ public:
 
     void Call_Animator();
 
+    void Call_Animator_Still();
+
     void Delete_fruit();
 
     int Get_Amount();

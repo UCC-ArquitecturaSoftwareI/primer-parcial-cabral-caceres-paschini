@@ -33,7 +33,9 @@ private:
     Enemies_factory *fac;
     Player_Decorator *Pla;
     bool Won;
+    int Power_Up;
     int GoTo;
+    bool Time_Stp;
 
 public:
     static Game &Get_Game() {
@@ -48,8 +50,6 @@ public:
     void UpdateMusic();
 
     void Update_Game();
-
-    void EndGame();
 
     void On() override;
 

@@ -14,6 +14,8 @@
 class Character : public Entity {
 private:
     Vector2 player_Spd{};
+    float Spd_Multi;
+    float Max_Speed;
     int Fruits_Left;
     int life;
     int Invulnerable = 0;
@@ -27,6 +29,8 @@ public:
         Fruits_Left = 35;
         life = 3;
         Time = {0, 0};
+        Spd_Multi = 1;
+        Max_Speed = 3;
     }
 
     void Acelerate_x(float d);
@@ -65,7 +69,11 @@ public:
 
     void LessInv();
 
-    int GetInvulnerable() ;
+    int GetInvulnerable();
+
+    void SetSpdMulti(float spdMulti);
+
+    void Set_MaxSpeed(float Max);
 };
 
 

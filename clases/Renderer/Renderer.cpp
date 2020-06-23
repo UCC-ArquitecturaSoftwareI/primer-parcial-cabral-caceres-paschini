@@ -100,7 +100,7 @@ void Renderer::draw_Map() {
 }
 
 
-void Renderer::UpdateDrawFrame(int State) {
+void Renderer::UpdateDrawFrame(int State, bool Time_Stp) {
 
     //Set character state
 
@@ -130,19 +130,27 @@ void Renderer::UpdateDrawFrame(int State) {
 
         //Draws all entities
         draw_Map();
-        Fruits->Call_Animator();
         Chara->Animate();
         if (Dec != nullptr)
             Dec->DrawFx();
-        for (auto i: *Bad_Guys) {
-            i->Animate();
+
+        if (Time_Stp) {
+            Fruits->Call_Animator_Still();
+            for (auto i: *Bad_Guys) {
+                i->Animate_Still();
+            }
+        } else{
+            Fruits->Call_Animator();
+            for (auto i: *Bad_Guys) {
+                i->Animate();
+            }
         }
         EndMode2D();
 
 
         // Finalizo el dibujado
     } else frameCounter++;
-    Interface.DrawGui(Fruits->Get_Amount());
+    Interface.DrawGui(Fruits->Get_Amount(), Time_Stp);
     Life->Animate();
     EndDrawing();
 }

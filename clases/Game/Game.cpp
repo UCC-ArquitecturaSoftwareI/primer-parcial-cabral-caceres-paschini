@@ -37,13 +37,31 @@ void Game::UpdateFrame() {
     if (Col->IsCollecting(player)) {
         Fruits->Delete_fruit();
         Srend->PlaySoundfx("resources/Music/Pick_FX.mp3");
-        Pla = new Player_Decorator(player);
-        Rend->Update_Fx(Pla);
+        if (Power_Up == 0) {
+            if (Pla != nullptr) {
+                player->SetSpdMulti(1);
+                player->Set_MaxSpeed(3);
+                delete Pla;
+                Pla = nullptr;
+                Rend->Update_Fx(Pla);
+            }
+            Pla = new Player_Decorator(player);
+            Rend->Update_Fx(Pla);
+            Power_Up = 2;
+            if (Pla->Get_Type() == 5)
+                Time_Stp = true;
+        } else {
+            Power_Up--;
+        }
     }
 
     if (Pla != nullptr) {
+        Pla->Activate_Power();
         Pla->Reduce_Timer();
         if (Pla->Get_Timer()) {
+            player->SetSpdMulti(1);
+            player->Set_MaxSpeed(3);
+            Time_Stp = false;
             delete Pla;
             Pla = nullptr;
             Rend->Update_Fx(Pla);
@@ -58,25 +76,28 @@ void Game::UpdateFrame() {
         Srend->PlaySoundfx("resources/Music/DMG.mp3");
     }
 
-    for (auto i:Bad_Guys) {
-        //Dmg Enemies
-        if (Col->Dmg(player, i) && player->GetInvulnerable() == 0) {
-            State = 0;
-            player->Change_life(-1);
-            player->SetInvulnerable(80);
-            Srend->PlaySoundfx("resources/Music/DMG.mp3");
+    if (!Time_Stp) {
+        for (auto i:Bad_Guys) {
+            //Dmg Enemies
+            if (Col->Dmg(player, i) && player->GetInvulnerable() == 0) {
+                State = 0;
+                player->Change_life(-1);
+                player->SetInvulnerable(80);
+                Srend->PlaySoundfx("resources/Music/DMG.mp3");
+            }
+
+            i->move_x();
+            Col->IsColliding_X(i);
+            i->move_y();
+            Col->IsColliding_y(i);
         }
-        i->move_x();
-        Col->IsColliding_X(i);
-        i->move_y();
-        Col->IsColliding_y(i);
     }
 
     if (player->GetInvulnerable() != 0) {
         player->LessInv();
     }
     //Draw the result
-    Rend->UpdateDrawFrame(State);
+    Rend->UpdateDrawFrame(State, Time_Stp);
     if (player->Is_alive())
         GoTo = 0;
     else {
@@ -96,7 +117,8 @@ void Game::UpdateMusic() {
 void Game::Update_Game() {
     while (GoTo == 0) {
         UpdateFrame();
-        UpdateMusic();
+        if (!Time_Stp)
+            UpdateMusic();
     }
 }
 
@@ -137,7 +159,9 @@ Vector2 Game::GetTime() {
 }
 
 void Game::Reset_Game() {
+    Time_Stp = false;
     GoTo = 0;
+    Power_Up = 2;
     map = new Map("resources/level/Map1.json");
     player = new Character("resources/Player/spritesheet.png", map->ReturnCharPos(),
                            {6, 5, 5, 1, 1, 10, 10, 11, 11, 4, 4});

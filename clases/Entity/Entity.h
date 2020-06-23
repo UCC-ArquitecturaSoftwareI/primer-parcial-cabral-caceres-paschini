@@ -39,6 +39,8 @@ public:
 
     void Animate();
 
+    void Animate_Still();
+
     void Set_Animation(int);
 
 };

@@ -9,7 +9,9 @@
 
 class Power_D : public Power_Ups{
 public:
-    Power_D();
+    Power_D(Character *Pla);
+
+    void Activate_Power();
 
 
 };

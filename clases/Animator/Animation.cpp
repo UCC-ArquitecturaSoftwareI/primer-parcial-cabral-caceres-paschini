@@ -24,3 +24,8 @@ void Animation::Animate(Vector2 pos) {
 void Animation::setCurrentRow(int currentRow) {
     Animation::currentRow = currentRow;
 }
+
+void Animation::Animte_Still(Vector2 pos) {
+    frameRec = {static_cast<float>(currentColumn * image->getProportion().x),static_cast<float>(currentRow * image->getProportion().y), image->getProportion().x,image->getProportion().y};
+    DrawTextureRec(image->getPicture(), frameRec, pos, WHITE);
+}

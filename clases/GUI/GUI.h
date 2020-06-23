@@ -27,7 +27,7 @@ public:
 
     void LoadPlayer( Character *Play);
 
-    void DrawGui(int Amount);
+    void DrawGui(int Amount, bool Time_stp);
 
     void Take_Time();
 

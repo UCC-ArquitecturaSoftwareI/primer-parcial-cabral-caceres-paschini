@@ -11,8 +11,17 @@
  * @param d
  */
 void Character::Acelerate_x(float d) {
-    if (std::abs(player_Spd.x) < 2.6)
-        player_Spd.x += d;
+    if (player_Spd.x > Max_Speed) {
+        player_Spd.x = Max_Speed;
+        return;
+    }
+    if (player_Spd.x < -Max_Speed) {
+        player_Spd.x = -Max_Speed;
+        return;
+    } else {
+        player_Spd.x += d * Spd_Multi;
+    }
+
 
 }
 
@@ -89,6 +98,14 @@ void Character::LessInv() {
 
 int Character::GetInvulnerable() {
     return Invulnerable;
+}
+
+void Character::SetSpdMulti(float spdMulti) {
+    Spd_Multi = spdMulti;
+}
+
+void Character::Set_MaxSpeed(float  Max) {
+    Max_Speed = Max;
 }
 
 

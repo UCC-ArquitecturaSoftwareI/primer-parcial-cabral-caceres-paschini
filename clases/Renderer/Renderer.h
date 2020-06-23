@@ -37,7 +37,7 @@ public:
 
     void draw_Map();
 
-    void UpdateDrawFrame(int State);
+    void UpdateDrawFrame(int State, bool Time_Stp);
 
     void Update_Fx(Player_Decorator *Pl);
 

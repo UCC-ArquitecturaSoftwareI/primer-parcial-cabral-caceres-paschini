@@ -60,3 +60,7 @@ void Entity::Set_Animation(int Temp) {
     Ani->setCurrentRow(Temp);
 }
 
+void Entity::Animate_Still() {
+    Ani->Animte_Still(Entity_pos);
+}
+

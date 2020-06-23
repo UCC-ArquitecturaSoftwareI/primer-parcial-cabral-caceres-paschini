@@ -24,6 +24,8 @@ public:
 
     void Animate(Vector2 pos);
 
+    void Animte_Still(Vector2 pos);
+
     void setCurrentRow(int currentRow);
 
 };

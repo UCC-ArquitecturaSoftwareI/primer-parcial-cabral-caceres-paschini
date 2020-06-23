@@ -19,7 +19,6 @@ private:
     Power_Ups *Power;
     Character *Player;
     Animation *Ani;
-    int Timer;
     int Cu_Power;
 public:
     Player_Decorator(Character *chara);
@@ -31,6 +30,10 @@ public:
     void Reduce_Timer();
 
     ~Player_Decorator();
+
+    void Activate_Power();
+
+    int Get_Type();
 
 };
 
