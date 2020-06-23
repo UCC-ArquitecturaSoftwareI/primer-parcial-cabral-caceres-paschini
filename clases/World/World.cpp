@@ -11,7 +11,7 @@ World::World(Character *player1) {
 }
 
 void World::Friction() {
-    if (std::abs(player->GetSpeed().x) > 0.00001) {
+    if (player->GetSpeed().x > 0.00001 || player->GetSpeed().x < -0.00001) {
 
         if (player->GetSpeed().x > 0)
             player->Deacelerate_x(-Fric);
