@@ -1,7 +1,3 @@
-//
-// Created by martin on 16/6/20.
-//
-
 #include "Ending.h"
 #include <iostream>
 

@@ -1,7 +1,3 @@
-//
-// Created by martin on 23/6/20.
-//
-
 #include "Player_Decorator.h"
 
 Player_Decorator::Player_Decorator(Character *chara) {
