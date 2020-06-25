@@ -1,6 +1,6 @@
 /**
- * @title       Clase Animation_Creator
- * @file        Animation_Creator.h
+ * @title       Clase Imagen Holder
+ * @file        Imagen_Holder.h
  * @version     1.0
  * @date        20/05/2020.
  * @author      Martin Caceres
