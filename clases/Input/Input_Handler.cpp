@@ -1,7 +1,3 @@
-//
-// Created by martin on 9/5/20.
-//
-
 #include "Input_Handler.h"
 
 

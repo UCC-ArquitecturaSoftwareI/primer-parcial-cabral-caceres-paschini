@@ -1,7 +1,3 @@
-//
-// Created by martin on 23/6/20.
-//
-
 #include "Power_A.h"
 
 Power_A::Power_A(Character *Pla) {
