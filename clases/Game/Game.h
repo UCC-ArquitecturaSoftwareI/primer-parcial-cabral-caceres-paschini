@@ -26,46 +26,69 @@ class Game : public State {
 private:
     Game();
 
-    Map *map;   /** */
-    Character *player;  /** */
-    Sound_Render *Srend; /** */
-    Renderer *Rend; /** */
-    Input_Handler *Input;  /** */
-    Collision *Col;  /** */
-    World *world;   /** */
-    Fruit_Vector *Fruits;  /** */
-    std::vector<Enemies *> Bad_Guys;  /** */
-    Enemies_factory *fac; /** */
-    Player_Decorator *Pla;  /** */
-    bool Won;  /** */
-    int Power_Up;   /** */
-    int GoTo;   /** */
-    bool Time_Stp;  /** */
+    Map *map;   /** Puntero del map */
+    Character *player;  /** Puntero del player*/
+    Sound_Render *Srend; /**  Puntero para sonido*/
+    Renderer *Rend; /** Puntero Rend */
+    Input_Handler *Input;  /** vector input*/
+    Collision *Col;  /** vector columna */
+    World *world;   /** vector mundo*/
+    Fruit_Vector *Fruits;  /** vector fruta*/
+    std::vector<Enemies *> Bad_Guys;  /** Vector con puntero enemies */
+    Enemies_factory *fac; /** puntero fac*/
+    Player_Decorator *Pla;  /** puntero player*/
+    bool Won;  /** Posibilidad de ganar */
+    int Power_Up;   /** int value.Especifica el poder*/
+    int GoTo;   /**int value. Espefica a donde va */
+    bool Time_Stp;  /** Tiempo pare */
 
 public:
     static Game &Get_Game() {
         static Game The_game;
         return The_game;
     }
-
+/**
+ *Funcion que inicializa la Musica
+ */
     void PlayMusic();
-
+/**
+ *Funcion que da sonidos segundo el movimiento del player
+ */
     void UpdateFrame();
-
+/**
+ *Funcion Musica
+ */
     void UpdateMusic();
-
+/**
+ * Funcion que si pierde o no mueve para el sonido del movimiento
+ */
     void Update_Game();
-
+/**
+ * Funcion que usa State para saber si continua con los sonidos
+ */
     void On() override;
-
+/**
+ *Funcion para cuando el juego termina
+ * @return
+ */
     int Off() override;
-
+/**
+ *Funcion que borra todo del juego
+ */
     void Del();
-
+/**
+ * Vector para el tiempo, cuando el juegador esta en el mapa
+ * @return
+ */
     Vector2 GetTime();
-
+/**
+ * Posibles valores de ganador o loser
+ * @return
+ */
     bool GetWon();
-
+   /**
+    * Resetea el juego
+    */
     void Reset_Game();
 };
 
