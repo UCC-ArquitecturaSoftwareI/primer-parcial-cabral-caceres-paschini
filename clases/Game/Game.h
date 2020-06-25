@@ -1,7 +1,12 @@
-//
-// Created by martin on 10/5/20.
-//
-
+/**
+ * @title       Clase Game
+ * @file       Game.h
+ * @version     1.0
+ * @date        10/5/20.
+ * @author      Martin Caceres
+ * @author      Camila Cabral
+ * @author      Catalina Paschini
+*/
 #ifndef RAYLIBTEMPLATE_GAME_H
 #define RAYLIBTEMPLATE_GAME_H
 
@@ -21,21 +26,21 @@ class Game : public State {
 private:
     Game();
 
-    Map *map;
-    Character *player;
-    Sound_Render *Srend;
-    Renderer *Rend;
-    Input_Handler *Input;
-    Collision *Col;
-    World *world;
-    Fruit_Vector *Fruits;
-    std::vector<Enemies *> Bad_Guys;
-    Enemies_factory *fac;
-    Player_Decorator *Pla;
-    bool Won;
-    int Power_Up;
-    int GoTo;
-    bool Time_Stp;
+    Map *map;   /** */
+    Character *player;  /** */
+    Sound_Render *Srend; /** */
+    Renderer *Rend; /** */
+    Input_Handler *Input;  /** */
+    Collision *Col;  /** */
+    World *world;   /** */
+    Fruit_Vector *Fruits;  /** */
+    std::vector<Enemies *> Bad_Guys;  /** */
+    Enemies_factory *fac; /** */
+    Player_Decorator *Pla;  /** */
+    bool Won;  /** */
+    int Power_Up;   /** */
+    int GoTo;   /** */
+    bool Time_Stp;  /** */
 
 public:
     static Game &Get_Game() {
