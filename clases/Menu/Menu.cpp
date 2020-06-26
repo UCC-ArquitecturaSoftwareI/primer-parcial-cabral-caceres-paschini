@@ -69,7 +69,7 @@ void Menu::Draw() {
     DrawTextureEx(RED_Fire, {400, 450,}, 1, 1, WHITE);
     DrawText("Move Fast", 380, 520, 20, BLACK);
     DrawTextureEx(BLUE_Fire, {650, 520,}, 1, 1, WHITE);
-    DrawText("Stop Time", 630, 590, 20, BLACK);
+    DrawText("Fly High", 630, 590, 20, BLACK);
     DrawTextureEx(PINK_Fire, {900, 450,}, 1, 1, WHITE);
     DrawText("Gain 1 Life", 880, 520, 20, BLACK);
     DrawTextureEx(GREEN_Fire, {400, 580,}, 1, 1, WHITE);
