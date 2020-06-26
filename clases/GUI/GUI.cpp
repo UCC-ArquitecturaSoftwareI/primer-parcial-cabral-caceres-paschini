@@ -33,10 +33,10 @@ void GUI::DrawGui(int Amount, bool Time_stp) {
     DrawText(S, 103, 20, 20, BLACK);
     DrawText("s", 130, 20, 20, BLACK);
     DrawText("life: ", 20, 40, 20, BLACK);
-    DrawText("Fruits: ", 920, 20, 20, BLACK);
+    DrawText("Fruits: ", 930, 20, 20, BLACK);
     DrawText(c, 1000, 20, 20, BLACK);
     DrawText("/35", 1030, 20, 20, BLACK);
-    DrawText("'U' for volume up \n'D' for volume down", 20, 623, 20, BLACK);
+    DrawText("'8' for volume up \n'2' for volume down", 20, 623, 20, BLACK);
 
     if (Amount != 0 && !Time_stp) {
         Take_Time();
@@ -47,8 +47,8 @@ void GUI::DrawGui(int Amount, bool Time_stp) {
 }
 
 GUI::GUI() {
-    Rec_1 = {5, 15, 180, 50};
-    Rec_2 = {910, 15, 180, 30};
+    Rec_1 = {5, 15, 180, 60};
+    Rec_2 = {910, 15, 180, 60};
     Rec_3 = {5, 620, 250, 55};
     Seconds = Minutes = timer = 0;
 }

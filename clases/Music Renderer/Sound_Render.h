@@ -14,7 +14,7 @@ private:
     Music music;
     Sound Temp;
     int timer = 0;
-    float volume =0.4;
+    float volume =0.2;
 public:
     explicit Sound_Render(std::string text);
 

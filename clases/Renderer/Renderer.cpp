@@ -31,6 +31,8 @@ Renderer::Renderer(Map *Mp, Character *Ch, Fruit_Vector *Vec, std::vector<Enemie
     camZoom.rotation = 0.0f;
     camZoom.zoom = 1.5f;
     Interface.LoadPlayer(Chara);
+    Shade = LoadShader(nullptr, "resources/Shader/swirl.fs");
+    swirlCenterLoc = GetShaderLocation(Shade, "center");
 }
 
 void Renderer::draw_Map() {
@@ -103,19 +105,18 @@ void Renderer::draw_Map() {
 void Renderer::UpdateDrawFrame(int State, bool Time_Stp) {
 
     //Set character state
+    SetShaderValue(Shade, swirlCenterLoc, Swirl_center, UNIFORM_VEC2);
 
     if (Chara->GetInvulnerable() != 0)
         Chara->Set_Animation(0);
     else
         Chara->Set_Animation(State);
 
-
     if (Chara->Get_life_Num() > 0)
         Life->Set_Animation(3 - Chara->Get_life_Num());
 
     //draws Life Amount
     BeginDrawing();
-
 
     if (frameCounter != 2) {
 
@@ -126,20 +127,18 @@ void Renderer::UpdateDrawFrame(int State, bool Time_Stp) {
         BeginMode2D(camZoom);
 
         camZoom.target = {Chara->Get_Entity_Pos().x, Chara->Get_Entity_Pos().y};
-
-
+        
         //Draws all entities
         draw_Map();
         Chara->Animate();
         if (Dec != nullptr)
             Dec->DrawFx();
-
         if (Time_Stp) {
             Fruits->Call_Animator_Still();
             for (auto i: *Bad_Guys) {
                 i->Animate_Still();
             }
-        } else{
+        } else {
             Fruits->Call_Animator();
             for (auto i: *Bad_Guys) {
                 i->Animate();
@@ -152,10 +151,13 @@ void Renderer::UpdateDrawFrame(int State, bool Time_Stp) {
     } else frameCounter++;
     Interface.DrawGui(Fruits->Get_Amount(), Time_Stp);
     Life->Animate();
+
     EndDrawing();
 }
 
 void Renderer::Update_Fx(Player_Decorator *Pl) {
     Dec = Pl;
 }
+
+
 

@@ -10,6 +10,7 @@ Power_D::Power_D(Character *Pla) {
     Type = 5;
     Img = new Image_Holder({7, 7, 7, 7, 7, 7, 7, 3}, "resources/Effects/Purple_Fire.v2.png", {64, 64});
     Sound S = LoadSound("resources/Music/Time_Stop.mp3");
+    SetSoundVolume(S,.4);
     PlaySound(S);
 }
 

@@ -14,6 +14,12 @@
 class Menu : public State {
 private:
     Texture2D Background;
+    Texture2D WASD;
+    Texture2D RED_Fire;
+    Texture2D BLUE_Fire;
+    Texture2D PINK_Fire;
+    Texture2D PURPLE_Fire;
+    Texture2D GREEN_Fire;
     Rectangle Back_;
     Rectangle Button;
     Rectangle Mouse;

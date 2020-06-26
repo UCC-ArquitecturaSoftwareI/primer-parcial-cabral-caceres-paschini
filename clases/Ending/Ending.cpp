@@ -33,10 +33,10 @@ void Ending::Update_End() {
 
 void Ending::Detect_Input() {
     Mouse = {GetMousePosition().x, GetMousePosition().y, 20, 20};
-    if (IsKeyDown(KEY_U)) {
+    if (IsKeyDown(KEY_EIGHT)) {
         Srend->ChangeVolume(0.01);
     }
-    if (IsKeyDown(KEY_D)) {
+    if (IsKeyDown(KEY_TWO)) {
         Srend->ChangeVolume(-0.01);
     }
     if (IsMouseButtonDown(MOUSE_LEFT_BUTTON) && CheckCollisionRecs(Button1, Mouse))

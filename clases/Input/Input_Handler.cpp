@@ -25,24 +25,24 @@ void Input_Handler::setKeyPress() {
     KeyPress.x = 5;
 
 
-    if (IsKeyDown(KEY_RIGHT)) {
+    if (IsKeyDown(KEY_D)) {
         KeyPress.x = 7;
         KeyPress.y = 0;
         Play->Acelerate_x(Acc_x);
     }
-    if (IsKeyDown(KEY_LEFT)) {
+    if (IsKeyDown(KEY_A)) {
         KeyPress.x = 7;
         KeyPress.y = 1;
         Play->Acelerate_x(-Acc_x);
     }
-    if (IsKeyDown(KEY_UP) && CanJump) {
+    if (IsKeyDown(KEY_W) && CanJump) {
         KeyPress.x = 3;
         Play->Jump_y(Acc_y);
     }
-    if(IsKeyDown(KEY_U)){
+    if(IsKeyDown(KEY_EIGHT)){
         MUS->ChangeVolume(0.01);
     }
-    if(IsKeyDown(KEY_D)){
+    if(IsKeyDown(KEY_TWO)){
         MUS->ChangeVolume(-0.01);
     }
 }
