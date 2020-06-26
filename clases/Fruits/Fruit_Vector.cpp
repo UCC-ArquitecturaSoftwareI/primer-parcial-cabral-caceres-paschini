@@ -1,7 +1,3 @@
-
-// Created by martin on 21/5/20.
-//
-
 #include "Fruit_Vector.h"
 
 Fruit_Vector::Fruit_Vector(std::vector<Vector2> Pos_fruits) {

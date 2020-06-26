@@ -1,7 +1,3 @@
-//
-// Created by martin on 7/6/20.
-//
-
 #include "Enemies_factory.h"
 
 void Enemies_factory::Set_Map(std::multimap<std::string, Rectangle> *M) {
