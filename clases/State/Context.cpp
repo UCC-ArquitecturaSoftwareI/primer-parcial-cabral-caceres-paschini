@@ -1,7 +1,3 @@
-//
-// Created by martin on 16/6/20.
-//
-
 #include "Context.h"
 
 void Context::Start_State() {

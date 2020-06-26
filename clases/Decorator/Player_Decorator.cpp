@@ -1,5 +1,5 @@
 #include "Player_Decorator.h"
-//#include <time.h>
+#include <time.h>
 Player_Decorator::Player_Decorator(Character *chara) {
     Player = chara;
     srand(time(0));
