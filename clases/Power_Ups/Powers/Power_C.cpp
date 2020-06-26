@@ -1,7 +1,3 @@
-//
-// Created by martin on 23/6/20.
-//
-
 #include "Power_C.h"
 
 Power_C::Power_C(Character *Pla) {

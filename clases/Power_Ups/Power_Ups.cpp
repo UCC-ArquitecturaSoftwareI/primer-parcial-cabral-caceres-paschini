@@ -1,7 +1,3 @@
-//
-// Created by martin on 23/6/20.
-//
-
 #include "Power_Ups.h"
 
 Power_Ups::Power_Ups() {

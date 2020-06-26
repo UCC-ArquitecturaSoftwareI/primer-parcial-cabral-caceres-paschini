@@ -1,7 +1,3 @@
-//
-// Created by martin on 23/6/20.
-//
-
 #include "Power_E.h"
 
 Power_E::Power_E(Character *Pla) {

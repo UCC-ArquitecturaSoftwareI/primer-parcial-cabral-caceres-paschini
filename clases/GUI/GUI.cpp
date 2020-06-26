@@ -1,7 +1,3 @@
-//
-// Created by martin on 8/6/20.
-//
-
 #include "GUI.h"
 
 void GUI::DrawGui(int Amount, bool Time_stp) {

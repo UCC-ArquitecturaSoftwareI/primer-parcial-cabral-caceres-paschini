@@ -1,9 +1,3 @@
-//
-// Created by martin on 21/3/20.
-//
-
-#include <string>
-#include <sstream>
 #include "Character.h"
 
 /**

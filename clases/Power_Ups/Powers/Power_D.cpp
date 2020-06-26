@@ -1,7 +1,3 @@
-//
-// Created by martin on 23/6/20.
-//
-
 #include "Power_D.h"
 
 Power_D::Power_D(Character *Pla) {

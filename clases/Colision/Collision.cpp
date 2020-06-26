@@ -1,7 +1,3 @@
-//
-// Created by martin on 10/5/20.
-//
-
 #include "Collision.h"
 
 Collision::Collision() {

@@ -1,7 +1,3 @@
-//
-// Created by martin on 8/6/20.
-//
-
 #include "Enemies.h"
 
 int Enemies::Get_State_x() {

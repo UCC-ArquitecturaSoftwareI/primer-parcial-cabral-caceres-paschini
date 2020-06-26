@@ -1,7 +1,3 @@
-//
-// Created by Martin on 20/04/2020.
-//
-
 #include "Renderer.h"
 #include <vector>
 

@@ -1,7 +1,3 @@
-//
-// Created by Martin on 18/04/2020.
-//
-
 #include "Map.h"
 #include <iostream>
 
