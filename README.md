@@ -1,5 +1,7 @@
 ![Build and Deploy][badge]
+
 #Plataformer 
+
 ##Integrantes: **Cabral Camila Caceres Martin ,Paschini Catalina** 
 
 Este proyecto es una plantilla básica para crear proyectos en Raylib. Incluye github actions
